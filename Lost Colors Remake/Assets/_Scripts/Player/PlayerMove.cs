@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _friction;
     public bool canMove;
 
-    private Vector3 _moveInput;
+    private Vector2 _moveInput;
     private Vector3 _movementForce;
 
 
@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         float targetSpeedX = _moveInput.x * _topSpeed;
-        float targetSpeedZ = _moveInput.z * _topSpeed;
+        float targetSpeedZ = _moveInput.y * _topSpeed;
 
         float speedDifX = targetSpeedX - PlayerMain.Instance.Rigidbody2D.linearVelocity.x;
         float speedDifZ = targetSpeedZ - PlayerMain.Instance.Rigidbody2D.linearVelocity.y;
@@ -32,7 +32,7 @@ public class PlayerMove : MonoBehaviour
         float movementX = Mathf.Pow(Mathf.Abs(speedDifX) * accelRateX, _velocityPower) * Mathf.Sign(speedDifX);
         float movementZ = Mathf.Pow(Mathf.Abs(speedDifZ) * accelRateY, _velocityPower) * Mathf.Sign(speedDifZ);
 
-        _movementForce = Vector3.right * movementX + Vector3.forward * movementZ;
+        _movementForce = Vector3.right * movementX + Vector3.up * movementZ;
 
         PlayerMain.Instance.Rigidbody2D.AddForce(_movementForce * Time.deltaTime * 50);
 
@@ -43,11 +43,11 @@ public class PlayerMove : MonoBehaviour
             PlayerMain.Instance.Rigidbody2D.AddForce(Vector3.right * -frictionX);
         }
 
-        if (Mathf.Abs(_moveInput.z) < 0.01f)
+        if (Mathf.Abs(_moveInput.y) < 0.01f)
         {
             float frictionY = Mathf.Min(Mathf.Abs(PlayerMain.Instance.Rigidbody2D.linearVelocity.y), Mathf.Abs(_friction));
             frictionY *= Mathf.Sign(PlayerMain.Instance.Rigidbody2D.linearVelocity.y);
-            PlayerMain.Instance.Rigidbody2D.AddForce(Vector3.forward * -frictionY);
+            PlayerMain.Instance.Rigidbody2D.AddForce(Vector3.up * -frictionY);
         }
     }
 
@@ -55,11 +55,11 @@ public class PlayerMove : MonoBehaviour
     {
         if (canMove)
         {
-            _moveInput = new Vector3(context.ReadValue<Vector2>().x, 0f, context.ReadValue<Vector2>().y);
+            _moveInput = new Vector2(context.ReadValue<Vector2>().x, context.ReadValue<Vector2>().y);
 
-            if (_moveInput != Vector3.zero)
+            if (_moveInput != Vector2.zero)
             {
-                PlayerMain.Instance.PlayerMesh.transform.rotation = Quaternion.LookRotation(_moveInput);
+                //PlayerMain.Instance.PlayerMesh.transform.rotation = Quaternion.LookRotation(_moveInput);
             }
         }
 

@@ -1,4 +1,4 @@
-/*using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 using PDollarGestureRecognizer;
 using System;
@@ -225,6 +225,18 @@ public class CastSpriteShape : MonoBehaviour
 
 
 
+    public List<Point> Vec3ToPoints(List<Vector3> list)
+    {
+        List<Point> listPoint = new List<Point>();
+
+        foreach (Vector3 point in list)
+        {
+            Point newPoint = new Point(point.x, point.y, 1);
+            listPoint.Add(newPoint);
+        }
+
+        return listPoint;
+    }
 
 
 
@@ -335,8 +347,8 @@ public class CastSpriteShape : MonoBehaviour
             maxZ = point.z > maxZ ? point.z : maxZ;
         }
 
-        *//*Debug.Log($"MinX : {minX}, MaxX : {maxX}, minY : {minY}, maxY : {maxY}");
-        Debug.Log($"distance X : {maxX - minX}, distance Y : {maxY - minY}");*//*
+        /*Debug.Log($"MinX : {minX}, MaxX : {maxX}, minY : {minY}, maxY : {maxY}");
+        Debug.Log($"distance X : {maxX - minX}, distance Y : {maxY - minY}");*/
 
         float X = minX >= 0 & maxX >= 0 ? minX : maxX;
 
@@ -502,4 +514,4 @@ public class CastSpriteShape : MonoBehaviour
     {
       
     }
-}*/
+}

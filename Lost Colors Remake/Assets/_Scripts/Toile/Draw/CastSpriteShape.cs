@@ -418,7 +418,7 @@ public class CastSpriteShape : MonoBehaviour
                 sphereColliderComponent.radius = (drawDim.x >= drawDim.y ? drawDim.x : drawDim.y) * 1.5f;
 
                 SimpleDash fireBall = (SimpleDash)SpellManager.Instance.GetSpell("SimpleDash");
-                SkillContext context = new(PlayerMain.Instance.Rigidbody, PlayerMain.Instance.gameObject, PlayerMain.Instance.transform.forward, 4);
+                SkillContext context = new(PlayerMain.Instance.Rigidbody2D, PlayerMain.Instance.gameObject, PlayerMain.Instance.transform.forward, 4);
                 fireBall.Activate(context);
                 //SpellManager.Instance.Spells["FireBall;Circle;E50037"].Activate(new(PlayerMain.Instance.Rigidbody, PlayerMain.Instance.gameObject, PlayerMain.Instance.transform.forward, 4));
 
@@ -456,7 +456,7 @@ public class CastSpriteShape : MonoBehaviour
                 Debug.Log("LE DESSIN C'EST UNE LIGNE, ATTAQUE NOOPY ATTAQUE");
 
                 fireBall = (SimpleDash)SpellManager.Instance.GetSpell("SimpleDash");
-                context = new(PlayerMain.Instance.Rigidbody, PlayerMain.Instance.gameObject, PlayerMain.Instance.transform.forward, 4);
+                context = new(PlayerMain.Instance.Rigidbody2D, PlayerMain.Instance.gameObject, PlayerMain.Instance.transform.forward, 4);
                 fireBall.Activate(context);
 
                 if (_ennemyObjectOnDraw.Count > 0)

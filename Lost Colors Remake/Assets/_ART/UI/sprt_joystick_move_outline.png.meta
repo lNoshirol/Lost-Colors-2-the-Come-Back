@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sprt_joystick_move_outline_0: 3754919283995821159
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

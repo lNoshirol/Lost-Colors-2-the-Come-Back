@@ -13,7 +13,7 @@ public class PlayerMain : MonoBehaviour
 
     public PlayerAttack Attack { get; private set; }
 
-    public Rigidbody Rigidbody { get; private set; }
+    public Rigidbody2D Rigidbody2D { get; private set; }
     [field: SerializeField] public GameObject ProjectileSocket { get; private set; }
     public GameObject PlayerMesh;
 
@@ -34,7 +34,7 @@ public class PlayerMain : MonoBehaviour
         Inventory = GetComponent<PlayerInventory>();
         Health = GetComponent<PlayerHealth>();
         UI = GetComponent<PlayerUI>();
-        Rigidbody = GetComponent<Rigidbody>();
+        Rigidbody2D = GetComponent<Rigidbody2D>();
         Attack = GetComponent<PlayerAttack>();
 
         playerInput = GetComponent<PlayerInput>();

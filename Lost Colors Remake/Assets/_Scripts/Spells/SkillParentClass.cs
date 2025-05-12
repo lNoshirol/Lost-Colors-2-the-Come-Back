@@ -46,9 +46,9 @@ public abstract class SkillParentClass
     #endregion
 
     #region Subskills
-    protected void Dash(Rigidbody rb, Vector3 direction, float force)
+    protected void Dash(Rigidbody2D rb, Vector3 direction, float force)
     {
-        rb.AddForce(direction * force, ForceMode.Impulse);
+        rb.AddForce(direction * force, ForceMode2D.Impulse);
         //Delegate[] functions = { PrintRandomTest, PrintRandomTest, PrintRandomTest };
         //DelayedFunction(functions, 1f);
     }

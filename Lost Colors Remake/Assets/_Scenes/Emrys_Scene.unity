@@ -1670,10 +1670,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _topSpeed: 1.4
-  _acceleration: 1.4
-  _deceleration: 120
-  _velocityPower: 0.087
-  _friction: 1
+  _acceleration: 3.6
+  _deceleration: 4.8
+  _velocityPower: 0.87
+  _friction: 0.75
   canMove: 0
 --- !u!114 &1551734100
 MonoBehaviour:

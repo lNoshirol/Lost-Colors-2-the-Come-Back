@@ -3,20 +3,24 @@ using UnityEngine.AI;
 
 public class EPatrolState : EnemiesState
 {
-    [SerializeField] 
-    float patrolSpeedMultiplier;
     [SerializeField]
-    float walkPointRange;
+    private float patrolSpeedMultiplier;
+
     [SerializeField]
-    Vector3 walkPoint;
+    private float walkPointRange;
+
     [SerializeField]
-    bool walkPointSet = false;
+    private Vector2 walkPoint;
+
+    [SerializeField]
+    private bool walkPointSet = false;
 
     public override void OnEnter()
     {
-        //EnemiesMain.mat.color = Color.green;
+        
         SearchWalkPoint();
     }
+
     public override void Do()
     {
         if (!walkPointSet)
@@ -43,44 +47,42 @@ public class EPatrolState : EnemiesState
 
     public override void FixedDo()
     {
+        
     }
+
     public override void OnExit()
     {
         walkPointSet = false;
-
     }
 
     private void SearchWalkPoint()
     {
-        float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+        float randomY = Random.Range(-walkPointRange, walkPointRange);
+        walkPoint = new Vector2(transform.position.x + randomX, transform.position.y + randomY);
 
-        if (Physics.Raycast(walkPoint, -transform.up, 2f, EnemiesMain.whatIsGround))
+        
+        RaycastHit2D groundHit = Physics2D.Raycast(walkPoint, Vector2.down, 0.1f, EnemiesMain.whatIsGround);
+
+        if (groundHit.collider != null)
         {
-            NavMeshHit hit;
-            if (NavMesh.SamplePosition(walkPoint, out hit, 1f, NavMesh.AllAreas))
+            NavMeshHit navHit;
+            if (NavMesh.SamplePosition(walkPoint, out navHit, 2f, NavMesh.AllAreas))
             {
+                walkPoint = navHit.position;
                 walkPointSet = true;
             }
         }
     }
 
-    private void SetEnemyDestination(Vector3 destination)
+    private void SetEnemyDestination(Vector2 destination)
     {
         EnemiesMain.agent.SetDestination(destination);
     }
 
     private bool DestinationReach()
     {
-        bool destinationReach = false;
-        Vector3 distanceToWalkPoint = transform.position - walkPoint;
-
-        if (distanceToWalkPoint.magnitude < 1f)
-        {
-            return destinationReach = true;
-        }
-        return destinationReach;
+        return Vector2.Distance(transform.position, walkPoint) < 0.5f;
     }
 
 }

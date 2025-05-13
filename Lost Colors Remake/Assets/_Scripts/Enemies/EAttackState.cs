@@ -14,11 +14,9 @@ public class EAttackState : EnemiesState
     public override void Do()
     {
         if (!alreadyAttack) {
-
-            transform.LookAt(EnemiesMain.player);
-            ///TEMP 
-            Rigidbody rb = Instantiate(EnemiesMain.projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            Vector2 direction = (EnemiesMain.player.position - transform.position).normalized;
+            Rigidbody2D rb = Instantiate(EnemiesMain.projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
+            rb.AddForce(direction * 10f, ForceMode2D.Impulse);
             alreadyAttack = true;
             Invoke(nameof(ResetAttack), attackCooldown);
         }

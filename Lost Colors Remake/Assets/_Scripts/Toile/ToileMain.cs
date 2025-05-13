@@ -6,7 +6,7 @@ public class ToileMain : MonoBehaviour
     [SerializeField] private int timeAmount;
     [SerializeField] public int toileTime = 60;
 
-    [SerializeField] public CastSpriteShape CastSpriteShape;
+    [SerializeField] public DrawForDollarP CastSpriteShape;
 
     public static ToileMain Instance { get; private set; }
     public ToileUI ToileUI { get; private set; }

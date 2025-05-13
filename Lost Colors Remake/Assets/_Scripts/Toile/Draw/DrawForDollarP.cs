@@ -4,6 +4,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.UIElements;
 
 public class DrawForDollarP : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class DrawForDollarP : MonoBehaviour
     [SerializeField] private float distanceBetweenPoint;
     private float currentDistance;
     [SerializeField] private List<Vector3> points = new();
+    [SerializeField] private Vector2 _currentPoint;
     [SerializeField] float _drawOffset;
     private DrawData _drawData;
     [SerializeField] private Color _currentColor;
@@ -53,17 +55,31 @@ public class DrawForDollarP : MonoBehaviour
 
     void Update()
     {
-        if (touchingScreen)
+        /*if (touchingScreen)
         {
-            ToileMain.Instance.RaycastDraw.DrawRayCastInRealTime();
+            //ToileMain.Instance.RaycastDraw.DrawRayCastInRealTime();
             AddPoint();
-        }
+        }*/
+
+        AddPoint2D();
 
         //DebugRay();
-        ToileMain.Instance.RaycastDraw.DebugRaycastLines();
+        //ToileMain.Instance.RaycastDraw.DebugRaycastLines();
+
+        /*if (Touchscreen.current != null)
+        {
+            _currentPoint = Cam.ScreenToWorldPoint(Touchscreen.current.position.ReadValue());
+            Debug.Log("Screen : " + _currentPoint);
+        }
+
+        else if (Mouse.current != null)
+        {
+            _currentPoint = Cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            Debug.Log("Mouse : " + _currentPoint);
+        }*/
+
     }
 
-    [Obsolete]
     public void OnTouchScreen(InputAction.CallbackContext callbackContext)
     {
         //Debug.Log($"CastSpriteShape L74/ AAAAAAAAAAAAH {gameObject.transform.parent.gameObject.activeSelf}");
@@ -155,6 +171,39 @@ public class DrawForDollarP : MonoBehaviour
         {
             lineRenderer.positionCount = points.Count;
             lineRenderer.SetPositions(points.ToArray());
+        }
+    }
+
+    private void AddPoint2D()
+    {
+        if (Touchscreen.current != null)
+        {
+            _currentPoint = Touchscreen.current.position.ReadValue();
+        }
+
+        else if (Mouse.current != null)
+        {
+            _currentPoint = Mouse.current.position.ReadValue();
+        }
+
+        if (points.Count == 0)
+        {
+            points.Add(_currentPoint);
+
+            UpdateLinePoints();
+            return;
+        }
+        else
+        {
+            currentDistance = Vector3.Distance(points[points.Count - 1], _currentPoint);
+
+            if (currentDistance >= distanceBetweenPoint)
+            {
+                points.Add(_currentPoint);
+                
+                UpdateLinePoints();
+                return;
+            }
         }
     }
 

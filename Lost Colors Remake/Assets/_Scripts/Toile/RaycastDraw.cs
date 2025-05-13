@@ -22,7 +22,7 @@ public class RaycastDraw : MonoBehaviour
     private GameObject meshObject;
     private Mesh mesh;
 
-    [SerializeField] private CastSpriteShape _pen;
+    [SerializeField] private DrawForDollarP _pen;
     [SerializeField] private MeshFilter _filter;
 
     //test

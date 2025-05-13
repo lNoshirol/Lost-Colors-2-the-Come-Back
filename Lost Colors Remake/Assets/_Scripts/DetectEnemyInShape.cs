@@ -4,7 +4,7 @@ using UnityEngine;
 public class DetectEnemyInShape : MonoBehaviour
 {
     [SerializeField] private RaycastDraw _rayCastDraw;
-    [SerializeField] private CastSpriteShape _pen;
+    [SerializeField] private DrawForDollarP _pen;
     private List<Vector2> _shapePoints = new();
     private List<Vector2> _target2DPos = new();
     private List<GameObject> _targets = new();

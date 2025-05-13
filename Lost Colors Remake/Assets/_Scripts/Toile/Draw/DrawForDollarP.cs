@@ -12,7 +12,7 @@ public class DrawForDollarP : MonoBehaviour
     [SerializeField] private float distanceBetweenPoint;
     private float currentDistance;
     [SerializeField] private List<Vector3> points = new();
-    [SerializeField] private Vector2 _currentPoint;
+    public Vector2 _currentPoint;
     [SerializeField] float _drawOffset;
     private DrawData _drawData;
     [SerializeField] private Color _currentColor;
@@ -63,10 +63,11 @@ public class DrawForDollarP : MonoBehaviour
 
         AddPoint2D();
 
+
         //DebugRay();
         //ToileMain.Instance.RaycastDraw.DebugRaycastLines();
 
-        
+
 
     }
 
@@ -179,6 +180,7 @@ public class DrawForDollarP : MonoBehaviour
         if (points.Count == 0)
         {
             points.Add(_currentPoint);
+            ToileMain.Instance.RaycastDraw.DrawRayCastInRealTime();
 
             UpdateLinePoints();
             return;
@@ -190,7 +192,8 @@ public class DrawForDollarP : MonoBehaviour
             if (currentDistance >= distanceBetweenPoint)
             {
                 points.Add(_currentPoint);
-                
+                ToileMain.Instance.RaycastDraw.DrawRayCastInRealTime();
+
                 UpdateLinePoints();
                 return;
             }

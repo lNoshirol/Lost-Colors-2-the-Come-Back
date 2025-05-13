@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 public class FingerTouchHandler : MonoBehaviour
 {
-    [SerializeField] private CastSpriteShape castSpriteShape;
+    [SerializeField] private DrawForDollarP castSpriteShape;
+
 
     private void OnEnable()
     {

@@ -22,8 +22,8 @@ public class EnemiesMain : MonoBehaviour
 
     public Rigidbody rb { get; private set; }
     public Transform player { get; private set; }
-    public Vector3 position { get; private set; }
-    public Vector3 velocity { get; private set; }
+    public Vector2 position { get; private set; }
+    public Vector2 velocity { get; private set; }
 
     //Range
 
@@ -61,6 +61,15 @@ public class EnemiesMain : MonoBehaviour
         EIdleState.Setup(this);
         EnemiesCurrentState = EIdleState;
         EnemiesCurrentState?.OnEnter();
+
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(transform.position, out hit, 1f, NavMesh.AllAreas))
+        {
+            transform.position = hit.position;
+        }
+
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
 
     }
 

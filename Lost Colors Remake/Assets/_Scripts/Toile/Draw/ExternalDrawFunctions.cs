@@ -186,7 +186,7 @@ public class ExternalDrawFunctions : MonoBehaviour
                 sphereColliderComponent.radius = (drawDim.x >= drawDim.y ? drawDim.x : drawDim.y) * 1.5f;
 
                 SimpleDash fireBall = (SimpleDash)SpellManager.Instance.GetSpell("SimpleDash");
-                SkillContext context = new(PlayerMain.Instance.Rigidbody, PlayerMain.Instance.gameObject, PlayerMain.Instance.transform.forward, 4);
+                SkillContext context = new(PlayerMain.Instance.Rigidbody2D, PlayerMain.Instance.gameObject, PlayerMain.Instance.transform.up, 4);
                 fireBall.Activate(context);
                 //SpellManager.Instance.Spells["FireBall;Circle;E50037"].Activate(new(PlayerMain.Instance.Rigidbody, PlayerMain.Instance.gameObject, PlayerMain.Instance.transform.forward, 4));
 
@@ -196,13 +196,13 @@ public class ExternalDrawFunctions : MonoBehaviour
                 BoxCollider boxColliderComponent;
                 collider.TryGetComponent(out boxColliderComponent);
 
-                Vector3 cameraForward = Cam.transform.forward;
+                Vector3 cameraForward = Cam.transform.up;
                 Vector3 cameraRight = Cam.transform.right;
 
                 Vector3 toTarget = (collider.transform.position - Cam.transform.position).normalized;
 
                 float signedAngle = Vector3.SignedAngle(cameraForward, toTarget, Vector3.up);
-                float signedAngleUp = Vector3.SignedAngle(cameraRight, toTarget, Vector3.forward);
+                float signedAngleUp = Vector3.SignedAngle(cameraRight, toTarget, Vector3.up);
 
                 //Debug.Log($"Angle : {signedAngle}, AngleUp {signedAngleUp}");
 
@@ -224,7 +224,7 @@ public class ExternalDrawFunctions : MonoBehaviour
                 Debug.Log("LE DESSIN C'EST UNE LIGNE, ATTAQUE NOOPY ATTAQUE");
 
                 fireBall = (SimpleDash)SpellManager.Instance.GetSpell("SimpleDash");
-                context = new(PlayerMain.Instance.Rigidbody, PlayerMain.Instance.gameObject, PlayerMain.Instance.transform.forward, 4);
+                context = new(PlayerMain.Instance.Rigidbody2D, PlayerMain.Instance.gameObject, PlayerMain.Instance.transform.up, 4);
                 fireBall.Activate(context);
 
                 if (_catchEnnemy._ennemyObjectOnDraw.Count > 0)

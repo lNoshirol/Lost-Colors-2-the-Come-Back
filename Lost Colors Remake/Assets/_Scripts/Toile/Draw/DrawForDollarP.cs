@@ -66,17 +66,7 @@ public class DrawForDollarP : MonoBehaviour
         //DebugRay();
         //ToileMain.Instance.RaycastDraw.DebugRaycastLines();
 
-        /*if (Touchscreen.current != null)
-        {
-            _currentPoint = Cam.ScreenToWorldPoint(Touchscreen.current.position.ReadValue());
-            Debug.Log("Screen : " + _currentPoint);
-        }
-
-        else if (Mouse.current != null)
-        {
-            _currentPoint = Cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-            Debug.Log("Mouse : " + _currentPoint);
-        }*/
+        
 
     }
 
@@ -178,12 +168,12 @@ public class DrawForDollarP : MonoBehaviour
     {
         if (Touchscreen.current != null)
         {
-            _currentPoint = Touchscreen.current.position.ReadValue();
+            _currentPoint = Cam.ScreenToWorldPoint(Touchscreen.current.position.ReadValue());
         }
 
         else if (Mouse.current != null)
         {
-            _currentPoint = Mouse.current.position.ReadValue();
+            _currentPoint = Cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         }
 
         if (points.Count == 0)

@@ -45,7 +45,7 @@ public class PlayerMain : MonoBehaviour
 
     private void Start()
     {
-        CameraMain.Instance.CenterCameraAtPosition(Instance.transform.position);
+        //CameraMain.Instance.CenterCameraAtPosition(Instance.transform.position);
     }
 
 }

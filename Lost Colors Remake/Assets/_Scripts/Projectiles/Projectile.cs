@@ -21,11 +21,11 @@ public class Projectile : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(other.gameObject.layer == 7)
+        if (collision.gameObject.layer == 8)
         {
-            PlayerMain player = other.gameObject.TryGetComponent(out PlayerMain playerD) ? playerD:null; 
+            PlayerMain player = collision.gameObject.TryGetComponent(out PlayerMain playerD) ? playerD : null;
             player.Health.PlayerHealthChange(_projectileDatas.Damage);
         }
     }

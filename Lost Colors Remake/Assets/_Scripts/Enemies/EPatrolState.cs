@@ -63,15 +63,12 @@ public class EPatrolState : EnemiesState
 
         
         RaycastHit2D groundHit = Physics2D.Raycast(walkPoint, Vector2.down, 0.1f, EnemiesMain.whatIsGround);
-        Debug.Log("je cherche");
 
         if (groundHit.collider != null)
         {
-            Debug.Log("J'ai hit");
             NavMeshHit navHit;
             if (NavMesh.SamplePosition(walkPoint, out navHit, 2f, NavMesh.AllAreas))
             {
-                Debug.Log("J'y vais");
                 walkPoint = navHit.position;
                 walkPointSet = true;
             }

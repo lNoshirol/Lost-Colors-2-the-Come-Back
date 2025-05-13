@@ -24,6 +24,7 @@ public class EnemiesMain : MonoBehaviour
     public Transform player { get; private set; }
     public Vector2 position { get; private set; }
     public Vector2 velocity { get; private set; }
+    [SerializeField] SpriteRenderer spriteRenderer;
 
     //Range
 
@@ -76,6 +77,9 @@ public class EnemiesMain : MonoBehaviour
     private void Update()
     {
         EnemiesCurrentState?.Do();
+        FlipSprite();
+
+
     }
 
     private void FixedUpdate()
@@ -95,7 +99,7 @@ public class EnemiesMain : MonoBehaviour
         if (Time.time >= nextSightCheckTime)
         {
             nextSightCheckTime = Time.time + checkInterval;
-            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            playerInSightRange = Physics2D.OverlapCircle(transform.position, sightRange, whatIsPlayer);
         }
         return playerInSightRange;
     }
@@ -105,7 +109,7 @@ public class EnemiesMain : MonoBehaviour
         if (Time.time >= nextAttackCheckTime)
         {
             nextAttackCheckTime = Time.time + checkInterval;
-            playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+            playerInAttackRange = Physics2D.OverlapCircle(transform.position, attackRange, whatIsPlayer);
         }
         return playerInAttackRange;
     }
@@ -116,5 +120,17 @@ public class EnemiesMain : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
+
+    private void FlipSprite()
+    {
+        if(agent.velocity.normalized.x > 0.01f)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if(agent.velocity.normalized.x < -0.01f)
+        {
+            spriteRenderer.flipX = true;
+        }
     }
 }

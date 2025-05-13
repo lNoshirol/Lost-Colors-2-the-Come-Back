@@ -213,7 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolSpeedMultiplier: 1
   walkPointRange: 20
-  walkPoint: {x: 0, y: 0, z: 0}
+  walkPoint: {x: 0, y: 0}
   walkPointSet: 0
 --- !u!1 &4877568866340885713
 GameObject:
@@ -504,7 +504,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6695722471592870552}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -538,6 +538,7 @@ MonoBehaviour:
   EnemiesCurrentState: {fileID: 0}
   agent: {fileID: 4349718614920837913}
   enemyMesh: {fileID: 3478162577142185268}
+  spriteRenderer: {fileID: 7737749079377589711}
   sightRange: 20
   attackRange: 10
   playerInSightRange: 0
@@ -548,7 +549,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
-  projectile: {fileID: 0}
+  projectile: {fileID: 5537566206245424735, guid: 372614bd1b97bd349b0782a71dd2cab8, type: 3}
   mat: {fileID: 0}
 --- !u!114 &3820118662184904292
 MonoBehaviour:
@@ -669,7 +670,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &6779289311008023966
 GameObject:
   m_ObjectHideFlags: 0

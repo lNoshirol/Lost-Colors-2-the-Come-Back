@@ -50,6 +50,10 @@ public class DrawForDollarP : MonoBehaviour
 
         Cam = Camera.main;
 
+
+        //ClickManager.instance.OnClickStart += OnTouchStart;
+        //ClickManager.instance.OnClickEnd += OnTouchEnd;
+
         //Debug.Log("CastSpriteShape.cs l59/ " + _currentColor.ToString());
     }
 
@@ -61,7 +65,7 @@ public class DrawForDollarP : MonoBehaviour
             AddPoint();
         }*/
 
-        AddPoint2D();
+        //AddPoint2D();
 
 
         //DebugRay();
@@ -89,6 +93,8 @@ public class DrawForDollarP : MonoBehaviour
     [Obsolete]
     public void OnTouchStart()
     {
+        Debug.Log("gawr gura AH");
+
         ToileMain.Instance.RaycastDraw.ClearRaycastLines();
         touchingScreen = true;
         points.Clear();
@@ -112,7 +118,7 @@ public class DrawForDollarP : MonoBehaviour
             Gesture candidate = new Gesture(drawReady.ToArray());
             Result gestureResult = PointCloudRecognizer.Classify(candidate, trainingSet.ToArray());
 
-            Debug.Log(gestureResult.GestureClass + " " + gestureResult.Score);
+            //Debug.Log(gestureResult.GestureClass + " " + gestureResult.Score);
 
             //TryMakeAdaptativeCollider(GetDrawCenter(points), gestureResult);
 
@@ -167,6 +173,9 @@ public class DrawForDollarP : MonoBehaviour
 
     private void AddPoint2D()
     {
+        Debug.Log("TouchScreen : " + Touchscreen.current);
+        Debug.Log("Mouse : " + Mouse.current);
+
         if (Touchscreen.current != null)
         {
             _currentPoint = Cam.ScreenToWorldPoint(Touchscreen.current.position.ReadValue());

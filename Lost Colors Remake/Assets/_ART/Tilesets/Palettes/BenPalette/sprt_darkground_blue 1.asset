@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: sprt_ground_blue 1_0
+  m_Name: sprt_darkground_blue 1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -8530078985065344715, guid: 893b373686423754ea321c234d7caf5b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a259a312e7b48540ba5c81cb9c209fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

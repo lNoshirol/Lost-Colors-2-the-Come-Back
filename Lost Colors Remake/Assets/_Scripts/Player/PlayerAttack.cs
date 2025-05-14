@@ -22,6 +22,8 @@ public class PlayerAttack : MonoBehaviour
 
     public static int NbOfClicks = 0;
 
+    private float[] comboMultipliers = { 1f, 1.1f, 1.3f };
+
     private void Start()
     {
         attackArea.SetActive(false);
@@ -29,18 +31,20 @@ public class PlayerAttack : MonoBehaviour
 
     public void BaseAttack(InputAction.CallbackContext context)
     {
-        if (canAttack && PlayerMain.Instance.Inventory.ItemDatabase[ItemTypeEnum.Paintbrush])
-        {
+        if (!canAttack || !PlayerHasPaintbrush()) return;
             OnAttack();
-        }
     }
 
     public void BaseAttackMobile()
     {
-        if (canAttack && PlayerMain.Instance.Inventory.ItemDatabase[ItemTypeEnum.Paintbrush])
-        {
-            OnAttack();
-        }
+        if (!canAttack || !PlayerHasPaintbrush()) return;
+
+        OnAttack();
+    }
+
+    private bool PlayerHasPaintbrush()
+    {
+        return PlayerMain.Instance.Inventory.ItemDatabase[ItemTypeEnum.Paintbrush];
     }
 
     public void OnAttack()
@@ -51,46 +55,35 @@ public class PlayerAttack : MonoBehaviour
         StartCoroutine(ComboAttack());
     }
 
+
     private IEnumerator ComboAttack()
     {
         isAttacking = true;
         canAttack = false;
 
-        if (NbOfClicks == 1)
-        {
-            attackDamageAmount = baseDamageAmount;
-            animator.SetBool("A1", true);
-            couroutineuh = StartCoroutine(DelayCombo());
-        }
-        else if (NbOfClicks == 2)
-        {
-            attackDamageAmount = baseDamageAmount * 1.1f;
-            StopCoroutine(couroutineuh);
-            animator.SetBool("A2", true);
-            couroutineuh = StartCoroutine(DelayCombo());
+        int comboIndex = Mathf.Clamp(NbOfClicks - 1, 0, comboMultipliers.Length - 1);
+        attackDamageAmount = baseDamageAmount * comboMultipliers[comboIndex];
 
-        }
-        else if (NbOfClicks == 3)
+        if (couroutineuh != null)
         {
-            attackDamageAmount = baseDamageAmount * 1.3f;
             StopCoroutine(couroutineuh);
-            animator.SetBool("A3", true);
-            StartCoroutine(DelayCombo());
-
         }
+
+        couroutineuh = StartCoroutine(DelayCombo(comboIndex + 1));
+
+        Debug.Log($"Combo {comboIndex + 1}");
+
         yield return new WaitForSeconds(animationDuration);
-        yield return new WaitForSeconds(comboDelay);
 
         canAttack = true;
         isAttacking = false;
     }
 
-    private IEnumerator DelayCombo()
+    private IEnumerator DelayCombo(int combo)
     {
-        yield return new WaitForSeconds(comboDelay*2);
-        animator.SetBool("A1", false);
-        animator.SetBool("A2", false);
-        animator.SetBool("A3", false);
+        animator.SetTrigger("Attack" + combo);
+        yield return new WaitForSeconds(comboDelay);
         NbOfClicks = 0;
     }
+
 }

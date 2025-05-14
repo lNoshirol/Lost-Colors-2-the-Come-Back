@@ -435,9 +435,9 @@ MonoBehaviour:
     m_ActionName: 'Player/Sprint[/Keyboard/leftShift]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 489137973}
-        m_TargetAssemblyTypeName: ClickManager, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 147683599}
+        m_TargetAssemblyTypeName: DrawForDollarP, Assembly-CSharp
+        m_MethodName: OnTouchScreen
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -490,7 +490,7 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Touch
+  m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -842,7 +842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -803, y: -279}
+  m_AnchoredPosition: {x: -740, y: -321}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &395155425
@@ -914,7 +914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &489137972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,6 +928,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stick: {fileID: 395155423}
+  _stickController: {fileID: 0}
+  bounds:
+    m_Center: {x: 415, y: 316, z: 0}
+    m_Extent: {x: 200, y: 133.33333, z: 0}
 --- !u!114 &489137973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,7 +969,6 @@ GameObject:
   m_Component:
   - component: {fileID: 508890045}
   - component: {fileID: 508890044}
-  - component: {fileID: 508890042}
   - component: {fileID: 508890046}
   - component: {fileID: 508890049}
   - component: {fileID: 508890048}
@@ -977,52 +980,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &508890042
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508890041}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &508890044
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1341,7 +1298,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660134592}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 936b201522372ad4598afdacfacfef63, type: 3}
   m_Name: 
@@ -1353,12 +1310,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660134592}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5624df5d284f364fb79e5d97bd1fe6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _stick: {fileID: 975024517}
+  _stickController: {fileID: 0}
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!114 &660134608 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4925874406817020376, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
@@ -1872,6 +1833,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 156360834068830225, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: canMove
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 268813919245903404, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: m_Behaviour
       value: 0

@@ -65,7 +65,7 @@ public class DrawForDollarP : MonoBehaviour
             AddPoint();
         }*/
 
-        //AddPoint2D();
+        AddPoint2D();
 
 
         //DebugRay();

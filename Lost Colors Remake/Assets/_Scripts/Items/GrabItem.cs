@@ -7,6 +7,7 @@ public class GrabItem : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             PlayerMain.Instance.Inventory.AddItemToInventory(type);
+            gameObject.SetActive(false);
         }
     }
 }

@@ -38,8 +38,6 @@ public class PlayerMain : MonoBehaviour
         Attack = GetComponent<PlayerAttack>();
 
         playerInput = GetComponent<PlayerInput>();
-
-        DontDestroyOnLoad(gameObject);
     }
 
 

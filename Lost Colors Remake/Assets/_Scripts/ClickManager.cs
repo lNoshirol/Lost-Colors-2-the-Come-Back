@@ -9,6 +9,8 @@ public class ClickManager : MonoBehaviour
     public event Action OnClickStart;
     public event Action OnClickEnd;
 
+    public bool TouchScreen {  get; private set; }
+
     private void Awake()
     {
 
@@ -24,7 +26,18 @@ public class ClickManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            OnClickStart?.Invoke();
+            TouchScreen = true;
+            Debug.Log("click start");
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            OnClickEnd?.Invoke();
+            TouchScreen = false;
+            Debug.Log("Click End");
+        }
     }
 
     public void OnClick(InputAction.CallbackContext callbackContext)

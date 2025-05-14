@@ -1,0 +1,1778 @@
+fileFormatVersion: 2
+guid: a312e8953f45b844fa4136c1f7065080
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3067867460902864255
+    second: Human-Worker-Cyan_0
+  - first:
+      213: -3963918395118175434
+    second: Human-Worker-Cyan_1
+  - first:
+      213: -7496440205879209260
+    second: Human-Worker-Cyan_2
+  - first:
+      213: 4782527470758755366
+    second: Human-Worker-Cyan_3
+  - first:
+      213: -1882607576979959731
+    second: Human-Worker-Cyan_4
+  - first:
+      213: 103714190389854346
+    second: Human-Worker-Cyan_5
+  - first:
+      213: -4071411183059525243
+    second: Human-Worker-Cyan_6
+  - first:
+      213: -8372438290159640578
+    second: Human-Worker-Cyan_7
+  - first:
+      213: -4825661529962332590
+    second: Human-Worker-Cyan_8
+  - first:
+      213: -6148125392449554986
+    second: Human-Worker-Cyan_9
+  - first:
+      213: -7006928716436282437
+    second: Human-Worker-Cyan_10
+  - first:
+      213: -1872247997637338815
+    second: Human-Worker-Cyan_11
+  - first:
+      213: -1045313895994225360
+    second: Human-Worker-Cyan_12
+  - first:
+      213: 7976433435137045940
+    second: Human-Worker-Cyan_13
+  - first:
+      213: -5054671002882577506
+    second: Human-Worker-Cyan_14
+  - first:
+      213: -8330538137542444201
+    second: Human-Worker-Cyan_15
+  - first:
+      213: 5693235058330940480
+    second: Human-Worker-Cyan_16
+  - first:
+      213: -3502998146284827830
+    second: Human-Worker-Cyan_17
+  - first:
+      213: -2658209923169772024
+    second: Human-Worker-Cyan_18
+  - first:
+      213: 6722842158772886033
+    second: Human-Worker-Cyan_19
+  - first:
+      213: -5977750265413409593
+    second: Human-Worker-Cyan_20
+  - first:
+      213: -6139763478142647777
+    second: Human-Worker-Cyan_21
+  - first:
+      213: 8112073101433066955
+    second: Human-Worker-Cyan_22
+  - first:
+      213: -6950301029140295309
+    second: Human-Worker-Cyan_23
+  - first:
+      213: 872211256471820855
+    second: Human-Worker-Cyan_24
+  - first:
+      213: -5978197441153226668
+    second: Human-Worker-Cyan_25
+  - first:
+      213: 7219334427078251555
+    second: Human-Worker-Cyan_26
+  - first:
+      213: -2936770228914277914
+    second: Human-Worker-Cyan_27
+  - first:
+      213: 5178194345573791559
+    second: Human-Worker-Cyan_28
+  - first:
+      213: 3131065305332174682
+    second: Human-Worker-Cyan_29
+  - first:
+      213: -8396648958645076659
+    second: Human-Worker-Cyan_30
+  - first:
+      213: -4187242272123774066
+    second: Human-Worker-Cyan_31
+  - first:
+      213: -7210941265714766089
+    second: Human-Worker-Cyan_32
+  - first:
+      213: 6044827188853740235
+    second: Human-Worker-Cyan_33
+  - first:
+      213: 5119177726140015780
+    second: Human-Worker-Cyan_34
+  - first:
+      213: 4026561048558329298
+    second: Human-Worker-Cyan_35
+  - first:
+      213: 1215532045841450616
+    second: Human-Worker-Cyan_36
+  - first:
+      213: 7533113448211974955
+    second: Human-Worker-Cyan_37
+  - first:
+      213: -2085438604113694389
+    second: Human-Worker-Cyan_38
+  - first:
+      213: -8160184074077048458
+    second: Human-Worker-Cyan_39
+  - first:
+      213: -2999757946148275632
+    second: Human-Worker-Cyan_40
+  - first:
+      213: -7770203665040294763
+    second: Human-Worker-Cyan_41
+  - first:
+      213: 2470708580996272838
+    second: Human-Worker-Cyan_42
+  - first:
+      213: 5690287673248696155
+    second: Human-Worker-Cyan_43
+  - first:
+      213: -3279745357183938776
+    second: Human-Worker-Cyan_44
+  - first:
+      213: -4746395829559024082
+    second: Human-Worker-Cyan_45
+  - first:
+      213: -2087769245346214139
+    second: Human-Worker-Cyan_46
+  - first:
+      213: 5925995476743413905
+    second: Human-Worker-Cyan_47
+  - first:
+      213: -1491853648574702387
+    second: Human-Worker-Cyan_48
+  - first:
+      213: 2601149500535423194
+    second: Human-Worker-Cyan_49
+  - first:
+      213: -5986239490427289780
+    second: Human-Worker-Cyan_50
+  - first:
+      213: 5990438767568018070
+    second: Human-Worker-Cyan_51
+  - first:
+      213: -3224853857485927952
+    second: Human-Worker-Cyan_52
+  - first:
+      213: -4447036151601984927
+    second: Human-Worker-Cyan_53
+  - first:
+      213: -7398632603884911467
+    second: Human-Worker-Cyan_54
+  - first:
+      213: 517364282321633600
+    second: Human-Worker-Cyan_55
+  - first:
+      213: 1988816866606759421
+    second: Human-Worker-Cyan_56
+  - first:
+      213: -6703352731305248263
+    second: Human-Worker-Cyan_57
+  - first:
+      213: 283475052773951440
+    second: Human-Worker-Cyan_58
+  - first:
+      213: -1038119055018091668
+    second: Human-Worker-Cyan_59
+  - first:
+      213: -2058199168913860688
+    second: Human-Worker-Cyan_60
+  - first:
+      213: -1300246592006722822
+    second: Human-Worker-Cyan_61
+  - first:
+      213: 6590155320368415519
+    second: Human-Worker-Cyan_62
+  - first:
+      213: 8212582839141198410
+    second: Human-Worker-Cyan_63
+  - first:
+      213: 5539902201052173245
+    second: Human-Worker-Cyan_64
+  - first:
+      213: 5747286898028166123
+    second: Human-Worker-Cyan_65
+  - first:
+      213: -30608435939443667
+    second: Human-Worker-Cyan_66
+  - first:
+      213: 2799731792929444763
+    second: Human-Worker-Cyan_67
+  - first:
+      213: -4518803552443807097
+    second: Human-Worker-Cyan_68
+  - first:
+      213: 175469365700585875
+    second: Human-Worker-Cyan_69
+  - first:
+      213: -5289365137418289078
+    second: Human-Worker-Cyan_70
+  - first:
+      213: -6376810004178859881
+    second: Human-Worker-Cyan_71
+  - first:
+      213: 5340636017860470653
+    second: Human-Worker-Cyan_72
+  - first:
+      213: -8145632643754262298
+    second: Human-Worker-Cyan_73
+  - first:
+      213: -9114187786471882930
+    second: Human-Worker-Cyan_74
+  - first:
+      213: -4547443188921338593
+    second: Human-Worker-Cyan_75
+  - first:
+      213: -4053516114017945749
+    second: Human-Worker-Cyan_76
+  - first:
+      213: -5510558256968824050
+    second: Human-Worker-Cyan_77
+  - first:
+      213: 8995155008846776754
+    second: Human-Worker-Cyan_78
+  - first:
+      213: 266011481692992666
+    second: Human-Worker-Cyan_79
+  - first:
+      213: 8939791063262186285
+    second: Human-Worker-Cyan_80
+  - first:
+      213: 6418914817365378399
+    second: Human-Worker-Cyan_81
+  - first:
+      213: 1992169142877471206
+    second: Human-Worker-Cyan_82
+  - first:
+      213: -3348195022803660609
+    second: Human-Worker-Cyan_83
+  - first:
+      213: -5524622816679514272
+    second: Human-Worker-Cyan_84
+  - first:
+      213: -7688799600175354792
+    second: Human-Worker-Cyan_85
+  - first:
+      213: -464757624200437574
+    second: Human-Worker-Cyan_86
+  - first:
+      213: 5821538162109845052
+    second: Human-Worker-Cyan_87
+  - first:
+      213: -1651844684682795140
+    second: Human-Worker-Cyan_88
+  - first:
+      213: 4544873240221454460
+    second: Human-Worker-Cyan_89
+  - first:
+      213: 1908451684035031891
+    second: Human-Worker-Cyan_90
+  - first:
+      213: -6079358851366149872
+    second: Human-Worker-Cyan_91
+  - first:
+      213: 8863387622522364661
+    second: Human-Worker-Cyan_92
+  - first:
+      213: -1801440358664829411
+    second: Human-Worker-Cyan_93
+  - first:
+      213: -3491239164970212456
+    second: Human-Worker-Cyan_94
+  - first:
+      213: 3490394330555708497
+    second: Human-Worker-Cyan_95
+  - first:
+      213: 2453526712537435046
+    second: Human-Worker-Cyan_96
+  - first:
+      213: -8399512421486244369
+    second: Human-Worker-Cyan_97
+  - first:
+      213: 8568451601822726037
+    second: Human-Worker-Cyan_98
+  - first:
+      213: -6950037235116344649
+    second: Human-Worker-Cyan_99
+  - first:
+      213: -4543911404333388766
+    second: Human-Worker-Cyan_100
+  - first:
+      213: -6546120929465578912
+    second: Human-Worker-Cyan_101
+  - first:
+      213: 618926399705032337
+    second: Human-Worker-Cyan_102
+  - first:
+      213: 1099132895221813480
+    second: Human-Worker-Cyan_103
+  - first:
+      213: -5893616703628279944
+    second: Human-Worker-Cyan_104
+  - first:
+      213: -1250191838354765984
+    second: Human-Worker-Cyan_105
+  - first:
+      213: -3415426201141531906
+    second: Human-Worker-Cyan_106
+  - first:
+      213: 7222661912496492385
+    second: Human-Worker-Cyan_107
+  - first:
+      213: -1294835153160563389
+    second: Human-Worker-Cyan_108
+  - first:
+      213: -3543469471789256766
+    second: Human-Worker-Cyan_109
+  - first:
+      213: -9132658385300805882
+    second: Human-Worker-Cyan_110
+  - first:
+      213: -780311306186323502
+    second: Human-Worker-Cyan_111
+  - first:
+      213: -1143278501965592145
+    second: Human-Worker-Cyan_112
+  - first:
+      213: 6806540474175908733
+    second: Human-Worker-Cyan_113
+  - first:
+      213: -8977002041232450762
+    second: Human-Worker-Cyan_114
+  - first:
+      213: -7242782998665888662
+    second: Human-Worker-Cyan_115
+  - first:
+      213: 8759710960462540147
+    second: Human-Worker-Cyan_116
+  - first:
+      213: -1632541119208640520
+    second: Human-Worker-Cyan_117
+  - first:
+      213: 7507972318011186376
+    second: Human-Worker-Cyan_118
+  - first:
+      213: -645605557678783282
+    second: Human-Worker-Cyan_119
+  - first:
+      213: -6625342500709815033
+    second: Human-Worker-Cyan_120
+  - first:
+      213: 9200813959578941769
+    second: Human-Worker-Cyan_121
+  - first:
+      213: 7231244371626138852
+    second: Human-Worker-Cyan_122
+  - first:
+      213: 6117661232703763111
+    second: Human-Worker-Cyan_123
+  - first:
+      213: 6656659237096226853
+    second: Human-Worker-Cyan_124
+  - first:
+      213: -1968130575285971297
+    second: Human-Worker-Cyan_125
+  - first:
+      213: 8991844855978401779
+    second: Human-Worker-Cyan_126
+  - first:
+      213: 2279830315177476590
+    second: Human-Worker-Cyan_127
+  - first:
+      213: 7794207993783499663
+    second: Human-Worker-Cyan_128
+  - first:
+      213: -783807956452648554
+    second: Human-Worker-Cyan_129
+  - first:
+      213: -6023946297972077444
+    second: Human-Worker-Cyan_130
+  - first:
+      213: -5410641843921936763
+    second: Human-Worker-Cyan_131
+  - first:
+      213: -1524880667705021481
+    second: Human-Worker-Cyan_132
+  - first:
+      213: -1488291383011989543
+    second: Human-Worker-Cyan_133
+  - first:
+      213: 6664935399614661709
+    second: Human-Worker-Cyan_134
+  - first:
+      213: -8800907305547926310
+    second: Human-Worker-Cyan_135
+  - first:
+      213: -6426140505586265207
+    second: Human-Worker-Cyan_136
+  - first:
+      213: 4163447419400830504
+    second: Human-Worker-Cyan_137
+  - first:
+      213: 8464665293157809338
+    second: Human-Worker-Cyan_138
+  - first:
+      213: 1067294430011657851
+    second: Human-Worker-Cyan_139
+  - first:
+      213: 6671086994966104679
+    second: Human-Worker-Cyan_140
+  - first:
+      213: 5127659023673372860
+    second: Human-Worker-Cyan_141
+  - first:
+      213: -758064553564225450
+    second: Human-Worker-Cyan_142
+  - first:
+      213: -762241042136845221
+    second: Human-Worker-Cyan_143
+  - first:
+      213: 1017333344944011005
+    second: Human-Worker-Cyan_144
+  - first:
+      213: -5773363397574121142
+    second: Human-Worker-Cyan_145
+  - first:
+      213: 200082117538299053
+    second: Human-Worker-Cyan_146
+  - first:
+      213: -608627850931618417
+    second: Human-Worker-Cyan_147
+  - first:
+      213: 5025173869331750493
+    second: Human-Worker-Cyan_148
+  - first:
+      213: 4085481629020615364
+    second: Human-Worker-Cyan_149
+  - first:
+      213: 5002499791836893560
+    second: Human-Worker-Cyan_150
+  - first:
+      213: 5197322223006465653
+    second: Human-Worker-Cyan_151
+  - first:
+      213: 867491761389758893
+    second: Human-Worker-Cyan_152
+  - first:
+      213: -5017256378019083150
+    second: Human-Worker-Cyan_153
+  - first:
+      213: -1664048041582641936
+    second: Human-Worker-Cyan_154
+  - first:
+      213: -9108554771746964699
+    second: Human-Worker-Cyan_155
+  - first:
+      213: 3430343684996574503
+    second: Human-Worker-Cyan_156
+  - first:
+      213: 807868182962552886
+    second: Human-Worker-Cyan_157
+  - first:
+      213: -3485706868682286707
+    second: Human-Worker-Cyan_158
+  - first:
+      213: 251375976551658706
+    second: Human-Worker-Cyan_159
+  - first:
+      213: 4159121861457400230
+    second: Human-Worker-Cyan_160
+  - first:
+      213: -7605284463535995082
+    second: Human-Worker-Cyan_161
+  - first:
+      213: -3144379230859855894
+    second: Human-Worker-Cyan_162
+  - first:
+      213: 1792927849310826414
+    second: Human-Worker-Cyan_163
+  - first:
+      213: -1030429989324965956
+    second: Human-Worker-Cyan_164
+  - first:
+      213: 2748922812951424342
+    second: Human-Worker-Cyan_165
+  - first:
+      213: 277391299086617407
+    second: Human-Worker-Cyan_166
+  - first:
+      213: -8971646003271860733
+    second: Human-Worker-Cyan_167
+  - first:
+      213: -5825439010886506866
+    second: Human-Worker-Cyan_168
+  - first:
+      213: -3363659527471176260
+    second: Human-Worker-Cyan_169
+  - first:
+      213: 2780765310152790656
+    second: Human-Worker-Cyan_170
+  - first:
+      213: -1139487297924433031
+    second: Human-Worker-Cyan_171
+  - first:
+      213: 1108206069165275613
+    second: Human-Worker-Cyan_172
+  - first:
+      213: 8753777306243648866
+    second: Human-Worker-Cyan_173
+  - first:
+      213: -4544022429530572594
+    second: Human-Worker-Cyan_174
+  - first:
+      213: -3263508892988340981
+    second: Human-Worker-Cyan_175
+  - first:
+      213: -2441207458678325517
+    second: Human-Worker-Cyan_176
+  - first:
+      213: 1802743644128592378
+    second: Human-Worker-Cyan_177
+  - first:
+      213: 3811860478459624860
+    second: Human-Worker-Cyan_178
+  - first:
+      213: -1994637961414378417
+    second: Human-Worker-Cyan_179
+  - first:
+      213: 4167260008433288783
+    second: Human-Worker-Cyan_180
+  - first:
+      213: 6858840049086926778
+    second: Human-Worker-Cyan_181
+  - first:
+      213: -6716301155000391567
+    second: Human-Worker-Cyan_182
+  - first:
+      213: 5881714541740739548
+    second: Human-Worker-Cyan_183
+  - first:
+      213: 6314602936190538807
+    second: Human-Worker-Cyan_184
+  - first:
+      213: -9130229014108885743
+    second: Human-Worker-Cyan_185
+  - first:
+      213: -6535867649670205794
+    second: Human-Worker-Cyan_186
+  - first:
+      213: -8058887003100247729
+    second: Human-Worker-Cyan_187
+  - first:
+      213: -1796019654171345014
+    second: Human-Worker-Cyan_188
+  - first:
+      213: 4616704970839793053
+    second: Human-Worker-Cyan_189
+  - first:
+      213: 5623121166230435778
+    second: Human-Worker-Cyan_190
+  - first:
+      213: -3975128581494254125
+    second: Human-Worker-Cyan_191
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582327bde02ad7c4f9c8dee097685b6c
+      internalID: -1382691563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14eaecd87b8410941a0cad1c0506a081
+      internalID: 964468391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40016dacad67ba4796cdd1a6b3049e3
+      internalID: 26026152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a76cd14977a354693a626f3855b758
+      internalID: 1052046161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b74f3c341e4c74bb668dcc377bb8aa
+      internalID: -1645393591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e048327e6038fc645a5e80d62a6cd166
+      internalID: 144509043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a304213abecf974d9fb2abf1ef30f5a
+      internalID: 597032778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420072852d4da784bb614c7154c43071
+      internalID: -744716876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f66bfa2d13d9e49afd01a5b4618fb2
+      internalID: -1444829263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca13155823aabde4685cb43cfc4c6a3b
+      internalID: -1081101249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf628969d65618140b2979baf1dcad27
+      internalID: 1989606605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_22
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0d4b2a43c203247bb838d47e6dab5d
+      internalID: 946106429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_23
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab96aeb42c8a8344b09b321e50d7417
+      internalID: 528021309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39308519c98b61b43af08063b4345bd6
+      internalID: -103393641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf860e6e0d6f81a4d83307f5e892ecfb
+      internalID: 465373400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07df364dc3d1ec4d813fd1caba7257a
+      internalID: -1587537793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22cbd576a9ed47149a08078d29fa095b
+      internalID: 712243047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_52
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91887415f06dbba48886c6ab1ed444e7
+      internalID: 1102082979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e340941ae70294046a71a18eb9ff256c
+      internalID: -550459171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33810e056a4def94ea27d507a883a933
+      internalID: 277249725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_55
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c397ce8eb635f49b589846e613a2ac
+      internalID: 1442128793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782c97aac914f214e8049cf3072b7d88
+      internalID: 1391906017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb7d5cdc9abe794a83f8fef018e1c89
+      internalID: 1173055816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_97
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d683c56fe3d34d4ba057dcf95d1cd99
+      internalID: -1304755730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_98
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34bde854f0480e84eb0464e6565fcef5
+      internalID: 817395355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_99
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4a39bbcdd10c1419609980a834057e
+      internalID: 215118418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_100
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48a409ea4468fc419073ca8eb192eab
+      internalID: -478428675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_101
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a01895d0704e474c906d0374ad4b32b
+      internalID: -1422535412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_102
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6964beb3e3352114687d8f5550f0ade7
+      internalID: -362858389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_103
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d241af577d3384985ce92c21cd9046
+      internalID: -142477715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_104
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5938bd6840178e749b7956054e1604bb
+      internalID: 1510052844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f326c7442ad00458cba862794cc979
+      internalID: 653912781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_145
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf620e20d2db534a98f277ebd32f979
+      internalID: 2060879633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_146
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf9b950fa14de742819d5fd91b68805
+      internalID: 2001391262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_147
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c30f99763717164081c150de4f269df
+      internalID: -704092159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_148
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b271f9f012201941887b6541631bc67
+      internalID: 1300180736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_149
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c029f277e0e825e4280547e3fd5d0f72
+      internalID: 1390175767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_150
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc7be3ed771d9c44b52312cd8149a9e
+      internalID: -1566299869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_151
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b493cc13148e9c4b91db9b520f48e49
+      internalID: 1954153441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human-Worker-Cyan_152
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54130f2bef39074499509f8509950920
+      internalID: 410072178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 73a3af16429fd1f4b99bd689680991cc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Human-Worker-Cyan_0: -1382691563
+      Human-Worker-Cyan_1: 964468391
+      Human-Worker-Cyan_10: 336602449
+      Human-Worker-Cyan_100: -478428675
+      Human-Worker-Cyan_101: -1422535412
+      Human-Worker-Cyan_102: -362858389
+      Human-Worker-Cyan_103: -142477715
+      Human-Worker-Cyan_104: 1510052844
+      Human-Worker-Cyan_105: 1416161685
+      Human-Worker-Cyan_106: 1604550455
+      Human-Worker-Cyan_107: -714993829
+      Human-Worker-Cyan_108: 1393294879
+      Human-Worker-Cyan_109: -945151537
+      Human-Worker-Cyan_11: -1723705373
+      Human-Worker-Cyan_110: 406919358
+      Human-Worker-Cyan_111: -1462503337
+      Human-Worker-Cyan_112: 331528277
+      Human-Worker-Cyan_113: 1476317292
+      Human-Worker-Cyan_114: 461552364
+      Human-Worker-Cyan_115: 406077453
+      Human-Worker-Cyan_116: -1004263708
+      Human-Worker-Cyan_117: 1485357139
+      Human-Worker-Cyan_118: 802128286
+      Human-Worker-Cyan_119: 1918839526
+      Human-Worker-Cyan_12: -1010824951
+      Human-Worker-Cyan_120: 865729005
+      Human-Worker-Cyan_121: 1904668878
+      Human-Worker-Cyan_122: -233122015
+      Human-Worker-Cyan_123: -954687281
+      Human-Worker-Cyan_124: -595553017
+      Human-Worker-Cyan_125: 437113931
+      Human-Worker-Cyan_126: -183479264
+      Human-Worker-Cyan_127: 1493736642
+      Human-Worker-Cyan_128: -2074998598
+      Human-Worker-Cyan_129: 1790398279
+      Human-Worker-Cyan_13: 2084919057
+      Human-Worker-Cyan_130: 451366174
+      Human-Worker-Cyan_131: 1579621580
+      Human-Worker-Cyan_132: 990865151
+      Human-Worker-Cyan_133: -1898535767
+      Human-Worker-Cyan_134: -950994045
+      Human-Worker-Cyan_135: 938499937
+      Human-Worker-Cyan_136: -350293832
+      Human-Worker-Cyan_137: 1204015137
+      Human-Worker-Cyan_138: -1362404877
+      Human-Worker-Cyan_139: 1789011302
+      Human-Worker-Cyan_14: -683704251
+      Human-Worker-Cyan_140: -241128637
+      Human-Worker-Cyan_141: -1850541576
+      Human-Worker-Cyan_142: -1121870881
+      Human-Worker-Cyan_143: 192622765
+      Human-Worker-Cyan_144: 653912781
+      Human-Worker-Cyan_145: 2060879633
+      Human-Worker-Cyan_146: 2001391262
+      Human-Worker-Cyan_147: -704092159
+      Human-Worker-Cyan_148: 1300180736
+      Human-Worker-Cyan_149: 1390175767
+      Human-Worker-Cyan_15: -716924474
+      Human-Worker-Cyan_150: -1566299869
+      Human-Worker-Cyan_151: 1954153441
+      Human-Worker-Cyan_152: 410072178
+      Human-Worker-Cyan_153: 1035063020
+      Human-Worker-Cyan_154: -572017970
+      Human-Worker-Cyan_155: -323155971
+      Human-Worker-Cyan_156: 215065319
+      Human-Worker-Cyan_157: -112309212
+      Human-Worker-Cyan_158: 1162959651
+      Human-Worker-Cyan_159: -460726937
+      Human-Worker-Cyan_16: -1345408044
+      Human-Worker-Cyan_160: -1560803164
+      Human-Worker-Cyan_161: 1166966962
+      Human-Worker-Cyan_162: 1951846146
+      Human-Worker-Cyan_163: 1711852245
+      Human-Worker-Cyan_164: 1261236972
+      Human-Worker-Cyan_165: 1343098213
+      Human-Worker-Cyan_166: -1618388264
+      Human-Worker-Cyan_167: -175197855
+      Human-Worker-Cyan_168: -119722214
+      Human-Worker-Cyan_169: -2013845046
+      Human-Worker-Cyan_17: 192109432
+      Human-Worker-Cyan_170: -1597766745
+      Human-Worker-Cyan_171: 956107620
+      Human-Worker-Cyan_172: -1939019300
+      Human-Worker-Cyan_173: -1152465161
+      Human-Worker-Cyan_174: -185888013
+      Human-Worker-Cyan_175: -1399958415
+      Human-Worker-Cyan_176: 326202499
+      Human-Worker-Cyan_177: 1503979136
+      Human-Worker-Cyan_178: -245849344
+      Human-Worker-Cyan_179: 225948614
+      Human-Worker-Cyan_18: -670452588
+      Human-Worker-Cyan_180: -8363630
+      Human-Worker-Cyan_181: -708957849
+      Human-Worker-Cyan_182: -784617235
+      Human-Worker-Cyan_183: 519568216
+      Human-Worker-Cyan_184: 1036720094
+      Human-Worker-Cyan_185: 1972571469
+      Human-Worker-Cyan_186: 937891608
+      Human-Worker-Cyan_187: -1955646060
+      Human-Worker-Cyan_188: -1776624030
+      Human-Worker-Cyan_189: 1990488252
+      Human-Worker-Cyan_19: 706373331
+      Human-Worker-Cyan_190: 1132266136
+      Human-Worker-Cyan_191: 621791753
+      Human-Worker-Cyan_2: 26026152
+      Human-Worker-Cyan_20: -1081101249
+      Human-Worker-Cyan_21: 1989606605
+      Human-Worker-Cyan_22: 946106429
+      Human-Worker-Cyan_23: 528021309
+      Human-Worker-Cyan_24: 412714920
+      Human-Worker-Cyan_25: 1773047755
+      Human-Worker-Cyan_26: -241287680
+      Human-Worker-Cyan_27: 810646412
+      Human-Worker-Cyan_28: 158940078
+      Human-Worker-Cyan_29: 648948895
+      Human-Worker-Cyan_3: 1052046161
+      Human-Worker-Cyan_30: -607278361
+      Human-Worker-Cyan_31: 2086420852
+      Human-Worker-Cyan_32: 1719856219
+      Human-Worker-Cyan_33: 587839522
+      Human-Worker-Cyan_34: -1056998129
+      Human-Worker-Cyan_35: -1523855525
+      Human-Worker-Cyan_36: -1389575069
+      Human-Worker-Cyan_37: 536477492
+      Human-Worker-Cyan_38: 801881811
+      Human-Worker-Cyan_39: 1524207015
+      Human-Worker-Cyan_4: -1645393591
+      Human-Worker-Cyan_40: -1439683219
+      Human-Worker-Cyan_41: -1933892894
+      Human-Worker-Cyan_42: -564693338
+      Human-Worker-Cyan_43: 412118887
+      Human-Worker-Cyan_44: -362883619
+      Human-Worker-Cyan_45: 1889417954
+      Human-Worker-Cyan_46: -1770204664
+      Human-Worker-Cyan_47: -842227670
+      Human-Worker-Cyan_48: -103393641
+      Human-Worker-Cyan_49: 465373400
+      Human-Worker-Cyan_5: 144509043
+      Human-Worker-Cyan_50: -1587537793
+      Human-Worker-Cyan_51: 712243047
+      Human-Worker-Cyan_52: 1102082979
+      Human-Worker-Cyan_53: -550459171
+      Human-Worker-Cyan_54: 277249725
+      Human-Worker-Cyan_55: 1442128793
+      Human-Worker-Cyan_56: 1391906017
+      Human-Worker-Cyan_57: -361690451
+      Human-Worker-Cyan_58: -1085156679
+      Human-Worker-Cyan_59: -87996556
+      Human-Worker-Cyan_6: 597032778
+      Human-Worker-Cyan_60: 742367710
+      Human-Worker-Cyan_61: 1883098550
+      Human-Worker-Cyan_62: 1299188620
+      Human-Worker-Cyan_63: -833819227
+      Human-Worker-Cyan_64: -1673594880
+      Human-Worker-Cyan_65: 393936055
+      Human-Worker-Cyan_66: 713245915
+      Human-Worker-Cyan_67: -1860641722
+      Human-Worker-Cyan_68: 1881865800
+      Human-Worker-Cyan_69: 1050809073
+      Human-Worker-Cyan_7: -744716876
+      Human-Worker-Cyan_70: 314825874
+      Human-Worker-Cyan_71: 1643649784
+      Human-Worker-Cyan_72: 1984725552
+      Human-Worker-Cyan_73: 2082050186
+      Human-Worker-Cyan_74: -1583309450
+      Human-Worker-Cyan_75: 672019468
+      Human-Worker-Cyan_76: -1248730492
+      Human-Worker-Cyan_77: 601706543
+      Human-Worker-Cyan_78: 752435288
+      Human-Worker-Cyan_79: -1047209261
+      Human-Worker-Cyan_8: -1444829263
+      Human-Worker-Cyan_80: -1331462617
+      Human-Worker-Cyan_81: -2854836
+      Human-Worker-Cyan_82: -1220769853
+      Human-Worker-Cyan_83: -1420750771
+      Human-Worker-Cyan_84: -1745138732
+      Human-Worker-Cyan_85: 782684291
+      Human-Worker-Cyan_86: 26184900
+      Human-Worker-Cyan_87: -1975195150
+      Human-Worker-Cyan_88: 332743010
+      Human-Worker-Cyan_89: 603829204
+      Human-Worker-Cyan_9: -22645407
+      Human-Worker-Cyan_90: -252593594
+      Human-Worker-Cyan_91: -972136197
+      Human-Worker-Cyan_92: -421991274
+      Human-Worker-Cyan_93: -1386633495
+      Human-Worker-Cyan_94: -1128418945
+      Human-Worker-Cyan_95: -1625867360
+      Human-Worker-Cyan_96: 1173055816
+      Human-Worker-Cyan_97: -1304755730
+      Human-Worker-Cyan_98: 817395355
+      Human-Worker-Cyan_99: 215118418
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

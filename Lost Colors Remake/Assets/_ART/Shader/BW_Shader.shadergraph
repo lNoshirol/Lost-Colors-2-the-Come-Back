@@ -1094,9 +1094,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": 0.0,
-    "m_FloatType": 0,
+    "m_FloatType": 1,
     "m_RangeValues": {
-        "x": 0.0,
+        "x": -1.0,
         "y": 1.0
     }
 }
@@ -1530,8 +1530,8 @@
     "m_ObjectId": "585e3b6e49c0496493691a7f45cc0e60",
     "m_Title": "Transition",
     "m_Position": {
-        "x": -2256.800048828125,
-        "y": -606.3999633789063
+        "x": -2259.199951171875,
+        "y": -600.0
     }
 }
 
@@ -2466,7 +2466,7 @@
     "m_ObjectId": "cb5fb2951c584d408908a4994d406365",
     "m_Title": "Contrast factor",
     "m_Position": {
-        "x": -1847.199951171875,
+        "x": -1847.2001953125,
         "y": -657.5999755859375
     }
 }
@@ -2566,8 +2566,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2231.19970703125,
-            "y": -546.4000244140625,
+            "x": -2233.60009765625,
+            "y": -540.0,
             "width": 56.0,
             "height": 24.0
         }

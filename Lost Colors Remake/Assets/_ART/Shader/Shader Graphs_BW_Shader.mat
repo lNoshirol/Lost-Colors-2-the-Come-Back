@@ -41,11 +41,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Contrast: 8
+    - _Contrast: 138.88
     - _Contraste: 2.41
     - _EUUH: 1
     - _MaskRadius: 0
-    - _Transition: 1
+    - _Transition: -1
     m_Colors:
     - _MaskCenter: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

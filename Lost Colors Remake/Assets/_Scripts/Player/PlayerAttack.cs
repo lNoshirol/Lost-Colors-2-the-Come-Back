@@ -38,7 +38,6 @@ public class PlayerAttack : MonoBehaviour
     public void BaseAttackMobile()
     {
         if (!canAttack || !PlayerHasPaintbrush()) return;
-
         OnAttack();
     }
 
@@ -52,12 +51,13 @@ public class PlayerAttack : MonoBehaviour
         if (isAttacking) return;
 
         NbOfClicks++;
+        attackArea.SetActive(true);
         StartCoroutine(ComboAttack());
     }
 
-
     private IEnumerator ComboAttack()
     {
+        Debug.Log("Bombo");
         isAttacking = true;
         canAttack = false;
 
@@ -74,14 +74,14 @@ public class PlayerAttack : MonoBehaviour
         Debug.Log($"Combo {comboIndex + 1}");
 
         yield return new WaitForSeconds(animationDuration);
-
+        attackArea.SetActive(false);
         canAttack = true;
         isAttacking = false;
     }
 
     private IEnumerator DelayCombo(int combo)
     {
-        animator.SetTrigger("Attack" + combo);
+        //animator.SetTrigger("Attack" + combo);
         yield return new WaitForSeconds(comboDelay);
         NbOfClicks = 0;
     }

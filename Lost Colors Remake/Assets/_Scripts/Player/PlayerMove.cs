@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _friction;
     public bool canMove;
 
-    private Vector2 _moveInput;
+    public Vector2 _moveInput;
     private Vector3 _movementForce;
 
 

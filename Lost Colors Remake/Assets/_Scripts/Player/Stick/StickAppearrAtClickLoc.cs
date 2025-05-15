@@ -3,7 +3,8 @@ using UnityEngine;
 public class StickAppearrAtClickLoc : MonoBehaviour
 {
     [SerializeField] GameObject _stick;
-    public Bounds bounds;
+    public Bounds joystickMoveArea;
+    public Bounds clickArea;
 
     private Vector2 lastTouchPos;
 
@@ -15,14 +16,23 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     public void OnTouchStart()
     {
-        Joystick.instance._joystickAnime.BoolSwitcher("IsHere", true);
-
         Vector2 touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         lastTouchPos = touchPosition;
+        
+        if (!clickArea.Contains(touchPosition))
+        {
+            Joystick.instance.canMove = false;
+            return;
+        }
+
+        Joystick.instance._joystickAnime.BoolSwitcher("IsHere", true);
+
+        Joystick.instance.canMove = true;
+
         _stick.SetActive(true);
 
-        if (bounds.Contains(touchPosition))
+        if (joystickMoveArea.Contains(touchPosition))
         {
             _stick.transform.position = touchPosition;
             Debug.Log("Position Changed inside bounds");
@@ -30,7 +40,7 @@ public class StickAppearrAtClickLoc : MonoBehaviour
         }
         else
         {
-            touchPosition = bounds.ClosestPoint(touchPosition);
+            touchPosition = joystickMoveArea.ClosestPoint(touchPosition);
             _stick.transform.position = touchPosition;
             Debug.Log("Position Changed snap to closest point");
         }
@@ -44,6 +54,9 @@ public class StickAppearrAtClickLoc : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(bounds.center, bounds.size);
+        Gizmos.DrawWireCube(joystickMoveArea.center, joystickMoveArea.size);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(clickArea.center, clickArea.size);
     }
 }

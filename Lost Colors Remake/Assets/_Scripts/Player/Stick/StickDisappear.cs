@@ -30,7 +30,10 @@ public class StickDisappear : MonoBehaviour
 
     public void StartCoroutineDisapear()
     {
-        disappearCountdown = StartCoroutine(DisappearCountDown());
+        if (transform.parent.gameObject.activeSelf)
+        {
+            disappearCountdown = StartCoroutine(DisappearCountDown());
+        }
     }
 
     IEnumerator DisappearCountDown()

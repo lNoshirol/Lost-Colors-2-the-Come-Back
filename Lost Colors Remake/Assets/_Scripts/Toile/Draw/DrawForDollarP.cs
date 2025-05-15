@@ -52,6 +52,8 @@ public class DrawForDollarP : MonoBehaviour
         //ClickManager.instance.OnClickEnd += OnTouchEnd;
 
         //Debug.Log("CastSpriteShape.cs l59/ " + _currentColor.ToString());
+
+        ClickManager.instance.OnClickStart += Resetpoint;
     }
 
     void Update()
@@ -159,7 +161,7 @@ public class DrawForDollarP : MonoBehaviour
     private void AddPoint2D()
     {
 
-        _currentPoint = Input.mousePosition;
+        _currentPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         if (points.Count == 0)
         {
@@ -187,5 +189,6 @@ public class DrawForDollarP : MonoBehaviour
     public void Resetpoint()
     {
         lineRenderer.positionCount = 0;
+        points.Clear();
     }
 }

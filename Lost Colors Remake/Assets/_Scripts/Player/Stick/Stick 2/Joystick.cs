@@ -8,6 +8,8 @@ public class Joystick : MonoBehaviour
     public Transform Player;
     public float speed;
 
+    public bool canMove;
+
     public JoystickAnime _joystickAnime;
 
     private void Awake()
@@ -29,13 +31,12 @@ public class Joystick : MonoBehaviour
 
     private void OnMouseUp()
     {
-        //touchStart = false;
         StickDisappear.instance.StartCoroutineDisapear();
     }
 
     private void Update()
     {
-        if (ClickManager.instance.TouchScreen)
+        if (ClickManager.instance.TouchScreen && canMove)
         {
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 

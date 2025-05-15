@@ -10,6 +10,7 @@ public class ClickManager : MonoBehaviour
     public event Action OnClickEnd;
 
     public bool TouchScreen {  get; private set; }
+    public bool isScreenTouch;
 
     private void Awake()
     {
@@ -30,12 +31,14 @@ public class ClickManager : MonoBehaviour
         {
             OnClickStart?.Invoke();
             TouchScreen = true;
+            isScreenTouch = true;
             Debug.Log("click start");
         }
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             OnClickEnd?.Invoke();
             TouchScreen = false;
+            isScreenTouch= false;
             Debug.Log("Click End");
         }
     }

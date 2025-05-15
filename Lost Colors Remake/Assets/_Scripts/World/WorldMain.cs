@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Threading.Tasks;
-using UnityEngine.InputSystem;
 
 public class WorldMain : MonoBehaviour
 {
@@ -48,7 +47,6 @@ public class WorldMain : MonoBehaviour
     }
     public async void SwitchRoom(string roomName, string switcherName)
     {
-        PlayerMain.Instance.playerInput.DeactivateInput();
         PlayerMain.Instance.Rigidbody2D.linearVelocity = new Vector3(0, 0, 0);
         PlayerMain.Instance.UI.SwitchRoomUI();
         await Task.Delay(1000);
@@ -58,6 +56,5 @@ public class WorldMain : MonoBehaviour
         //CameraMain.Instance.CenterCameraAtPosition(CameraMain.Instance.transform.position);
         PlayerMain.Instance.UI.SwitchRoomUI();
         await Task.Delay(500);
-        PlayerMain.Instance.playerInput.ActivateInput();
     }
 }

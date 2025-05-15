@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c87c64615f985b749ad9420e87fad974
+guid: efc22586920e14d4da409c14c354badf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3469317882114447665
-    second: sprt_enviro_crystal_0
+      213: 7288226726458259476
+    second: sprt_enviro_tree_orange_04_BW_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,8 +49,8 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.51291984, y: 0.14470285}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -114,7 +114,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprt_enviro_crystal_0
+      name: sprt_enviro_tree_orange_04_BW_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 8
-        width: 24
-        height: 48
+        x: 6
+        y: 10
+        width: 115
+        height: 114
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 13997588b3e752030800000000000000
-      internalID: 3469317882114447665
+      spriteID: 4187d01d79bf42560800000000000000
+      internalID: 7288226726458259476
       vertices: []
       indices: 
       edges: []
@@ -152,7 +152,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprt_enviro_crystal_0: 3469317882114447665
+      sprt_enviro_tree_orange_04_BW_0: 7288226726458259476
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

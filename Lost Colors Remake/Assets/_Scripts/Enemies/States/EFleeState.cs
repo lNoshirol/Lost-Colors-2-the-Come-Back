@@ -10,15 +10,6 @@ public class EFleeState : EnemiesState
     }
     public override void Do()
     {
-
-        if (EnemiesMain.CheckPlayerInAttackRange())
-        {
-            EnemiesMain.SwitchState(EnemiesMain.EAttackState);
-        }
-        else if (!EnemiesMain.CheckPlayerInSightRange())
-        {
-            EnemiesMain.SwitchState(EnemiesMain.EPatrolState);
-        }
     }
 
     public override void FixedDo()
@@ -29,7 +20,7 @@ public class EFleeState : EnemiesState
         EnemiesMain.agent.SetDestination(transform.position);
     }
 
-    public void FleeFromPlayer(float fleeDistance = 30f)
+    public void FleeFromPlayer(float fleeDistance)
     {
         Vector3 directionAwayFromPlayer = (transform.position - EnemiesMain.player.position).normalized;
         Vector3 rawFleePoint = transform.position + directionAwayFromPlayer * fleeDistance;

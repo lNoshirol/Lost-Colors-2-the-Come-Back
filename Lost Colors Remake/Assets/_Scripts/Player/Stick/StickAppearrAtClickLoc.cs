@@ -1,11 +1,8 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.EnhancedTouch;
 
 public class StickAppearrAtClickLoc : MonoBehaviour
 {
     [SerializeField] GameObject _stick;
-    [SerializeField] JoystickController _stickController;
     public Bounds bounds;
 
     private Vector2 lastTouchPos;
@@ -18,11 +15,13 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     public void OnTouchStart()
     {
-        Vector2 touchPosition = Camera.main.ScreenToWorldPoint(Touchscreen.current.position.ReadValue());
+        Joystick.instance._joystickAnime.BoolSwitcher("IsHere", true);
+
+        Vector2 touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         lastTouchPos = touchPosition;
         _stick.SetActive(true);
-        
+
         if (bounds.Contains(touchPosition))
         {
             _stick.transform.position = touchPosition;
@@ -39,7 +38,7 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     public void OnTouchEnd()
     {
-
+        Joystick.instance._joystickAnime.BoolSwitcher("IsHere", false);
     }
 
     private void OnDrawGizmos()

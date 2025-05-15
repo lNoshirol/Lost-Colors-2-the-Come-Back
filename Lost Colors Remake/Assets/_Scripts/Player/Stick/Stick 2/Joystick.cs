@@ -1,56 +1,60 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Joystick : MonoBehaviour
 {
-    [SerializeField] Vector2 startsPos, endPos, initialPos;
-    [SerializeField] private bool touchStart;
+    public static Joystick instance;
+
+    [SerializeField] Vector2 endPos;
     public Transform Player;
     public float speed;
 
-    //[SerializeField] GameObject _stickCenter;
+    public JoystickAnime _joystickAnime;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-        initialPos = transform.parent.position;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    private void OnMouseDown()
+    private void Start()
     {
-        startsPos = /*Camera.main.ScreenToWorldPoint(Touchscreen.current.position.ReadValue())*/ transform.parent.position;
-        Debug.Log("Je vais te toucher la nuit");
-    }
-
-    private void OnMouseDrag()
-    {
-        touchStart = true;
-        endPos = Camera.main.ScreenToWorldPoint(Touchscreen.current.position.ReadValue());
-        Debug.Log("Dit, le fécondeur d'homme");
+        _joystickAnime = GetComponent<JoystickAnime>();
     }
 
     private void OnMouseUp()
     {
-        touchStart = false;
+        //touchStart = false;
+        StickDisappear.instance.StartCoroutineDisapear();
     }
 
     private void Update()
     {
-        if (touchStart)
+        if (ClickManager.instance.TouchScreen)
         {
-            Vector2 offset = endPos - startsPos;
+            endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            Vector2 offset = endPos - new Vector2(transform.parent.position.x, transform.parent.position.y);
             Vector2 direction = Vector2.ClampMagnitude(offset, 1f);
             MovePlayer(direction);
-            transform.position = new Vector2(startsPos.x + direction.x, startsPos.y + direction.y);
+            transform.position = new Vector2(transform.parent.position.x + direction.x, transform.parent.position.y + direction.y);
         }
         else
         {
             transform.position = transform.parent.position;
         }
+
     }
 
     public void MovePlayer(Vector2 _direction)
     {
-        Player.Translate(Time.deltaTime * speed * _direction);
+        //Player.Translate(Time.deltaTime * speed * _direction);
+
+        Debug.DrawRay(Vector2.zero, _direction * 2, Color.red);
     }
 }

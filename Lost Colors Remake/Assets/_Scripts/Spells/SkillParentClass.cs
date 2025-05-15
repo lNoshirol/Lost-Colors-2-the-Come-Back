@@ -46,7 +46,7 @@ public abstract class SkillParentClass
     #endregion
 
     #region Subskills
-    protected void Dash(Rigidbody2D rb, Vector3 direction, float force)
+    protected void Dash(Rigidbody2D rb, Vector2 direction, float force)
     {
         rb.AddForce(direction * force, ForceMode2D.Impulse);
         //Delegate[] functions = { PrintRandomTest, PrintRandomTest, PrintRandomTest };
@@ -101,7 +101,7 @@ public class SkillContext
     public float Strength;
 
     // Constructeur qui permet d'injecter que les données dont on a besoin
-    public SkillContext(Rigidbody2D _rigidbody2D = null, GameObject caster = null, Vector3? direction = null, float strength = 0f) // Vector3? est un Nullable, d'où le cast en vector3 après (évite les problèmes de Vector3 inconstant)
+    public SkillContext(Rigidbody2D _rigidbody2D = null, GameObject caster = null, Vector2? direction = null, float strength = 0f) // Vector3? est un Nullable, d'où le cast en vector3 après (évite les problèmes de Vector3 inconstant)
     {
         Rigidbody2D = _rigidbody2D;
         Caster = caster;

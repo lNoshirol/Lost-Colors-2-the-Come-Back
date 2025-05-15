@@ -12,12 +12,11 @@ public class CameraMain : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
 
 
-    public void CenterCameraAtPosition(Vector3 targetPosition)
+    public void CenterCameraAtPosition(Vector2 targetPosition)
     {
         transform.position = targetPosition;
     }

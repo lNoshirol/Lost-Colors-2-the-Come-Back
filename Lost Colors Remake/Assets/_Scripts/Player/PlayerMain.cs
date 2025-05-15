@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMain : MonoBehaviour
 {
@@ -16,8 +15,6 @@ public class PlayerMain : MonoBehaviour
     public Rigidbody2D Rigidbody2D { get; private set; }
     [field: SerializeField] public GameObject ProjectileSocket { get; private set; }
     public GameObject PlayerMesh;
-
-    public PlayerInput playerInput;
 
     public GameObject paintBrushSocket;
 
@@ -37,9 +34,6 @@ public class PlayerMain : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Attack = GetComponent<PlayerAttack>();
 
-        playerInput = GetComponent<PlayerInput>();
-
-        DontDestroyOnLoad(gameObject);
     }
 
 

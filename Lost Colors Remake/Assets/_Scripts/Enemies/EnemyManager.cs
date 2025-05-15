@@ -16,7 +16,6 @@ public class EnemyManager : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public void AddEnemiesToListAndDic(GameObject enemy)

@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 15d0fb130af0a7648b1587058ecb75fa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8812887017211991484
+    second: sprt_animals_mini_multiple_0
+  - first:
+      213: 2358421454125425244
+    second: sprt_animals_mini_multiple_1
+  - first:
+      213: 8811308254916927931
+    second: sprt_animals_mini_multiple_2
+  - first:
+      213: -6454997828490699528
+    second: sprt_animals_mini_multiple_3
+  - first:
+      213: -2993412114348765013
+    second: sprt_animals_mini_multiple_4
+  - first:
+      213: -5448349132743618216
+    second: sprt_animals_mini_multiple_5
+  - first:
+      213: -3687347255471484054
+    second: sprt_animals_mini_multiple_6
+  - first:
+      213: -1016310414135625237
+    second: sprt_animals_mini_multiple_7
+  - first:
+      213: -4673010455908644996
+    second: sprt_animals_mini_multiple_8
+  - first:
+      213: 5022121847456181655
+    second: sprt_animals_mini_multiple_9
+  - first:
+      213: -8800027963459057152
+    second: sprt_animals_mini_multiple_10
+  - first:
+      213: 8614847876051053881
+    second: sprt_animals_mini_multiple_11
+  - first:
+      213: 1123667598611596367
+    second: sprt_animals_mini_multiple_12
+  - first:
+      213: -4162814700431218007
+    second: sprt_animals_mini_multiple_13
+  - first:
+      213: 8892711364365082628
+    second: sprt_animals_mini_multiple_14
+  - first:
+      213: 61109048203596246
+    second: sprt_animals_mini_multiple_15
+  - first:
+      213: 4467270356854157263
+    second: sprt_animals_mini_multiple_16
+  - first:
+      213: -1382594951459734650
+    second: sprt_animals_mini_multiple_17
+  - first:
+      213: 3106921778497121537
+    second: sprt_animals_mini_multiple_18
+  - first:
+      213: 30396006478055151
+    second: sprt_animals_mini_multiple_19
+  - first:
+      213: 678530176130227717
+    second: sprt_animals_mini_multiple_20
+  - first:
+      213: -8104801427074465180
+    second: sprt_animals_mini_multiple_21
+  - first:
+      213: -3738493444883674206
+    second: sprt_animals_mini_multiple_22
+  - first:
+      213: 8011750699057377419
+    second: sprt_animals_mini_multiple_23
+  - first:
+      213: -5359650391217017673
+    second: sprt_animals_mini_multiple_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 176
+        width: 7
+        height: 8
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb5929aac0aad4a70800000000000000
+      internalID: 8812887017211991484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 176
+        width: 7
+        height: 8
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c526ecb21dbcab020800000000000000
+      internalID: 2358421454125425244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 176
+        width: 7
+        height: 8
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb16acc6c2e084a70800000000000000
+      internalID: 8811308254916927931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 159
+        width: 9
+        height: 12
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fcd4eeccad3b66a0800000000000000
+      internalID: -6454997828490699528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_4
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 159
+        width: 10
+        height: 12
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba014e1ba834576d0800000000000000
+      internalID: -2993412114348765013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_5
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 159
+        width: 10
+        height: 12
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 851528294539364b0800000000000000
+      internalID: -5448349132743618216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 141
+        width: 12
+        height: 16
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a635c122539e3dcc0800000000000000
+      internalID: -3687347255471484054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 141
+        width: 12
+        height: 16
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be97aef101755e1f0800000000000000
+      internalID: -1016310414135625237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_8
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 141
+        width: 12
+        height: 16
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7701efbfb1262fb0800000000000000
+      internalID: -4673010455908644996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 126
+        width: 13
+        height: 14
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79daa50463922b540800000000000000
+      internalID: 5022121847456181655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_10
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 126
+        width: 13
+        height: 14
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ac488113500e580800000000000000
+      internalID: -8800027963459057152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_11
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 126
+        width: 13
+        height: 14
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93d2d06ff761e8770800000000000000
+      internalID: 8614847876051053881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 111
+        width: 12
+        height: 10
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f444cdc3ab1189f00800000000000000
+      internalID: 1123667598611596367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_13
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 111
+        width: 12
+        height: 10
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aae503e516ba36c0800000000000000
+      internalID: -4162814700431218007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_14
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 111
+        width: 12
+        height: 10
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4006f0bced1496b70800000000000000
+      internalID: 8892711364365082628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 95
+        width: 13
+        height: 11
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1dcb60b5a19d000800000000000000
+      internalID: 61109048203596246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_16
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 95
+        width: 13
+        height: 11
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcfacef88beeefd30800000000000000
+      internalID: 4467270356854157263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_17
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 95
+        width: 13
+        height: 11
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b7ef9873900dce0800000000000000
+      internalID: -1382594951459734650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 78
+        width: 15
+        height: 13
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10dee3875e00e1b20800000000000000
+      internalID: 3106921778497121537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_19
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 78
+        width: 15
+        height: 13
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe607b0c10dfb6000800000000000000
+      internalID: 30396006478055151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 78
+        width: 15
+        height: 13
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50e10a5a99f9a6900800000000000000
+      internalID: 678530176130227717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 62
+        width: 16
+        height: 14
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462c52c0b06f58f80800000000000000
+      internalID: -8104801427074465180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_22
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 62
+        width: 16
+        height: 14
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab059ee4043e1cc0800000000000000
+      internalID: -3738493444883674206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_23
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 62
+        width: 16
+        height: 14
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b807d4e00d47f2f60800000000000000
+      internalID: 8011750699057377419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_animals_mini_multiple_24
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 33
+        width: 11
+        height: 9
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bce937ad52be95b0800000000000000
+      internalID: -5359650391217017673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ec515792fb2bc344ea0b04f9d702bb64
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprt_animals_mini_multiple_0: 8812887017211991484
+      sprt_animals_mini_multiple_1: 2358421454125425244
+      sprt_animals_mini_multiple_10: -8800027963459057152
+      sprt_animals_mini_multiple_11: 8614847876051053881
+      sprt_animals_mini_multiple_12: 1123667598611596367
+      sprt_animals_mini_multiple_13: -4162814700431218007
+      sprt_animals_mini_multiple_14: 8892711364365082628
+      sprt_animals_mini_multiple_15: 61109048203596246
+      sprt_animals_mini_multiple_16: 4467270356854157263
+      sprt_animals_mini_multiple_17: -1382594951459734650
+      sprt_animals_mini_multiple_18: 3106921778497121537
+      sprt_animals_mini_multiple_19: 30396006478055151
+      sprt_animals_mini_multiple_2: 8811308254916927931
+      sprt_animals_mini_multiple_20: 678530176130227717
+      sprt_animals_mini_multiple_21: -8104801427074465180
+      sprt_animals_mini_multiple_22: -3738493444883674206
+      sprt_animals_mini_multiple_23: 8011750699057377419
+      sprt_animals_mini_multiple_24: -5359650391217017673
+      sprt_animals_mini_multiple_3: -6454997828490699528
+      sprt_animals_mini_multiple_4: -2993412114348765013
+      sprt_animals_mini_multiple_5: -5448349132743618216
+      sprt_animals_mini_multiple_6: -3687347255471484054
+      sprt_animals_mini_multiple_7: -1016310414135625237
+      sprt_animals_mini_multiple_8: -4673010455908644996
+      sprt_animals_mini_multiple_9: 5022121847456181655
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

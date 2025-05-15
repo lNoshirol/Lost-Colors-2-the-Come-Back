@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _friction;
     public bool canMove;
 
-    private Vector2 _moveInput;
+    public Vector2 _moveInput;
     private Vector3 _movementForce;
 
 
@@ -51,11 +50,11 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    public void Move(InputAction.CallbackContext context)
+    public void Move()
     {
         if (canMove)
         {
-            _moveInput = new Vector2(context.ReadValue<Vector2>().x, context.ReadValue<Vector2>().y);
+            _moveInput = new Vector2();
 
             if (_moveInput != Vector2.zero)
             {

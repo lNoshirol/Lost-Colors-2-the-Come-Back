@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 
@@ -18,11 +17,12 @@ public class TriggerToile : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.tKey.wasPressedThisFrame)
+        if (false)
         {
             OpenAndCloseToileMagique();
         }
     }
+
     public void OpenAndCloseToileMagique()
     {
         ToileMain.Instance.CastSpriteShape.Resetpoint();

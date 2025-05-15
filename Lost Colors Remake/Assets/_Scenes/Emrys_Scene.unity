@@ -13998,7 +13998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1099605391}
   - component: {fileID: 1099605392}
-  - component: {fileID: 1099605393}
+  - component: {fileID: 1099605394}
   m_Layer: 0
   m_Name: Tree01
   m_TagString: Untagged
@@ -14076,8 +14076,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!61 &1099605393
-BoxCollider2D:
+--- !u!70 &1099605394
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -14110,18 +14110,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.026217584, y: -0.08081328}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.3}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.21096295, y: 0.035594568}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.027134456, y: 0.025291381}
+  m_Size: {x: 0.09434208, y: 0.002418399}
+  m_Direction: 1
 --- !u!1 &1099836542
 GameObject:
   m_ObjectHideFlags: 0
@@ -40161,6 +40152,14 @@ PrefabInstance:
     - target: {fileID: 6695722471592870552, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7252232056931524908, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 7252232056931524908, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

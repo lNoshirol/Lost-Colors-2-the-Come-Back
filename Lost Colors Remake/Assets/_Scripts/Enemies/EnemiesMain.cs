@@ -36,7 +36,12 @@ public class EnemiesMain : MonoBehaviour
 
     [Header("Enemy Brain Needs")]
     public GameObject projectile;
-    public Material mat;
+
+    [Header("Scriptable")]
+    public EnemyDATA enemyData;
+    [Header("Globale Stats")]
+    public bool isAlive;
+
 
     //Delay for updates
     private float nextSightCheckTime = 0f;
@@ -48,11 +53,9 @@ public class EnemiesMain : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = gameObject.GetComponent<NavMeshAgent>();
-        mat = enemyMesh.GetComponent <Renderer>().material;
 
         Health = GetComponent<EnemyHealth>();
         UI = GetComponent<EnemyUI>();
-        Stats = GetComponent<EnemyStats>();
     }
     private void Start()
     {
@@ -133,4 +136,5 @@ public class EnemiesMain : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
+
 }

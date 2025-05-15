@@ -8,20 +8,25 @@ public class EnemyDATA : ScriptableObject
     public string enemyID;	         // 
     public string enemyName;         // 
 
-    public float enemyAttack;
-    public float enemyAttackCooldown;
-
     public float enemyMaxHP;
     public float enemyHP;
 
     public string enemyArmorId;
     public float enemyArmor;
 
-    public float enemySpeed;
-    public float enemyMaxSpeed;
-
     public float enemySightRange;
     public float enemyAttackRange;
+
+    public float enemyIdleWaitTime;
+
+    public float patrolSpeedMultiplier;
+    public float chaseSpeedMultiplier;
+
+    public float enemyAttack;
+    public float enemyAttackCooldown;
+
+    public float enemySpeed;
+    public float enemyMaxSpeed;
 
     public List<string> skillName;
 }

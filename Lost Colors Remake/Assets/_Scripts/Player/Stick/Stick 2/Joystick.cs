@@ -54,7 +54,7 @@ public class Joystick : MonoBehaviour
 
     public void MovePlayer(Vector2 _direction)
     {
-        //Player.Translate(Time.deltaTime * speed * _direction);
+        Player.Translate(Time.deltaTime * speed * _direction);
 
         Debug.DrawRay(Vector2.zero, _direction * 2, Color.red);
     }

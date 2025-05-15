@@ -5,14 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Enemy", menuName = "Scriptable Objects/Enemy", order = 1)]
 public class EnemyDATA : ScriptableObject
 {
-    public string enemyID;	         // 
-    public string enemyName;         // 
-
+    public string enemyID;	         //    
+    public int enemyPowerLevel;
     public float enemyMaxHP;
-    public float enemyHP;
 
-    public string enemyArmorId;
-    public float enemyArmor;
+    public List<string> enemyArmorList;
+    public int enemyMaxArmor;
 
     public float enemySightRange;
     public float enemyAttackRange;
@@ -22,11 +20,11 @@ public class EnemyDATA : ScriptableObject
     public float patrolSpeedMultiplier;
     public float chaseSpeedMultiplier;
 
-    public float enemyAttack;
+    public float enemyAttackAmount;
     public float enemyAttackCooldown;
 
     public float enemySpeed;
     public float enemyMaxSpeed;
 
-    public List<string> skillName;
+    public List<string> skillNameList;
 }

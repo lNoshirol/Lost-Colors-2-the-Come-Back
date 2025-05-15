@@ -2,11 +2,25 @@ using UnityEngine;
 
 public class StickAppearrAtClickLoc : MonoBehaviour
 {
+    public static StickAppearrAtClickLoc Instance { get; private set; }
+
     [SerializeField] GameObject _stick;
     public Bounds joystickMoveArea;
     public Bounds clickArea;
 
     private Vector2 lastTouchPos;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {

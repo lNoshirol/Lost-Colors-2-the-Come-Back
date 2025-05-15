@@ -1,4 +1,3 @@
-using UnityEngine.InputSystem;
 using UnityEngine;
 using System.Collections;
 using System.Drawing;
@@ -29,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
         attackArea.SetActive(false);
     }
 
-    public void BaseAttack(InputAction.CallbackContext context)
+    public void BaseAttack()
     {
         if (!canAttack || !PlayerHasPaintbrush()) return;
             OnAttack();

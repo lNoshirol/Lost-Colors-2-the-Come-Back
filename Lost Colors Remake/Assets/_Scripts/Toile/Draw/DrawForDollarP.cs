@@ -2,9 +2,6 @@ using PDollarGestureRecognizer;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.EnhancedTouch;
-using UnityEngine.UIElements;
 
 public class DrawForDollarP : MonoBehaviour
 {
@@ -65,7 +62,10 @@ public class DrawForDollarP : MonoBehaviour
             AddPoint();
         }*/
 
-        AddPoint2D();
+        if (ClickManager.instance.TouchScreen)
+        {
+            AddPoint2D();
+        }
 
 
         //DebugRay();
@@ -73,21 +73,6 @@ public class DrawForDollarP : MonoBehaviour
 
 
 
-    }
-
-    public void OnTouchScreen(InputAction.CallbackContext callbackContext)
-    {
-        //Debug.Log($"CastSpriteShape L74/ AAAAAAAAAAAAH {gameObject.transform.parent.gameObject.activeSelf}");
-
-        if (callbackContext.started)
-        {
-            OnTouchStart();
-        }
-
-        if (callbackContext.canceled)
-        {
-            OnTouchEnd();
-        }
     }
 
     [Obsolete]
@@ -173,18 +158,8 @@ public class DrawForDollarP : MonoBehaviour
 
     private void AddPoint2D()
     {
-        Debug.Log("TouchScreen : " + Touchscreen.current);
-        Debug.Log("Mouse : " + Mouse.current);
 
-        if (Touchscreen.current != null)
-        {
-            _currentPoint = Cam.ScreenToWorldPoint(Touchscreen.current.position.ReadValue());
-        }
-
-        else if (Mouse.current != null)
-        {
-            _currentPoint = Cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        }
+        _currentPoint = Input.mousePosition;
 
         if (points.Count == 0)
         {
@@ -209,76 +184,8 @@ public class DrawForDollarP : MonoBehaviour
         }
     }
 
-    private void AddPoint()
-    {
-        Ray Ray;
-
-        if (Touchscreen.current != null)
-        {
-            Ray = Cam.ScreenPointToRay(Touchscreen.current.position.ReadValue());
-        }
-
-        else if (Mouse.current != null)
-        {
-            Ray = Cam.ScreenPointToRay(Mouse.current.position.ReadValue());
-        }
-
-        else
-        {
-            Ray = new Ray();
-        }
-
-        RaycastHit hit;
-
-        _catchEnnemy.EnnemyOnPath(Ray, IgnoreMeUwU2);
-
-        if (Physics.Raycast(Ray, out hit) && hit.collider != null)
-        {
-            if (hit.collider.CompareTag("Writeable"))
-            {
-                if (points.Count == 0)
-                {
-                    points.Add(hit.point + new Vector3(0, _drawOffset, -_drawOffset));
-
-                    UpdateLinePoints();
-                    return;
-                }
-                else
-                {
-                    currentDistance = Vector3.Distance(points[points.Count - 1], hit.point);
-
-                    if (currentDistance >= distanceBetweenPoint)
-                    {
-                        points.Add(hit.point + new Vector3(0, _drawOffset, -_drawOffset));
-
-                        UpdateLinePoints();
-                        return;
-                    }
-                }
-            }
-        }
-    }
-
     public void Resetpoint()
     {
         lineRenderer.positionCount = 0;
-    }
-
-    private void OnEnable()
-    {
-        TouchSimulation.Enable();
-        UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown += FingerDown;
-    }
-
-    private void OnDisable()
-    {
-        TouchSimulation.Disable();
-        UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown -= FingerDown;
-    }
-
-
-    private void FingerDown(Finger finger)
-    {
-
     }
 }

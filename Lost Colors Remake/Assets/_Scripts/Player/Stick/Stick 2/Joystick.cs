@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Joystick : MonoBehaviour
 {
@@ -38,7 +37,7 @@ public class Joystick : MonoBehaviour
     {
         if (ClickManager.instance.TouchScreen)
         {
-            endPos = Camera.main.ScreenToWorldPoint(Touchscreen.current.position.ReadValue());
+            endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             Vector2 offset = endPos - new Vector2(transform.parent.position.x, transform.parent.position.y);
             Vector2 direction = Vector2.ClampMagnitude(offset, 1f);

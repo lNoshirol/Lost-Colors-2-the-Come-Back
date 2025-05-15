@@ -18,11 +18,13 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     public void OnTouchStart()
     {
+        Joystick.instance._joystickAnime.BoolSwitcher("IsHere", true);
+
         Vector2 touchPosition = Camera.main.ScreenToWorldPoint(Touchscreen.current.position.ReadValue());
 
         lastTouchPos = touchPosition;
         _stick.SetActive(true);
-        
+
         if (bounds.Contains(touchPosition))
         {
             _stick.transform.position = touchPosition;
@@ -39,7 +41,7 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     public void OnTouchEnd()
     {
-
+        Joystick.instance._joystickAnime.BoolSwitcher("IsHere", false);
     }
 
     private void OnDrawGizmos()

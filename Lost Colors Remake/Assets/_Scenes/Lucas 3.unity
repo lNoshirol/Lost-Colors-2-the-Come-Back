@@ -387,6 +387,8 @@ GameObject:
   - component: {fileID: 595679706}
   - component: {fileID: 595679708}
   - component: {fileID: 595679707}
+  - component: {fileID: 595679709}
+  - component: {fileID: 595679710}
   m_Layer: 0
   m_Name: sprt_joystick_move_round_0
   m_TagString: Untagged
@@ -452,7 +454,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4737488167766915167, guid: 3289b05723a5e3e47a10d996c8cdd1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -512,12 +514,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d415668c598f20f4abfc8a3ead8623bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startsPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
-  initialPos: {x: 0, y: 0}
-  touchStart: 0
   Player: {fileID: 134145519}
   speed: 7
+  _joystickAnime: {fileID: 0}
+--- !u!114 &595679709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595679704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5186aaf0142484e9f89115acae7212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBeforeDisappear: 2
+  joyastickParent: {fileID: 1364489510}
+--- !u!114 &595679710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595679704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393c72e7ddad1c74b8c2809134d45c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &877888010
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5624df5d284f364fb79e5d97bd1fe6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stick: {fileID: 305697745}
+  _stick: {fileID: 1364489510}
   _stickController: {fileID: 0}
   bounds:
     m_Center: {x: -6, y: -0.72, z: 0}
@@ -581,6 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936b201522372ad4598afdacfacfef63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isScreenTouch: 0
 --- !u!1 &1364489510
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1364489511}
   - component: {fileID: 1364489512}
+  - component: {fileID: 1364489513}
   m_Layer: 0
   m_Name: sprt_joystick_move_outline_0
   m_TagString: Untagged
@@ -669,6 +697,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1364489513
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364489510}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ab78f75f6b588241807763c40e3e9c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

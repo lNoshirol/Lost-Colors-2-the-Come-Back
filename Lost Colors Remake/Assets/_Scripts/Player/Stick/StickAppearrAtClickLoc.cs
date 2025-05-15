@@ -8,6 +8,9 @@ public class StickAppearrAtClickLoc : MonoBehaviour
     public Bounds joystickMoveArea;
     public Bounds clickArea;
 
+    public Vector3 moveAreaBasePos;
+    public Vector3 clickAreaBasePos;
+
     private Vector2 lastTouchPos;
 
     private void Awake()
@@ -26,6 +29,9 @@ public class StickAppearrAtClickLoc : MonoBehaviour
     {
         ClickManager.instance.OnClickStart += OnTouchStart;
         ClickManager.instance.OnClickEnd += OnTouchEnd;
+
+        moveAreaBasePos = joystickMoveArea.center;
+        clickAreaBasePos = clickArea.center;
     }
 
     public void OnTouchStart()

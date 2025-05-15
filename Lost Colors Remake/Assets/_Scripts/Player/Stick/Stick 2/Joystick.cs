@@ -11,6 +11,7 @@ public class Joystick : MonoBehaviour
     public bool canMove;
 
     public JoystickAnime _joystickAnime;
+    private StickAppearrAtClickLoc _stickAppearrAtClickLoc;
 
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class Joystick : MonoBehaviour
     private void Start()
     {
         _joystickAnime = GetComponent<JoystickAnime>();
+        _stickAppearrAtClickLoc = StickAppearrAtClickLoc.Instance;
     }
 
     private void OnMouseUp()
@@ -55,7 +57,8 @@ public class Joystick : MonoBehaviour
     public void MovePlayer(Vector2 _direction)
     {
         Player.Translate(Time.deltaTime * speed * _direction);
-        
+        _stickAppearrAtClickLoc.clickArea.center = Player.position + _stickAppearrAtClickLoc.clickAreaBasePos;
+        _stickAppearrAtClickLoc.joystickMoveArea.center = Player.position + _stickAppearrAtClickLoc.moveAreaBasePos;
 
         Debug.DrawRay(Vector2.zero, _direction * 2, Color.red);
     }

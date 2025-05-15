@@ -28,6 +28,7 @@ public class TileMapCorruptionWaveHandler : MonoBehaviour
     private void WaveAnim()
     {
         MaterialPropertyBlock mPropertyBlock = new();
+        _tilemapRenderer.sharedMaterial.DOFloat(0f, "_WaveProgress", 0f);
         mPropertyBlock.SetVector("_WaveDiffusionCenter", _waveStartPoint);
         _tilemapRenderer.SetPropertyBlock(mPropertyBlock);
         _tilemapRenderer.sharedMaterial.DOFloat(20f, "_WaveProgress", 2.4f);

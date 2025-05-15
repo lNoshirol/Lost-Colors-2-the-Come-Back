@@ -175,9 +175,6 @@
             "m_Id": "067949e6482e4c90b9faf92753457cf6"
         },
         {
-            "m_Id": "05218f75b1004343b3358f0c7f275451"
-        },
-        {
             "m_Id": "510984285377403b9fc923b7ba9a9412"
         },
         {
@@ -1171,44 +1168,6 @@
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
-    }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.SliderNode",
-    "m_ObjectId": "05218f75b1004343b3358f0c7f275451",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "Slider",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": -2296.800048828125,
-            "y": -404.79998779296877,
-            "width": 131.199951171875,
-            "height": 33.600006103515628
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "b6c8cc59052c477b8cc38eb909defdfc"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_Value": {
-        "x": 0.0,
-        "y": -1.0,
-        "z": 1.0
     }
 }
 
@@ -2722,10 +2681,10 @@
     "m_Guid": {
         "m_GuidSerialized": "5769fb5c-6f42-46a1-8c68-1088a7fb1d3d"
     },
-    "m_Name": "_",
+    "m_Name": "_WaveRatio",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "_",
-    "m_DefaultReferenceName": "_",
+    "m_RefNameGeneratedByDisplayName": "_WaveRatio",
+    "m_DefaultReferenceName": "_WaveRatio",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -4469,7 +4428,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
     "m_ObjectId": "96c93a153ed44e1dbc40aee8f0d36155",
     "m_Id": 0,
-    "m_DisplayName": "_",
+    "m_DisplayName": "_WaveRatio",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -5010,21 +4969,6 @@
     "m_SupportsLODCrossFade": false,
     "m_CustomEditorGUI": "",
     "m_SupportVFX": false
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "b6c8cc59052c477b8cc38eb909defdfc",
-    "m_Id": 0,
-    "m_DisplayName": "Out",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out",
-    "m_StageCapability": 3,
-    "m_Value": 0.0,
-    "m_DefaultValue": 0.0,
-    "m_Labels": []
 }
 
 {

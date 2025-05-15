@@ -31,6 +31,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 0c84b0cc59caeef4f83d366623002c0b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_9f49e02b174347ab915c9b3f517d7085_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 1d8481de16af723418a688958c41224b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -51,13 +55,14 @@ Material:
     - _MaskRadius: 0
     - _TESTTESTTEST: 2.8
     - _Transition: 1
-    - _WaveProgress: 8.18
+    - _WaveProgress: 20
     - _WaveWidth: 0.51
     m_Colors:
     - _: {r: 1, g: 1.5, b: 0, a: 0}
     - _MaskCenter: {r: 0, g: 0, b: 0, a: 0}
     - _WaveDiffusionCenter: {r: 7.12, g: -9.5, b: 0, a: 0}
     - _WaveDiffusionStartPoint: {r: 0.31, g: -4.34, b: 0, a: 0}
+    - _WaveRatio: {r: 1, g: 1.5, b: 0, a: 0}
     - _blblbl: {r: -6.73, g: -3.47, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

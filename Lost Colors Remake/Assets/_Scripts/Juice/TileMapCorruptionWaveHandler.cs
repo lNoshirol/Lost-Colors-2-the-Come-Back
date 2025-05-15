@@ -6,7 +6,6 @@ public class TileMapCorruptionWaveHandler : MonoBehaviour
 {
     [SerializeField] private Vector2 _waveStartPoint;
     private TilemapRenderer _tilemapRenderer;
-    private Material _material;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,8 +27,10 @@ public class TileMapCorruptionWaveHandler : MonoBehaviour
 
     private void WaveAnim()
     {
-        _tilemapRenderer.material.DOFloat(20f, "_WaveProgress", 2.4f);
-        //_tilemapRenderer.material.DOFloat(5f, "_WaveWidth", 2.4f);
+        MaterialPropertyBlock mPropertyBlock = new();
+        mPropertyBlock.SetVector("_WaveDiffusionCenter", _waveStartPoint);
+        _tilemapRenderer.SetPropertyBlock(mPropertyBlock);
+        _tilemapRenderer.sharedMaterial.DOFloat(20f, "_WaveProgress", 2.4f);
     }
 
     private void OnDrawGizmos()

@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class ClickManager : MonoBehaviour
 {
@@ -39,23 +38,6 @@ public class ClickManager : MonoBehaviour
             OnClickEnd?.Invoke();
             TouchScreen = false;
             isScreenTouch= false;
-            Debug.Log("Click End");
-        }
-    }
-
-    public void OnClick(InputAction.CallbackContext callbackContext)
-    {
-        Debug.Log("Oh tu prefere moi ou ton pere ?");
-
-        if (callbackContext.started)
-        {
-            OnClickStart?.Invoke();
-            Debug.Log("click start");
-        }
-
-        if (callbackContext.canceled)
-        {
-            OnClickEnd?.Invoke();
             Debug.Log("Click End");
         }
     }

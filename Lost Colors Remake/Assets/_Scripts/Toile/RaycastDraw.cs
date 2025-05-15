@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using NaughtyAttributes.Test;
 using System.Drawing;
@@ -42,20 +41,7 @@ public class RaycastDraw : MonoBehaviour
 
     public void DrawRayCastInRealTime()
     {
-        Vector2 screenPoint;
-
-        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
-        {
-            screenPoint = Touchscreen.current.primaryTouch.position.ReadValue();
-        }
-        else if (Mouse.current != null && Mouse.current.leftButton.isPressed)
-        {
-            screenPoint = Mouse.current.position.ReadValue();
-        }
-        else
-        {
-            return;
-        }
+        Vector2 screenPoint = Input.mousePosition;
 
         points2D.Add(screenPoint);
 

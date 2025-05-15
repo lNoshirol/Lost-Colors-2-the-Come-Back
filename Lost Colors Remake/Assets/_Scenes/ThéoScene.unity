@@ -39310,6 +39310,34 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -11.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9172032580895127489, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172032580895127489, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172032580895127489, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172032580895127489, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172032580895127489, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172032580895127489, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172032580895127489, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39320,6 +39348,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2458422246108691770, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5025375355386475130}
+    - targetCorrespondingSourceObject: {fileID: 2458422246108691770, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5025375355386475134}
   m_SourcePrefab: {fileID: 100100000, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
 --- !u!1 &5025375355386475116 stripped
 GameObject:
@@ -39403,6 +39434,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5025375355386475134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025375355386475116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd1070dc432bac468bc520ef28d9764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 5025375355386475117}
 --- !u!1001 &6108538065895352283
 PrefabInstance:
   m_ObjectHideFlags: 0

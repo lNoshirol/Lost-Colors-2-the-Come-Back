@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Joystick : MonoBehaviour
 {
@@ -8,6 +7,8 @@ public class Joystick : MonoBehaviour
     [SerializeField] Vector2 endPos;
     public Transform Player;
     public float speed;
+
+    public bool canMove;
 
     public JoystickAnime _joystickAnime;
 
@@ -30,15 +31,14 @@ public class Joystick : MonoBehaviour
 
     private void OnMouseUp()
     {
-        //touchStart = false;
         StickDisappear.instance.StartCoroutineDisapear();
     }
 
     private void Update()
     {
-        if (ClickManager.instance.TouchScreen)
+        if (ClickManager.instance.TouchScreen && canMove)
         {
-            endPos = Camera.main.ScreenToWorldPoint(Touchscreen.current.position.ReadValue());
+            endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             Vector2 offset = endPos - new Vector2(transform.parent.position.x, transform.parent.position.y);
             Vector2 direction = Vector2.ClampMagnitude(offset, 1f);
@@ -54,7 +54,7 @@ public class Joystick : MonoBehaviour
 
     public void MovePlayer(Vector2 _direction)
     {
-        //Player.Translate(Time.deltaTime * speed * _direction);
+        Player.Translate(Time.deltaTime * speed * _direction);
 
         Debug.DrawRay(Vector2.zero, _direction * 2, Color.red);
     }

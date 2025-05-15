@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -51,11 +50,11 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    public void Move(InputAction.CallbackContext context)
+    public void Move()
     {
         if (canMove)
         {
-            _moveInput = new Vector2(context.ReadValue<Vector2>().x, context.ReadValue<Vector2>().y);
+            _moveInput = new Vector2();
 
             if (_moveInput != Vector2.zero)
             {

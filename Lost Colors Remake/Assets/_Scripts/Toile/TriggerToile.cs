@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,10 +6,27 @@ using UnityEngine.UI;
 
 public class TriggerToile : MonoBehaviour
 {
+    public static TriggerToile instance;
+
     public bool _isActive;
     [SerializeField] private GameObject toile;
     [SerializeField] private Button toileButton;
-    
+
+    public event Action<bool> WhenTriggerToile;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogError("Two TriggerToile script are detected in the scene, this is not allowed");
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         _isActive = false;
@@ -31,9 +49,9 @@ public class TriggerToile : MonoBehaviour
             ToileMain.Instance.ToileUI.UpdateToileUI(ToileMain.Instance.toileTime);
             _isActive = true;
             toile.SetActive(_isActive);
+            WhenTriggerToile?.Invoke(!_isActive);
             PlayerMain.Instance.UI.HidePlayerControls();
             PlayerMain.Instance.Move.canMove = false;
-            //PlayerMain.Instance.playerInput.SwitchCurrentControlScheme("Keyboard&Mouse", Keyboard.current, Mouse.current);
             //StopCoroutine(ToileMain.Instance.timerCo);
             Time.timeScale = 0;
 
@@ -54,6 +72,7 @@ public class TriggerToile : MonoBehaviour
         yield return null;
         _isActive = false;
         toile.SetActive(_isActive);
+        WhenTriggerToile?.Invoke(!_isActive);
         PlayerMain.Instance.UI.HidePlayerControls();
         PlayerMain.Instance.Move.canMove = true;
         ToileMain.Instance.gestureIsStarted = false;

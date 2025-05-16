@@ -516,7 +516,6 @@ GameObject:
   - component: {fileID: 8561084106496603863}
   - component: {fileID: 3820118662184904292}
   - component: {fileID: 9023901565862365591}
-  - component: {fileID: 8229384572841939342}
   - component: {fileID: 6916225228254587306}
   - component: {fileID: 6627984063825915955}
   m_Layer: 9
@@ -631,21 +630,6 @@ MonoBehaviour:
   healthbarSprite: {fileID: 1315101799288067918}
   enemiesMain: {fileID: 8561084106496603863}
   enemyGlyphe: {fileID: 8271309953584184901}
---- !u!114 &8229384572841939342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6695722471592870552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370d661b44fed2b42a72ba00b7399d60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: ab8874fe3acc6224e88af5f137d7a96d, type: 2}
-  isAlive: 0
-  EnemiesMain: {fileID: 0}
 --- !u!61 &6916225228254587306
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -41,8 +41,8 @@ public class EnemyHealth : MonoBehaviour
     private void EnemyIsDead()
     {
         Debug.Log("Enemy dead");
-        gameObject.SetActive(false);
         PlayerMain.Instance.Health.PlayerHealthChange(-50);
+        EnemyMain.ColorSwitch();
     }
 
     public void ArmorLost()

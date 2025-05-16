@@ -30,6 +30,8 @@ public class StickAppearrAtClickLoc : MonoBehaviour
         ClickManager.instance.OnClickStart += OnTouchStart;
         ClickManager.instance.OnClickEnd += OnTouchEnd;
 
+        TriggerToile.instance.WhenTriggerToile += forceSetActive;
+
         moveAreaBasePos = joystickMoveArea.center;
         clickAreaBasePos = clickArea.center;
     }
@@ -69,6 +71,12 @@ public class StickAppearrAtClickLoc : MonoBehaviour
     public void OnTouchEnd()
     {
         Joystick.instance._joystickAnime.BoolSwitcher("IsHere", false);
+    }
+
+    private void forceSetActive(bool active)
+    {
+        _stick.SetActive(active);
+        OnTouchEnd();
     }
 
     private void OnDrawGizmos()

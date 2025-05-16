@@ -55,11 +55,6 @@ public class PlayerMove : MonoBehaviour
         if (canMove)
         {
             _moveInput = new Vector2();
-
-            if (_moveInput != Vector2.zero)
-            {
-                //PlayerMain.Instance.PlayerMesh.transform.rotation = Quaternion.LookRotation(_moveInput);
-            }
         }
 
     }

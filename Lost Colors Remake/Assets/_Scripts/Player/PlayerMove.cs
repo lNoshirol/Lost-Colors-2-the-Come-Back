@@ -16,6 +16,8 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         canMove = true;
+
+        ClickManager.instance.OnClickEnd += CancelMoveInput;
     }
     void Update()
     {
@@ -48,6 +50,8 @@ public class PlayerMove : MonoBehaviour
             frictionY *= Mathf.Sign(PlayerMain.Instance.Rigidbody2D.linearVelocity.y);
             PlayerMain.Instance.Rigidbody2D.AddForce(Vector3.up * -frictionY);
         }
+
+        Joystick.instance.MovePlayer();
     }
 
     public void Move()
@@ -55,12 +59,16 @@ public class PlayerMove : MonoBehaviour
         if (canMove)
         {
             _moveInput = new Vector2();
-
-            if (_moveInput != Vector2.zero)
-            {
-                //PlayerMain.Instance.PlayerMesh.transform.rotation = Quaternion.LookRotation(_moveInput);
-            }
         }
+    }
 
+    public void SetMoveInput(Vector2 moveInput)
+    {
+        _moveInput = moveInput;
+    }
+
+    private void CancelMoveInput()
+    {
+        _moveInput = Vector2.zero;
     }
 }

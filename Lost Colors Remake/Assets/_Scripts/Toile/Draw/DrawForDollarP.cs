@@ -48,12 +48,12 @@ public class DrawForDollarP : MonoBehaviour
         Cam = Camera.main;
 
 
-        //ClickManager.instance.OnClickStart += OnTouchStart;
-        //ClickManager.instance.OnClickEnd += OnTouchEnd;
+        ClickManager.instance.OnClickStart += OnTouchStart;
+        ClickManager.instance.OnClickEnd += OnTouchEnd;
 
         //Debug.Log("CastSpriteShape.cs l59/ " + _currentColor.ToString());
 
-        ClickManager.instance.OnClickStart += Resetpoint;
+        //ClickManager.instance.OnClickStart += Resetpoint;
     }
 
     void Update()
@@ -80,7 +80,6 @@ public class DrawForDollarP : MonoBehaviour
     [Obsolete]
     public void OnTouchStart()
     {
-        Debug.Log("gawr gura AH");
 
         ToileMain.Instance.RaycastDraw.ClearRaycastLines();
         touchingScreen = true;
@@ -91,6 +90,7 @@ public class DrawForDollarP : MonoBehaviour
             ToileMain.Instance.timerCo = StartCoroutine(ToileMain.Instance.ToileTimer());
 
         lineRenderer.SetColors(_currentColor, _currentColor);
+        Debug.Log("IL FAIT TARPIN CHAUD");
     }
 
     public void OnTouchEnd()

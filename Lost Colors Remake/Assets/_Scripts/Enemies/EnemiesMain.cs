@@ -9,13 +9,15 @@ public class EnemiesMain : MonoBehaviour
     public bool isColorized;
 
     [Header("Enemy Brain Needs")]
-
     public bool playerInSightRange;
     public bool playerInAttackRange;
     public LayerMask whatIsGround;
     public LayerMask whatIsPlayer;
     public GameObject projectile;
 
+    [Header("ShaderNeeds")]
+    public Material enemyMat_BW;
+    public Material enemyMat_Color;
     [Header("Enemy State")]
     public EnemiesState EnemiesCurrentState;
 
@@ -33,7 +35,6 @@ public class EnemiesMain : MonoBehaviour
 
 
     [Header("Enemy Components")]
-    [SerializeField] SpriteRenderer spriteRenderer;
     public NavMeshAgent agent;
     public GameObject enemyMesh;
     public EnemyHealth Health { get; private set; }
@@ -46,13 +47,6 @@ public class EnemiesMain : MonoBehaviour
     public Vector2 position { get; private set; }
     public Vector2 velocity { get; private set; }
     
-
-    //Range
-
-
-
-
-
     //Delay for updates
     private float nextSightCheckTime = 0f;
     private float nextAttackCheckTime = 0f;
@@ -124,7 +118,7 @@ public class EnemiesMain : MonoBehaviour
         {
             nextAttackCheckTime = Time.time + checkInterval;
             playerInAttackRange = Physics2D.OverlapCircle(transform.position, Stats.attackRange, whatIsPlayer);
-        }
+        }   
         return playerInAttackRange;
     }
 
@@ -183,6 +177,5 @@ public class EnemiesMain : MonoBehaviour
     public EnemiesState GetChaseOrFleeState()
     {
         return isColorized ? EFleeState : EChaseState;
-
     }
 }

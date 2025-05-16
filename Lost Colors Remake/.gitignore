@@ -75,4 +75,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 #custom files
-/Assets/Default Editor Ressources/Febucci/
+/Assets/Default Editor Ressources/Febucci/HierarchyData.asset

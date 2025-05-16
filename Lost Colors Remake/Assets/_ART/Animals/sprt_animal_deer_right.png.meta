@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c9267e047b38114479e154420d9c52af
+guid: 8a0837e68a1d21344b067139cfc3bbda
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6833004302375684365
-    second: sprt_tree_red_02_0
+      213: -4067876362214317678
+    second: sprt_animal_deer_right_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprt_tree_red_02_0
+      name: sprt_animal_deer_right_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 8
-        width: 59
-        height: 53
+        x: 13
+        y: 0
+        width: 43
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f67e203aca4c21a0800000000000000
-      internalID: -6833004302375684365
+      spriteID: 291e10840000c87c0800000000000000
+      internalID: -4067876362214317678
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprt_tree_red_02_0: -6833004302375684365
+      sprt_animal_deer_right_0: -4067876362214317678
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

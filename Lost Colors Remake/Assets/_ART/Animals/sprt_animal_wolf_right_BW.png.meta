@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c9267e047b38114479e154420d9c52af
+guid: 0e898b050fba61240a144783d02d0a49
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6833004302375684365
-    second: sprt_tree_red_02_0
+      213: -6800381638347491118
+    second: sprt_animal_wolf_right_BW_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprt_tree_red_02_0
+      name: sprt_animal_wolf_right_BW_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 8
-        width: 59
-        height: 53
+        x: 1
+        y: 0
+        width: 62
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f67e203aca4c21a0800000000000000
-      internalID: -6833004302375684365
+      spriteID: 2d8753d0ee030a1a0800000000000000
+      internalID: -6800381638347491118
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprt_tree_red_02_0: -6833004302375684365
+      sprt_animal_wolf_right_BW_0: -6800381638347491118
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

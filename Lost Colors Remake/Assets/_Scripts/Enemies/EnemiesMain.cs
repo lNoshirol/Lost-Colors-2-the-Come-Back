@@ -180,9 +180,10 @@ public class EnemiesMain : MonoBehaviour
 
     public void ColorSwitch()
     {
-        //Debug.Log("JE SUIS DANS LA FONCTION COLOR SWITCH");
         Debug.Log(spriteRenderer.material);
         spriteRenderer.material.DOFloat(1f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
         isColorized = true;
+        EnemiesCurrentState = EIdleState;
+        EnemiesCurrentState?.OnEnter();
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class DrawForDollarP : MonoBehaviour
 {
+    public static DrawForDollarP instance;
+
     [SerializeField] LineRenderer lineRenderer;
     [SerializeField] private float distanceBetweenPoint;
     private float currentDistance;
@@ -26,17 +28,19 @@ public class DrawForDollarP : MonoBehaviour
     public LayerMask IgnoreMeUwU;
     public LayerMask IgnoreMeUwU2;
 
-    /*    private void Awake()
+    public event Action<DrawData> OnDrawFinish;
+
+    private void Awake()
+    {
+        if (instance == null)
         {
-            if (instance == null)
-            {
-                instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }*/
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -104,12 +108,15 @@ public class DrawForDollarP : MonoBehaviour
 
             Gesture candidate = new Gesture(drawReady.ToArray());
             Result gestureResult = PointCloudRecognizer.Classify(candidate, trainingSet.ToArray());
+            _drawData = new DrawData(points, _extDrawFunc.GetDrawDim(points), gestureResult, _extDrawFunc.GetSpellTargetPointFromCenter(points), ColorUtility.ToHtmlStringRGB(_currentColor));
 
-            //Debug.Log(gestureResult.GestureClass + " " + gestureResult.Score);
+            OnDrawFinish?.Invoke(_drawData);
+
+            Debug.Log(gestureResult.GestureClass + " " + gestureResult.Score);
 
             //TryMakeAdaptativeCollider(GetDrawCenter(points), gestureResult);
 
-            //_drawData = new DrawData(points, GetDrawDim(points), gestureResult, GetSpellTargetPointFromCenter(points), ColorUtility.ToHtmlStringRGB(_currentColor));
+
             if (gestureResult.Score < 0.8)
             {
                 touchingScreen = false;

@@ -34,6 +34,8 @@ public class Joystick : MonoBehaviour
     private void OnMouseUp()
     {
         StickDisappear.instance.StartCoroutineDisapear();
+
+
     }
 
     private void Update()
@@ -44,7 +46,7 @@ public class Joystick : MonoBehaviour
 
             Vector2 offset = endPos - new Vector2(transform.parent.position.x, transform.parent.position.y);
             Vector2 direction = Vector2.ClampMagnitude(offset, 1f);
-            MovePlayer(direction);
+            PlayerMain.Instance.Move.SetMoveInput(direction);
             transform.position = new Vector2(transform.parent.position.x + direction.x, transform.parent.position.y + direction.y);
         }
         else
@@ -54,12 +56,12 @@ public class Joystick : MonoBehaviour
 
     }
 
-    public void MovePlayer(Vector2 _direction)
+    public void MovePlayer()
     {
-        Player.Translate(Time.deltaTime * speed * _direction);
+
+        //PlayerMain.Instance.Move.SetMoveInput(_direction);
         _stickAppearrAtClickLoc.clickArea.center = Player.position + _stickAppearrAtClickLoc.clickAreaBasePos;
         _stickAppearrAtClickLoc.joystickMoveArea.center = Player.position + _stickAppearrAtClickLoc.moveAreaBasePos;
 
-        Debug.DrawRay(Vector2.zero, _direction * 2, Color.red);
     }
 }

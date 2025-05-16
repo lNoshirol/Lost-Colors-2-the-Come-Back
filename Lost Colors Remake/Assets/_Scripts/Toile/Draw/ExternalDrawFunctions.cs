@@ -15,6 +15,11 @@ public class ExternalDrawFunctions : MonoBehaviour
 
     public CatchEnnemyOnDraw _catchEnnemy;
 
+    private void Start()
+    {
+        Cam = Camera.main;
+    }
+
     public List<Vector3> RecenterAndRotate(List<Vector3> points)
     {
         Vector3 centroid = GetDrawCentroid(points);

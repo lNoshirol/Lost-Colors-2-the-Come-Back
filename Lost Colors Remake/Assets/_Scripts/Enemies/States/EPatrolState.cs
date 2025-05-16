@@ -35,7 +35,7 @@ public class EPatrolState : EnemiesState
 
         if (EnemiesMain.CheckPlayerInSightRange())
         {
-            EnemiesMain.SwitchState(EnemiesMain.EChaseState);
+            EnemiesMain.SwitchState(EnemiesMain.GetChaseOrFleeState());
             return;
         }
 

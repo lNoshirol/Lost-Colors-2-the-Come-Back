@@ -5,7 +5,11 @@ public class EAttackState : EnemiesState
     [SerializeField]
     float attackCooldown;
     [SerializeField]
+    float attackAmount;
+    [SerializeField]
     bool alreadyAttack;
+
+
     public override void OnEnter()
     {
         //EnemiesMain.mat.color = Color.red;

@@ -15,9 +15,9 @@ public class EnemyColoration : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-            GetComponent<SpriteRenderer>().sharedMaterial.DOFloat(0, "_Transition", 0);
+            GetComponent<SpriteRenderer>().material.DOFloat(0, "_Transition", 0);
 
-            GetComponent<SpriteRenderer>().sharedMaterial.DOFloat(0.1f, "_Transition", 1.2f).SetEase(Ease.OutQuad);
+            GetComponent<SpriteRenderer>().material.DOFloat(1f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
         }
     }
 }

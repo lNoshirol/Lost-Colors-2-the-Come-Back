@@ -33,7 +33,8 @@ public class EnemiesMain : MonoBehaviour
 
 
     [Header("Enemy Components")]
-    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer spriteRendererBW;
+    [SerializeField] SpriteRenderer spriteRendererColor;
     public NavMeshAgent agent;
     public GameObject enemyMesh;
     public EnemyHealth Health { get; private set; }
@@ -46,13 +47,6 @@ public class EnemiesMain : MonoBehaviour
     public Vector2 position { get; private set; }
     public Vector2 velocity { get; private set; }
     
-
-    //Range
-
-
-
-
-
     //Delay for updates
     private float nextSightCheckTime = 0f;
     private float nextAttackCheckTime = 0f;
@@ -124,7 +118,7 @@ public class EnemiesMain : MonoBehaviour
         {
             nextAttackCheckTime = Time.time + checkInterval;
             playerInAttackRange = Physics2D.OverlapCircle(transform.position, Stats.attackRange, whatIsPlayer);
-        }
+        }   
         return playerInAttackRange;
     }
 
@@ -183,6 +177,19 @@ public class EnemiesMain : MonoBehaviour
     public EnemiesState GetChaseOrFleeState()
     {
         return isColorized ? EFleeState : EChaseState;
+    }
 
+    public void switchColor(bool colorfull)
+    {
+        if (!colorfull) {
+
+            spriteRendererBW.gameObject.SetActive(true);
+            spriteRendererColor.gameObject.SetActive(false);
+        }
+        else
+        {
+            spriteRendererBW.gameObject.SetActive(false);
+            spriteRendererColor.gameObject.SetActive(true);
+        }
     }
 }

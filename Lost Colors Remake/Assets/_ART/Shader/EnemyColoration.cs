@@ -20,4 +20,5 @@ public class EnemyColoration : MonoBehaviour
             GetComponent<SpriteRenderer>().material.DOFloat(1f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
         }
     }
+
 }

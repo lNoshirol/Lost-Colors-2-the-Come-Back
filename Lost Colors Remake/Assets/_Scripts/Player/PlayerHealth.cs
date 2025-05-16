@@ -28,13 +28,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.layer == 9)
-    //    {
-    //        PlayerHealthChange(25);
-    //    }
-    //}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject);
+    }
 
     private void PlayerIsDead()
     {

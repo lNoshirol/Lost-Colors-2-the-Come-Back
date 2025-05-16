@@ -9,13 +9,15 @@ public class EnemiesMain : MonoBehaviour
     public bool isColorized;
 
     [Header("Enemy Brain Needs")]
-
     public bool playerInSightRange;
     public bool playerInAttackRange;
     public LayerMask whatIsGround;
     public LayerMask whatIsPlayer;
     public GameObject projectile;
 
+    [Header("ShaderNeeds")]
+    public Material enemyMat_BW;
+    public Material enemyMat_Color;
     [Header("Enemy State")]
     public EnemiesState EnemiesCurrentState;
 
@@ -33,8 +35,6 @@ public class EnemiesMain : MonoBehaviour
 
 
     [Header("Enemy Components")]
-    [SerializeField] SpriteRenderer spriteRendererBW;
-    [SerializeField] SpriteRenderer spriteRendererColor;
     public NavMeshAgent agent;
     public GameObject enemyMesh;
     public EnemyHealth Health { get; private set; }
@@ -177,19 +177,5 @@ public class EnemiesMain : MonoBehaviour
     public EnemiesState GetChaseOrFleeState()
     {
         return isColorized ? EFleeState : EChaseState;
-    }
-
-    public void switchColor(bool colorfull)
-    {
-        if (!colorfull) {
-
-            spriteRendererBW.gameObject.SetActive(true);
-            spriteRendererColor.gameObject.SetActive(false);
-        }
-        else
-        {
-            spriteRendererBW.gameObject.SetActive(false);
-            spriteRendererColor.gameObject.SetActive(true);
-        }
     }
 }

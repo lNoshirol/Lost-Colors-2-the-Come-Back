@@ -26,7 +26,6 @@ public class CatchEnnemyOnDraw : MonoBehaviour
         foreach (GameObject obj in _ennemyObjectOnDraw)
         {
 
-            
         } 
     }
 }

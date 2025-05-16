@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -16,8 +17,7 @@ public class EnemiesMain : MonoBehaviour
     public GameObject projectile;
 
     [Header("ShaderNeeds")]
-    public Material enemyMat_BW;
-    public Material enemyMat_Color;
+    public SpriteRenderer spriteRenderer;
     [Header("Enemy State")]
     public EnemiesState EnemiesCurrentState;
 
@@ -171,11 +171,18 @@ public class EnemiesMain : MonoBehaviour
             maxSpeed = enemyData.enemyMaxSpeed,
             skillNameList = new List<string>(enemyData.skillNameList)
         };
-
     }
 
     public EnemiesState GetChaseOrFleeState()
     {
         return isColorized ? EFleeState : EChaseState;
+    }
+
+    public void ColorSwitch()
+    {
+        //Debug.Log("JE SUIS DANS LA FONCTION COLOR SWITCH");
+        Debug.Log(spriteRenderer.material);
+        spriteRenderer.material.DOFloat(1f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
+        isColorized = true;
     }
 }

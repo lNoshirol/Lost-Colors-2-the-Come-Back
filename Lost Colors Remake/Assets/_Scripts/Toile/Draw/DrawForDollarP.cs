@@ -110,7 +110,7 @@ public class DrawForDollarP : MonoBehaviour
             //TryMakeAdaptativeCollider(GetDrawCenter(points), gestureResult);
 
             //_drawData = new DrawData(points, GetDrawDim(points), gestureResult, GetSpellTargetPointFromCenter(points), ColorUtility.ToHtmlStringRGB(_currentColor));
-            if (gestureResult.Score < 0.8)
+            if (gestureResult.Score < 0.8 && _detectEnemyInShape.)
             {
                 touchingScreen = false;
 

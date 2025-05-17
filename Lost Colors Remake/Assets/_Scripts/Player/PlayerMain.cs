@@ -1,3 +1,6 @@
+using DG.Tweening;
+using System.Drawing;
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 public class PlayerMain : MonoBehaviour
@@ -15,8 +18,11 @@ public class PlayerMain : MonoBehaviour
     public Rigidbody2D Rigidbody2D { get; private set; }
     [field: SerializeField] public GameObject ProjectileSocket { get; private set; }
     public GameObject PlayerMesh;
+    public SpriteRenderer playerSprite;
 
     public GameObject paintBrushSocket;
+
+    public bool isColorized;
 
     private void Awake()
     {
@@ -39,7 +45,26 @@ public class PlayerMain : MonoBehaviour
 
     private void Start()
     {
-        //CameraMain.Instance.CenterCameraAtPosition(Instance.transform.position);
+        if (Inventory.CheckBrushInDatabase()){
+            ColorSwitch(true);
+        }
     }
+
+
+    public void ColorSwitch(bool goToColor)
+    {
+        if (goToColor) {
+            playerSprite.material.DOFloat(1f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
+            isColorized = true;
+        }
+        else
+        {
+            playerSprite.material.DOFloat(0f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
+            isColorized = false;
+        }
+
+    }
+
+
 
 }

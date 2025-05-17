@@ -41754,6 +41754,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!212 &1862897952 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1672561485340572052, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+  m_PrefabInstance: {fileID: 5025375355386475115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1864213502
 GameObject:
   m_ObjectHideFlags: 0
@@ -49734,6 +49739,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: _MainPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1672561485340572052, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672561485340572052, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672561485340572052, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a4a6c00083aa5b4ea8c8c4c667954a9, type: 3}
+    - target: {fileID: 1672561485340572052, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672561485340572052, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7690f6538d96ace48ac7a0089f9a5431, type: 2}
     - target: {fileID: 2384214893316031475, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.484
@@ -49772,6 +49797,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2384214893316031475, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3759690937926007033, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 1862897952}
+    - target: {fileID: 6841222080737570790, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747290406696043137, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
@@ -49856,6 +49889,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 215331239596162731, guid: eaae63b7b9387a546b39377195c89cef, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f46c25a34b8b1c459f5624066469b4e, type: 3}
     - target: {fileID: 5212156829946427625, guid: eaae63b7b9387a546b39377195c89cef, type: 3}
       propertyPath: m_Name
       value: Sprt_crystal

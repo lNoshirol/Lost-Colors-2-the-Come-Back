@@ -13,7 +13,7 @@ public class TileMapCorruptionWaveHandler : MonoBehaviour
         _tilemapRenderer = GetComponent<TilemapRenderer>();
         
         MaterialPropertyBlock mPropertyBlock = new();
-        mPropertyBlock.SetVector("_WaveDiffusionCenter", _waveStartPoint);
+        mPropertyBlock.SetVector("_WaveDiffusionStartPoint", _waveStartPoint);
         _tilemapRenderer.SetPropertyBlock(mPropertyBlock);
     }
 
@@ -29,7 +29,7 @@ public class TileMapCorruptionWaveHandler : MonoBehaviour
     {
         MaterialPropertyBlock mPropertyBlock = new();
         _tilemapRenderer.material.DOFloat(0f, "_WaveProgress", 0f);
-        mPropertyBlock.SetVector("_WaveDiffusionCenter", _waveStartPoint);
+        mPropertyBlock.SetVector("_WaveDiffusionStartPoint", _waveStartPoint);
         _tilemapRenderer.SetPropertyBlock(mPropertyBlock);
         _tilemapRenderer.material.DOFloat(20f, "_WaveProgress", 2.4f);
     }

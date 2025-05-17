@@ -5,18 +5,28 @@ public class EFleeState : EnemiesState
 {
     public float fleeDistance;
     private Vector2 fleePoint;
+    [SerializeField]
+    private bool fleePointSet = false;
+
     public override void OnEnter()
     {
         FleeFromPlayer(fleeDistance);
     }
     public override void Do()
     {
-        if (!EnemiesMain.CheckPlayerInSightRange())
+        if (!fleePointSet)
         {
-            EnemiesMain.SwitchState(EnemiesMain.EPatrolState);
+            FleeFromPlayer(fleeDistance);
         }
-        else if (FleeDestinationReach() && EnemiesMain.CheckPlayerInSightRange())
+
+        if (fleePointSet)
         {
+            SetEnemyDestination(fleePoint);
+        }
+
+        if (FleeDestinationReach())
+        {
+            Debug.Log("Destination atteinte");
             FleeFromPlayer(fleeDistance);
         }
     }
@@ -42,15 +52,19 @@ public class EFleeState : EnemiesState
             if (NavMesh.SamplePosition(rawFleePoint, out navHit, 2f, NavMesh.AllAreas))
             {
                 fleePoint = navHit.position;
-                EnemiesMain.agent.SetDestination(fleePoint);
-                Debug.DrawLine(transform.position, fleePoint, Color.blue, 1f);
+                fleePointSet = true;
             }
         }
     }
 
+    private void SetEnemyDestination(Vector2 destination)
+    {
+        EnemiesMain.agent.SetDestination(destination);
+    }
+
     private bool FleeDestinationReach()
     {
-        return Vector2.Distance(transform.position, fleePoint) < 0.5f;
+        return Vector2.Distance((Vector2)transform.position, fleePoint) < 0.5f;
     }
 
 }

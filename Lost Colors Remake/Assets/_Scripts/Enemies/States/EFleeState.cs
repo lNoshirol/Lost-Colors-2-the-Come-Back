@@ -14,6 +14,7 @@ public class EFleeState : EnemiesState
     }
     public override void Do()
     {
+        EnemiesMain.UpdateSpriteDirectionRB();
         if (!fleePointSet)
         {
             FleeFromPlayer(fleeDistance);

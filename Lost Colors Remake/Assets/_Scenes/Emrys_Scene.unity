@@ -49876,6 +49876,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8561084106496603863, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: spriteLeft
+      value: 
+      objectReference: {fileID: 21300000, guid: 87629c2d0e7a214418c0c3031a17257a, type: 3}
+    - target: {fileID: 8561084106496603863, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: spriteRight
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d8bd45af8695b147a8747398fb5d82f, type: 3}
+    - target: {fileID: 8561084106496603863, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: spriteLeftBW
+      value: 
+      objectReference: {fileID: 21300000, guid: 87629c2d0e7a214418c0c3031a17257a, type: 3}
+    - target: {fileID: 8561084106496603863, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: spriteRightBW
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d8bd45af8695b147a8747398fb5d82f, type: 3}
+    - target: {fileID: 8561084106496603863, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: spriteLeftColor
+      value: 
+      objectReference: {fileID: 21300000, guid: 83f7f4ffb3c93e246ad4cf4b73da4443, type: 3}
+    - target: {fileID: 8561084106496603863, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: spriteRightColor
+      value: 
+      objectReference: {fileID: 21300000, guid: 8a0837e68a1d21344b067139cfc3bbda, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.U2D;
 
 public class EnemiesMain : MonoBehaviour
 {
@@ -42,21 +43,33 @@ public class EnemiesMain : MonoBehaviour
 
     public EnemyStats Stats { get; private set; }
 
-    public Rigidbody rb { get; private set; }
+    public Rigidbody2D rb { get; private set; }
     public Transform player { get; private set; }
     public Vector2 position { get; private set; }
     public Vector2 velocity { get; private set; }
-    
+
+    [Header("Enemy Sprite BW")]
+    public Sprite spriteRightBW;
+    public Sprite spriteLeftBW;
+
+    [Header("Enemy Sprite Color")]
+    public Sprite spriteRightColor;
+    public Sprite spriteLeftColor;
+
     //Delay for updates
     private float nextSightCheckTime = 0f;
     private float nextAttackCheckTime = 0f;
     private float checkInterval = 0.2f;
 
 
+
+
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = gameObject.GetComponent<NavMeshAgent>();
+        rb = gameObject.GetComponent <Rigidbody2D>();
 
         Health = GetComponent<EnemyHealth>();
         UI = GetComponent<EnemyUI>();
@@ -88,6 +101,7 @@ public class EnemiesMain : MonoBehaviour
     private void Update()
     {
         EnemiesCurrentState?.Do();
+
     }
 
     private void FixedUpdate()
@@ -185,5 +199,37 @@ public class EnemiesMain : MonoBehaviour
         isColorized = true;
         EnemiesCurrentState = EIdleState;
         EnemiesCurrentState?.OnEnter();
+    }
+
+
+    public void UpdateSpriteDirectionRB()
+    {
+        Vector2 direction = rb.linearVelocity;
+
+        if (direction.x >= 0)
+        {
+            spriteRenderer.sprite = spriteRightBW;
+            spriteRenderer.material.SetTexture("_ColoredTex", spriteRightColor.texture);
+        }
+        else
+        {
+
+        }
+        spriteRenderer.sprite = spriteLeftBW;
+    }
+
+    public void UpdateSpriteDirectionPlayer()
+    {
+        Vector2 toPlayer = player.position - transform.position;
+        if (toPlayer.x >= 0)
+        {
+            spriteRenderer.sprite = spriteRightBW;
+            spriteRenderer.material.SetTexture("_ColoredTex", spriteRightColor.texture);
+        }
+        else
+        {
+            spriteRenderer.sprite = spriteLeftBW;
+            spriteRenderer.material.SetTexture("_ColoredTex", spriteLeftColor.texture);
+        }
     }
 }

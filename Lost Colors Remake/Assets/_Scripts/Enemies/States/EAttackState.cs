@@ -17,6 +17,7 @@ public class EAttackState : EnemiesState
 
     public override void Do()
     {
+        EnemiesMain.UpdateSpriteDirectionPlayer();
         if (!alreadyAttack) {
             Vector2 direction = (EnemiesMain.player.position - transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

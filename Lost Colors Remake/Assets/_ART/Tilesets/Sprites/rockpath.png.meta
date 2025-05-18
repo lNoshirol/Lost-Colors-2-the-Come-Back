@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: 80167506314039842a10fdcf31ba0c03
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8263882466262753249
+    second: rockpath_0
+  - first:
+      213: -4019656473403605363
+    second: rockpath_1
+  - first:
+      213: -6355545849222463823
+    second: rockpath_2
+  - first:
+      213: 7110119368617163643
+    second: rockpath_3
+  - first:
+      213: -7912029993572575656
+    second: rockpath_4
+  - first:
+      213: -231695845556498203
+    second: rockpath_5
+  - first:
+      213: -5643387754894817053
+    second: rockpath_6
+  - first:
+      213: 3892547527107155747
+    second: rockpath_7
+  - first:
+      213: 8458954414889828475
+    second: rockpath_8
+  - first:
+      213: 5917043293308029832
+    second: rockpath_9
+  - first:
+      213: 8323350519654143251
+    second: rockpath_10
+  - first:
+      213: 6785289975803030789
+    second: rockpath_11
+  - first:
+      213: -3745373743321568082
+    second: rockpath_12
+  - first:
+      213: 1567777229536308941
+    second: rockpath_13
+  - first:
+      213: 2061403273274357814
+    second: rockpath_14
+  - first:
+      213: -8083304933667997277
+    second: rockpath_15
+  - first:
+      213: 4059602996175619883
+    second: rockpath_16
+  - first:
+      213: -2244301528055688020
+    second: rockpath_17
+  - first:
+      213: 4775371172158099108
+    second: rockpath_18
+  - first:
+      213: -926860494476156396
+    second: rockpath_19
+  - first:
+      213: 1753963811331899796
+    second: rockpath_20
+  - first:
+      213: 4402602250034151743
+    second: rockpath_21
+  - first:
+      213: 8994404971151743794
+    second: rockpath_22
+  - first:
+      213: 2980735919336376462
+    second: rockpath_23
+  - first:
+      213: -3599422089195971062
+    second: rockpath_24
+  - first:
+      213: 373557278822712600
+    second: rockpath_25
+  - first:
+      213: -7193728155886924273
+    second: rockpath_26
+  - first:
+      213: -5982131344214785486
+    second: rockpath_27
+  - first:
+      213: 8614598684522422751
+    second: rockpath_28
+  - first:
+      213: -6289933998333915607
+    second: rockpath_29
+  - first:
+      213: 7664733239412648415
+    second: rockpath_30
+  - first:
+      213: 2132559554066991729
+    second: rockpath_31
+  - first:
+      213: -3087602090689222231
+    second: rockpath_32
+  - first:
+      213: -6997702842544052597
+    second: rockpath_33
+  - first:
+      213: -6717997201415646918
+    second: rockpath_34
+  - first:
+      213: -1788414429782065578
+    second: rockpath_35
+  - first:
+      213: -8538685228052486063
+    second: rockpath_36
+  - first:
+      213: 7294379923798322918
+    second: rockpath_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rockpath_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1064dc4eaac05d80800000000000000
+      internalID: -8263882466262753249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockpath_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ebda70cbf4738c0800000000000000
+      internalID: -4019656473403605363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockpath_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bef26729b09cc7a0800000000000000
+      internalID: -6355545849222463823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockpath_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7bfc0d05e73ca260800000000000000
+      internalID: 7110119368617163643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockpath_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856dedcf3a2d23290800000000000000
+      internalID: -7912029993572575656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockpath_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e0dba52bd9d8ccf0800000000000000
+      internalID: -231695845556498203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockpath_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e884b3acb8aea1b0800000000000000
+      internalID: -5643387754894817053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockpath_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3271c803a5b150630800000000000000
+      internalID: 3892547527107155747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockpath_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b700bbe093e346570800000000000000
+      internalID: 8458954414889828475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 959e0998db809484682d4d3f6341044d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rockpath_0: -8263882466262753249
+      rockpath_1: -4019656473403605363
+      rockpath_2: -6355545849222463823
+      rockpath_3: 7110119368617163643
+      rockpath_4: -7912029993572575656
+      rockpath_5: -231695845556498203
+      rockpath_6: -5643387754894817053
+      rockpath_7: 3892547527107155747
+      rockpath_8: 8458954414889828475
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

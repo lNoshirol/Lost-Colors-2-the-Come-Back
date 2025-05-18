@@ -121,7 +121,7 @@ public class CastSpriteShape : MonoBehaviour
                         EnemyHealth health = enemy.GetComponent<EnemyHealth>();
                         if (health.enemyArmorId == "raccoon_armor")
                         {
-                            health.ArmorLost();
+                            //health.ArmorLost();
                         }
                     }
                     foreach (GameObject enemy in _detectEnemyInShape.GetTargetsInShape())

@@ -7,7 +7,7 @@ using UnityEngine.U2D;
 public class EnemiesMain : MonoBehaviour
 {
     [Header("ScriptableDATA")]
-    public EnemyDATA enemyData;
+    [SerializeField] private EnemyDATA enemyData;
     public bool isColorized;
 
     [Header("Enemy Brain Needs")]
@@ -43,6 +43,8 @@ public class EnemiesMain : MonoBehaviour
 
     public EnemyStats Stats { get; private set; }
 
+    public EnemyArmor Armor;
+
     public Rigidbody2D rb { get; private set; }
     public Transform player { get; private set; }
     public Vector2 position { get; private set; }
@@ -61,10 +63,6 @@ public class EnemiesMain : MonoBehaviour
     private float nextAttackCheckTime = 0f;
     private float checkInterval = 0.2f;
 
-
-
-
-
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -73,29 +71,20 @@ public class EnemiesMain : MonoBehaviour
 
         Health = GetComponent<EnemyHealth>();
         UI = GetComponent<EnemyUI>();
+
+        SetupStats();
     }
     private void Start()
     {
+
+
         EnemyManager.Instance.AddEnemiesToListAndDic(gameObject);
-        SetupStats();
 
-        EPatrolState.Setup(this);
-        EChaseState.Setup(this);
-        EAttackState.Setup(this);
-        EIdleState.Setup(this);
-        EFleeState.Setup(this);
-        EnemiesCurrentState = EIdleState;
-        EnemiesCurrentState?.OnEnter();
+        SetupAndEnterState();
 
-        NavMeshHit hit;
-        if (NavMesh.SamplePosition(transform.position, out hit, 1f, NavMesh.AllAreas))
-        {
-            transform.position = hit.position;
-        }
+        SnapToNavMesh();
 
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-
+        DisplayGoodUI();
     }
 
     private void Update()
@@ -107,6 +96,28 @@ public class EnemiesMain : MonoBehaviour
     private void FixedUpdate()
     {
         EnemiesCurrentState?.FixedDo();
+    }
+
+    private void SnapToNavMesh()
+    {
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(transform.position, out hit, 1f, NavMesh.AllAreas))
+        {
+            transform.position = hit.position;
+        }
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+    }
+
+    public void SetupAndEnterState()
+    {
+        EPatrolState.Setup(this);
+        EChaseState.Setup(this);
+        EAttackState.Setup(this);
+        EIdleState.Setup(this);
+        EFleeState.Setup(this);
+        EnemiesCurrentState = EIdleState;
+        EnemiesCurrentState?.OnEnter();
     }
 
     public void SwitchState(EnemiesState newState)
@@ -136,13 +147,13 @@ public class EnemiesMain : MonoBehaviour
         return playerInAttackRange;
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, Stats.attackRange);
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, Stats.sightRange);
-    }
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(transform.position, Stats.attackRange);
+    //    Gizmos.color = Color.green;
+    //    Gizmos.DrawWireSphere(transform.position, Stats.sightRange);
+    //}
 
     [System.Serializable]
     public class EnemyStats
@@ -152,7 +163,7 @@ public class EnemiesMain : MonoBehaviour
         public bool isColorized;
         public int powerLevel;
         public float maxHp;
-        public List<string> armorList;
+        public List<GameObject> armorList;
         public int maxArmor;
         public float sightRange;
         public float attackRange;
@@ -172,7 +183,7 @@ public class EnemiesMain : MonoBehaviour
         {
             powerLevel = enemyData.enemyPowerLevel,
             maxHp = enemyData.enemyMaxHP,
-            armorList = new List<string>(enemyData.enemyArmorList),
+            armorList = new List<GameObject>(enemyData.armorSpriteListPrefab),
             maxArmor = enemyData.enemyMaxArmor,
             sightRange = enemyData.enemySightRange,
             attackRange = enemyData.enemyAttackRange,
@@ -204,7 +215,7 @@ public class EnemiesMain : MonoBehaviour
 
     public void UpdateSpriteDirectionRB()
     {
-        Vector2 direction = rb.linearVelocity;
+        Vector2 direction = agent.velocity;
 
         if (direction.x >= 0)
         {
@@ -213,9 +224,9 @@ public class EnemiesMain : MonoBehaviour
         }
         else
         {
-
+            spriteRenderer.sprite = spriteLeftBW;
+            spriteRenderer.material.SetTexture("_ColoredTex", spriteLeftColor.texture);
         }
-        spriteRenderer.sprite = spriteLeftBW;
     }
 
     public void UpdateSpriteDirectionPlayer()
@@ -232,4 +243,26 @@ public class EnemiesMain : MonoBehaviour
             spriteRenderer.material.SetTexture("_ColoredTex", spriteLeftColor.texture);
         }
     }
+
+
+    void DisplayGoodUI()
+    {
+        if (isColorized)
+        {
+            UI.RemoveHealtBar();
+        }
+        else
+        {
+            if (Stats.maxArmor == 0)
+            {
+                return;
+            }
+            else
+            {
+                UI.RemoveHealtBar();
+                Armor.AddGlyph();
+            }
+        }
+    }
+
 }

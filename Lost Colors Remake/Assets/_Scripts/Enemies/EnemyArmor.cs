@@ -11,12 +11,8 @@ public class EnemyArmor : MonoBehaviour
     private void Start()
     {
         enemyArmorCount = EnemiesMain.Stats.maxArmor;
-        
     }
 
-
-
-    
     public void AddGlyph()
     {
         while (enemyArmorCount > 0)
@@ -29,7 +25,7 @@ public class EnemyArmor : MonoBehaviour
         }
     }
 
-    public void RemoveGlyph()
+    public void RemoveGlyph(string glyphName)
     {
         if (activeGlyphs.Count == 0) return;
 

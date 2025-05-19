@@ -78,7 +78,7 @@ public class EnemiesMain : MonoBehaviour
     {
 
 
-        EnemyManager.Instance.AddEnemiesToListAndDic(gameObject);
+        EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);
 
         SetupAndEnterState();
 

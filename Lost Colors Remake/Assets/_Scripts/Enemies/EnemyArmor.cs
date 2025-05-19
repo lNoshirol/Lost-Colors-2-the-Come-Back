@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,12 +15,28 @@ public class EnemyArmor : MonoBehaviour
 
     }
 
+    public GameObject searchArmorInPool(string glyphName)
+    {
+        foreach (KeyValuePair<string, Pool> glyph in EnemyManager.Instance.glyphPrefabPool)
+        {
+            if (glyph.Key.Contains(glyphName))
+            {
+                return glyph.Value.GetObject();
+            }
+        }
+        return null;
+
+
+    }
+
+
     public void AddGlyph()
     {
         while (enemyArmorCount > 0)
         {
-            int index = Random.Range(0, EnemiesMain.Stats.armorList.Count);
-            GameObject newGlyph = Instantiate(EnemiesMain.Stats.armorList[index], transform);
+            int index = UnityEngine.Random.Range(0, EnemiesMain.Stats.armorList.Count);
+            GameObject newGlyph = searchArmorInPool(EnemiesMain.Stats.armorList[index].name);
+            newGlyph.transform.parent = transform;
             activeGlyphs.Add(newGlyph);
             UpdateGlyphPositions();
             enemyArmorCount--;

@@ -12,11 +12,12 @@ EditorBuildSettings:
     path: Assets/_Scenes/Emrys_Scene.unity
     guid: 6016223f0d79b4847a23b837b347108f
   - enabled: 1
-    path: "Assets/_Scenes/Th\xE9o_Scene.unity"
-    guid: 9bbfbbf611d7b0746b8af55b856ff053
+    path: Assets/_Scenes/TheoScene.unity
+    guid: 8596a79f15e3dda49b003f2a20b7c0c4
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: dccbfc9d105c68c4390d06259b70efa9, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 7c4852b2e6c841c4fa4e9a812e1c2123, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 62870b3e0db3aa6489e653b04f2b5b00, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: d7d858dd66622b243852b7747c04e5cb, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

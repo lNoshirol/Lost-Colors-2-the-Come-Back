@@ -13,7 +13,7 @@ public class ExternalDrawFunctions : MonoBehaviour
     public Vector3 vecTest;
     public Vector3 vecTest2;
 
-    public CatchEnnemyOnDraw _catchEnnemy;
+    public CatchThingsOnDraw _catchEnnemy;
 
     private void Start()
     {

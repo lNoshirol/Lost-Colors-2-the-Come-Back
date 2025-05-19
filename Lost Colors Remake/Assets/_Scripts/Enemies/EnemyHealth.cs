@@ -47,7 +47,7 @@ public class EnemyHealth : MonoBehaviour
         Debug.Log("Enemy dead");
         PlayerMain.Instance.Health.PlayerHealthChange(-50);
         EnemyMain.ColorSwitch();
-        EnemyMain.UI.RemoveHealtBar();
+        EnemyMain.UI.SwitchHealtBar(false);
     }
     // NEW METHOD IN ENEMYARMOR
     //public void ArmorLost()

@@ -18,11 +18,6 @@ public class EnemyManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        Debug.Log(FindCloserEnemy());
-    }
-
     public void AddEnemiesToListAndDic(GameObject enemy, bool isColorized)
     {
         AddEnemiesToWorldDic(enemy);
@@ -53,7 +48,8 @@ public class EnemyManager : MonoBehaviour
 
     public void ArmorLost(string glyphName)
     {
-        FindCloserEnemy().GetComponent<EnemyArmor>().RemoveGlyph(glyphName);
+        Debug.Log("ArmorLost");
+        FindCloserEnemy().GetComponent<EnemiesMain>().Armor.RemoveGlyph(glyphName);
     }
 
     public GameObject FindCloserEnemy()

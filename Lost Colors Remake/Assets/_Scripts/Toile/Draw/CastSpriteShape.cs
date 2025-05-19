@@ -114,7 +114,7 @@ public class CastSpriteShape : MonoBehaviour
                 
             }
 
-            EnemyManager.Instance.ArmorLost(gestureResult.GestureClass);
+            
 
 
             //switch (gestureResult.GestureClass) {

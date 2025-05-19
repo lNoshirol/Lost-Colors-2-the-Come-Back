@@ -23,7 +23,7 @@ public class DrawForDollarP : MonoBehaviour
 
     public ExternalDrawFunctions _extDrawFunc;
     [SerializeField] private DetectEnemyInShape _detectEnemyInShape;
-    public CatchEnnemyOnDraw _catchEnnemy;
+    public CatchThingsOnDraw _catchEnnemy;
 
     public LayerMask IgnoreMeUwU;
     public LayerMask IgnoreMeUwU2;
@@ -70,13 +70,17 @@ public class DrawForDollarP : MonoBehaviour
 
         if (ClickManager.instance.TouchScreen)
         {
+            Debug.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward * 50, Color.blue);
+
             AddPoint2D();
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            _catchEnnemy.EnnemyOnPath(ray, IgnoreMeUwU);
         }
 
 
-        //DebugRay();
         //ToileMain.Instance.RaycastDraw.DebugRaycastLines();
-
 
 
     }
@@ -99,6 +103,8 @@ public class DrawForDollarP : MonoBehaviour
 
     public void OnTouchEnd()
     {
+        _catchEnnemy.IlEstTaMereLaPute();
+
         if (points.Count > 10)
         {
             List<Point> drawReady = _extDrawFunc.Vec3ToPoints(_extDrawFunc.RecenterAndRotate(points));

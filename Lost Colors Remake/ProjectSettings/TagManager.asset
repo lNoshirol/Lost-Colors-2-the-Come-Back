@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - PlayerAttackArea
+  - Torch
   layers:
   - Default
   - TransparentFX

@@ -549,6 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glyphPrefab: {fileID: 1203507347480276920, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+  activeGlyphs: []
   EnemiesMain: {fileID: 8561084106496603863}
 --- !u!1 &6695722471592870552
 GameObject:

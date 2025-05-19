@@ -51028,6 +51028,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager_Enemies
       objectReference: {fileID: 0}
+    - target: {fileID: 6853716129046933737, guid: 7a5c6d057fedf35498949e75294a2805, type: 3}
+      propertyPath: glyphPoolAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6853716129046933737, guid: 7a5c6d057fedf35498949e75294a2805, type: 3}
+      propertyPath: glyphPrefabList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6853716129046933737, guid: 7a5c6d057fedf35498949e75294a2805, type: 3}
+      propertyPath: 'glyphPrefabList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1203507347480276920, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+    - target: {fileID: 6853716129046933737, guid: 7a5c6d057fedf35498949e75294a2805, type: 3}
+      propertyPath: 'glyphPrefabList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1203507347480276920, guid: 769568728d598fc4eab594fde733fc15, type: 3}
+    - target: {fileID: 6853716129046933737, guid: 7a5c6d057fedf35498949e75294a2805, type: 3}
+      propertyPath: 'glyphPrefabList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1203507347480276920, guid: e80e19c961e0a5145a88dd37d8bae6ba, type: 3}
     - target: {fileID: 8702260480029882481, guid: 7a5c6d057fedf35498949e75294a2805, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.9298277

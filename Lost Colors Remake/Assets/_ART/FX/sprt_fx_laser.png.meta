@@ -81,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,6 +139,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -147,11 +160,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 195
+        y: 192
         width: 176
-        height: 23
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -168,12 +181,12 @@ TextureImporter:
       name: sprt_fx_laser_1
       rect:
         serializedVersion: 2
-        x: 7
-        y: 167
-        width: 166
-        height: 21
+        x: 0
+        y: 160
+        width: 176
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -190,12 +203,12 @@ TextureImporter:
       name: sprt_fx_laser_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 149
-        width: 13
-        height: 9
+        x: 0
+        y: 128
+        width: 176
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -212,12 +225,12 @@ TextureImporter:
       name: sprt_fx_laser_3
       rect:
         serializedVersion: 2
-        x: 7
-        y: 133
-        width: 169
-        height: 24
+        x: 0
+        y: 96
+        width: 176
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -234,12 +247,12 @@ TextureImporter:
       name: sprt_fx_laser_4
       rect:
         serializedVersion: 2
-        x: 1
-        y: 133
-        width: 13
-        height: 9
+        x: 0
+        y: 64
+        width: 176
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -256,12 +269,12 @@ TextureImporter:
       name: sprt_fx_laser_5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 117
-        width: 9
-        height: 8
+        x: 0
+        y: 32
+        width: 176
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -278,12 +291,12 @@ TextureImporter:
       name: sprt_fx_laser_6
       rect:
         serializedVersion: 2
-        x: 7
-        y: 102
-        width: 166
-        height: 22
+        x: 0
+        y: 0
+        width: 176
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -292,94 +305,6 @@ TextureImporter:
       bones: []
       spriteID: a7a718b848fb37b60800000000000000
       internalID: 7742742760377121402
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_fx_laser_7
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 102
-        width: 16
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85e827c438022a850800000000000000
-      internalID: 6386702969860165208
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_fx_laser_8
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 66
-        width: 169
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7f5c7b6c6c6a37f30800000000000000
-      internalID: 4572181419378853367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_fx_laser_9
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 37
-        width: 166
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 18ab85ccfdbe243b0800000000000000
-      internalID: -5529598046018946431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_fx_laser_10
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 7
-        width: 171
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5507442083e6ce570800000000000000
-      internalID: 8497287783776546901
       vertices: []
       indices: 
       edges: []
@@ -400,15 +325,11 @@ TextureImporter:
     nameFileIdTable:
       sprt_fx_laser_0: 5976436411178661494
       sprt_fx_laser_1: 2050887783718665751
-      sprt_fx_laser_10: 8497287783776546901
       sprt_fx_laser_2: 395095064716083583
       sprt_fx_laser_3: 2083736613144078778
       sprt_fx_laser_4: -5470968816338870575
       sprt_fx_laser_5: -5947313522592206851
       sprt_fx_laser_6: 7742742760377121402
-      sprt_fx_laser_7: 6386702969860165208
-      sprt_fx_laser_8: 4572181419378853367
-      sprt_fx_laser_9: -5529598046018946431
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

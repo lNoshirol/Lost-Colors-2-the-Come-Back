@@ -27,6 +27,7 @@ public class Projectile : MonoBehaviour
         {
             PlayerMain player = collision.gameObject.TryGetComponent(out PlayerMain playerD) ? playerD : null;
             player.Health.PlayerHealthChange(_projectileDatas.Damage);
+            Destroy(gameObject); //TEMP : A retirer et faire une pool pour que tout soit plus clean
         }
     }
 }

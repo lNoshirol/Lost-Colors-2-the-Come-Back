@@ -17,6 +17,8 @@ public class EChaseState : EnemiesState
     {
         EnemiesMain.agent.SetDestination(EnemiesMain.player.position);
 
+        EnemiesMain.UpdateSpriteDirectionPlayer();
+
         if (EnemiesMain.CheckPlayerInAttackRange())
         {
             EnemiesMain.SwitchState(EnemiesMain.EAttackState);

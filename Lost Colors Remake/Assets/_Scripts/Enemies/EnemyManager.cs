@@ -18,10 +18,10 @@ public class EnemyManager : MonoBehaviour
         Instance = this;
     }
 
-    public void AddEnemiesToListAndDic(GameObject enemy)
+    public void AddEnemiesToListAndDic(GameObject enemy, bool isColorized)
     {
         AddEnemiesToWorldDic(enemy);
-        AddCurrentEnemiesInRoom(enemy);
+        AddCurrentEnemiesInRoom(enemy, isColorized);
     }
 
     public void AddEnemiesToWorldDic(GameObject enemy)
@@ -35,13 +35,36 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    public void AddCurrentEnemiesInRoom(GameObject currentEnemies)
+    public void AddCurrentEnemiesInRoom(GameObject currentEnemies, bool isColorized)
     {
+        if (isColorized) return;
         CurrentEnemyList.Add(currentEnemies);
     }
 
     public void UpdateEnemyWorldDic()
     {
 
+    }
+
+    public void ArmorLost(string glyphName)
+    {
+        Debug.Log("ArmorLost");
+        FindCloserEnemy().GetComponent<EnemiesMain>().Armor.RemoveGlyph(glyphName);
+    }
+
+    public GameObject FindCloserEnemy()
+    {
+        GameObject closerEnemy = null;
+        float minDistance = Mathf.Infinity;
+        foreach(GameObject enemy in CurrentEnemyList)
+        {
+            float actualDist = Vector2.Distance(enemy.transform.position, PlayerMain.Instance.transform.position);
+            if(actualDist < minDistance)
+            {
+                closerEnemy = enemy;
+                minDistance = actualDist;
+            }
+        }
+        return closerEnemy;
     }
 }

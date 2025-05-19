@@ -78,7 +78,7 @@ public class EnemiesMain : MonoBehaviour
     {
 
 
-        EnemyManager.Instance.AddEnemiesToListAndDic(gameObject);
+        EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);
 
         SetupAndEnterState();
 
@@ -249,7 +249,7 @@ public class EnemiesMain : MonoBehaviour
     {
         if (isColorized)
         {
-            UI.RemoveHealtBar();
+            UI.SwitchHealtBar(false);
         }
         else
         {
@@ -259,7 +259,7 @@ public class EnemiesMain : MonoBehaviour
             }
             else
             {
-                UI.RemoveHealtBar();
+                UI.SwitchHealtBar(false);
                 Armor.AddGlyph();
             }
         }

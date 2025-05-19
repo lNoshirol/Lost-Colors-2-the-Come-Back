@@ -4,19 +4,16 @@ using UnityEngine;
 public class EnemyArmor : MonoBehaviour
 {
     public GameObject glyphPrefab;
-    private List<GameObject> activeGlyphs = new List<GameObject>();
+    public List<GameObject> activeGlyphs = new List<GameObject>();
     [SerializeField] EnemiesMain EnemiesMain;
     int enemyArmorCount;
 
     private void Start()
     {
         enemyArmorCount = EnemiesMain.Stats.maxArmor;
-        
+
     }
 
-
-
-    
     public void AddGlyph()
     {
         while (enemyArmorCount > 0)
@@ -29,14 +26,21 @@ public class EnemyArmor : MonoBehaviour
         }
     }
 
-    public void RemoveGlyph()
+    public void RemoveGlyph(string glyphName)
     {
         if (activeGlyphs.Count == 0) return;
 
         GameObject last = activeGlyphs[activeGlyphs.Count - 1];
+        Debug.Log(last.name);
+        if (!last.name.Contains(glyphName))
+        {
+            return;
+        }
         activeGlyphs.RemoveAt(activeGlyphs.Count - 1);
         Destroy(last);
         UpdateGlyphPositions();
+        EnemiesMain.UI.SwitchHealtBar(true);
+
     }
 
     void UpdateGlyphPositions()

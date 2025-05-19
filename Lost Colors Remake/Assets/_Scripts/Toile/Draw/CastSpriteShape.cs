@@ -114,25 +114,28 @@ public class CastSpriteShape : MonoBehaviour
                 
             }
 
-            switch (gestureResult.GestureClass) {
-                case "thunder":
-                    foreach(GameObject enemy in EnemyManager.Instance.CurrentEnemyList)
-                    {
-                        EnemyHealth health = enemy.GetComponent<EnemyHealth>();
-                        if (health.enemyArmorId == "raccoon_armor")
-                        {
-                            health.ArmorLost();
-                        }
-                    }
-                    foreach (GameObject enemy in _detectEnemyInShape.GetTargetsInShape())
-                    {
-                        Debug.Log(enemy);
-                        enemy.GetComponent<EnemyHealth>().EnemyHealthChange(100);
-
-                    }
-                    break;
             
-            }
+
+
+            //switch (gestureResult.GestureClass) {
+            //    case "thunder":
+            //        foreach(GameObject enemy in EnemyManager.Instance.CurrentEnemyList)
+            //        {
+            //            EnemyHealth health = enemy.GetComponent<EnemyHealth>();
+            //            if (health.enemyArmorId == "raccoon_armor")
+            //            {
+            //                //health.ArmorLost();
+            //            }
+            //        }
+            //        foreach (GameObject enemy in _detectEnemyInShape.GetTargetsInShape())
+            //        {
+            //            Debug.Log(enemy);
+            //            enemy.GetComponent<EnemyHealth>().EnemyHealthChange(100);
+
+            //        }
+            //        break;
+            
+            //}
         }
 
         touchingScreen = false;

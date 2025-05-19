@@ -16,7 +16,7 @@ public class Crystal : MonoBehaviour
     private float checkInterval = 0.2f;
     private float nextAttackCheckTime = 0f;
 
-    public float sightRange;
+
     public float attackRange;
 
     public LayerMask whatIsPlayer;
@@ -24,26 +24,10 @@ public class Crystal : MonoBehaviour
     [SerializeField]
     private Transform player;
 
-    [SerializeField]
-    private Transform _socket;
-
-    public IEnumerator FireAtPlayer()
-    {
-        CrystalCanShoot = false;
-        Vector2 direction = (player.position - firePoint.position).normalized;
-
-        GameObject pipolopo = ProjectileManager.Instance.ProjectilePools[projectilePrefab.name].GetObject();
-        pipolopo.transform.position = _socket.position;
-        Rigidbody2D rb = pipolopo.GetComponent<Rigidbody2D>();
-
-        if (rb != null)
-        {
-            rb.linearVelocity = direction * projectileSpeed;
-        }
-
-        yield return new WaitForSeconds(2f);
-    }
-
+    public GameObject laserPrefab;
+    public Vector2[] LazerCardinals;
+    public Vector2[] LazerSubCardinals;
+ 
     public bool CheckPlayerInAttackRange()
     {
         if (Time.time >= nextAttackCheckTime)
@@ -60,6 +44,39 @@ public class Crystal : MonoBehaviour
         {
             
         }
+    }
+
+    private void Start()
+    {
+        for (int i = 0; i < LazerSubCardinals.Length; i++)
+        {
+            Vector2 setting = LazerSubCardinals[i];
+            float delay = i * 0.5f;
+            StartCoroutine(ShootInDirection(setting, delay));
+        }
+    }
+
+
+    IEnumerator ShootInDirection(Vector2 setting, float startDelay)
+    {
+        yield return new WaitForSeconds(startDelay*2);
+
+        while (true)
+        {
+            ShootLaser(setting);
+            yield return new WaitForSeconds(2.25f);
+        }
+    }
+
+
+    void ShootLaser(Vector2 direction)
+    {
+        GameObject laser = Instantiate(laserPrefab, firePoint.position, Quaternion.identity);
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        laser.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        Destroy(laser, 2f);
     }
 
 }

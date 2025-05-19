@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Gesture Name="" Subject="user" InputType="stylus" Speed="MEDIUM" NumPts="1">
+  <Stroke index="1">
+    <Point X="50" Y="5" T="1747602142050" Pressure="128" />
+  </Stroke>
+</Gesture>

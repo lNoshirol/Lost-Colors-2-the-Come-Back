@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SO_FireBall
   m_EditorClassIdentifier: 
   Name: FireBall
-  Damage: 5
+  Damage: 25
   Speed: 10
   OnLaunchVFX: {fileID: 0}
   OnHitVFX: {fileID: 0}

@@ -22,6 +22,10 @@ public class EnemyHealth : MonoBehaviour
     }
     public void EnemyHealthChange(float healthChangeAmount)
     {
+        if (EnemyMain.isColorized)
+        {
+            return;
+        }
 
         if (enemyArmorAmount == 0) {
             enemyCurrentHealth -= healthChangeAmount;
@@ -43,24 +47,25 @@ public class EnemyHealth : MonoBehaviour
         Debug.Log("Enemy dead");
         PlayerMain.Instance.Health.PlayerHealthChange(-50);
         EnemyMain.ColorSwitch();
+        EnemyMain.UI.RemoveHealtBar();
     }
+    // NEW METHOD IN ENEMYARMOR
+    //public void ArmorLost()
+    //{
+    //    if (enemyArmorAmount == 0)
+    //    {
+    //        enemyArmorAmount = 0;
+    //        Debug.Log("JE PERD PAS DE LARMURE");
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("JE PERD DE L'ARMURE");
+    //        enemyArmorAmount--;
+    //        if(enemyArmorAmount == 0)
+    //        {
+    //            EnemyMain.UI.SwitchGlyphToHealth();
+    //        }
+    //    }
 
-    public void ArmorLost()
-    {
-        if (enemyArmorAmount == 0)
-        {
-            enemyArmorAmount = 0;
-            Debug.Log("JE PERD PAS DE LARMURE");
-        }
-        else
-        {
-            Debug.Log("JE PERD DE L'ARMURE");
-            enemyArmorAmount--;
-            if(enemyArmorAmount == 0)
-            {
-                EnemyMain.UI.SwitchGlyphToHealth();
-            }
-        }
-
-    }
+    //}
 }

@@ -119,6 +119,87 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &1900118815
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8003507408572209, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2679124404473262172, guid: ba527390569291e41bb1152d8f693536, type: 3}
+    - target: {fileID: 1203507347480276920, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_Name
+      value: GlyphDeer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203507347480276920, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 9.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719850797978269391, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
 --- !u!1 &1907031143
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,78 +360,9 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!1001 &8838915401266726665
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1211518651142501143, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1211518651142501143, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1211518651142501143, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1211518651142501143, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1211518651142501143, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1211518651142501143, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1211518651142501143, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1211518651142501143, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1211518651142501143, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1211518651142501143, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987757490811873758, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: pathSvg
-      value: Assets\_Algo\PDollar\Resources\Illustrator\SVG\LineVertical.svg
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987757490811873758, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: ShapeName
-      value: LineV
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987757490811873758, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: GeneratedXmlLocationPath
-      value: Assets\_Algo\PDollar\Resources\GestureSet\LostColors\LineVertic.xml
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265681856501409787, guid: 907e5930677920041aa159c399458059, type: 3}
-      propertyPath: m_Name
-      value: SvgToXml
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 907e5930677920041aa159c399458059, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1907031148}
-  - {fileID: 8838915401266726665}
+  - {fileID: 1900118815}

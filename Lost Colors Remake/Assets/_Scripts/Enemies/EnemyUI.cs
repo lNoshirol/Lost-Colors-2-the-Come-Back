@@ -40,4 +40,9 @@ public class EnemyUI : MonoBehaviour
         healthbarSprite.transform.parent.gameObject.SetActive(true);
         enemyGlyphe.gameObject.SetActive(false);
     }
+
+    public void RemoveHealtBar()
+    {
+        healthbarSprite.transform.parent.parent.gameObject.SetActive(false);
+    }
 }

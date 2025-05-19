@@ -9,7 +9,7 @@ public class EnemyDATA : ScriptableObject
     public int enemyPowerLevel;
     public float enemyMaxHP;
 
-    public List<string> enemyArmorList;
+    public List<GameObject> armorSpriteListPrefab;
     public int enemyMaxArmor;
 
     public float enemySightRange;
@@ -25,6 +25,7 @@ public class EnemyDATA : ScriptableObject
 
     public float enemySpeed;
     public float enemyMaxSpeed;
+
 
     public List<string> skillNameList;
 }

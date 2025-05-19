@@ -11,7 +11,9 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField]
     DictItem itemType;
     [SerializeField] private DictSpell LootableSpells;
-    
+
+
+
     public Dictionary<ItemTypeEnum, bool> ItemDatabase;
     public Dictionary<string, bool> SpellDataBase;
 
@@ -25,6 +27,17 @@ public class PlayerInventory : MonoBehaviour
     {
         ItemDatabase[type] = true;
         Debug.Log("Item loot : " + type);
+    }
+
+    public bool CheckBrushInDatabase()
+    {
+        bool brushIsLooted = false;
+        if (ItemDatabase[ItemTypeEnum.Paintbrush] == true)
+        {
+            brushIsLooted = true;
+        }
+        return brushIsLooted;
+
     }
 }
 

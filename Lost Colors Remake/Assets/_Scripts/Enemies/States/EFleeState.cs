@@ -4,12 +4,32 @@ using UnityEngine.AI;
 public class EFleeState : EnemiesState
 {
     public float fleeDistance;
+    private Vector2 fleePoint;
+    [SerializeField]
+    private bool fleePointSet = false;
+
     public override void OnEnter()
     {
         FleeFromPlayer(fleeDistance);
     }
     public override void Do()
     {
+        EnemiesMain.UpdateSpriteDirectionRB();
+        if (!fleePointSet)
+        {
+            FleeFromPlayer(fleeDistance);
+        }
+
+        if (fleePointSet)
+        {
+            SetEnemyDestination(fleePoint);
+        }
+
+        if (FleeDestinationReach())
+        {
+            Debug.Log("Destination atteinte");
+            FleeFromPlayer(fleeDistance);
+        }
     }
 
     public override void FixedDo()
@@ -32,10 +52,20 @@ public class EFleeState : EnemiesState
             NavMeshHit navHit;
             if (NavMesh.SamplePosition(rawFleePoint, out navHit, 2f, NavMesh.AllAreas))
             {
-                EnemiesMain.agent.SetDestination(navHit.position);
-                Debug.DrawLine(transform.position, navHit.position, Color.blue, 1f);
+                fleePoint = navHit.position;
+                fleePointSet = true;
             }
         }
+    }
+
+    private void SetEnemyDestination(Vector2 destination)
+    {
+        EnemiesMain.agent.SetDestination(destination);
+    }
+
+    private bool FleeDestinationReach()
+    {
+        return Vector2.Distance((Vector2)transform.position, fleePoint) < 0.5f;
     }
 
 }

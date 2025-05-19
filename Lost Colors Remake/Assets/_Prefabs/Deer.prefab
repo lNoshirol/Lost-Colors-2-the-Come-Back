@@ -548,7 +548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b0238b38cc8154e95ea369d3f063dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  symbolPrefab: {fileID: 1203507347480276920, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+  glyphPrefab: {fileID: 1203507347480276920, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+  EnemiesMain: {fileID: 8561084106496603863}
 --- !u!1 &6695722471592870552
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,6 +645,7 @@ MonoBehaviour:
   EFleeState: {fileID: 2431913563940288873}
   agent: {fileID: 4349718614920837913}
   enemyMesh: {fileID: 3478162577142185268}
+  Armor: {fileID: 3190256811434328014}
   spriteRightBW: {fileID: 21300000, guid: 8d8bd45af8695b147a8747398fb5d82f, type: 3}
   spriteLeftBW: {fileID: 21300000, guid: 87629c2d0e7a214418c0c3031a17257a, type: 3}
   spriteRightColor: {fileID: 21300000, guid: 8a0837e68a1d21344b067139cfc3bbda, type: 3}

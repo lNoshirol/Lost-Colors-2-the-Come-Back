@@ -25,7 +25,9 @@ public class Crystal : MonoBehaviour
     private Transform player;
 
     public GameObject laserPrefab;
-    public Vector2[] shootSettings;
+    public Vector2[] LazerCardinals;
+    public Vector2[] LazerSubCardinals;
+ 
     public bool CheckPlayerInAttackRange()
     {
         if (Time.time >= nextAttackCheckTime)
@@ -46,9 +48,9 @@ public class Crystal : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < shootSettings.Length; i++)
+        for (int i = 0; i < LazerSubCardinals.Length; i++)
         {
-            Vector2 setting = shootSettings[i];
+            Vector2 setting = LazerSubCardinals[i];
             float delay = i * 0.5f;
             StartCoroutine(ShootInDirection(setting, delay));
         }
@@ -74,7 +76,7 @@ public class Crystal : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         laser.transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        Destroy(laser, 1f);
+        Destroy(laser, 2f);
     }
 
 }

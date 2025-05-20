@@ -11,6 +11,10 @@ public class MagicCrystal : EnemiesMain
     public Vector2[] LazerCardinals;
     public Vector2[] LazerSubCardinals;
 
+    public GameObject GameObjectToStorePool;
+
+    public Pool pool;
+
     private bool HasStartAttckedPlayer;
 
     public override void Start()
@@ -18,6 +22,8 @@ public class MagicCrystal : EnemiesMain
         EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);
 
         DisplayGoodUI();
+
+        pool = new Pool(projectile, 10, GameObjectToStorePool.transform);
     }
 
     public override void Update()
@@ -69,19 +75,22 @@ public class MagicCrystal : EnemiesMain
 
         while (!isColorized)
         {
-            ShootLaser(setting);
+            StartCoroutine(ShootLaser(setting));
             yield return new WaitForSeconds(2.25f);
         }
     }
 
 
-    void ShootLaser(Vector2 direction)
+    IEnumerator ShootLaser(Vector2 direction)
     {
-        GameObject laser = Instantiate(projectile, firePoint.position, Quaternion.identity);
+        
+        GameObject laser = pool.GetObject();
+        laser.transform.position = firePoint.position;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         laser.transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        Destroy(laser, 2f);
+        yield return new WaitForSeconds(2f);
+        pool.Stock(laser);
     }
 }

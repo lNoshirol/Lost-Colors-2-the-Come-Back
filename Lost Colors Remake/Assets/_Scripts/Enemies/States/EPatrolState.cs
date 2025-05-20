@@ -83,7 +83,7 @@ public class EPatrolState : EnemiesState
 
     private bool DestinationReach()
     {
-        return Vector2.Distance(transform.position, walkPoint) < 0.5f;
+        return Vector2.Distance(transform.position, walkPoint) < 2f;
     }
 
 }

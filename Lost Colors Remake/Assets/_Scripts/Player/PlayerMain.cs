@@ -85,14 +85,16 @@ public class PlayerMain : MonoBehaviour
 
     public void GetDirection()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+        horizontal = Move._moveInput.x;
+        vertical = Move._moveInput.y;
 
         //Setting the animators parameters
         anim.SetFloat("X", horizontal);
         anim.SetFloat("Y", vertical);
-        Debug.Log(horizontal);
-        Debug.Log(vertical);
+        //Debug.Log(horizontal);
+        //Debug.Log(vertical);
+        Debug.Log(anim.GetFloat("X"));
+        Debug.Log(anim.GetFloat("Y"));
 
     }
 }

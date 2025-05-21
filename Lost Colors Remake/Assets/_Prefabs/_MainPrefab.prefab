@@ -422,6 +422,7 @@ GameObject:
   - component: {fileID: 6958382831092715955}
   - component: {fileID: 9172032580895127489}
   - component: {fileID: 2151663390415507562}
+  - component: {fileID: 8386882895695517757}
   m_Layer: 8
   m_Name: PlayerMain
   m_TagString: Player
@@ -462,6 +463,11 @@ MonoBehaviour:
   <ProjectileSocket>k__BackingField: {fileID: 417187346715378797}
   PlayerMesh: {fileID: 417187346715378797}
   playerSprite: {fileID: 1672561485340572052}
+  playerSpriteRightColor: {fileID: 21300000, guid: 2278010769c87d44f9dd1d4c3046b013, type: 3}
+  playerSpriteLeftColor: {fileID: 21300000, guid: 488f1265f7a17ba469d32fc45c901e80, type: 3}
+  playerSpriteUpColor: {fileID: 21300000, guid: 07104c31bae2f6240b270b3a8b8b6007, type: 3}
+  playerSpriteDownColor: {fileID: 21300000, guid: f71a21c722f536c4091d5e0ee214e2b8, type: 3}
+  anim: {fileID: 8386882895695517757}
   paintBrushSocket: {fileID: 8622619193382922164}
   isColorized: 0
 --- !u!114 &156360834068830225
@@ -663,6 +669,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isScreenTouch: 0
+--- !u!95 &8386882895695517757
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2458422246108691770}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cb236f7833012b49885e07ef459f751, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2614488200985444996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,6 +1929,10 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 4333591921870223713, guid: 87650e8597726b041abb991908f0921d, type: 3}
+      propertyPath: _catchEnnemy
+      value: 
+      objectReference: {fileID: 6662786949219524547}
     - target: {fileID: 4838294299314484208, guid: 87650e8597726b041abb991908f0921d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1956,14 +1988,22 @@ PrefabInstance:
       value: toile parent
       objectReference: {fileID: 0}
     - target: {fileID: 8593728354961014140, guid: 87650e8597726b041abb991908f0921d, type: 3}
+      propertyPath: _catchEnnemy
+      value: 
+      objectReference: {fileID: 6662786949219524547}
+    - target: {fileID: 8593728354961014140, guid: 87650e8597726b041abb991908f0921d, type: 3}
       propertyPath: _detectEnemyInShape
       value: 
       objectReference: {fileID: 8453673513405801747}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8020021796839115549, guid: 87650e8597726b041abb991908f0921d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 175297114094458907, guid: 87650e8597726b041abb991908f0921d, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4051118564437541767, guid: 87650e8597726b041abb991908f0921d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6662786949219524547}
   m_SourcePrefab: {fileID: 100100000, guid: 87650e8597726b041abb991908f0921d, type: 3}
 --- !u!4 &2561948694236853255 stripped
 Transform:
@@ -1981,12 +2021,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcdefdd9f6517f4d821f77bf42a6a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3627299534736897811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4051118564437541767, guid: 87650e8597726b041abb991908f0921d, type: 3}
+  m_PrefabInstance: {fileID: 751739860249015444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6662786949219524547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3627299534736897811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0684432cb3c7f648903ffb608c1ea4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ennemyObjectOnDraw: []
 --- !u!114 &8453673513405801747 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9169271867914752391, guid: 87650e8597726b041abb991908f0921d, type: 3}
   m_PrefabInstance: {fileID: 751739860249015444}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3627299534736897811}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6015bf21cda3b594a8dbec593531ef88, type: 3}

@@ -98,7 +98,6 @@ public class DrawForDollarP : MonoBehaviour
             ToileMain.Instance.timerCo = StartCoroutine(ToileMain.Instance.ToileTimer());
 
         lineRenderer.SetColors(_currentColor, _currentColor);
-        Debug.Log("IL FAIT TARPIN CHAUD");
     }
 
     public void OnTouchEnd()
@@ -122,8 +121,8 @@ public class DrawForDollarP : MonoBehaviour
 
             //TryMakeAdaptativeCollider(GetDrawCenter(points), gestureResult);
 
-
-            if (gestureResult.Score < 0.8)
+            //TEMP A FIXER PLUS TARD
+            if (gestureResult.Score < 0.1)
             {
                 touchingScreen = false;
 
@@ -136,8 +135,12 @@ public class DrawForDollarP : MonoBehaviour
                 return;
 
             }
+            else
+            {
+                EnemyManager.Instance.ArmorLost(gestureResult.GestureClass);
+            }
 
-            EnemyManager.Instance.ArmorLost(gestureResult.GestureClass);
+
 
             //switch (gestureResult.GestureClass)
             //{

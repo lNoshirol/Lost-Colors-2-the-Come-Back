@@ -205,7 +205,6 @@ public class EnemiesMain : MonoBehaviour
 
     public virtual void ColorSwitch()
     {
-        Debug.Log(spriteRenderer.material);
         spriteRenderer.material.DOFloat(1f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
         isColorized = true;
         EnemiesCurrentState = EIdleState;

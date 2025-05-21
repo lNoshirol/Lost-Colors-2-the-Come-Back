@@ -44,7 +44,7 @@ namespace PDollarGestureRecognizer
 			foreach (string filePath in filePaths)
 				trainingSet.Add(GestureIO.ReadGestureFromFile(filePath));
 
-			Debug.Log("Demo.cs l47/ " + trainingSet.Count);
+			//Debug.Log("Demo.cs l47/ " + trainingSet.Count);
 		}
 
 		void Update()

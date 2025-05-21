@@ -88,13 +88,16 @@ public class PlayerMain : MonoBehaviour
         horizontal = Move._moveInput.x;
         vertical = Move._moveInput.y;
 
-        //Setting the animators parameters
-        anim.SetFloat("X", horizontal);
-        anim.SetFloat("Y", vertical);
-        //Debug.Log(horizontal);
-        //Debug.Log(vertical);
-        Debug.Log(anim.GetFloat("X"));
-        Debug.Log(anim.GetFloat("Y"));
+        if (horizontal != 0 || vertical != 0)
+        {
+            anim.SetBool("IsMoving", true);
+            anim.SetFloat("X", horizontal);
+            anim.SetFloat("Y", vertical);
+        }
+        else
+        {
+            anim.SetBool("IsMoving", false);
+        }
 
     }
 }

@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 91e58e782a63cee41832b68d63d30a9d
+guid: af7ed76797b1dc448a336504920f6ca6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5370484810879093078
-    second: SpriteSheet_Player_Right_Color_0
+      213: 2627794691545276571
+    second: SpriteSheet_Player_Left_Color_0
   - first:
-      213: -8368447521704345285
-    second: SpriteSheet_Player_Right_Color_1
+      213: -9065157777337761588
+    second: SpriteSheet_Player_Left_Color_1
   - first:
-      213: 3437879785517520717
-    second: SpriteSheet_Player_Right_Color_2
+      213: -86480826374323795
+    second: SpriteSheet_Player_Left_Color_2
   - first:
-      213: 980013411369026923
-    second: SpriteSheet_Player_Right_Color_3
+      213: -5365839316684267862
+    second: SpriteSheet_Player_Left_Color_3
   - first:
-      213: -3590315195336463011
-    second: SpriteSheet_Player_Right_Color_4
+      213: -1575875798643868144
+    second: SpriteSheet_Player_Left_Color_4
   - first:
-      213: 2030704320056768797
-    second: SpriteSheet_Player_Right_Color_5
+      213: 9188708170427457633
+    second: SpriteSheet_Player_Left_Color_5
   - first:
-      213: 5718200175241658104
-    second: SpriteSheet_Player_Right_Color_6
+      213: -5999570627530625183
+    second: SpriteSheet_Player_Left_Color_6
   - first:
-      213: 875768171198523111
-    second: SpriteSheet_Player_Right_Color_7
+      213: -1534188077678359851
+    second: SpriteSheet_Player_Left_Color_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,7 +134,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpriteSheet_Player_Right_Color_0
+      name: SpriteSheet_Player_Left_Color_0
       rect:
         serializedVersion: 2
         x: 0
@@ -149,14 +149,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa6bbefb4843875b0800000000000000
-      internalID: -5370484810879093078
+      spriteID: b90a63c695dc77420800000000000000
+      internalID: 2627794691545276571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_Player_Right_Color_1
+      name: SpriteSheet_Player_Left_Color_1
       rect:
         serializedVersion: 2
         x: 64
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b318053215d4ddb80800000000000000
-      internalID: -8368447521704345285
+      spriteID: cc0c9e0e707123280800000000000000
+      internalID: -9065157777337761588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_Player_Right_Color_2
+      name: SpriteSheet_Player_Left_Color_2
       rect:
         serializedVersion: 2
         x: 128
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d479444437dc5bf20800000000000000
-      internalID: 3437879785517520717
+      spriteID: da183188522cccef0800000000000000
+      internalID: -86480826374323795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_Player_Right_Color_3
+      name: SpriteSheet_Player_Left_Color_3
       rect:
         serializedVersion: 2
         x: 192
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6505cb5105b99d00800000000000000
-      internalID: 980013411369026923
+      spriteID: aae95372295b885b0800000000000000
+      internalID: -5365839316684267862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_Player_Right_Color_4
+      name: SpriteSheet_Player_Left_Color_4
       rect:
         serializedVersion: 2
         x: 256
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5d68462a53ac2ec0800000000000000
-      internalID: -3590315195336463011
+      spriteID: 01e72bb7f4d512ae0800000000000000
+      internalID: -1575875798643868144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_Player_Right_Color_5
+      name: SpriteSheet_Player_Left_Color_5
       rect:
         serializedVersion: 2
         x: 320
@@ -259,14 +259,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d19b5d8e1d28e2c10800000000000000
-      internalID: 2030704320056768797
+      spriteID: 160ee0ba569d48f70800000000000000
+      internalID: 9188708170427457633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_Player_Right_Color_6
+      name: SpriteSheet_Player_Left_Color_6
       rect:
         serializedVersion: 2
         x: 384
@@ -281,14 +281,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8fefad753c02b5f40800000000000000
-      internalID: 5718200175241658104
+      spriteID: 16f6b252d4e3dbca0800000000000000
+      internalID: -5999570627530625183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_Player_Right_Color_7
+      name: SpriteSheet_Player_Left_Color_7
       rect:
         serializedVersion: 2
         x: 448
@@ -303,8 +303,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e6a1edf28a572c00800000000000000
-      internalID: 875768171198523111
+      spriteID: 5da8753621875bae0800000000000000
+      internalID: -1534188077678359851
       vertices: []
       indices: 
       edges: []
@@ -313,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bd369538d0fb37c4ebea7bf45e6d74cb
+    spriteID: 17ad489e729c38544aafeba2008cd65c
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SpriteSheet_Player_Right_Color_0: -5370484810879093078
-      SpriteSheet_Player_Right_Color_1: -8368447521704345285
-      SpriteSheet_Player_Right_Color_2: 3437879785517520717
-      SpriteSheet_Player_Right_Color_3: 980013411369026923
-      SpriteSheet_Player_Right_Color_4: -3590315195336463011
-      SpriteSheet_Player_Right_Color_5: 2030704320056768797
-      SpriteSheet_Player_Right_Color_6: 5718200175241658104
-      SpriteSheet_Player_Right_Color_7: 875768171198523111
+      SpriteSheet_Player_Left_Color_0: 2627794691545276571
+      SpriteSheet_Player_Left_Color_1: -9065157777337761588
+      SpriteSheet_Player_Left_Color_2: -86480826374323795
+      SpriteSheet_Player_Left_Color_3: -5365839316684267862
+      SpriteSheet_Player_Left_Color_4: -1575875798643868144
+      SpriteSheet_Player_Left_Color_5: 9188708170427457633
+      SpriteSheet_Player_Left_Color_6: -5999570627530625183
+      SpriteSheet_Player_Left_Color_7: -1534188077678359851
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

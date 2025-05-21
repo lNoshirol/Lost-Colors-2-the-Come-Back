@@ -72,7 +72,7 @@ public class EnemyManager : MonoBehaviour
         foreach(GameObject enemy in CurrentEnemyList)
         {
             float actualDist = Vector2.Distance(enemy.transform.position, PlayerMain.Instance.transform.position);
-            if(actualDist < minDistance && enemy.GetComponent<EnemiesMain>().Armor.activeGlyphs.Count > 0)
+            if (actualDist < minDistance && enemy.TryGetComponent(out EnemiesMain main) && main.Armor.activeGlyphs.Count > 0 && enemy.TryGetComponent(out Renderer renderer) && renderer.isVisible)
             {
                 closerEnemy = enemy;
                 minDistance = actualDist;

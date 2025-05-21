@@ -46,6 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentEnemyList: []
+  glyphPrefabList:
+  - {fileID: 1203507347480276920, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+  - {fileID: 1203507347480276920, guid: 769568728d598fc4eab594fde733fc15, type: 3}
+  - {fileID: 1203507347480276920, guid: e80e19c961e0a5145a88dd37d8bae6ba, type: 3}
+  GlyphPoolList: []
 --- !u!114 &4787441750665485638
 MonoBehaviour:
   m_ObjectHideFlags: 0

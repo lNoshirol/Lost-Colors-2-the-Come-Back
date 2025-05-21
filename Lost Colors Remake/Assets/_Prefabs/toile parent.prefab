@@ -555,7 +555,6 @@ GameObject:
   - component: {fileID: 6329182421702281142}
   - component: {fileID: 8593728354961014140}
   - component: {fileID: 4333591921870223713}
-  - component: {fileID: 8020021796839115549}
   - component: {fileID: 9169271867914752391}
   m_Layer: 0
   m_Name: Pen
@@ -601,7 +600,7 @@ MonoBehaviour:
   touchingScreen: 0
   _extDrawFunc: {fileID: 4333591921870223713}
   _detectEnemyInShape: {fileID: 0}
-  _catchEnnemy: {fileID: 8020021796839115549}
+  _catchEnnemy: {fileID: 0}
   IgnoreMeUwU:
     serializedVersion: 2
     m_Bits: 55
@@ -632,20 +631,7 @@ MonoBehaviour:
     m_Bits: 0
   vecTest: {x: 0, y: 0, z: 0}
   vecTest2: {x: 0, y: 0, z: 0}
-  _catchEnnemy: {fileID: 8020021796839115549}
---- !u!114 &8020021796839115549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4051118564437541767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ab387a361ebdb746856b699ef35571e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ennemyObjectOnDraw: []
+  _catchEnnemy: {fileID: 0}
 --- !u!114 &9169271867914752391
 MonoBehaviour:
   m_ObjectHideFlags: 0

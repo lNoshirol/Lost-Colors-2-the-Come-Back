@@ -40,19 +40,30 @@ public class PlayerMain : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        Debug.Log($"NoDestroy Awake on {gameObject.name}, instance = {Instance}");
+
+        if (Instance == null)
         {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            Debug.Log($"NoDestroy instance set and DontDestroyOnLoad called on {gameObject.name}");
+        }
+        else if (Instance != this)
+        {
+            Debug.Log($"Duplicate NoDestroy detected on {gameObject.name}, destroying this instance.");
             Destroy(gameObject);
             return;
         }
 
         Instance = this;
+        DontDestroyOnLoad(gameObject);
         Move = GetComponent<PlayerMove>();
         Inventory = GetComponent<PlayerInventory>();
         Health = GetComponent<PlayerHealth>();
         UI = GetComponent<PlayerUI>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Attack = GetComponent<PlayerAttack>();
+
 
     }
 

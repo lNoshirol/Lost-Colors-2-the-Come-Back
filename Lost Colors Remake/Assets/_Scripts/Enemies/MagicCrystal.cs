@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class MagicCrystal : EnemiesMain
 
     public Vector2[] LazerCardinals;
     public Vector2[] LazerSubCardinals;
+    private Vector2[] vector2s;
 
     public GameObject GameObjectToStorePool;
 
@@ -17,13 +19,17 @@ public class MagicCrystal : EnemiesMain
 
     private bool HasStartAttckedPlayer;
 
+    public bool ChangeList;
+
     public override void Start()
     {
         EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);
 
         DisplayGoodUI();
 
-        pool = new Pool(projectile, 10, GameObjectToStorePool.transform);
+        pool = new Pool(projectile, 12, GameObjectToStorePool.transform);
+
+        vector2s = LazerCardinals;
     }
 
     public override void Update()
@@ -31,11 +37,22 @@ public class MagicCrystal : EnemiesMain
         if (CheckPlayerInAttackRange() && !HasStartAttckedPlayer && !isColorized)
         {
             HasStartAttckedPlayer = true;
-            for (int i = 0; i < LazerSubCardinals.Length; i++)
+
+            if (ChangeList)
             {
-                Vector2 setting = LazerSubCardinals[i];
-                float delay = i * 0.5f;
-                StartCoroutine(ShootInDirection(setting, delay));
+                for (int i = 0; i < LazerCardinals.Length; i++)
+                {
+                    Vector2 setting = LazerCardinals[i];
+                    ShootEncore(setting);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < LazerSubCardinals.Length; i++)
+                {
+                    Vector2 setting = LazerSubCardinals[i];
+                    ShootEncore(setting);
+                }
             }
         }
         else if (!CheckPlayerInAttackRange())
@@ -69,28 +86,18 @@ public class MagicCrystal : EnemiesMain
         isColorized = true;
     }
 
-    IEnumerator ShootInDirection(Vector2 setting, float startDelay)
+    async void ShootEncore(Vector2 direction)
     {
-        yield return new WaitForSeconds(startDelay * 2);
-
-        while (!isColorized)
-        {
-            StartCoroutine(ShootLaser(setting));
-            yield return new WaitForSeconds(2.25f);
-        }
-    }
-
-
-    IEnumerator ShootLaser(Vector2 direction)
-    {
-        
         GameObject laser = pool.GetObject();
         laser.transform.position = firePoint.position;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         laser.transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        yield return new WaitForSeconds(2f);
+        await Task.Delay(2000);
+
         pool.Stock(laser);
+        HasStartAttckedPlayer = false;
+        
     }
 }

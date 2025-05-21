@@ -485,7 +485,7 @@ MonoBehaviour:
   _acceleration: 8.82
   _deceleration: 11.76
   _velocityPower: 0.87
-  _friction: 0.1225
+  _friction: 1
   canMove: 1
   _moveInput: {x: 0, y: 0}
 --- !u!114 &9174611379819718931

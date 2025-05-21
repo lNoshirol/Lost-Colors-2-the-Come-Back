@@ -64156,6 +64156,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 156360834068830225, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: _friction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 587022581706631170, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: m_Name
       value: _MainPrefab

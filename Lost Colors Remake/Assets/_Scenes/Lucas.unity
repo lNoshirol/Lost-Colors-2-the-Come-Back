@@ -2165,6 +2165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentEnemyList: []
   glyphPrefabList: []
+  GlyphPoolList: []
 --- !u!1 &1217856601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2816,6 +2817,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _MainPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1383713196840638929, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2384214893316031475, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2877,12 +2882,68 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: percentageCenterPos
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: clickArea.m_Center.x
+      value: -6.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: clickArea.m_Center.y
+      value: -1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: clickArea.m_Extent.x
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: clickArea.m_Extent.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: clickArea.m_Extent.z
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: percentageCenterPos.x
+      value: 13.580247
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: percentageCenterPos.y
+      value: 45.67901
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: joystickMoveArea.m_Center.y
+      value: -1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: joystickMoveArea.m_Extent.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: joystickMoveArea.m_Extent.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: joystickMoveArea.m_Extent.z
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870473850834505410, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870473850834505410, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870473850834505410, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870473850834505410, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5219846770536042898, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: m_IsTrigger

@@ -34,4 +34,9 @@ public class CatchThingsOnDraw : MonoBehaviour
             }
         }
     }
+
+    public void resetList()
+    {
+        _ennemyObjectOnDraw.Clear();
+    }
 }

@@ -70,8 +70,14 @@ public class Joystick : MonoBehaviour
         }
         else
         {
-            transform.position = transform.parent.position;
+            Resetos();
         }
+    }
+
+    public void Resetos()
+    {
+        transform.position = transform.parent.position;
+
     }
 
     public void MovePlayer()

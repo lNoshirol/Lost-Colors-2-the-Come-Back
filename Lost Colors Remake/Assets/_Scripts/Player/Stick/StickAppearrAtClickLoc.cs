@@ -1,9 +1,18 @@
+using NaughtyAttributes;
+using Unity.Android.Gradle;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Android;
 
 public class StickAppearrAtClickLoc : MonoBehaviour
 {
     public static StickAppearrAtClickLoc Instance { get; private set; }
 
+    [Header("Stick Box Parameter")]
+    [Range(0, 100), OnValueChanged("ChangeCenterPosWidth")]
+    public int percentageCenterPos;
+
+    [Header("Box")]
     [SerializeField] GameObject _stick;
     public Bounds joystickMoveArea;
     public Bounds clickArea;
@@ -32,8 +41,15 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
         TriggerToile.instance.WhenTriggerToile += forceSetActive;*/
 
+        ChangeCenterPosWidth();
+        
+        
         moveAreaBasePos = joystickMoveArea.center;
         clickAreaBasePos = clickArea.center;
+
+        Debug.Log(Screen.width);
+        Debug.Log(Screen.height);
+
     }
 
     private void Update()
@@ -61,6 +77,7 @@ public class StickAppearrAtClickLoc : MonoBehaviour
                 if (Input.touches[i].phase == TouchPhase.Ended && Input.touches[i].fingerId == Joystick.instance.stickTouchFingerId)
                 {
                     Joystick.instance.stickTouchFingerId = -1;
+                    Joystick.instance.Resetos();
                     Debug.Log("suce");
                 }
 
@@ -135,4 +152,16 @@ public class StickAppearrAtClickLoc : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(clickArea.center, clickArea.size);
     }
+
+    #region C'est pas propre ? M'en branle ça sert due dans l'editeur
+
+    public void ChangeCenterPosWidth()
+    {
+        
+        Debug.Log($"Width {Screen.width} Height {Screen.height}");
+        Vector3 centerPosX = Camera.main.ScreenToWorldPoint( new (percentageCenterPos * Screen.width / 100, 0, 0));
+        joystickMoveArea.center = new(centerPosX.x, joystickMoveArea.center.y, joystickMoveArea.center.z);
+    }
+
+    #endregion
 }

@@ -6,11 +6,11 @@ using UnityEngine;
 public class MagicCrystal : EnemiesMain
 {
     [Header("Magic Crystal Components")]
-    [SerializeField]
-    private Transform firePoint;
+    [SerializeField] private Transform firePoint;
 
     public Vector2[] LazerCardinals;
     public Vector2[] LazerSubCardinals;
+
     private Vector2[] vector2s;
 
     public GameObject GameObjectToStorePool;
@@ -21,41 +21,32 @@ public class MagicCrystal : EnemiesMain
 
     public bool ChangeList;
 
+    private bool isShooting;
+
     public override void Start()
     {
         EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);
-
         DisplayGoodUI();
 
-        pool = new Pool(projectile, 12, GameObjectToStorePool.transform);
-
+        pool = new Pool(projectile, 20, GameObjectToStorePool.transform);
         vector2s = LazerCardinals;
     }
 
     public override void Update()
     {
-        if (CheckPlayerInAttackRange() && !HasStartAttckedPlayer && !isColorized)
+        if (isColorized || isShooting) return;
+
+        bool playerInRange = CheckPlayerInAttackRange();
+
+        if (playerInRange && !HasStartAttckedPlayer)
         {
             HasStartAttckedPlayer = true;
 
-            if (ChangeList)
-            {
-                for (int i = 0; i < LazerCardinals.Length; i++)
-                {
-                    Vector2 setting = LazerCardinals[i];
-                    ShootEncore(setting);
-                }
-            }
-            else
-            {
-                for (int i = 0; i < LazerSubCardinals.Length; i++)
-                {
-                    Vector2 setting = LazerSubCardinals[i];
-                    ShootEncore(setting);
-                }
-            }
+            vector2s = ChangeList ? LazerCardinals : LazerSubCardinals;
+
+            StartCoroutine(ShootInAllDirections(vector2s));
         }
-        else if (!CheckPlayerInAttackRange())
+        else if (!playerInRange)
         {
             HasStartAttckedPlayer = false;
         }
@@ -86,7 +77,24 @@ public class MagicCrystal : EnemiesMain
         isColorized = true;
     }
 
-    async void ShootEncore(Vector2 direction)
+    private IEnumerator ShootInAllDirections(Vector2[] directions)
+    {
+        isShooting = true;
+
+        foreach (var direction in directions)
+        {
+            ShootLaser(direction);
+        }
+
+        yield return new WaitForSeconds(2f);
+
+        isShooting = false;
+
+        HasStartAttckedPlayer = false;
+        ChangeList = !ChangeList;
+    }
+
+    private async void ShootLaser(Vector2 direction)
     {
         GameObject laser = pool.GetObject();
         laser.transform.position = firePoint.position;
@@ -97,7 +105,5 @@ public class MagicCrystal : EnemiesMain
         await Task.Delay(2000);
 
         pool.Stock(laser);
-        HasStartAttckedPlayer = false;
-        
     }
 }

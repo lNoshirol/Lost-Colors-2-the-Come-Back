@@ -11,16 +11,15 @@ public class CatchThingsOnDraw : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 2000f, ~layerMask))
         {
-            //Debug.Log("oh tu grimpe dans le vaisseau en deux deux ?");
-
             if (hit.collider.gameObject.layer == 9 && !_ennemyObjectOnDraw.Contains(hit.collider.gameObject))
             {
+                Debug.Log("Hit ennemy with line");
                 _ennemyObjectOnDraw.Add(hit.collider.gameObject);
             }
         }
     }
 
-    public void CatchObject()
+    public void CatchObjectOnLine()
     {
         foreach (GameObject obj in _ennemyObjectOnDraw)
         {

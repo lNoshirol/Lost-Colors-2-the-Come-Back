@@ -23,11 +23,11 @@ public class TorchGroup : MonoBehaviour
             }
         }
 
-        FaitUnTrucEnnDeuxDeux();
+        TriggerEvent();
     }
 
-    public void FaitUnTrucEnnDeuxDeux()
+    public void TriggerEvent()
     {
-        Debug.Log("Bili zaboul bili bili ?");
+        //Debug.Log("Bili zaboul bili bili ?");
     }
 }

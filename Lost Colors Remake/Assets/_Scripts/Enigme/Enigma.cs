@@ -14,7 +14,7 @@ public class Enigma : MonoBehaviour
     {
         if (Vector3.Distance(PlayerMain.Instance.transform.position, transform.position) <= castDistanceAuthorize && drawData.result.GestureClass == drawTargetName)
         {
-            Debug.Log("Choix numéro 2 ça marche");
+            //Debug.Log("Choix numéro 2 ça marche");
         }
     }
 

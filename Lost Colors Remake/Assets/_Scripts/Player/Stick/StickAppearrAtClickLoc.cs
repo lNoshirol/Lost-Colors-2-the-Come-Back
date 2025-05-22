@@ -48,28 +48,23 @@ public class StickAppearrAtClickLoc : MonoBehaviour
                 if (Input.touches[i].phase == TouchPhase.Began && Joystick.instance.stickTouchFingerId == -1 && clickArea.Contains(Camera.main.ScreenToWorldPoint(Input.touches[i].position)))
                 {
                     OnTouchStart(Input.touches[i]);
-                    Debug.Log("tié vraiment une chienne mamie");
                     Joystick.instance.stickTouch = Input.touches[i];
                     Joystick.instance.stickTouchFingerId = Input.touches[i].fingerId;
                 }
                 else if ((Input.touches[i].phase == TouchPhase.Moved || Input.touches[i].phase == TouchPhase.Stationary) && Input.touches[i].fingerId == Joystick.instance.stickTouchFingerId)
                 {
                     Joystick.instance.MoveStick(Input.touches[i]);
-                    Debug.Log("BOUGE");
                 }
 
                 if (Input.touches[i].phase == TouchPhase.Ended && Input.touches[i].fingerId == Joystick.instance.stickTouchFingerId)
                 {
                     Joystick.instance.stickTouchFingerId = -1;
-                    Debug.Log("suce");
                 }
 
                 if (Joystick.instance.stickTouchFingerId == -1)
                 {
                     OnTouchEnd();
                     PlayerMain.Instance.Move.CancelMoveInput();
-                    Joystick.instance.stickTouchFingerId = -1;
-                    Debug.Log("OH CASSEU TOII SALE PUTE");
                 }
             }
         }
@@ -78,7 +73,6 @@ public class StickAppearrAtClickLoc : MonoBehaviour
             OnTouchEnd();
             PlayerMain.Instance.Move.CancelMoveInput();
             Joystick.instance.stickTouchFingerId = -1;
-            Debug.Log("OH CASSEU TOII");
         }
     }
 

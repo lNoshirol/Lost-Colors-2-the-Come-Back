@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
 public class DetectEnemyInShape : MonoBehaviour
@@ -20,20 +22,42 @@ public class DetectEnemyInShape : MonoBehaviour
     public List<GameObject> GetTargetsInShape()
     {
         Init();
-        Debug.Log(_shapePoints.Count);
+        Debug.Log("nombre de point de la forme : " + _shapePoints.Count);
 
         List<GameObject> result = new();
+        bool isLine = false;
 
         _target2DPos = TargetsPosToScreenPos(_targets);
 
-
-        //_shapePoints.Add(_shapePoints[0]);
-
-        for(int i = 0; i < _target2DPos.Count; i++)
+        if (_shapePoints.Count >= 2)
         {
-            if (IsInside(_target2DPos[i]))
+            float distance = Vector2.Distance(_shapePoints[0], _shapePoints[^1]);
+            float closeThreshold = 70f;
+
+            if (distance < closeThreshold)
             {
-                result.Add(_targets[i]);
+                _shapePoints.Add(_shapePoints[0]); 
+                Debug.Log("Forme fermée via points proches");
+            }
+            else if(HasSelfIntersection(_shapePoints))
+            {
+                Debug.Log("Forme fermé via intersection");
+            }
+            else
+            {
+                isLine = true;
+                Debug.Log("une ligne");
+            }
+        }
+
+        if (!isLine)
+        {
+            for (int i = 0; i < _target2DPos.Count; i++)
+            {
+                if (IsInside(_target2DPos[i]))
+                {
+                    result.Add(_targets[i]);
+                }
             }
         }
 
@@ -118,8 +142,74 @@ public class DetectEnemyInShape : MonoBehaviour
         return ((int)windingNumber % 2) != 0;
     }
 
+
     public void PROTOTrashDebug()
     {
         GetTargetsInShape();
     }
+
+    private bool HasSelfIntersection(List<Vector2> points)
+    {
+        for (int i = 0; i < points.Count - 1; i++)
+        {
+            Vector2 a1 = points[i];
+            Vector2 a2 = points[i + 1];
+
+            for (int j = i + 2; j < points.Count - 1; j++)
+            {
+                if (i == 0 && j == points.Count - 2) continue;
+
+                Vector2 b1 = points[j];
+                Vector2 b2 = points[j + 1];
+
+                if (DoSegmentsIntersect(a1, a2, b1, b2))
+                {
+                    Debug.Log($"Intersection entre {i}-{i + 1} et {j}-{j + 1}");
+                    IntersectionListUpdate(new Vector2(i, i + 1), new Vector2(j, j + 1));
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private void IntersectionListUpdate(Vector2 firstPoint, Vector2 lastPoint)
+    {
+        _shapePoints[0] = firstPoint;
+        _shapePoints[^1] = lastPoint;
+    }
+
+
+    //ALGO : Segment Intersection
+    private bool DoSegmentsIntersect(Vector2 p1, Vector2 p2, Vector2 q1, Vector2 q2)
+    {
+        float o1 = Orientation(p1, p2, q1);
+        float o2 = Orientation(p1, p2, q2);
+        float o3 = Orientation(q1, q2, p1);
+        float o4 = Orientation(q1, q2, p2);
+
+        if (o1 != o2 && o3 != o4)
+            return true;
+
+        if (o1 == 0 && OnSegment(p1, q1, p2)) return true;
+        if (o2 == 0 && OnSegment(p1, q2, p2)) return true;
+        if (o3 == 0 && OnSegment(q1, p1, q2)) return true;
+        if (o4 == 0 && OnSegment(q1, p2, q2)) return true;
+
+        return false;
+    }
+
+    private int Orientation(Vector2 a, Vector2 b, Vector2 c)
+    {
+        float val = (b.y - a.y) * (c.x - b.x) - (b.x - a.x) * (c.y - b.y);
+        if (Mathf.Approximately(val, 0)) return 0;
+        return (val > 0) ? 1 : 2;
+    }
+
+    private bool OnSegment(Vector2 a, Vector2 b, Vector2 c)
+    {
+        return b.x <= Mathf.Max(a.x, c.x) && b.x >= Mathf.Min(a.x, c.x) &&
+               b.y <= Mathf.Max(a.y, c.y) && b.y >= Mathf.Min(a.y, c.y);
+    }
+
 }

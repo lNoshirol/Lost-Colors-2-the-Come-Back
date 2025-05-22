@@ -102,7 +102,7 @@ public class DrawForDollarP : MonoBehaviour
 
     public void OnTouchEnd()
     {
-        _catchEnnemy.CatchObject();
+        
 
         if (points.Count > 10)
         {
@@ -125,12 +125,10 @@ public class DrawForDollarP : MonoBehaviour
             //TEMP A FIXER PLUS TARD
             if (gestureResult.Score < 0.9)
             {
-                touchingScreen = false;
-
                 foreach (GameObject enemy in _detectEnemyInShape.GetTargetsInShape())
                 {
-                    enemy.GetComponent<EnemyHealth>().EnemyHealthChange(100);
-
+                    if (_detectEnemyInShape.GetTargetsInShape().Count != 0) enemy.GetComponent<EnemyHealth>().EnemyHealthChange(100);
+                    else { _catchEnnemy.CatchObjectOnLine(); }
                 }
 
                 return;
@@ -140,8 +138,7 @@ public class DrawForDollarP : MonoBehaviour
             {
                 EnemyManager.Instance.ArmorLost(gestureResult.GestureClass);
             }
-
-
+            touchingScreen = false;
 
             //switch (gestureResult.GestureClass)
             //{

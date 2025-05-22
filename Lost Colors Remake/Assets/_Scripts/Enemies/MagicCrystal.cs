@@ -28,7 +28,7 @@ public class MagicCrystal : EnemiesMain
         EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);
         DisplayGoodUI();
 
-        pool = new Pool(projectile, 12, GameObjectToStorePool.transform);
+        pool = new Pool(projectile, 20, GameObjectToStorePool.transform);
         vector2s = LazerCardinals;
     }
 

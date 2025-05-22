@@ -30,9 +30,9 @@ public class ExternalDrawFunctions : MonoBehaviour
         {
             Vector3 newPoint = point - centroid;
 
-            newPoint = Quaternion.Euler(-45, 0, 0) * newPoint;
+            //newPoint = Quaternion.Euler(-45, 0, 0) * newPoint;
 
-            newPoint = Quaternion.Euler(0, 0, 180) * newPoint;
+            //newPoint = Quaternion.Euler(0, 0, 180) * newPoint;
 
             recenterDraw.Add(newPoint);
         }
@@ -166,7 +166,7 @@ public class ExternalDrawFunctions : MonoBehaviour
 
         foreach (Vector3 point in list)
         {
-            Point newPoint = new Point(point.x, point.y, 1);
+            Point newPoint = new Point(point.x, -point.y, 1);
             listPoint.Add(newPoint);
         }
 

@@ -15,7 +15,7 @@ public class EnemyArmor : MonoBehaviour
 
     }
 
-    public GameObject searchArmorInPool(string glyphName)
+    public GameObject SearchArmorInPool(string glyphName)
     {
         foreach (KeyValuePair<string, Pool> glyph in EnemyManager.Instance.glyphPrefabPool)
         {
@@ -25,8 +25,21 @@ public class EnemyArmor : MonoBehaviour
             }
         }
         return null;
+    }
 
+    public void RePackInPool(GameObject glyph)
+    {
+        foreach(GameObject parent in EnemyManager.Instance.GlyphPoolList)
+        {
+            string cleanGlyphName = glyph.name.Replace("(Clone)", "");
 
+            if (parent.name.Contains(cleanGlyphName))
+            {
+                glyph.transform.parent = parent.transform;
+                glyph.transform.position = parent.transform.position;
+                glyph.SetActive(false);
+            }
+        }
     }
 
 
@@ -35,7 +48,7 @@ public class EnemyArmor : MonoBehaviour
         while (enemyArmorCount > 0)
         {
             int index = UnityEngine.Random.Range(0, EnemiesMain.Stats.armorList.Count);
-            GameObject newGlyph = searchArmorInPool(EnemiesMain.Stats.armorList[index].name);
+            GameObject newGlyph = SearchArmorInPool(EnemiesMain.Stats.armorList[index].name);
             newGlyph.transform.parent = transform;
             activeGlyphs.Add(newGlyph);
             UpdateGlyphPositions();
@@ -54,15 +67,16 @@ public class EnemyArmor : MonoBehaviour
             return;
         }
         activeGlyphs.RemoveAt(activeGlyphs.Count - 1);
-        Destroy(last);
+        RePackInPool(last);
         UpdateGlyphPositions();
-        EnemiesMain.UI.SwitchHealtBar(true);
+        if (activeGlyphs.Count == 0) EnemiesMain.UI.SwitchHealtBar(true);
+
 
     }
 
     void UpdateGlyphPositions()
     {
-        float spacing = 0.5f;
+        float spacing = 1f;
         float totalWidth = (activeGlyphs.Count - 1) * spacing;
         for (int i = 0; i < activeGlyphs.Count; i++)
         {

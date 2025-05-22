@@ -98,16 +98,16 @@ public class DrawForDollarP : MonoBehaviour
             ToileMain.Instance.timerCo = StartCoroutine(ToileMain.Instance.ToileTimer());
 
         lineRenderer.SetColors(_currentColor, _currentColor);
-        //Debug.Log("IL FAIT TARPIN CHAUD");
     }
 
     public void OnTouchEnd()
     {
-        _catchEnnemy.IlEstTaMereLaPute();
+        _catchEnnemy.CatchObject();
 
         if (points.Count > 10)
         {
-            List<Point> drawReady = _extDrawFunc.Vec3ToPoints(_extDrawFunc.RecenterAndRotate(points));
+            //List<Point> drawReady = _extDrawFunc.Vec3ToPoints(_extDrawFunc.RecenterAndRotate(points)); //20% de précision si on dégage le recenter and rotate
+            List<Point> drawReady = _extDrawFunc.Vec3ToPoints(points);
 
             //GetSpellTargetPointFromCentroid(points);
             //GetSpellTargetPointFromCenter(points);
@@ -122,8 +122,8 @@ public class DrawForDollarP : MonoBehaviour
 
             //TryMakeAdaptativeCollider(GetDrawCenter(points), gestureResult);
 
-
-            if (gestureResult.Score < 0.8)
+            //TEMP A FIXER PLUS TARD
+            if (gestureResult.Score < 0.9)
             {
                 touchingScreen = false;
 
@@ -136,8 +136,12 @@ public class DrawForDollarP : MonoBehaviour
                 return;
 
             }
+            else
+            {
+                EnemyManager.Instance.ArmorLost(gestureResult.GestureClass);
+            }
 
-            EnemyManager.Instance.ArmorLost(gestureResult.GestureClass);
+
 
             //switch (gestureResult.GestureClass)
             //{

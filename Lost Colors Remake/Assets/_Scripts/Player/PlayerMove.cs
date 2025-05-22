@@ -96,7 +96,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (canMove)
         {
-            _moveInput = new Vector2();
+            _moveInput = new Vector2().normalized;
         }
     }
 

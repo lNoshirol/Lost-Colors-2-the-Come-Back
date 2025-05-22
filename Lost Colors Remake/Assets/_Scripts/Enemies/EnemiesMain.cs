@@ -50,6 +50,7 @@ public class EnemiesMain : MonoBehaviour
     public Vector2 position { get; private set; }
     public Vector2 velocity { get; private set; }
 
+
     [Header("Enemy Sprite BW")]
     public Sprite spriteRightBW;
     public Sprite spriteLeftBW;
@@ -74,7 +75,7 @@ public class EnemiesMain : MonoBehaviour
 
         SetupStats();
     }
-    private void Start()
+    public virtual void Start()
     {
 
 
@@ -87,7 +88,7 @@ public class EnemiesMain : MonoBehaviour
         DisplayGoodUI();
     }
 
-    private void Update()
+    public virtual void Update()
     {
         EnemiesCurrentState?.Do();
 
@@ -203,9 +204,8 @@ public class EnemiesMain : MonoBehaviour
         return isColorized ? EFleeState : EChaseState;
     }
 
-    public void ColorSwitch()
+    public virtual void ColorSwitch()
     {
-        Debug.Log(spriteRenderer.material);
         spriteRenderer.material.DOFloat(1f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
         isColorized = true;
         EnemiesCurrentState = EIdleState;
@@ -245,7 +245,7 @@ public class EnemiesMain : MonoBehaviour
     }
 
 
-    void DisplayGoodUI()
+    public virtual void DisplayGoodUI()
     {
         if (isColorized)
         {

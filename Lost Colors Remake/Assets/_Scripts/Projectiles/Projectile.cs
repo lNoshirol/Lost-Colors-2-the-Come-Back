@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private ProjectileDatas _projectileDatas;
+    public ProjectileDatas _projectileDatas;
 
     private Rigidbody _rb;
 
@@ -21,13 +21,13 @@ public class Projectile : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 8)
         {
             PlayerMain player = collision.gameObject.TryGetComponent(out PlayerMain playerD) ? playerD : null;
             player.Health.PlayerHealthChange(_projectileDatas.Damage);
-            Destroy(gameObject); //TEMP : A retirer et faire une pool pour que tout soit plus clean
+            gameObject.SetActive(false);
         }
     }
 }

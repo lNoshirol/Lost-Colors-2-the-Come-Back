@@ -65,7 +65,7 @@ public class EFleeState : EnemiesState
 
     private bool FleeDestinationReach()
     {
-        return Vector2.Distance((Vector2)transform.position, fleePoint) < 0.5f;
+        return Vector2.Distance(transform.position, fleePoint) < 2f;
     }
 
 }

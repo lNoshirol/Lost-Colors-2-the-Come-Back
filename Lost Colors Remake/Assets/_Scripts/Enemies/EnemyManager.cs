@@ -8,6 +8,7 @@ public class EnemyManager : MonoBehaviour
     public Dictionary<GameObject, bool> WorldEnemyDic = new();
     [SerializeField] private List<GameObject> glyphPrefabList = new List<GameObject>();
     public Dictionary<string, Pool> glyphPrefabPool = new();
+    public List<GameObject> GlyphPoolList = new();
     
 
 
@@ -27,11 +28,9 @@ public class EnemyManager : MonoBehaviour
             parent.transform.parent = this.transform;
             Pool newPool = new(glyph, 10, parent.transform);
             glyphPrefabPool.Add(glyph.name, newPool);
+            GlyphPoolList.Add(parent);
         }
     }
-
-
-
 
     public void AddEnemiesToListAndDic(GameObject enemy, bool isColorized)
     {
@@ -63,8 +62,11 @@ public class EnemyManager : MonoBehaviour
 
     public void ArmorLost(string glyphName)
     {
-        Debug.Log("ArmorLost");
-        FindCloserEnemy().GetComponent<EnemiesMain>().Armor.RemoveGlyph(glyphName);
+        if (FindCloserEnemy() != null)
+        {
+            FindCloserEnemy().GetComponent<EnemiesMain>().Armor.RemoveGlyph(glyphName);
+        }
+        
     }
 
     public GameObject FindCloserEnemy()
@@ -74,7 +76,7 @@ public class EnemyManager : MonoBehaviour
         foreach(GameObject enemy in CurrentEnemyList)
         {
             float actualDist = Vector2.Distance(enemy.transform.position, PlayerMain.Instance.transform.position);
-            if(actualDist < minDistance)
+            if (actualDist < minDistance && enemy.TryGetComponent(out EnemiesMain main) && main.Armor.activeGlyphs.Count > 0 && main.spriteRenderer.TryGetComponent(out Renderer renderer) && renderer.isVisible)
             {
                 closerEnemy = enemy;
                 minDistance = actualDist;

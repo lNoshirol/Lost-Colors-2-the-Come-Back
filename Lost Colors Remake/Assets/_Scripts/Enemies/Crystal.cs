@@ -27,6 +27,8 @@ public class Crystal : MonoBehaviour
     public GameObject laserPrefab;
     public Vector2[] LazerCardinals;
     public Vector2[] LazerSubCardinals;
+
+    private bool HasStartAttackPlayer;
  
     public bool CheckPlayerInAttackRange()
     {
@@ -40,22 +42,22 @@ public class Crystal : MonoBehaviour
 
     public void Update()
     {
-        if (CheckPlayerInAttackRange())
+        if (CheckPlayerInAttackRange() && !HasStartAttackPlayer)
         {
-            
+            HasStartAttackPlayer = true;
+            for (int i = 0; i < LazerSubCardinals.Length; i++)
+            {
+                Vector2 setting = LazerSubCardinals[i];
+                float delay = i * 0.5f;
+                StartCoroutine(ShootInDirection(setting, delay));
+            }
+        }
+
+        if (!CheckPlayerInAttackRange())
+        {
+            HasStartAttackPlayer = false;
         }
     }
-
-    private void Start()
-    {
-        for (int i = 0; i < LazerSubCardinals.Length; i++)
-        {
-            Vector2 setting = LazerSubCardinals[i];
-            float delay = i * 0.5f;
-            StartCoroutine(ShootInDirection(setting, delay));
-        }
-    }
-
 
     IEnumerator ShootInDirection(Vector2 setting, float startDelay)
     {

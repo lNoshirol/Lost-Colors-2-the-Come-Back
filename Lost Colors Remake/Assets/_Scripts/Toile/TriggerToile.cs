@@ -22,7 +22,6 @@ public class TriggerToile : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Two TriggerToile script are detected in the scene, this is not allowed");
             Destroy(gameObject);
         }
     }
@@ -33,13 +32,13 @@ public class TriggerToile : MonoBehaviour
         toileButton.interactable = false;
     }
 
-    private void Update()
-    {
-        if (false)
-        {
-            OpenAndCloseToileMagique();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (false)
+    //    {
+    //        OpenAndCloseToileMagique();
+    //    }
+    //}
 
     public void OpenAndCloseToileMagique()
     {

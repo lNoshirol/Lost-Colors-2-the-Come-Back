@@ -8,7 +8,7 @@ public class RoomSwitch : MonoBehaviour
     {
         gameObject.name = roomSwitcherData.switcherID;
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {

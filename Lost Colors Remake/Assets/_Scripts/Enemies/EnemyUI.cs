@@ -12,7 +12,7 @@ public class EnemyUI : MonoBehaviour
 
     void Start()
     {
-        if (enemiesMain.Health.enemyArmorAmount > 0)
+        if (enemiesMain.Armor.activeGlyphs.Count > 0)
         {
             healthbarSprite.transform.parent.gameObject.SetActive(false);
             enemyGlyphe.gameObject.SetActive(true);

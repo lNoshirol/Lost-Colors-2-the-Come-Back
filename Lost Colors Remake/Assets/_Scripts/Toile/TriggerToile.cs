@@ -32,13 +32,13 @@ public class TriggerToile : MonoBehaviour
         toileButton.interactable = false;
     }
 
-    private void Update()
-    {
-        if (false)
-        {
-            OpenAndCloseToileMagique();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (false)
+    //    {
+    //        OpenAndCloseToileMagique();
+    //    }
+    //}
 
     public void OpenAndCloseToileMagique()
     {

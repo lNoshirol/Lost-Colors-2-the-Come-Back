@@ -50,6 +50,7 @@ public class EnemiesMain : MonoBehaviour
     public Vector2 position { get; private set; }
     public Vector2 velocity { get; private set; }
 
+
     [Header("Enemy Sprite BW")]
     public Sprite spriteRightBW;
     public Sprite spriteLeftBW;

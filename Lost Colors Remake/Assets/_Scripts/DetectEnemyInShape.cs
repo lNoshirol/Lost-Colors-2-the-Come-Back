@@ -27,7 +27,7 @@ public class DetectEnemyInShape : MonoBehaviour
         _target2DPos = TargetsPosToScreenPos(_targets);
 
 
-        _shapePoints.Add(_shapePoints[0]);
+        //_shapePoints.Add(_shapePoints[0]);
 
         for(int i = 0; i < _target2DPos.Count; i++)
         {

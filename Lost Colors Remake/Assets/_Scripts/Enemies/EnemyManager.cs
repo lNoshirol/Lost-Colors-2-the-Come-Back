@@ -62,7 +62,11 @@ public class EnemyManager : MonoBehaviour
 
     public void ArmorLost(string glyphName)
     {
-        FindCloserEnemy().GetComponent<EnemiesMain>().Armor.RemoveGlyph(glyphName);
+        if (FindCloserEnemy() != null)
+        {
+            FindCloserEnemy().GetComponent<EnemiesMain>().Armor.RemoveGlyph(glyphName);
+        }
+        
     }
 
     public GameObject FindCloserEnemy()
@@ -72,7 +76,7 @@ public class EnemyManager : MonoBehaviour
         foreach(GameObject enemy in CurrentEnemyList)
         {
             float actualDist = Vector2.Distance(enemy.transform.position, PlayerMain.Instance.transform.position);
-            if (actualDist < minDistance && enemy.TryGetComponent(out EnemiesMain main) && main.Armor.activeGlyphs.Count > 0 && enemy.TryGetComponent(out Renderer renderer) && renderer.isVisible)
+            if (actualDist < minDistance && enemy.TryGetComponent(out EnemiesMain main) && main.Armor.activeGlyphs.Count > 0 && main.spriteRenderer.TryGetComponent(out Renderer renderer) && renderer.isVisible)
             {
                 closerEnemy = enemy;
                 minDistance = actualDist;

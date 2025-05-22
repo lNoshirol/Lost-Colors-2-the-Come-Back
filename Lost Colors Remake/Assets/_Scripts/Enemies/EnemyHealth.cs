@@ -6,9 +6,6 @@ public class EnemyHealth : MonoBehaviour
 
     public float enemyCurrentHealth;
 
-    public string enemyArmorId;
-
-    public float enemyArmorAmount;
     [SerializeField] EnemiesMain EnemyMain;
 
 
@@ -22,12 +19,13 @@ public class EnemyHealth : MonoBehaviour
     }
     public void EnemyHealthChange(float healthChangeAmount)
     {
+        Debug.Log(EnemyMain.isColorized);
         if (EnemyMain.isColorized)
         {
             return;
         }
 
-        if (enemyArmorAmount == 0) {
+        if (EnemyMain.Armor.activeGlyphs.Count == 0) {
             enemyCurrentHealth -= healthChangeAmount;
         }
         

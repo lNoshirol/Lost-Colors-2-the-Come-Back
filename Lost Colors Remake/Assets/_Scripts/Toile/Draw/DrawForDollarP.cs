@@ -122,7 +122,7 @@ public class DrawForDollarP : MonoBehaviour
             //TryMakeAdaptativeCollider(GetDrawCenter(points), gestureResult);
 
             //TEMP A FIXER PLUS TARD
-            if (gestureResult.Score < 0.1)
+            if (gestureResult.Score < 0.9)
             {
                 touchingScreen = false;
 

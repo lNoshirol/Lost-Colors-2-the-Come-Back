@@ -22,7 +22,6 @@ public class TriggerToile : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Two TriggerToile script are detected in the scene, this is not allowed");
             Destroy(gameObject);
         }
     }

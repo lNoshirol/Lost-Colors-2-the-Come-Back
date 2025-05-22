@@ -102,11 +102,12 @@ public class DrawForDollarP : MonoBehaviour
 
     public void OnTouchEnd()
     {
-        _catchEnnemy.IlEstTaMereLaPute();
+        _catchEnnemy.CatchObject();
 
         if (points.Count > 10)
         {
-            List<Point> drawReady = _extDrawFunc.Vec3ToPoints(_extDrawFunc.RecenterAndRotate(points));
+            //List<Point> drawReady = _extDrawFunc.Vec3ToPoints(_extDrawFunc.RecenterAndRotate(points)); //20% de précision si on dégage le recenter and rotate
+            List<Point> drawReady = _extDrawFunc.Vec3ToPoints(points);
 
             //GetSpellTargetPointFromCentroid(points);
             //GetSpellTargetPointFromCenter(points);

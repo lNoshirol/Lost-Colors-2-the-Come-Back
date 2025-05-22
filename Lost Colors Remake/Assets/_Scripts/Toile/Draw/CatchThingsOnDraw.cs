@@ -21,7 +21,7 @@ public class CatchThingsOnDraw : MonoBehaviour
         }
     }
 
-    public void IlEstTaMereLaPute()
+    public void CatchObject()
     {
         foreach (GameObject obj in _ennemyObjectOnDraw)
         {

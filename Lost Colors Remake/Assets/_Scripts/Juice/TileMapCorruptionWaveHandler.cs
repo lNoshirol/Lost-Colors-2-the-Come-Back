@@ -47,7 +47,7 @@ public class TileMapCorruptionWaveHandler : MonoBehaviour
         WaveProgress = _tilemapRenderer.material.GetFloat("_WaveProgress");
         mPropertyBlock.SetVector("_WaveDiffusionStartPoint", _waveStartPoint);
         _tilemapRenderer.SetPropertyBlock(mPropertyBlock);
-        _tilemapRenderer.material.DOFloat(20f, "_WaveProgress", 2.4f);
+        _tilemapRenderer.material.DOFloat(40f, "_WaveProgress", 2.4f);
     }
 
     private void OnDrawGizmos()

@@ -98,7 +98,7 @@ public class DrawForDollarP : MonoBehaviour
             ToileMain.Instance.timerCo = StartCoroutine(ToileMain.Instance.ToileTimer());
 
         lineRenderer.SetColors(_currentColor, _currentColor);
-        Debug.Log("IL FAIT TARPIN CHAUD");
+        //Debug.Log("IL FAIT TARPIN CHAUD");
     }
 
     public void OnTouchEnd()

@@ -1,6 +1,4 @@
 using DG.Tweening;
-using System.Drawing;
-using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 public class PlayerMain : MonoBehaviour

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -21,6 +22,43 @@ public class PlayerMove : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKey(KeyCode.W))
+        {
+            _moveInput += Vector2.up;
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            _moveInput -= Vector2.up;
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            _moveInput += Vector2.left;
+        }
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            _moveInput += Vector2.left;
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            _moveInput += Vector2.down;
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            _moveInput += Vector2.down;
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            _moveInput += Vector2.right;
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            _moveInput += Vector2.right;
+        }
+
+
         float targetSpeedX = _moveInput.x * _topSpeed;
         float targetSpeedZ = _moveInput.y * _topSpeed;
 
@@ -64,10 +102,11 @@ public class PlayerMove : MonoBehaviour
 
     public void SetMoveInput(Vector2 moveInput)
     {
+        //moveInput.Normalize();
         _moveInput = moveInput;
     }
 
-    private void CancelMoveInput()
+    public void CancelMoveInput()
     {
         _moveInput = Vector2.zero;
     }

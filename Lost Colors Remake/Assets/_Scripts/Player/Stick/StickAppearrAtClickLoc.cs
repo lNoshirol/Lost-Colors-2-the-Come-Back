@@ -27,21 +27,69 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     private void Start()
     {
-        ClickManager.instance.OnClickStart += OnTouchStart;
+        /*ClickManager.instance.OnClickStart += OnTouchStart;
         ClickManager.instance.OnClickEnd += OnTouchEnd;
 
-        TriggerToile.instance.WhenTriggerToile += forceSetActive;
+        TriggerToile.instance.WhenTriggerToile += forceSetActive;*/
 
         moveAreaBasePos = joystickMoveArea.center;
         clickAreaBasePos = clickArea.center;
     }
 
-    public void OnTouchStart()
+    private void Update()
     {
-        Vector2 touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Input.touchCount > 0)
+        {
+            //Debug.Log(Input.GetTouch(0).phase);
+
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                if (Input.touches[i].phase == TouchPhase.Began && Joystick.instance.stickTouchFingerId == -1 && clickArea.Contains(Camera.main.ScreenToWorldPoint(Input.touches[i].position)))
+                {
+                    OnTouchStart(Input.touches[i]);
+                    Debug.Log("tié vraiment une chienne mamie");
+                    Joystick.instance.stickTouch = Input.touches[i];
+                    Joystick.instance.stickTouchFingerId = Input.touches[i].fingerId;
+                }
+                else if ((Input.touches[i].phase == TouchPhase.Moved || Input.touches[i].phase == TouchPhase.Stationary) && Input.touches[i].fingerId == Joystick.instance.stickTouchFingerId)
+                {
+                    Joystick.instance.MoveStick(Input.touches[i]);
+                    Debug.Log("BOUGE");
+                }
+
+                if (Input.touches[i].phase == TouchPhase.Ended && Input.touches[i].fingerId == Joystick.instance.stickTouchFingerId)
+                {
+                    Joystick.instance.stickTouchFingerId = -1;
+                    Debug.Log("suce");
+                }
+
+                if (Joystick.instance.stickTouchFingerId == -1)
+                {
+                    OnTouchEnd();
+                    PlayerMain.Instance.Move.CancelMoveInput();
+                    Joystick.instance.stickTouchFingerId = -1;
+                    Debug.Log("OH CASSEU TOII SALE PUTE");
+                }
+            }
+        }
+        else
+        {
+            OnTouchEnd();
+            PlayerMain.Instance.Move.CancelMoveInput();
+            Joystick.instance.stickTouchFingerId = -1;
+            Debug.Log("OH CASSEU TOII");
+        }
+    }
+
+    public void OnTouchStart(Touch touch)
+    {
+        //Debug.Log("begin touch");
+
+        Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
 
         lastTouchPos = touchPosition;
-        
+
         if (!clickArea.Contains(touchPosition))
         {
             Joystick.instance.canMove = false;
@@ -57,14 +105,14 @@ public class StickAppearrAtClickLoc : MonoBehaviour
         if (joystickMoveArea.Contains(touchPosition))
         {
             _stick.transform.position = touchPosition;
-            Debug.Log("Position Changed inside bounds");
+            //Debug.Log("Position Changed inside bounds");
 
         }
         else
         {
             touchPosition = joystickMoveArea.ClosestPoint(touchPosition);
             _stick.transform.position = touchPosition;
-            Debug.Log("Position Changed snap to closest point");
+            //Debug.Log("Position Changed snap to closest point");
         }
     }
 

@@ -2877,6 +2877,10 @@ PrefabInstance:
       propertyPath: stickTouchFingerId
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 3603154998625247935, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: orthographic size
+      value: 4.765625
+      objectReference: {fileID: 0}
     - target: {fileID: 3912138852197158389, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: _catchEnnemy
       value: 
@@ -2895,11 +2899,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: clickArea.m_Extent.x
-      value: 3.6
+      value: 4.23
       objectReference: {fileID: 0}
     - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: clickArea.m_Extent.y
-      value: 2.5
+      value: 3.05
       objectReference: {fileID: 0}
     - target: {fileID: 4665237368030068875, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: clickArea.m_Extent.z

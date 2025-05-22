@@ -20,8 +20,6 @@ public class StickAppearrAtClickLoc : MonoBehaviour
     public Vector3 moveAreaBasePos;
     public Vector3 clickAreaBasePos;
 
-    private Vector2 lastTouchPos;
-
     private void Awake()
     {
         if (Instance == null)
@@ -41,9 +39,19 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
         TriggerToile.instance.WhenTriggerToile += forceSetActive;*/
 
-        ChangeCenterPosWidth();
-        
-        
+        float areaCenterX = -(Screen.width * 6.35f / 2712);
+        float areaCenterY = -(Screen.height * 1.7f / 1220);
+
+        joystickMoveArea.center = new (areaCenterX, areaCenterY);
+        clickArea.center = new (areaCenterX, areaCenterY);
+
+        float areaSizeX = (Screen.width * 1.5f / 2712)*2;
+        float areaSizeY = (Screen.height * 1 / 1220)*2;
+
+        joystickMoveArea.size = new (areaSizeX, areaSizeY, 25);
+        clickArea.size = new (areaSizeX * 2.82f, areaSizeY * 3.05f, 25);
+
+
         moveAreaBasePos = joystickMoveArea.center;
         clickAreaBasePos = clickArea.center;
 
@@ -105,7 +113,6 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
         Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
 
-        lastTouchPos = touchPosition;
 
         if (!clickArea.Contains(touchPosition))
         {
@@ -154,14 +161,6 @@ public class StickAppearrAtClickLoc : MonoBehaviour
     }
 
     #region C'est pas propre ? M'en branle ça sert due dans l'editeur
-
-    public void ChangeCenterPosWidth()
-    {
-        
-        Debug.Log($"Width {Screen.width} Height {Screen.height}");
-        Vector3 centerPosX = Camera.main.ScreenToWorldPoint( new (percentageCenterPos * Screen.width / 100, 0, 0));
-        joystickMoveArea.center = new(centerPosX.x, joystickMoveArea.center.y, joystickMoveArea.center.z);
-    }
 
     #endregion
 }

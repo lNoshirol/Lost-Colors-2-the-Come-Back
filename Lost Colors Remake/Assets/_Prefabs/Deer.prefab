@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea80a1b25256dd8409e5dafa89c9aa58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 1
+  attackCooldown: 5
   attackAmount: 0
   alreadyAttack: 0
 --- !u!1 &5411484367494692842
@@ -665,8 +665,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 100
   enemyCurrentHealth: 100
-  enemyArmorId: 
-  enemyArmorAmount: 0
   EnemyMain: {fileID: 8561084106496603863}
 --- !u!114 &9023901565862365591
 MonoBehaviour:

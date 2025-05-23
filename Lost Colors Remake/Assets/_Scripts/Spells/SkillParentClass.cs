@@ -53,6 +53,12 @@ public abstract class SkillParentClass
         //DelayedFunction(functions, 1f);
     }
 
+    protected void StopRigidBody(Rigidbody2D rb)
+    {
+        rb.angularVelocity = 0;
+        rb.linearVelocity = new Vector2(0,0);
+    }
+
     protected void PrintRandomTest()
     {
         string[] textDatas = { "zarma", "tout roule", "bigre", "zebi", "corneguidouille", "fichtre" };

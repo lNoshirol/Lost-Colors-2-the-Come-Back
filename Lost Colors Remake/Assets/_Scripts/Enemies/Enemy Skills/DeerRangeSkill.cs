@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class EnemyFireBall : SkillParentClass
+public class DeerRangeSkill : SkillParentClass
 {
     public override void Activate(SkillContext context)
     {
-        // PROTO
-        GameObject fireBall = GetProjectile("FireBall");
+        Debug.Log("Cerf fireball");
+        GameObject fireBall = GetProjectile("EnemyFireBall");
         AlignToTransform(fireBall.transform, context.Caster.transform);
         Projectile proj = fireBall.TryGetComponent(out Projectile projectile) ? projectile : null;
-        proj.Launch();
+        proj.Launch(context);
     }
 }

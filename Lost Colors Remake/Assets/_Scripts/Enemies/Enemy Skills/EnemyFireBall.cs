@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class FireBall : SkillParentClass
+public class EnemyFireBall : SkillParentClass
 {
     public override void Activate(SkillContext context)
     {
         // PROTO
         GameObject fireBall = GetProjectile("FireBall");
-        AlignToCameraTransform(fireBall.transform);
+        AlignToTransform(fireBall.transform, context.Caster.transform);
         Projectile proj = fireBall.TryGetComponent(out Projectile projectile) ? projectile : null;
         proj.Launch(context);
     }

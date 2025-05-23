@@ -4,19 +4,21 @@ public class Projectile : MonoBehaviour
 {
     public ProjectileDatas _projectileDatas;
 
-    private Rigidbody _rb;
+    private Rigidbody2D _rb;
 
     private void Awake()
     {
-        _rb = TryGetComponent(out Rigidbody rb) ? rb : null;
+        _rb = TryGetComponent(out Rigidbody2D rb) ? rb : null;
     }
 
     /// <summary>
     /// Launch the projectile in the direction of its forward vector, with its Datas speed
     /// </summary>
-    public void Launch()
+    public void Launch(SkillContext context)
     {
-        _rb.AddForce(this.transform.forward * this._projectileDatas.Speed, ForceMode.Impulse);
+        float angle = Mathf.Atan2(context.Direction.y, context.Direction.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.Euler(0, 0, angle);
+        _rb.AddForce(context.Direction * this._projectileDatas.Speed, ForceMode2D.Impulse);
         // Jouer SFX et VFX OnLaunch
     }
 

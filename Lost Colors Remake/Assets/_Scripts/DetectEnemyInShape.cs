@@ -72,7 +72,7 @@ public class DetectEnemyInShape : MonoBehaviour
         foreach (GameObject target in targets)
         {
             target2DPos.Add(Camera.main.WorldToScreenPoint(target.transform.position));
-            print($"[D.E.I.S.] 3D : {target.transform.position}, 2D : {Camera.main.WorldToScreenPoint(target.transform.position)}");
+            //print($"[D.E.I.S.] 3D : {target.transform.position}, 2D : {Camera.main.WorldToScreenPoint(target.transform.position)}");
         }
 
         return target2DPos;

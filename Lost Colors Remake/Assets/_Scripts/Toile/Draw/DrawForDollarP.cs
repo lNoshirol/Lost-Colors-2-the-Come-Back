@@ -16,6 +16,7 @@ public class DrawForDollarP : MonoBehaviour
     private DrawData _drawData;
     [SerializeField] private Color _currentColor;
 
+
     public List<Gesture> trainingSet = new List<Gesture>();
 
     public Camera Cam;
@@ -177,7 +178,7 @@ public class DrawForDollarP : MonoBehaviour
     private void AddPoint2D()
     {
 
-        _currentPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        _currentPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
 
         if (points.Count == 0)
         {

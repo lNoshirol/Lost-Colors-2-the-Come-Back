@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+ï»¿using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
@@ -14,7 +14,7 @@ public class DetectEnemyInShape : MonoBehaviour
 
     public void Init()
     {
-        // à convertir en List<Vector2> + _pen.GetDrawData().points ne renvoit pas souvent de points
+        // Ã  convertir en List<Vector2> + _pen.GetDrawData().points ne renvoit pas souvent de points
         _shapePoints = _rayCastDraw.points2D;
         _targets = EnemyManager.Instance.CurrentEnemyList;
     }
@@ -37,11 +37,12 @@ public class DetectEnemyInShape : MonoBehaviour
             if (distance < closeThreshold)
             {
                 _shapePoints.Add(_shapePoints[0]); 
-                Debug.Log("Forme fermée via points proches");
+                Debug.Log("Forme fermÃ©e via points proches");
             }
             else if(HasSelfIntersection(_shapePoints))
             {
-                Debug.Log("Forme fermé via intersection");
+                Debug.Log("Forme fermÃ© via intersection");
+                Instantiate(PlayerMain.Instance.playerSprite, _shapePoints[0], Quaternion.identity);
             }
             else
             {
@@ -164,6 +165,13 @@ public class DetectEnemyInShape : MonoBehaviour
 
                 if (DoSegmentsIntersect(a1, a2, b1, b2))
                 {
+                    Vector2 intersectionPoint = GetIntersectionPoint(a1, a2, b1, b2);
+
+                    if (intersectionPoint != Vector2.positiveInfinity)
+                    //Instantiate(PlayerMain.Instance.playerSprite.gameObject, new Vector3(intersectionPoint.x, intersectionPoint.y, 0), Quaternion.identity);
+
+                    Debug.DrawLine(a1, a2, Color.blue, 5f);
+                    Debug.DrawLine(b1, b2, Color.blue, 5f);
                     Debug.Log($"Intersection entre {i}-{i + 1} et {j}-{j + 1}");
                     IntersectionListUpdate(new Vector2(i, i + 1), new Vector2(j, j + 1));
                     return true;
@@ -211,5 +219,29 @@ public class DetectEnemyInShape : MonoBehaviour
         return b.x <= Mathf.Max(a.x, c.x) && b.x >= Mathf.Min(a.x, c.x) &&
                b.y <= Mathf.Max(a.y, c.y) && b.y >= Mathf.Min(a.y, c.y);
     }
+
+    private Vector2 GetIntersectionPoint(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4)
+    {
+        float A1 = p2.y - p1.y;
+        float B1 = p1.x - p2.x;
+        float C1 = A1 * p1.x + B1 * p1.y;
+
+        float A2 = p4.y - p3.y;
+        float B2 = p3.x - p4.x;
+        float C2 = A2 * p3.x + B2 * p3.y;
+
+        float denominator = A1 * B2 - A2 * B1;
+
+        if (Mathf.Approximately(denominator, 0))
+        {
+            return Vector2.positiveInfinity;
+        }
+
+        float x = (B2 * C1 - B1 * C2) / denominator;
+        float y = (A1 * C2 - A2 * C1) / denominator;
+
+        return new Vector2(x, y);
+    }
+
 
 }

@@ -30,11 +30,6 @@ public class EAttackState : EnemiesState
         EnemiesMain.UpdateSpriteDirectionPlayer();
         if (!alreadyAttack) {
             CastCloseSpell();
-            //Vector2 direction = (EnemiesMain.player.position - transform.position).normalized;
-            //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            //Quaternion rotation = Quaternion.Euler(0, 0, angle);
-            //Rigidbody2D rb = Instantiate(EnemiesMain.projectile, transform.position, rotation).GetComponent<Rigidbody2D>();
-            //rb.AddForce(direction * 10f, ForceMode2D.Impulse);
             alreadyAttack = true;
             Invoke(nameof(ResetAttack), attackCooldown);
         }
@@ -46,7 +41,7 @@ public class EAttackState : EnemiesState
     void SkillSetup()
     {
         context = new(EnemiesMain.rb, this.gameObject, (EnemiesMain.player.position - transform.position).normalized, 10);
-        rangeSkill = new DeerCloseSkill();
+        rangeSkill = new DeerRangeSkill();
         closeSkill = new DeerCloseSkill();
     }
 
@@ -73,4 +68,11 @@ public class EAttackState : EnemiesState
         SkillSetup();
         rangeSkill.Activate(context);
     }
+
+
+    //Vector2 direction = (EnemiesMain.player.position - transform.position).normalized;
+    //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+    //Quaternion rotation = Quaternion.Euler(0, 0, angle);
+    //Rigidbody2D rb = Instantiate(EnemiesMain.projectile, transform.position, rotation).GetComponent<Rigidbody2D>();
+    //rb.AddForce(direction * 10f, ForceMode2D.Impulse);
 }

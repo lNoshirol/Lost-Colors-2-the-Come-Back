@@ -17,7 +17,7 @@ public class Projectile : MonoBehaviour
     public void Launch(SkillContext context)
     {
         float angle = Mathf.Atan2(context.Direction.y, context.Direction.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.Euler(0, 0, angle);
+        transform.Rotate(0, 0, angle);
         _rb.AddForce(context.Direction * this._projectileDatas.Speed, ForceMode2D.Impulse);
         // Jouer SFX et VFX OnLaunch
     }

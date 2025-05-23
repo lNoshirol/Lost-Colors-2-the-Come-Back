@@ -8,6 +8,6 @@ public class EnemyFireBall : SkillParentClass
         GameObject fireBall = GetProjectile("FireBall");
         AlignToTransform(fireBall.transform, context.Caster.transform);
         Projectile proj = fireBall.TryGetComponent(out Projectile projectile) ? projectile : null;
-        proj.Launch();
+        proj.Launch(context);
     }
 }

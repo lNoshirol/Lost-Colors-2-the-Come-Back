@@ -29,7 +29,16 @@ public class EAttackState : EnemiesState
     {
         EnemiesMain.UpdateSpriteDirectionPlayer();
         if (!alreadyAttack) {
-            CastCloseSpell();
+
+            int randomSpell = Random.Range(0, 2);
+            if (randomSpell == 0) 
+            { 
+                CastCloseSpell(); 
+            }
+            else
+            {
+                CastRangeSpell();
+            }
             alreadyAttack = true;
             Invoke(nameof(ResetAttack), attackCooldown);
         }

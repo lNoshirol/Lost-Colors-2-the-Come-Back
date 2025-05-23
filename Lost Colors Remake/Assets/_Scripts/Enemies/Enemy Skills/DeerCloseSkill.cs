@@ -6,6 +6,7 @@ public class DeerCloseSkill : SkillParentClass
     {
         Debug.Log("Cerf dash attack");
         Dash(context.Rigidbody2D, context.Direction, context.Strength);
+        DelayedFunction(() => StopRigidBody(context.Rigidbody2D), 0.5f);
     }
 }
 

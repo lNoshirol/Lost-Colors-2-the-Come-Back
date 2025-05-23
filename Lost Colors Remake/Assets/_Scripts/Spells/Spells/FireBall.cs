@@ -8,6 +8,6 @@ public class FireBall : SkillParentClass
         GameObject fireBall = GetProjectile("FireBall");
         AlignToCameraTransform(fireBall.transform);
         Projectile proj = fireBall.TryGetComponent(out Projectile projectile) ? projectile : null;
-        proj.Launch();
+        proj.Launch(context);
     }
 }

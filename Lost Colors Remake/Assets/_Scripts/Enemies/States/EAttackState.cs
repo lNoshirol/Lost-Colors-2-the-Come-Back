@@ -12,7 +12,7 @@ public class EAttackState : EnemiesState
 
     public override void OnEnter()
     {
-        //EnemiesMain.mat.color = Color.red;
+        
     }
 
     public override void Do()

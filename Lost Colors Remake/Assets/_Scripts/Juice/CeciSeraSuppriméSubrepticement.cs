@@ -20,7 +20,7 @@ public class CeciSeraSuppriméSubrepticement : MonoBehaviour
     {
         foreach (var renderer in _tilemapRenderers) 
         {
-            renderer.material.DOFloat(40f, "_WaveProgress", 3f);
+            renderer.material.DOFloat(40f, "_WaveProgress", 10f);
         }
         //_tilemapRenderer.material.DOFloat(40f, "_WaveProgress", 2.4f);
 

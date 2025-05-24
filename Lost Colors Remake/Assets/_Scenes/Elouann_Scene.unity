@@ -219,7 +219,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231469464}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: e32549fcf05bed044bac7b7f604f1be7, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 20bdb3cd7f0a8bf4a9121fcfe1dea8e4, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -49239,7 +49239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3603154998625247935, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: orthographic size
-      value: 3.75
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

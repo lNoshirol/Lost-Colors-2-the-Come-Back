@@ -228,9 +228,18 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 10.77
+        m_Name: _LifeTime
+        m_Overridden: 1
+      - m_Value: 11
+        m_Name: _Velocity
+        m_Overridden: 1
     m_Vector2f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 1, y: 1.5}
+        m_Name: _EllipseRatio
+        m_Overridden: 0
     m_Vector3f:
       m_Array: []
     m_Vector4f:
@@ -382,7 +391,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 569023808}
-  - component: {fileID: 569023811}
   - component: {fileID: 569023810}
   - component: {fileID: 569023809}
   m_Layer: 0
@@ -3395,22 +3403,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &569023811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569023807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a7a1614cd393a4d91148170cdaa07b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waveStartPoint: {x: 0, y: 0}
-  _waveRatio: {x: 0, y: 0}
-  _waveWidth: 0
-  WaveProgress: 0
 --- !u!1 &1046715473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3451,7 +3443,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185692606}
-  - component: {fileID: 1185692609}
   - component: {fileID: 1185692608}
   - component: {fileID: 1185692607}
   m_Layer: 0
@@ -35926,22 +35917,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1185692609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185692605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a7a1614cd393a4d91148170cdaa07b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waveStartPoint: {x: 0, y: 0}
-  _waveRatio: {x: 0, y: 0}
-  _waveWidth: 0
-  WaveProgress: 0
 --- !u!1 &1197192883
 GameObject:
   m_ObjectHideFlags: 0
@@ -35951,7 +35926,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197192884}
-  - component: {fileID: 1197192887}
   - component: {fileID: 1197192886}
   - component: {fileID: 1197192885}
   m_Layer: 0
@@ -47174,22 +47148,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1197192887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1197192883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a7a1614cd393a4d91148170cdaa07b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waveStartPoint: {x: 0, y: 0}
-  _waveRatio: {x: 0, y: 0}
-  _waveWidth: 0
-  WaveProgress: 0
 --- !u!1 &1214108509
 GameObject:
   m_ObjectHideFlags: 0
@@ -47230,7 +47188,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1228323575}
-  - component: {fileID: 1228323578}
   - component: {fileID: 1228323577}
   - component: {fileID: 1228323576}
   m_Layer: 0
@@ -49165,22 +49122,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1228323578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228323574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a7a1614cd393a4d91148170cdaa07b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waveStartPoint: {x: 0, y: 0}
-  _waveRatio: {x: 0, y: 0}
-  _waveWidth: 0
-  WaveProgress: 0
 --- !u!1001 &1236749929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49239,7 +49180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3603154998625247935, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: orthographic size
-      value: 0
+      value: 4.21875
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -49416,6 +49357,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caeef8ef210c4144c86e15ffd9f10a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _waveStartPoint: {x: 6, y: -1.55}
+  _waveRatio: {x: 1, y: 1.5}
+  _waveWidth: 0.5
+  _waveDuration: 5
+  _vfx: {fileID: 231469466}
   _tilemapRenderers:
   - {fileID: 1185692607}
   - {fileID: 1228323576}

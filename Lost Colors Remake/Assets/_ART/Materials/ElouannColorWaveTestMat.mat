@@ -55,8 +55,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _Contrast: 3.45
-    - _WaveProgress: -0.47
-    - _WaveWidth: 0.7
+    - _WaveProgress: 6.48
+    - _WaveWidth: 0.5
     m_Colors:
     - _WaveDiffusionStartPoint: {r: 6.04, g: -1.76, b: 0, a: 0}
     - _WaveRatio: {r: 1, g: 1.5, b: 0, a: 0}

@@ -9,14 +9,14 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] EnemiesMain EnemyMain;
 
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("PlayerAttackArea"))
-        {
-            EnemyHealthChange(PlayerMain.Instance.Attack.attackDamageAmount);
-            EnemyMain.UI.UpdateEnemyHealthUI();
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("PlayerAttackArea"))
+    //    {
+    //        EnemyHealthChange(PlayerMain.Instance.Attack.attackDamageAmount);
+    //        EnemyMain.UI.UpdateEnemyHealthUI();
+    //    }
+    //}
     public void EnemyHealthChange(float healthChangeAmount)
     {
         Debug.Log(EnemyMain.isColorized);

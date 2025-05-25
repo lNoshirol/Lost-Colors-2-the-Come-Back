@@ -64,7 +64,20 @@ public class EnemyManager : MonoBehaviour
     {
         if (FindCloserEnemy() != null)
         {
-            FindCloserEnemy().GetComponent<EnemiesMain>().Armor.RemoveGlyph(glyphName);
+
+            var enemy = FindCloserEnemy();
+            if (enemy.TryGetComponent<EnemiesMain>(out var enemiesMain))
+            {
+                enemiesMain.Armor.RemoveGlyph(glyphName);
+            }
+            else if (enemy.TryGetComponent<CrystalMain>(out var crystalMain))
+            {
+                crystalMain.Armor.RemoveGlyph(glyphName);
+            }
+        }
+        else
+        {
+            Debug.Log("No enemy on screen with armor");
         }
         
     }
@@ -76,10 +89,28 @@ public class EnemyManager : MonoBehaviour
         foreach(GameObject enemy in CurrentEnemyList)
         {
             float actualDist = Vector2.Distance(enemy.transform.position, PlayerMain.Instance.transform.position);
-            if (actualDist < minDistance && enemy.TryGetComponent(out EnemiesMain main) && main.Armor.activeGlyphs.Count > 0 && main.spriteRenderer.TryGetComponent(out Renderer renderer) && renderer.isVisible)
+            if (actualDist < minDistance)
             {
-                closerEnemy = enemy;
-                minDistance = actualDist;
+                if (enemy.TryGetComponent<EnemiesMain>(out var eMain))
+                {
+                    if (eMain.Armor.activeGlyphs.Count > 0 &&
+                        eMain.spriteRenderer.TryGetComponent<Renderer>(out var renderer) &&
+                        renderer.isVisible)
+                    {
+                        closerEnemy = enemy;
+                        minDistance = actualDist;
+                    }
+                }
+                else if (enemy.TryGetComponent<CrystalMain>(out var cMain))
+                {
+                    if (cMain.Armor.activeGlyphs.Count > 0 &&
+                        cMain.spriteRenderer.TryGetComponent<Renderer>(out var renderer) &&
+                        renderer.isVisible)
+                    {
+                        closerEnemy = enemy;
+                        minDistance = actualDist;
+                    }
+                }
             }
         }
         return closerEnemy;

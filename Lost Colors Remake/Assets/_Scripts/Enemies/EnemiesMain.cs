@@ -38,14 +38,14 @@ public class EnemiesMain : MonoBehaviour
     [Header("Enemy Components")]
     public NavMeshAgent agent;
     public GameObject enemyMesh;
-    public EnemyHealth Health { get; private set; }
-    public EnemyUI UI { get; private set; }
+    public EnemyHealth Health { get; protected set; }
+    public EnemyUI UI { get; protected set; }
 
-    public EnemyStats Stats { get; private set; }
+    public EnemyStats Stats { get; protected set; }
 
     public EnemyArmor Armor;
 
-    public Rigidbody2D rb { get; private set; }
+    public Rigidbody2D rb { get; protected set; }
     public Transform player { get; private set; }
     public Vector2 position { get; private set; }
     public Vector2 velocity { get; private set; }
@@ -77,8 +77,6 @@ public class EnemiesMain : MonoBehaviour
     }
     public virtual void Start()
     {
-
-
         EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);
 
         SetupAndEnterState();
@@ -110,7 +108,7 @@ public class EnemiesMain : MonoBehaviour
         agent.updateUpAxis = false;
     }
 
-    public void SetupAndEnterState()
+    public virtual void SetupAndEnterState()
     {
         EPatrolState.Setup(this);
         EChaseState.Setup(this);
@@ -178,7 +176,7 @@ public class EnemiesMain : MonoBehaviour
         public List<string> skillNameList;
     }
 
-    void SetupStats()
+    protected void SetupStats()
     {
         Stats = new EnemyStats
         {

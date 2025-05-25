@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c842e60bf7dec15469957e03a42addf2, type: 3}
   m_Name: Crystal001Data
   m_EditorClassIdentifier: 
-  enemyID: Crystal001
+  enemyID: Crystal01
   enemyPowerLevel: 1
   enemyMaxHP: 100
-  armorSpriteListPrefab: []
-  enemyMaxArmor: 0
+  armorSpriteListPrefab:
+  - {fileID: 1203507347480276920, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
+  enemyMaxArmor: 1
   enemySightRange: 10
   enemyAttackRange: 10
   enemyIdleWaitTime: 1

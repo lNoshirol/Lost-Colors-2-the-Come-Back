@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ElouannColorWaveTestMat
-  m_Shader: {fileID: -6465566751694194690, guid: 71013a239e2f94142b13a5efa37b3082, type: 3}
+  m_Shader: {fileID: 4800000, guid: e260cfa7296ee7642b167f1eb5be5023, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -36,7 +36,19 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -55,9 +67,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _Contrast: 3.45
-    - _WaveProgress: 6.48
-    - _WaveWidth: 0.5
+    - _EnableExternalAlpha: 0
+    - _WaveProgress: -0.5
+    - _WaveWidth: 0.7
+    - _ZWrite: 0
     m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _WaveDiffusionStartPoint: {r: 6.04, g: -1.76, b: 0, a: 0}
     - _WaveRatio: {r: 1, g: 1.5, b: 0, a: 0}
   m_BuildTextureStacks: []

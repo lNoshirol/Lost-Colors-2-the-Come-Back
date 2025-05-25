@@ -23,10 +23,10 @@ public class PlayerAttack : MonoBehaviour
 
     private float[] comboMultipliers = { 1f, 1.1f, 1.3f };
 
-    private void Start()
-    {
-        attackArea.SetActive(false);
-    }
+    //private void Start()
+    //{
+    //    attackArea.SetActive(false);
+    //}
 
     public void BaseAttack()
     {

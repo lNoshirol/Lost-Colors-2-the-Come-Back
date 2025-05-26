@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: FALAISEMAGIQUE2_0
+  m_Name: sprt_tileset_cliffOrangeRoot_5
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -844647068641974705, guid: ac01f2090fe61cb4aa8a450b66c8764d, type: 3}
+  m_Sprite: {fileID: -2109151080318123667, guid: e3064137696bb104ca2f54c45e1aa270, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

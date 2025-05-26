@@ -50,6 +50,12 @@ TextureImporter:
   - first:
       213: -888338481367115553
     second: sprt_tileset_cliffOrangeRoot_15
+  - first:
+      213: -2170759629117619337
+    second: sprt_tileset_cliffOrangeRoot_16
+  - first:
+      213: 1817361735742130609
+    second: sprt_tileset_cliffOrangeRoot_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -158,11 +164,77 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_3
+      name: sprt_tileset_cliffOrangeRoot_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 252c2a83c5559d5e0800000000000000
+      internalID: -1884381114502299054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32a50bcf775315580800000000000000
+      internalID: -8840225804094776797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 221545817e36547f0800000000000000
+      internalID: -628986728751541982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -183,8 +255,8 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 256
+        x: 256
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -205,7 +277,7 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_5
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 256
         width: 32
         height: 32
@@ -227,7 +299,7 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_6
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 256
         width: 32
         height: 32
@@ -249,7 +321,7 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_7
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 256
         width: 32
         height: 32
@@ -271,7 +343,7 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_8
       rect:
         serializedVersion: 2
-        x: 192
+        x: 96
         y: 256
         width: 32
         height: 32
@@ -293,7 +365,7 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_9
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 256
         width: 32
         height: 32
@@ -315,8 +387,8 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 224
+        x: 224
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -337,8 +409,8 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_11
       rect:
         serializedVersion: 2
-        x: 32
-        y: 224
+        x: 256
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -359,7 +431,7 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_12
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 224
         width: 32
         height: 32
@@ -381,7 +453,7 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_13
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 224
         width: 32
         height: 32
@@ -403,7 +475,7 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_14
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 224
         width: 32
         height: 32
@@ -425,7 +497,7 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_15
       rect:
         serializedVersion: 2
-        x: 192
+        x: 96
         y: 224
         width: 32
         height: 32
@@ -447,6 +519,50 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_16
       rect:
         serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7738fa55e99efd1e0800000000000000
+      internalID: -2170759629117619337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_17
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b90c4faed0983910800000000000000
+      internalID: 1817361735742130609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_18
+      rect:
+        serializedVersion: 2
         x: 256
         y: 224
         width: 32
@@ -459,14 +575,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c019153322437154b8502da22ef2be2d
-      internalID: 2111121963
+      spriteID: 32c3ce2bcf9589b4189a0f3cd7237ea7
+      internalID: -1710626277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_17
+      name: sprt_tileset_cliffOrangeRoot_19
       rect:
         serializedVersion: 2
         x: 0
@@ -481,14 +597,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d684fbb3e3866f4489b38fa7abb7e9cb
-      internalID: -1116196979
+      spriteID: 3d69280ec5a751146b86c510904c96f1
+      internalID: -1571267060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_18
+      name: sprt_tileset_cliffOrangeRoot_20
       rect:
         serializedVersion: 2
         x: 32
@@ -503,14 +619,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 974711a4299fb1240a1f3dc3fdc6cccf
-      internalID: -263890256
+      spriteID: 4f8ba4c1e3d6f2e4b90994ce198b4f4d
+      internalID: -1145709724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_19
+      name: sprt_tileset_cliffOrangeRoot_21
       rect:
         serializedVersion: 2
         x: 64
@@ -525,8 +641,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a54fb863aba649e489ec7bd0ee27c71e
-      internalID: -1203818818
+      spriteID: fa8c734ef51687044a46601cd75dc685
+      internalID: -801438987
       vertices: []
       indices: 
       edges: []
@@ -535,7 +651,51 @@ TextureImporter:
       name: sprt_tileset_cliffOrangeRoot_22
       rect:
         serializedVersion: 2
-        x: 192
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53bce5c06f5c9f43980dfe56751204e
+      internalID: 1312962198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_23
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a41e043066801e4d8e8c1755ad16bc1
+      internalID: 455309530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_24
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 160
         width: 32
         height: 32
@@ -547,14 +707,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56f92de705c343a4aa67b15aa3df597b
-      internalID: 1980172433
+      spriteID: b4b7580f9afd3b948996b20af370b01c
+      internalID: -136556671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_23
+      name: sprt_tileset_cliffOrangeRoot_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0230f57f2f20d1f4aaef0e7d313254e1
+      internalID: 391498387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0177c8ec24123442a2b0321118003f8
+      internalID: 814220182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ed60bbc3370ba4cb106f39d93650d9
+      internalID: 858566859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa833f4da2e7404dafed63199a9bbe9
+      internalID: 1290295011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3164ece861694834189eb0bd964d8036
+      internalID: 1326100373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_30
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d04af33616f3e740ae511ea50028d2d
+      internalID: -1789225478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_31
       rect:
         serializedVersion: 2
         x: 256
@@ -569,190 +861,278 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d21ac7f3dd607c4896203114d50bb23
-      internalID: -755600190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_24
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bae5179c168e03542bc9c9deb204c161
-      internalID: 920636511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_25
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd0d79309946adf499e9ea4b873346cf
-      internalID: 1590152211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_26
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9dfdc458a5b44814080f7c8e56537388
-      internalID: 1230186706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_27
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01fed7c8210dd0240994052ca35dcc21
-      internalID: 1676429816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_28
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d14c03335a88ae43b7cac2e839d57fb
-      internalID: -400767020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_29
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42e1192969501ae4d94daaa97bdbdf6a
-      internalID: 2127244076
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_30
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f850fb14d7f84c34fb4cf07c24bb9031
-      internalID: 1836251783
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_31
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d76d8c2ab1b281b458d6c6264e96485d
-      internalID: -848083529
+      spriteID: 597842602daef89468c7b4be1d110b70
+      internalID: -890794180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: sprt_tileset_cliffOrangeRoot_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099cc7d25f42baa43841f3136c598c6a
+      internalID: -1298382020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53597c8332e2b943afa2a1d63cc46b0
+      internalID: 681040966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1c216100e7dc047903f7fa52e52fe1
+      internalID: -660337466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096e01d79d6f9af47b9848f804c9b971
+      internalID: 295166618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5016470794f9f7449d95eab49d1e3dd
+      internalID: 1447506548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318b013aa79653049956e193e1f04750
+      internalID: -1198965010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b763e6c91414f1244affa592f2d04c9b
+      internalID: 1587679861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_39
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55bed8a9fbba3b44bbd4890316e9546
+      internalID: 1309245106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_40
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b9bb9596f303a4c99d8d454aae4a70
+      internalID: -910296382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_41
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3661b68373d12df42874f01fecaf8f3b
+      internalID: -56337660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea2a4698df1cc147adc04c3618f257e
+      internalID: -1355483508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_43
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f952e4cfbda04d40872bbd99b85e74c
+      internalID: 1868569258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_tileset_cliffOrangeRoot_44
       rect:
         serializedVersion: 2
         x: 0
@@ -767,14 +1147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9a23a45385da9447b2468d601f57e98
-      internalID: 1152568273
+      spriteID: ca5515c3ac39e97419845dd99edf90c6
+      internalID: -1087817782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_33
+      name: sprt_tileset_cliffOrangeRoot_45
       rect:
         serializedVersion: 2
         x: 32
@@ -789,14 +1169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 287f1a4944f54ad4b8e36b84bc289d38
-      internalID: -896122846
+      spriteID: 5a22fcaf22c7d0446bf5f7e8b2824240
+      internalID: 2026200118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_34
+      name: sprt_tileset_cliffOrangeRoot_46
       rect:
         serializedVersion: 2
         x: 64
@@ -811,14 +1191,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a99006e3793fb647a87ae2f337a193b
-      internalID: -1905196070
+      spriteID: 7e140e239f89ee04ab099c7beb828ad9
+      internalID: -495826082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_35
+      name: sprt_tileset_cliffOrangeRoot_47
       rect:
         serializedVersion: 2
         x: 96
@@ -833,14 +1213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87151b94eadc4124d85b603915aed075
-      internalID: -1241321274
+      spriteID: 8db06ee554591d042be89ad323daef34
+      internalID: -600384227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprt_tileset_cliffOrangeRoot_36
+      name: sprt_tileset_cliffOrangeRoot_48
       rect:
         serializedVersion: 2
         x: 128
@@ -855,8 +1235,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee0391701ce832645b52470a02f14578
-      internalID: 522270310
+      spriteID: 43ad856ae276e1946a00646bd9255352
+      internalID: 1809349577
       vertices: []
       indices: 
       edges: []
@@ -865,7 +1245,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cb395327d284001489a847a5d36063c6
+    spriteID: 6689506cded76004b993615efe76b762
     internalID: 0
     vertices: []
     indices: 
@@ -883,30 +1263,42 @@ TextureImporter:
       sprt_tileset_cliffOrangeRoot_13: 2508190349398713031
       sprt_tileset_cliffOrangeRoot_14: -8562901475716730398
       sprt_tileset_cliffOrangeRoot_15: -888338481367115553
-      sprt_tileset_cliffOrangeRoot_16: 2111121963
-      sprt_tileset_cliffOrangeRoot_17: -1116196979
-      sprt_tileset_cliffOrangeRoot_18: -263890256
-      sprt_tileset_cliffOrangeRoot_19: -1203818818
+      sprt_tileset_cliffOrangeRoot_16: -2170759629117619337
+      sprt_tileset_cliffOrangeRoot_17: 1817361735742130609
+      sprt_tileset_cliffOrangeRoot_18: -1710626277
+      sprt_tileset_cliffOrangeRoot_19: -1571267060
       sprt_tileset_cliffOrangeRoot_2: -628986728751541982
-      sprt_tileset_cliffOrangeRoot_20: 1132251926
-      sprt_tileset_cliffOrangeRoot_21: 237568848
-      sprt_tileset_cliffOrangeRoot_22: 1980172433
-      sprt_tileset_cliffOrangeRoot_23: -755600190
-      sprt_tileset_cliffOrangeRoot_24: 920636511
-      sprt_tileset_cliffOrangeRoot_25: 1590152211
-      sprt_tileset_cliffOrangeRoot_26: 1230186706
-      sprt_tileset_cliffOrangeRoot_27: 1676429816
-      sprt_tileset_cliffOrangeRoot_28: -400767020
-      sprt_tileset_cliffOrangeRoot_29: 2127244076
+      sprt_tileset_cliffOrangeRoot_20: -1145709724
+      sprt_tileset_cliffOrangeRoot_21: -801438987
+      sprt_tileset_cliffOrangeRoot_22: 1312962198
+      sprt_tileset_cliffOrangeRoot_23: 455309530
+      sprt_tileset_cliffOrangeRoot_24: -136556671
+      sprt_tileset_cliffOrangeRoot_25: 391498387
+      sprt_tileset_cliffOrangeRoot_26: 814220182
+      sprt_tileset_cliffOrangeRoot_27: 858566859
+      sprt_tileset_cliffOrangeRoot_28: 1290295011
+      sprt_tileset_cliffOrangeRoot_29: 1326100373
       sprt_tileset_cliffOrangeRoot_3: 961531716353346508
-      sprt_tileset_cliffOrangeRoot_30: 1836251783
-      sprt_tileset_cliffOrangeRoot_31: -848083529
-      sprt_tileset_cliffOrangeRoot_32: 1152568273
-      sprt_tileset_cliffOrangeRoot_33: -896122846
-      sprt_tileset_cliffOrangeRoot_34: -1905196070
-      sprt_tileset_cliffOrangeRoot_35: -1241321274
-      sprt_tileset_cliffOrangeRoot_36: 522270310
+      sprt_tileset_cliffOrangeRoot_30: -1789225478
+      sprt_tileset_cliffOrangeRoot_31: -890794180
+      sprt_tileset_cliffOrangeRoot_32: -1298382020
+      sprt_tileset_cliffOrangeRoot_33: 681040966
+      sprt_tileset_cliffOrangeRoot_34: -660337466
+      sprt_tileset_cliffOrangeRoot_35: 295166618
+      sprt_tileset_cliffOrangeRoot_36: 1447506548
+      sprt_tileset_cliffOrangeRoot_37: -1198965010
+      sprt_tileset_cliffOrangeRoot_38: 1587679861
+      sprt_tileset_cliffOrangeRoot_39: 1309245106
       sprt_tileset_cliffOrangeRoot_4: 4865183425305221636
+      sprt_tileset_cliffOrangeRoot_40: -910296382
+      sprt_tileset_cliffOrangeRoot_41: -56337660
+      sprt_tileset_cliffOrangeRoot_42: -1355483508
+      sprt_tileset_cliffOrangeRoot_43: 1868569258
+      sprt_tileset_cliffOrangeRoot_44: -1087817782
+      sprt_tileset_cliffOrangeRoot_45: 2026200118
+      sprt_tileset_cliffOrangeRoot_46: -495826082
+      sprt_tileset_cliffOrangeRoot_47: -600384227
+      sprt_tileset_cliffOrangeRoot_48: 1809349577
       sprt_tileset_cliffOrangeRoot_5: -2109151080318123667
       sprt_tileset_cliffOrangeRoot_6: 8545975353092540957
       sprt_tileset_cliffOrangeRoot_7: -6207287094902162708

@@ -15,8 +15,9 @@ public class PlayerMain : MonoBehaviour
     public PlayerAttack Attack { get; private set; }
 
     public Rigidbody2D Rigidbody2D { get; private set; }
+    public Collider2D Collider2D { get; private set; }
     [field: SerializeField] public GameObject ProjectileSocket { get; private set; }
-    public GameObject PlayerMesh;
+    public GameObject PlayerGameObject;
     [Header("Player Sprite")]
     public SpriteRenderer playerSprite;
 
@@ -61,6 +62,7 @@ public class PlayerMain : MonoBehaviour
         UI = GetComponent<PlayerUI>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Attack = GetComponent<PlayerAttack>();
+        Collider2D = GetComponent<Collider2D>();
 
 
     }

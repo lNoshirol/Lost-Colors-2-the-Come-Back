@@ -14,7 +14,6 @@ public class EnemyHealth : MonoBehaviour
         if (other.CompareTag("Player"))
         {
            PlayerMain.Instance.Health.PlayerLoseHP(1);
-            EnemyMain.UI.UpdateEnemyHealthUI();
         }
     }
     public void EnemyHealthChange(float healthChangeAmount)

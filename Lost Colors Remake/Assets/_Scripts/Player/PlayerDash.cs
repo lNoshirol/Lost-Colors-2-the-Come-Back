@@ -29,7 +29,7 @@ public class PlayerDash : MonoBehaviour
        yield return new WaitForSeconds(delay);
        isDashing = false;
        PlayerMain.Instance.UI.DashButton(true);
-        playerFeetCollider.gameObject.layer = 8;
+        playerFeetCollider.gameObject.layer = 13;
         PlayerMain.Instance.Dashing(false);
         CheckLayer();
     }

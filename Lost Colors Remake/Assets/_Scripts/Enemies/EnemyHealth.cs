@@ -9,14 +9,14 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] EnemiesMain EnemyMain;
 
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.CompareTag("PlayerAttackArea"))
-    //    {
-    //        EnemyHealthChange(PlayerMain.Instance.Attack.attackDamageAmount);
-    //        EnemyMain.UI.UpdateEnemyHealthUI();
-    //    }
-    //}
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+           PlayerMain.Instance.Health.PlayerLoseHP(1);
+            EnemyMain.UI.UpdateEnemyHealthUI();
+        }
+    }
     public void EnemyHealthChange(float healthChangeAmount)
     {
         Debug.Log(EnemyMain.isColorized);
@@ -43,7 +43,7 @@ public class EnemyHealth : MonoBehaviour
     private void EnemyIsDead()
     {
         Debug.Log("Enemy dead");
-        PlayerMain.Instance.Health.PlayerHealthChange(-50);
+        PlayerMain.Instance.Health.PlayerGainHP(0.5f);
         EnemyMain.ColorSwitch();
         EnemyMain.UI.SwitchHealtBar(false);
     }

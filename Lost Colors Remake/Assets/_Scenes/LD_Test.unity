@@ -42083,18 +42083,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3603154998625247935, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: orthographic size
-      value: 5.625
-      objectReference: {fileID: 0}
-    - target: {fileID: 3759690937926007033, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: PlayerGameObject
-      value: 
-      objectReference: {fileID: 1105861505}
-    - target: {fileID: 4925874406817020376, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: whatIsGround.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45691,11 +45679,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1105861505 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2458422246108691770, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-  m_PrefabInstance: {fileID: 920067735}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1151582908
 GameObject:
   m_ObjectHideFlags: 0

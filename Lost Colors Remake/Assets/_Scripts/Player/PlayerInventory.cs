@@ -6,7 +6,10 @@ public class PlayerInventory : MonoBehaviour
 {
     [SerializeField]
     [Range(0f, 100f)]
-    public int paintAmount = 100;
+    public int currentPaintAmont = 100;
+    public int basePaintAmont = 100;
+    private int _amountAtStart;
+
     [Header("NO UPDATE IN RUNTIME")]
     [SerializeField]
     DictItem itemType;
@@ -37,7 +40,21 @@ public class PlayerInventory : MonoBehaviour
             brushIsLooted = true;
         }
         return brushIsLooted;
+    }
 
+    public void EditPaintAmount()
+    {
+        currentPaintAmont = Mathf.Clamp(_amountAtStart - ExternalDrawFunctions.GetDrawLenght(DrawForDollarP.instance.GetDrawPoints()), 0, 100);
+    }
+
+    public void SetStartAmount()
+    {
+        _amountAtStart = currentPaintAmont;
+    }
+
+    public void ResetCurrentPaintAmount()
+    {
+        currentPaintAmont = basePaintAmont;
     }
 }
 

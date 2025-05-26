@@ -10,6 +10,10 @@ public class ToileUI : MonoBehaviour
     public void UpdateToileUI(int timerText)
     {
         timerUGUI.text = "timeAmountLeft : " + timerText;
-        paintAmountUGUI.text = "paintAmount : " + PlayerMain.Instance.Inventory.paintAmount;
+    }
+
+    public void UpdateToilePaintAmount()
+    {
+        paintAmountUGUI.text = "paintAmount : " + PlayerMain.Instance.Inventory.currentPaintAmont;
     }
 }

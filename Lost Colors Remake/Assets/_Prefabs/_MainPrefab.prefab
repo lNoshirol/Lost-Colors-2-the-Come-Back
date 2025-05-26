@@ -67,6 +67,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2384214893316031475}
     m_Modifications:
+    - target: {fileID: 3102311220201749475, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.30809402
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102311220201749475, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0398018
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102311220201749475, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.015926361
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102311220201749475, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.01876247
+      objectReference: {fileID: 0}
     - target: {fileID: 4441499770059576181, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: attackArea
       value: 
@@ -181,6 +197,10 @@ PrefabInstance:
       value: -3.01
       objectReference: {fileID: 0}
     - target: {fileID: 3321811113849562036, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
+      propertyPath: Lens.OrthographicSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321811113849562036, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 3374486955276342525}
@@ -191,6 +211,10 @@ PrefabInstance:
     - target: {fileID: 3543440330673061322, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: m_LocalPosition.y
       value: -3.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5397771579034108698, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
+      propertyPath: orthographic size
+      value: 5.625
       objectReference: {fileID: 0}
     - target: {fileID: 7208826201842624633, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: m_Name

@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 
 public class Enigma : MonoBehaviour
 {
     [SerializeField] float castDistanceAuthorize;
     [SerializeField] string drawTargetName;
+
+    public event Action OnEnigmaSolve;
 
     private void Start()
     {
@@ -14,6 +17,7 @@ public class Enigma : MonoBehaviour
     {
         if (Vector3.Distance(PlayerMain.Instance.transform.position, transform.position) <= castDistanceAuthorize && drawData.result.GestureClass == drawTargetName)
         {
+            OnEnigmaSolve?.Invoke();
             //Debug.Log("Choix numéro 2 ça marche");
         }
     }

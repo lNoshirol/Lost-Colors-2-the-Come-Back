@@ -29,6 +29,7 @@ public class SaveSystem : MonoBehaviour
         WriteXML(xmlWriter, "PlayerHealth", playerMain.Health.playerActualHealth.ToString() );
         WriteXML(xmlWriter, "PlayerPosition", playerMain.gameObject.transform.position.ToString());
         LastPostionPlayer = playerMain.gameObject.transform.position;
+        WriteXML(xmlWriter, "PlayerInventory", playerMain.Inventory.ItemDatabase[0].ToString());
         xmlWriter.Close();
     }
 
@@ -36,7 +37,7 @@ public class SaveSystem : MonoBehaviour
     {
         XmlDocument saveFile = new XmlDocument();
 
-        if (!System.IO.File.Exists(Application.persistentDataPath + "savefile.xml"))
+        if (!System.IO.File.Exists(Path.Combine(Application.persistentDataPath, "savefile.xml")))
         {
             string savePath = Path.Combine(Application.persistentDataPath, "savefile.xml");
             xmlWriter = xmlWriter = XmlWriter.Create(savePath, xml); ;
@@ -46,6 +47,8 @@ public class SaveSystem : MonoBehaviour
             xmlWriter.WriteEndElement();
             xmlWriter.WriteStartElement("PlayerPosition");
             xmlWriter.WriteEndElement();
+            xmlWriter.WriteStartElement("PlayerInventory");
+            xmlWriter.WriteEndElement();
             xmlWriter.WriteEndDocument();
             xmlWriter.Close();
         }
@@ -53,9 +56,10 @@ public class SaveSystem : MonoBehaviour
 
     public void LoadSave()
     {
+        Debug.LogWarning("BONJOUR");
         XmlDocument saveFile = new XmlDocument();
-        if (!System.IO.File.Exists(Application.dataPath + "/" + "ARGH" + ".xml")) return;
-        saveFile.LoadXml(System.IO.File.ReadAllText(Application.dataPath + "/" + "ARGH" + ".xml"));
+        if (!System.IO.File.Exists(Path.Combine(Application.persistentDataPath, "savefile.xml"))) return;
+        saveFile.LoadXml(System.IO.File.ReadAllText(Path.Combine(Application.persistentDataPath, "savefile.xml")));
 
         string key;
         string value;
@@ -67,10 +71,16 @@ public class SaveSystem : MonoBehaviour
             switch (key)
             {
                 case "PlayerHealth":
+                    playerMain.Health.playerActualHealth = int.Parse(value);
+                    playerMain.UI.UpdatePlayerHealthUI();
                     break;
                 case "PlayerPosition":
                     playerMain.gameObject.transform.position = LastPostionPlayer;
                     break;
+                case "PlayerInventory":
+                    playerMain.Inventory.ItemDatabase[0] = bool.Parse(value);
+                    break;
+
             }
         }
     }

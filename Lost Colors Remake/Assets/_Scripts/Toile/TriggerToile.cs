@@ -77,5 +77,6 @@ public class TriggerToile : MonoBehaviour
         ToileMain.Instance.gestureIsStarted = false;
         //StopCoroutine(ToileMain.Instance.timerCo);
         Time.timeScale = 1;
+        PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
     }
 }

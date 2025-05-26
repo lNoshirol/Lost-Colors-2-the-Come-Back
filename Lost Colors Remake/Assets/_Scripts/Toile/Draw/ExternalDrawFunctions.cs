@@ -54,37 +54,21 @@ public class ExternalDrawFunctions : MonoBehaviour
         return centroid;
     }
 
-    public Vector3 GetDrawCenter(List<Vector3> points)
+    public static Vector3 GetDrawCenter(Dictionary<string, float> pointsMinMaxValue)
     {
-        float minX = points[0].x;
-        float maxX = points[0].x;
-
-        float minY = points[0].y;
-        float maxY = points[0].y;
-
-        float minZ = points[0].z;
-        float maxZ = points[0].z;
-
-        foreach (Vector3 point in points)
-        {
-            minX = point.x < minX ? point.x : minX;
-            maxX = point.x > maxX ? point.x : maxX;
-
-            minY = point.y < minY ? point.y : minY;
-            maxY = point.y > maxY ? point.y : maxY;
-
-            minZ = point.z < minZ ? point.z : minZ;
-            maxZ = point.z > maxZ ? point.z : maxZ;
-        }
-
-        float x = (maxX + minX) / 2;
-        float y = (maxY + minY) / 2;
-        float z = (maxZ + minZ) / 2;
+        float x = (pointsMinMaxValue["MaxX"] + pointsMinMaxValue["MinX"]) / 2;
+        float y = (pointsMinMaxValue["MaxY"] + pointsMinMaxValue["MinY"]) / 2;
+        float z = (pointsMinMaxValue["MaxZ"] + pointsMinMaxValue["MinZ"]) / 2;
 
         return new Vector3(x, y, z);
     }
 
-    public Vector2 GetDrawDim(List<Vector3> points)
+    public Vector2 GetDrawDim(Dictionary<string, float> pointsMinMaxValue)
+    {
+        return new(pointsMinMaxValue["MaxX"] - pointsMinMaxValue["MinX"], pointsMinMaxValue["MaxY"] - pointsMinMaxValue["MinY"]);
+    }
+
+    public static Dictionary<string, float> GetMinMaxCoordinates(List<Vector3> points)
     {
         float minX = points[0].x;
         float maxX = points[0].x;
@@ -107,12 +91,30 @@ public class ExternalDrawFunctions : MonoBehaviour
             maxZ = point.z > maxZ ? point.z : maxZ;
         }
 
-        /*Debug.Log($"MinX : {minX}, MaxX : {maxX}, minY : {minY}, maxY : {maxY}");
-        Debug.Log($"distance X : {maxX - minX}, distance Y : {maxY - minY}");*/
+        Dictionary<string, float> MinMaxCoordinates = new Dictionary<string, float>()
+        {
+            { "MinX", minX },
+            { "MaxX", maxX },
+            { "MinY", minY },
+            { "MaxY", maxY },
+            { "MinZ", minZ },
+            { "MaxZ", maxZ }
+        };
 
-        float X = minX >= 0 & maxX >= 0 ? minX : maxX;
 
-        return new(maxX - minX, maxY - minY);
+        return MinMaxCoordinates;
+    }
+
+    public static List<Vector3> Vec2ShapeToVec3Shape(List<Vector2> points)
+    {
+        List<Vector3> shape = new();
+
+        foreach(Vector2 point in points)
+        {
+            shape.Add(point);
+        }
+
+        return shape;
     }
 
     public void GetSpellTargetPointFromCentroid(List<Vector3> points)
@@ -136,7 +138,7 @@ public class ExternalDrawFunctions : MonoBehaviour
 
     public Vector3 GetSpellTargetPointFromCenter(List<Vector3> points)
     {
-        Vector3 center = GetDrawCenter(points);
+        Vector3 center = GetDrawCenter(GetMinMaxCoordinates(points));
 
         Ray Ray = Cam.ScreenPointToRay(Cam.WorldToScreenPoint(center));
         RaycastHit hit;
@@ -186,7 +188,7 @@ public class ExternalDrawFunctions : MonoBehaviour
                 collider.TryGetComponent(out sphereColliderComponent);
                 sphereColliderComponent.isTrigger = true;
 
-                Vector2 drawDim = GetDrawDim(points);
+                Vector2 drawDim = GetDrawDim(GetMinMaxCoordinates(points));
 
                 sphereColliderComponent.radius = (drawDim.x >= drawDim.y ? drawDim.x : drawDim.y) * 1.5f;
 
@@ -215,7 +217,7 @@ public class ExternalDrawFunctions : MonoBehaviour
 
                 boxColliderComponent.isTrigger = true;
 
-                Vector2 dim = GetDrawDim(points);
+                Vector2 dim = GetDrawDim(GetMinMaxCoordinates(points));
 
                 Vector3 size = new(dim.x, Mathf.Abs(center.y), dim.y);
 

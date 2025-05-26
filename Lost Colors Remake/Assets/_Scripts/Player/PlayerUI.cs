@@ -7,6 +7,8 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private Image healthbarSprite;
     [SerializeField] private CanvasGroup blackScreen;
     [SerializeField] private CanvasGroup playerControl;
+    [SerializeField] private Button dashButton;
+    [SerializeField] private Button toileButton;
     [SerializeField] private float fadeSpeed;
     public void UpdatePlayerHealthUI()
     {
@@ -54,15 +56,33 @@ public class PlayerUI : MonoBehaviour
 
     public void HidePlayerControls()
     {
-        if(playerControl.gameObject.activeSelf)
+        if (playerControl.gameObject.activeSelf)
         {
-            playerControl.gameObject.SetActive(false);  
+            playerControl.gameObject.SetActive(false);
         }
-        else {
+        else
+        {
             playerControl.gameObject.SetActive(true);
 
         }
 
     }
 
+    public void DashButton(bool enable)
+    {
+        if (enable)
+            dashButton.interactable = true;
+        else
+            dashButton.interactable = false;
+
+    }
+
+    public void ToileButton(bool enable)
+    {
+        if (enable)
+            toileButton.interactable = true;
+        else
+            toileButton.interactable = false;
+
+    }
 }

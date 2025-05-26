@@ -95,6 +95,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -105
       objectReference: {fileID: 0}
+    - target: {fileID: 6652484439058342575, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: playerBaseHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652484439058342575, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: playerActualHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6813654795516905478, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 150

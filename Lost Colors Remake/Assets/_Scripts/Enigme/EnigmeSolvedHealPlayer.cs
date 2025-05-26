@@ -13,6 +13,6 @@ public class EnigmeSolvedHealPlayer : MonoBehaviour
 
     public void Interact()
     {
-        PlayerMain.Instance.Health.PlayerHealthChange(-_healAmount);
+        //PlayerMain.Instance.Health.PlayerHealthChange(-_healAmount);
     }
 }

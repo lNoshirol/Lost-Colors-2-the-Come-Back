@@ -1,13 +1,46 @@
 fileFormatVersion: 2
-guid: 1da44075fb262e4408ef30838897977d
+guid: eb0452c4e8b84a846b075282ea6f8d4e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1185237055011531742
-    second: TEXTUREORANGE_0
+      213: -492808475909119788
+    second: sprt_groundRock_01_0
   - first:
-      213: 1363409415566506441
-    second: TEXTUREORANGE_1
+      213: 5639451212496954141
+    second: sprt_groundRock_01_1
+  - first:
+      213: -7360740046122165834
+    second: sprt_groundRock_01_2
+  - first:
+      213: 8631552191958156065
+    second: sprt_groundRock_01_3
+  - first:
+      213: -3506728479071390950
+    second: sprt_groundRock_01_4
+  - first:
+      213: -901106572812351386
+    second: sprt_groundRock_01_5
+  - first:
+      213: -6106227169568069239
+    second: sprt_groundRock_01_6
+  - first:
+      213: -2169364133550917965
+    second: sprt_groundRock_01_7
+  - first:
+      213: -6341257653425922502
+    second: sprt_groundRock_01_8
+  - first:
+      213: 7378387334318745836
+    second: sprt_groundRock_01_9
+  - first:
+      213: 3714072223734134229
+    second: sprt_groundRock_01_10
+  - first:
+      213: -4966946710900000513
+    second: sprt_groundRock_01_11
+  - first:
+      213: -8932418094295823031
+    second: sprt_groundRock_01_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,12 +82,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,353 +145,291 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TEXTUREORANGE_0
+      name: sprt_groundRock_01_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
-        height: 64
+        x: 3
+        y: 37
+        width: 13
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 32, y: 1}
-        - {x: 32, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: -2, y: -32}
-        - {x: -1, y: -32}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22458699d213d8fe0800000000000000
-      internalID: -1185237055011531742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TEXTUREORANGE_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 32, y: -1}
-        - {x: -32, y: -1}
-        - {x: -32, y: 32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c9b34ac3adcbe210800000000000000
-      internalID: 1363409415566506441
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TEXTUREORANGE_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 1, y: -32}
-        - {x: -32, y: 1}
-        - {x: -32, y: 32}
-        - {x: 32, y: 32}
-        - {x: 32, y: -32}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 151456019f1c19d4d82b4b87fe67ced6
-      internalID: -1638149206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TEXTUREORANGE_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: 0, y: 32}
-        - {x: 0, y: -32}
-        - {x: -32, y: -32}
-      tessellationDetail: 0
-      bones: []
-      spriteID: bcc759b1470188940803b2e84ad15ece
-      internalID: 621517399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TEXTUREORANGE_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 26d8823d9a6dc7a4ba4ff915716c02c5
-      internalID: -61682821
+      spriteID: 4d0a22b5d413929f0800000000000000
+      internalID: -492808475909119788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEXTUREORANGE_5
+      name: sprt_groundRock_01_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
+        x: 20
+        y: 49
+        width: 16
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: 0, y: 32}
-        - {x: 32, y: 32}
-        - {x: 32, y: -32}
-        - {x: 0, y: -32}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: b4c803794cda9e4429ba2736ff46dfcb
-      internalID: -1098797306
+      spriteID: d13e609affa534e40800000000000000
+      internalID: 5639451212496954141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEXTUREORANGE_6
+      name: sprt_groundRock_01_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
+        x: 41
+        y: 46
+        width: 17
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: -1, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: 1}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: a2715d7d4743d5d44925e85098e3ec01
-      internalID: 1298277067
+      spriteID: 6b955ea4de569d990800000000000000
+      internalID: -7360740046122165834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEXTUREORANGE_7
+      name: sprt_groundRock_01_3
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
-        width: 64
-        height: 64
+        x: 20
+        y: 36
+        width: 17
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: 32, y: 1}
-        - {x: 1, y: 32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: 94a11c07ea919044eb143d0cff09d78e
-      internalID: 305713938
+      spriteID: 12309e59cfe69c770800000000000000
+      internalID: 8631552191958156065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEXTUREORANGE_8
+      name: sprt_groundRock_01_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 32
+        y: 26
+        width: 12
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: -32, y: -32}
-        - {x: -32, y: 32}
-        - {x: 1, y: 32}
-        - {x: 32, y: 3}
-        - {x: 32, y: -32}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: 89545e2934c57e2459a075137efe38fc
-      internalID: 1788876101
+      spriteID: a1334391709955fc0800000000000000
+      internalID: -3506728479071390950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEXTUREORANGE_9
+      name: sprt_groundRock_01_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 40
+        y: 35
+        width: 18
+        height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: 32, y: -32}
-        - {x: -32, y: -32}
-        - {x: -32, y: 5}
-        - {x: 32, y: 5}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: d5acecd2835b6b14d83a65a33bee5d29
-      internalID: -1401946701
+      spriteID: 66800c6a850ae73f0800000000000000
+      internalID: -901106572812351386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEXTUREORANGE_10
+      name: sprt_groundRock_01_6
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
+        x: 3
+        y: 23
+        width: 17
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: -32, y: 5}
-        - {x: -3, y: 32}
-        - {x: 32, y: 32}
-        - {x: 32, y: -32}
-        - {x: -32, y: -32}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: a304e5766de78c6498bab9482cd7c763
-      internalID: -1174050565
+      spriteID: 9896e00ddb2524ba0800000000000000
+      internalID: -6106227169568069239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEXTUREORANGE_11
+      name: sprt_groundRock_01_7
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
+        x: 19
+        y: 15
+        width: 13
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: -32, y: -32}
-        - {x: -32, y: -1}
-        - {x: 0, y: -32}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: 74569f9a84baa1a4595e8ed2c9ef9fe7
-      internalID: -248787162
+      spriteID: 3b6793770ded4e1e0800000000000000
+      internalID: -2169364133550917965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEXTUREORANGE_12
+      name: sprt_groundRock_01_8
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
+        x: 34
+        y: 8
+        width: 12
+        height: 17
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: 32, y: 0}
-        - {x: 32, y: -32}
-        - {x: 0, y: -32}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: 9f1a64df9ec0a0c4199770737eff8f3d
-      internalID: -294580210
+      spriteID: a3e125af2c35ff7a0800000000000000
+      internalID: -6341257653425922502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_groundRock_01_9
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 20
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce86f4d203c456660800000000000000
+      internalID: 7378387334318745836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_groundRock_01_10
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d571dd62090b8330800000000000000
+      internalID: 3714072223734134229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_groundRock_01_11
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8b28e484cd11bb0800000000000000
+      internalID: -4966946710900000513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_groundRock_01_12
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 6
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94dc938b11da90480800000000000000
+      internalID: -8932418094295823031
       vertices: []
       indices: 
       edges: []
@@ -467,7 +438,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 598c04f54ec38de498098c6bd6029568
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -477,19 +448,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TEXTUREORANGE_0: -1185237055011531742
-      TEXTUREORANGE_1: 1363409415566506441
-      TEXTUREORANGE_10: -1174050565
-      TEXTUREORANGE_11: -248787162
-      TEXTUREORANGE_12: -294580210
-      TEXTUREORANGE_2: -1638149206
-      TEXTUREORANGE_3: 621517399
-      TEXTUREORANGE_4: -61682821
-      TEXTUREORANGE_5: -1098797306
-      TEXTUREORANGE_6: 1298277067
-      TEXTUREORANGE_7: 305713938
-      TEXTUREORANGE_8: 1788876101
-      TEXTUREORANGE_9: -1401946701
+      sprt_groundRock_01_0: -492808475909119788
+      sprt_groundRock_01_1: 5639451212496954141
+      sprt_groundRock_01_10: 3714072223734134229
+      sprt_groundRock_01_11: -4966946710900000513
+      sprt_groundRock_01_12: -8932418094295823031
+      sprt_groundRock_01_2: -7360740046122165834
+      sprt_groundRock_01_3: 8631552191958156065
+      sprt_groundRock_01_4: -3506728479071390950
+      sprt_groundRock_01_5: -901106572812351386
+      sprt_groundRock_01_6: -6106227169568069239
+      sprt_groundRock_01_7: -2169364133550917965
+      sprt_groundRock_01_8: -6341257653425922502
+      sprt_groundRock_01_9: 7378387334318745836
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

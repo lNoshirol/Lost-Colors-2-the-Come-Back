@@ -6,6 +6,7 @@ public class PlayerDash : MonoBehaviour
     private bool isDashing;
     private Vector2 positionBeforeDash;
     public LayerMask whatIsGround;
+    [SerializeField] private Collider2D playerFeetCollider;
     
     public void DashOnClick()
     {
@@ -21,14 +22,14 @@ public class PlayerDash : MonoBehaviour
 
     IEnumerator WaitDash(float delay)
     {
-       PlayerMain.Instance.PlayerGameObject.layer = 11;
+       playerFeetCollider.gameObject.layer = 11;
        isDashing = true;
 
        PlayerMain.Instance.UI.DashButton(false);
        yield return new WaitForSeconds(delay);
        isDashing = false;
        PlayerMain.Instance.UI.DashButton(true);
-       PlayerMain.Instance.PlayerGameObject.layer = 8;
+        playerFeetCollider.gameObject.layer = 8;
         PlayerMain.Instance.Dashing(false);
         CheckLayer();
     }

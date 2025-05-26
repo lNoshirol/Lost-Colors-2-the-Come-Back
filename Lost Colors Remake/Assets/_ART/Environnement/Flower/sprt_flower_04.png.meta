@@ -116,8 +116,8 @@ TextureImporter:
       name: sprt_flower_04_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 31
+        x: 0
+        y: 0
         width: 34
         height: 34
       alignment: 0

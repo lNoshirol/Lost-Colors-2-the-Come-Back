@@ -11,6 +11,7 @@ public class PlayerDash : MonoBehaviour
     {
         if (isDashing) return;
         positionBeforeDash = PlayerMain.Instance.PlayerGameObject.transform.position;
+        PlayerMain.Instance.Dashing(true);
 
         SimpleDash dash = (SimpleDash)SpellManager.Instance.GetSpell("SimpleDash");
         SkillContext context = new(PlayerMain.Instance.Rigidbody2D, PlayerMain.Instance.gameObject, PlayerMain.Instance.Move._moveInput, 15);
@@ -22,12 +23,14 @@ public class PlayerDash : MonoBehaviour
     {
        PlayerMain.Instance.PlayerGameObject.layer = 11;
        isDashing = true;
+
        PlayerMain.Instance.UI.DashButton(false);
        yield return new WaitForSeconds(delay);
        isDashing = false;
        PlayerMain.Instance.UI.DashButton(true);
        PlayerMain.Instance.PlayerGameObject.layer = 8;
-       CheckLayer();
+        PlayerMain.Instance.Dashing(false);
+        CheckLayer();
     }
 
     void TakeDamageAndTP()
@@ -42,7 +45,4 @@ public class PlayerDash : MonoBehaviour
         if (isGrounded) return;
         else TakeDamageAndTP();
     }
-    
-
-
 }

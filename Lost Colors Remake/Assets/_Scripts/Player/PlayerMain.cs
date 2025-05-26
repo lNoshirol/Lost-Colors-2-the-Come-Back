@@ -111,5 +111,10 @@ public class PlayerMain : MonoBehaviour
         }
 
     }
+
+    public void Dashing(bool isDashing)
+    {
+        anim.SetBool("IsDashing", isDashing);
+    }
 }
 

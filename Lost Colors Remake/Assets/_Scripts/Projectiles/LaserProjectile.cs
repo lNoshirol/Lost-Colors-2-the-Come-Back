@@ -8,7 +8,7 @@ public class LaserProjectile : Projectile
         if (collision.gameObject.layer == 8)
         {
             PlayerMain player = collision.gameObject.TryGetComponent(out PlayerMain playerD) ? playerD : null;
-            player.Health.PlayerHealthChange(_projectileDatas.Damage);
+            player.Health.PlayerLoseHP(1);
         }
     }
 }

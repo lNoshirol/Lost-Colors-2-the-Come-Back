@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
 using System;
 
 public class TorchInteract : MonoBehaviour
@@ -11,6 +10,8 @@ public class TorchInteract : MonoBehaviour
 
     public void Interact()
     {
+        Debug.Log($"Interact {gameObject.name} {IsTrigger}");
+
         if (!IsTrigger)
         {
             IsTrigger = true;

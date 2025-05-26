@@ -71,11 +71,12 @@ public class DrawForDollarP : MonoBehaviour
 
         if (ClickManager.instance.TouchScreen)
         {
-            Debug.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward * 50, Color.blue);
 
             AddPoint2D();
 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Vector2 rayOrigin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            Ray2D ray = new(rayOrigin, Vector2.up*0.1f);
 
             _catchEnnemy.EnnemyOnPath(ray, IgnoreMeUwU);
         }
@@ -105,8 +106,6 @@ public class DrawForDollarP : MonoBehaviour
 
     public void OnTouchEnd()
     {
-        
-
         if (points.Count > 10)
         {
             //List<Point> drawReady = _extDrawFunc.Vec3ToPoints(_extDrawFunc.RecenterAndRotate(points)); //20% de précision si on dégage le recenter and rotate
@@ -125,6 +124,8 @@ public class DrawForDollarP : MonoBehaviour
 
             //TryMakeAdaptativeCollider(GetDrawCenter(points), gestureResult);
 
+            _catchEnnemy.CatchObjectOnLine();
+
             //TEMP A FIXER PLUS TARD
             if (gestureResult.Score < 0.9)
             {
@@ -135,7 +136,6 @@ public class DrawForDollarP : MonoBehaviour
                 }
 
                 return;
-
             }
             else
             {

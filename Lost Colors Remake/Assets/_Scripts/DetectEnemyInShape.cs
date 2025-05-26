@@ -37,11 +37,11 @@ public class DetectEnemyInShape : MonoBehaviour
             if (distance < closeThreshold)
             {
                 _shapePoints.Add(_shapePoints[0]); 
-                Debug.Log("Forme fermée via points proches");
+                Debug.Log("Forme fermée via points proches " + Camera.main.ScreenToWorldPoint(ExternalDrawFunctions.GetDrawCenter(ExternalDrawFunctions.GetMinMaxCoordinates(ExternalDrawFunctions.Vec2ShapeToVec3Shape(_shapePoints)))));
             }
             else if(HasSelfIntersection(_shapePoints))
             {
-                Debug.Log("Forme fermé via intersection");
+                Debug.Log("Forme fermée via intersection " + Camera.main.ScreenToWorldPoint(ExternalDrawFunctions.GetDrawCenter(ExternalDrawFunctions.GetMinMaxCoordinates(ExternalDrawFunctions.Vec2ShapeToVec3Shape(_shapePoints)))));
                 Instantiate(PlayerMain.Instance.playerSprite, _shapePoints[0], Quaternion.identity);
             }
             else

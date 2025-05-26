@@ -21,8 +21,8 @@ public class EAttackState : EnemiesState
 
     public override void OnEnter()
     {
-        
 
+        EnemiesMain.agent.isStopped = true;
     }
 
     public override void Do()
@@ -33,7 +33,8 @@ public class EAttackState : EnemiesState
             int randomSpell = Random.Range(0, 2);
             if (randomSpell == 0) 
             { 
-                CastCloseSpell(); 
+                CastCloseSpell();
+                
             }
             else
             {
@@ -60,6 +61,7 @@ public class EAttackState : EnemiesState
     public override void OnExit()
     {
         ResetAttack();
+        EnemiesMain.agent.isStopped = false;
     }
 
     private void ResetAttack()

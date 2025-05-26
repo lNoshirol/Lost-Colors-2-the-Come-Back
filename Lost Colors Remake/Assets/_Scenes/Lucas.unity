@@ -3056,6 +3056,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7223644119984313896, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: paintAmount
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7711388654948312543, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -3083,7 +3087,7 @@ PrefabInstance:
     - target: {fileID: 9020069054450485736, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: _catchEnnemy
       value: 
-      objectReference: {fileID: 1747170415}
+      objectReference: {fileID: 0}
     - target: {fileID: 9020069054450485736, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: IgnoreMeUwU.m_Bits
       value: 511
@@ -3092,10 +3096,7 @@ PrefabInstance:
     - {fileID: 7287492968973909897, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3627299534736897811, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1747170415}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
 --- !u!1 &1541779871
 GameObject:
@@ -3584,24 +3585,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1747170409 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3627299534736897811, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-  m_PrefabInstance: {fileID: 1529625642}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1747170415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747170409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0684432cb3c7f648903ffb608c1ea4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ennemyObjectOnDraw: []
 --- !u!1 &1798317781
 GameObject:
   m_ObjectHideFlags: 0

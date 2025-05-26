@@ -99,6 +99,8 @@ public class DrawForDollarP : MonoBehaviour
             ToileMain.Instance.timerCo = StartCoroutine(ToileMain.Instance.ToileTimer());
 
         lineRenderer.SetColors(_currentColor, _currentColor);
+
+        PlayerMain.Instance.Inventory.SetStartAmount();
     }
 
     public void OnTouchEnd()
@@ -180,6 +182,8 @@ public class DrawForDollarP : MonoBehaviour
 
         _currentPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
 
+        if (PlayerMain.Instance.Inventory.currentPaintAmont == 0) return;
+
         if (points.Count == 0)
         {
             points.Add(_currentPoint);
@@ -197,15 +201,28 @@ public class DrawForDollarP : MonoBehaviour
                 points.Add(_currentPoint);
                 ToileMain.Instance.RaycastDraw.DrawRayCastInRealTime();
 
+                PlayerMain.Instance.Inventory.EditPaintAmount();
+                ToileMain.Instance.ToileUI.UpdateToilePaintAmount();
+
                 UpdateLinePoints();
                 return;
             }
         }
     }
 
+    public List<Vector3> GetDrawPoints()
+    {
+        return points;
+    }
+
     public void Resetpoint()
     {
         lineRenderer.positionCount = 0;
+        points.Clear();
+    }
+
+    private void OnDisable()
+    {
         points.Clear();
     }
 }

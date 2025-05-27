@@ -22,6 +22,8 @@ public class PlayerMove : MonoBehaviour
     }
     void Update()
     {
+        if (!canMove) return;
+
         if (Input.GetKey(KeyCode.W))
         {
             _moveInput += Vector2.up;

@@ -38,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
     public void PlayerLoseHP(float healthLoose)
     {
         playerActualHealth = playerActualHealth - healthLoose;
-        JuiceManager.Instance.Stop(0.25f);
+        JuiceManager.Instance.PlayerHit(0.25f);
         PlayerMain.Instance.UI.UpdatePlayerHealthUI();
         if(playerActualHealth <= 0)
         {

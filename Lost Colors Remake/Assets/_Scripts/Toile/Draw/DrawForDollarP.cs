@@ -69,7 +69,15 @@ public class DrawForDollarP : MonoBehaviour
             AddPoint();
         }*/
 
-        if (ClickManager.instance.TouchScreen)
+        if (Input.touchCount > 0)
+        {
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                OnTouchStart();
+            }
+        }
+
+        if (ClickManager.instance.TouchScreen || Input.touchCount > 0)
         {
 
             AddPoint2D();

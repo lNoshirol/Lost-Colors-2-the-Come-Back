@@ -1,8 +1,6 @@
 using NaughtyAttributes;
-using Unity.Android.Gradle;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Android;
 
 public class StickAppearrAtClickLoc : MonoBehaviour
 {

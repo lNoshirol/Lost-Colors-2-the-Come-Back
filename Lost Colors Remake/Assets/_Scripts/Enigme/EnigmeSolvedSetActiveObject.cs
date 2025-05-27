@@ -1,18 +1,11 @@
 using UnityEngine;
 
-public class EnigmeSolvedSetActiveObject : MonoBehaviour
+public class EnigmeSolvedSetActiveObject : EnigmeSolved
 {
     [SerializeField] private GameObject _objectToDepop;
     [SerializeField] private bool _setActiveBool;
 
-    private void Start()
-    {
-        Enigma _enigma;
-        TryGetComponent(out _enigma);
-        _enigma.OnEnigmaSolve += Interact;
-    }
-
-    public void Interact()
+    public override void Interact()
     {
         _objectToDepop.SetActive(_setActiveBool);
     }

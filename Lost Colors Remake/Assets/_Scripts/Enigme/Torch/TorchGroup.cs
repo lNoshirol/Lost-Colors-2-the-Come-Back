@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class TorchGroup : MonoBehaviour
 {
     public List<TorchInteract> _torchList = new List<TorchInteract>();
+    public event Action Triggered;
 
     private void Start()
     {
@@ -28,6 +30,6 @@ public class TorchGroup : MonoBehaviour
 
     public void TriggerEvent()
     {
-        //Debug.Log("Bili zaboul bili bili ?");
+        Triggered?.Invoke();
     }
 }

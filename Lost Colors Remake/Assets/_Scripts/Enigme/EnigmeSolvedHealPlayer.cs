@@ -1,17 +1,10 @@
 using UnityEngine;
 
-public class EnigmeSolvedHealPlayer : MonoBehaviour
+public class EnigmeSolvedHealPlayer : EnigmeSolved
 {
     [SerializeField] private int _healAmount;
 
-    private void Start()
-    {
-        Enigma _enigma;
-        TryGetComponent(out _enigma);
-        _enigma.OnEnigmaSolve += Interact;
-    }
-
-    public void Interact()
+    public override void Interact()
     {
         //PlayerMain.Instance.Health.PlayerHealthChange(-_healAmount);
     }

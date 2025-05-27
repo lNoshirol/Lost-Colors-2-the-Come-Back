@@ -153,7 +153,7 @@ Transform:
   m_GameObject: {fileID: 3478162577142185268}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolSpeedMultiplier: 1
-  walkPointRange: 20
+  walkPointRange: 10
   walkPoint: {x: 0, y: 0}
   walkPointSet: 0
 --- !u!1 &4877568866340885713
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 8414638946198236637}
   - component: {fileID: 8460887935102229271}
   - component: {fileID: 1315101799288067918}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: HealthBar Forground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,81 +384,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &5452084351687322389
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5254045643532013656}
-  - component: {fileID: 9100430764453852175}
-  - component: {fileID: 8271309953584184901}
-  m_Layer: 9
-  m_Name: Glyph
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &5254045643532013656
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5452084351687322389}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 7252232056931524908}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.8}
-  m_SizeDelta: {x: 65, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &9100430764453852175
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5452084351687322389}
-  m_CullTransparentMesh: 1
---- !u!114 &8271309953584184901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5452084351687322389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 919b9b6e16ab80249836da721c835e08, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6011048695097047085
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6100100189013694717}
   - component: {fileID: 3190256811434328014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ArmorManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +455,7 @@ Transform:
   m_GameObject: {fileID: 6198299822021948078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.28, z: 0}
+  m_LocalPosition: {x: 0, y: 2.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -560,15 +485,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3621717970685091554}
+  - component: {fileID: 8506361799353150479}
   - component: {fileID: 4349718614920837913}
   - component: {fileID: 8561084106496603863}
   - component: {fileID: 3820118662184904292}
   - component: {fileID: 9023901565862365591}
-  - component: {fileID: 6916225228254587306}
   - component: {fileID: 6627984063825915955}
   m_Layer: 9
   m_Name: Deer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,6 +517,52 @@ Transform:
   - {fileID: 7252232056931524908}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &8506361799353150479
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6695722471592870552}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.08354175, y: 1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.3156021, y: 2.026052}
+  m_EdgeRadius: 0
 --- !u!195 &4349718614920837913
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -681,53 +652,7 @@ MonoBehaviour:
   enemyCanvas: {fileID: 5047171982902470119}
   healthbarSprite: {fileID: 1315101799288067918}
   enemiesMain: {fileID: 8561084106496603863}
-  enemyGlyphe: {fileID: 8271309953584184901}
---- !u!61 &6916225228254587306
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6695722471592870552}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.09414387, y: -0.05029726}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.1163692, y: 1.0736437}
-  m_EdgeRadius: 0
+  enemyGlyphe: {fileID: 0}
 --- !u!50 &6627984063825915955
 Rigidbody2D:
   serializedVersion: 5
@@ -767,7 +692,7 @@ GameObject:
   - component: {fileID: 5047171982902470119}
   - component: {fileID: 2704634170682903598}
   - component: {fileID: 5883143247893791699}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: EnemyCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,12 +712,11 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5275205786825405784}
-  - {fileID: 5254045643532013656}
   m_Father: {fileID: 3621717970685091554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.34}
+  m_AnchoredPosition: {x: 0, y: 2.32}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5047171982902470119
@@ -869,7 +793,7 @@ GameObject:
   - component: {fileID: 5275205786825405784}
   - component: {fileID: 7944003114949558580}
   - component: {fileID: 1342596455178322341}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: HealthBar Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,7 +842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

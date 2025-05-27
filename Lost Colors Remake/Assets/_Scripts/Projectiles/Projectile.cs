@@ -27,8 +27,6 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
-            PlayerMain player = collision.gameObject.TryGetComponent(out PlayerMain playerD) ? playerD : null;
-            player.Health.PlayerLoseHP(1);
             gameObject.SetActive(false);
         }
     }

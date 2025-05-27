@@ -14,6 +14,10 @@ public class TriggerToile : MonoBehaviour
 
     public event Action<bool> WhenTriggerToile;
 
+    public TimeManager time;
+
+    private Coroutine coroutine;
+
     private void Awake()
     {
         if (instance == null)
@@ -29,7 +33,7 @@ public class TriggerToile : MonoBehaviour
     private void Start()
     {
         _isActive = false;
-        toileButton.interactable = false;
+        //toileButton.interactable = false;
     }
 
     //private void Update()
@@ -52,12 +56,15 @@ public class TriggerToile : MonoBehaviour
             PlayerMain.Instance.UI.HidePlayerControls();
             PlayerMain.Instance.Move.canMove = false;
             //StopCoroutine(ToileMain.Instance.timerCo);
-            Time.timeScale = 0;
+            //Time.timeScale = Time.timeScale / 3;
+            coroutine = StartCoroutine(time.DoSlowmotion(ToileMain.Instance.toileTime));
 
         }
         else
         {
             StartCoroutine(DeactivateAfterFrame());
+            StopCoroutine(coroutine);
+            time.InSlowMotion = false;
         }
     }
 

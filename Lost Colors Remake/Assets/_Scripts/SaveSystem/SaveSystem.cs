@@ -1,6 +1,8 @@
 using System.IO;
 using System.Xml;
+using System.Xml.Serialization;
 using TMPro;
+using UnityEditor.Overlays;
 using UnityEngine;
 
 public class SaveSystem : MonoBehaviour
@@ -27,8 +29,7 @@ public class SaveSystem : MonoBehaviour
         xmlWriter.WriteStartDocument();
         xmlWriter.WriteStartElement("Data");
         WriteXML(xmlWriter, "PlayerHealth", playerMain.Health.playerActualHealth.ToString() );
-        WriteXML(xmlWriter, "PlayerPosition", playerMain.gameObject.transform.position.ToString());
-        LastPostionPlayer = playerMain.gameObject.transform.position;
+        WriteVector3(xmlWriter, "PlayerPosition", playerMain.gameObject.transform.position);
         WriteXML(xmlWriter, "PlayerInventory", playerMain.Inventory.ItemDatabase[0].ToString());
         xmlWriter.Close();
     }
@@ -56,7 +57,6 @@ public class SaveSystem : MonoBehaviour
 
     public void LoadSave()
     {
-        Debug.LogWarning("BONJOUR");
         XmlDocument saveFile = new XmlDocument();
         if (!System.IO.File.Exists(Path.Combine(Application.persistentDataPath, "savefile.xml"))) return;
         saveFile.LoadXml(System.IO.File.ReadAllText(Path.Combine(Application.persistentDataPath, "savefile.xml")));
@@ -75,8 +75,13 @@ public class SaveSystem : MonoBehaviour
                     playerMain.UI.UpdatePlayerHealthUI();
                     break;
                 case "PlayerPosition":
-                    playerMain.gameObject.transform.position = LastPostionPlayer;
+                    float x = float.Parse(node["x"].InnerText);
+                    float y = float.Parse(node["y"].InnerText);
+                    float z = float.Parse(node["z"].InnerText);
+                    Vector3 loadedPosition = new Vector3(x, y, z);
+                    playerMain.transform.position = loadedPosition;
                     break;
+
                 case "PlayerInventory":
                     playerMain.Inventory.ItemDatabase[0] = bool.Parse(value);
                     break;
@@ -91,4 +96,16 @@ public class SaveSystem : MonoBehaviour
         writer.WriteString(value);
         writer.WriteEndElement();
     }
+
+    static void WriteVector3(XmlWriter writer, string key, Vector3 position)
+    {
+        writer.WriteStartElement(key);
+
+        writer.WriteElementString("x", position.x.ToString());
+        writer.WriteElementString("y", position.y.ToString());
+        writer.WriteElementString("z", position.z.ToString());
+
+        writer.WriteEndElement();
+    }
+
 }

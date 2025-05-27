@@ -146,14 +146,14 @@ public class EnemiesMain : MonoBehaviour
         return playerInAttackRange;
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        if (transform.position == null && Stats.attackRange == null) return;
-        Gizmos.DrawWireSphere(transform.position, Stats.attackRange);
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, Stats.sightRange);
-    }
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.color = Color.red;
+    //    if (transform.position == null && Stats.attackRange == null) return;
+    //    Gizmos.DrawWireSphere(transform.position, Stats.attackRange);
+    //    Gizmos.color = Color.green;
+    //    Gizmos.DrawWireSphere(transform.position, Stats.sightRange);
+    //}
 
     [System.Serializable]
     public class EnemyStats

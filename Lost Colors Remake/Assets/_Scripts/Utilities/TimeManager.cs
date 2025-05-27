@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq.Expressions;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -24,13 +25,11 @@ public class TimeManager : MonoBehaviour
 
     void Update()
     {
-        //Time.timeScale += (1f / slowdownLength) * Time.unscaledDeltaTime;
-        //Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
-
         if (InSlowMotion)
         {
-            Time.timeScale = 0.25f;
-            Time.fixedDeltaTime = Time.timeScale*2f;
+            float origTimeScale = InSlowMotion ? .3f : 1;
+            float timeScale = InSlowMotion ? 1 : .3f;
+            DOVirtual.Float(origTimeScale, timeScale, .2f, SetTimeScale);
         }
         else
         {
@@ -45,7 +44,10 @@ public class TimeManager : MonoBehaviour
         InSlowMotion = true;
         yield return new WaitForSeconds(value);
         InSlowMotion = false;
-        Time.timeScale = _baseTime;
-        Time.fixedDeltaTime = _baseFixed;
+    }
+
+    void SetTimeScale(float x)
+    {
+        Time.timeScale = x;
     }
 }

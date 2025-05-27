@@ -11,13 +11,13 @@ public class TimeManager : MonoBehaviour
     private float _baseTime;
     private float _baseFixed;
 
+    [SerializeField]
     private PlayerMain _mainPlayer;
 
     public bool InSlowMotion = false;
 
     private void Start()
     {
-        _mainPlayer = FindAnyObjectByType<PlayerMain>();
         _baseFixed = Time.fixedDeltaTime;
         _baseTime = Time.timeScale;
     }

@@ -730,21 +730,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 27807193153674037, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 587022581706631170, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: m_Name
       value: _MainPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 1685616328797390388, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1930479012753189673, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2384214893316031475, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -786,57 +774,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2614488200985444996, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3632271568714385847, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601413259452178542, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6452506287688040079, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6769708455015401087, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800238920655007467, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7442776815243762456, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7511943263347533280, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8801075754593826607, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8881921884143556443, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156089289402246225, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2458422246108691770, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1524294386}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
 --- !u!1 &153283760
 GameObject:
@@ -37974,23 +37915,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!1 &1524294373 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2458422246108691770, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
-  m_PrefabInstance: {fileID: 111685974}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1524294386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524294373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f59ac5cede93b584597119412d95dbf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1558632370
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1454111109851972308}
   - component: {fileID: 5396709973687844584}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PlayerFeetCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8831720044735682783, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.87
+      value: 14.07
       objectReference: {fileID: 0}
     - target: {fileID: 8831720044735682783, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -493,7 +493,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 783730929042863478, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.87
+      value: 14.07
       objectReference: {fileID: 0}
     - target: {fileID: 783730929042863478, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: m_LocalPosition.y
@@ -509,7 +509,7 @@ PrefabInstance:
       objectReference: {fileID: 3374486955276342525}
     - target: {fileID: 3543440330673061322, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.87
+      value: 14.07
       objectReference: {fileID: 0}
     - target: {fileID: 3543440330673061322, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: m_LocalPosition.y

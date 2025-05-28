@@ -78,6 +78,10 @@ public class DrawForDollarP : MonoBehaviour
             {
                 OnTouchStart();
             }
+            if (Input.GetTouch(0).phase == TouchPhase.Ended)
+            {
+                OnTouchEnd();
+            }
         }
 
         if (ClickManager.instance.TouchScreen || Input.touchCount > 0)

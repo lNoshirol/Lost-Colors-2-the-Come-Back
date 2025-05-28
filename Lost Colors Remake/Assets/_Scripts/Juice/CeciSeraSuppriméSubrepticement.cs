@@ -27,17 +27,17 @@ public class CeciSeraSuppriméSubrepticement : MonoBehaviour
     public void Anim()
     {
         Setup();
-        _vfx.SetFloat("_WaveProgress", 0f);
+        //_vfx.SetFloat("_WaveProgress", 0f);
 
         _vfx.Play();
 
         // Anime Progress de 0 à 1 en 2 secondes
-        DOTween.To(
-            () => _vfx.GetFloat("_WaveProgress"),
-            x => _vfx.SetFloat("_WaveProgress", x),
-            40f,            // valeur finale
-            _waveDuration             // durée
-        ); 
+        //DOTween.To(
+        //    () => _vfx.GetFloat("_WaveProgress"),
+        //    x => _vfx.SetFloat("_WaveProgress", x),
+        //    40f,            // valeur finale
+        //    _waveDuration             // durée
+        //); 
 
         foreach (var renderer in _tilemapRenderers) 
         {

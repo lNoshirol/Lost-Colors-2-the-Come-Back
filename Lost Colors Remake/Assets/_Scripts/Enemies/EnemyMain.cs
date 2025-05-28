@@ -95,7 +95,6 @@ public class EnemyMain : MonoBehaviour
     private void FixedUpdate()
     {
         EnemiesCurrentState?.FixedDo();
-        Debug.Log(Animation);
     }
 
     private void SnapToNavMesh()

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Crystal : MonoBehaviour
 {
-    [Header("Crystal Settings")]
+    [Header("CrystalName Settings")]
     public GameObject projectilePrefab;
     public Transform firePoint;           
     public float projectileSpeed = 10f;

@@ -1,16 +1,11 @@
 using System.IO;
 using System.Xml;
-using System.Xml.Serialization;
-using TMPro;
-using UnityEditor.Overlays;
 using UnityEngine;
 
 public class SaveSystem : MonoBehaviour
 {
     [SerializeField]
     private PlayerMain playerMain;
-
-    private Vector3 LastPostionPlayer;
 
 
     XmlWriter xmlWriter;

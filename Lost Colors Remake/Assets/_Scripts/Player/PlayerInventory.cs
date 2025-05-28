@@ -5,10 +5,10 @@ using System;
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField]
-    [Range(0f, 100f)]
-    public int currentPaintAmont = 100;
-    public int basePaintAmont = 100;
-    private int _amountAtStart;
+/*    [Range(0f, 100f)]*/
+    public float currentPaintAmont = 100f;
+    public float basePaintAmont = 100;
+    private float _amountAtStart;
 
     [Header("NO UPDATE IN RUNTIME")]
     [SerializeField]
@@ -44,7 +44,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void EditPaintAmount()
     {
-        currentPaintAmont = Mathf.Clamp(_amountAtStart - ExternalDrawFunctions.GetDrawLenght(DrawForDollarP.instance.GetDrawPoints()), 0, 100);
+        currentPaintAmont = Mathf.Clamp(_amountAtStart - ExternalDrawFunctions.GetDrawLenght(DrawForDollarP.instance.GetDrawPoints()), 0f, 100f);
     }
 
     public void SetStartAmount()
@@ -55,6 +55,7 @@ public class PlayerInventory : MonoBehaviour
     public void ResetCurrentPaintAmount()
     {
         currentPaintAmont = basePaintAmont;
+        ToileMain.Instance.ToileUI.UpdateToilePaintAmount();
     }
 }
 

@@ -6,28 +6,25 @@ public class EnemyHealth : MonoBehaviour
 
     public float enemyCurrentHealth;
 
-    [SerializeField] EnemiesMain EnemyMain;
+    [SerializeField] EnemyMain EnemyMain;
 
-    public void EnemyHealthChange(float healthChangeAmount)
+    public void EnemyLoseHP(float healthLoose)
     {
-        Debug.Log(EnemyMain.isColorized);
         if (EnemyMain.isColorized)
         {
             return;
         }
-
-        if (EnemyMain.Armor.activeGlyphs.Count == 0) {
-            enemyCurrentHealth -= healthChangeAmount;
+        if (EnemyMain.Armor.activeGlyphs.Count == 0)
+        {
+            enemyCurrentHealth -= healthLoose;
+            JuiceManager.Instance.PlayerHit(0.25f);
+            EnemyMain.UI.UpdateEnemyHealthUI();
         }
-        
+
         if (enemyCurrentHealth <= 0)
         {
             enemyCurrentHealth = 0;
             EnemyIsDead();
-        }
-        else if (enemyCurrentHealth >= 100)
-        {
-            enemyCurrentHealth = 100;
         }
     }
 

@@ -6,8 +6,8 @@ public class EnemyUI : MonoBehaviour
 {
     [SerializeField] Canvas enemyCanvas;
     [SerializeField] private Image healthbarSprite;
-    [SerializeField] private EnemiesMain enemiesMain;
-    [SerializeField] private Image enemyGlyphe;
+    [SerializeField] private EnemyMain enemiesMain;
+    //[SerializeField] private Image enemyGlyphe;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Start()
@@ -15,12 +15,10 @@ public class EnemyUI : MonoBehaviour
         if (enemiesMain.Armor.activeGlyphs.Count > 0)
         {
             healthbarSprite.transform.parent.gameObject.SetActive(false);
-            enemyGlyphe.gameObject.SetActive(true);
         }
         else
         {
             healthbarSprite.transform.parent.gameObject.SetActive(true);
-            enemyGlyphe.gameObject.SetActive(false);
         }
     }
 

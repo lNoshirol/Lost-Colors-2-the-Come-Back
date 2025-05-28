@@ -16,8 +16,21 @@ public class JuiceManager : MonoBehaviour
         Instance = this;
     }
 
+    
+    // TEMP
+    public void WhiteSprite()
+    {
+        Color color = gameObject.GetComponent<SpriteRenderer>().color;
+        for (int i = 0; i < 3; i++)
+        {
+            color = Color.black;
+            Wait(0.2f);
+            color = Color.white;
+        }
+    }
 
-    public void Stop(float stopDuration)
+
+    public void PlayerHit(float stopDuration)
     {
         if (waiting) return;
         Time.timeScale = 0f;
@@ -32,4 +45,6 @@ public class JuiceManager : MonoBehaviour
         Time.timeScale = 1f;
         waiting = false;
     }
+
+
 }

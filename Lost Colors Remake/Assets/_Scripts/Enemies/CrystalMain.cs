@@ -2,10 +2,11 @@ using System.Collections;
 using System.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class CrystalMain : EnemiesMain
+public class CrystalMain : EnemyMain
 {
-    [Header("Magic Crystal Components")]
+    [Header("Magic CrystalName Components")]
     [SerializeField] private Transform firePoint;
 
     public Vector2[] LazerCardinals;
@@ -17,11 +18,9 @@ public class CrystalMain : EnemiesMain
 
     public Pool pool;
 
-    //private bool HasStartAttckedPlayer;
-
     public bool ChangeList;
 
-    //private bool isShooting;
+    private string _nameScene;
 
     private void Awake()
     {
@@ -29,34 +28,20 @@ public class CrystalMain : EnemiesMain
         Health = GetComponent<EnemyHealth>();
         UI = GetComponent<EnemyUI>();
         SetupStats();
+        _nameScene = SceneManager.GetActiveScene().name;
     }
+
     public override void Start()
     {
         EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);
         DisplayGoodUI();
-
-        //pool = new Pool(projectile, 20, GameObjectToStorePool.transform);
+        CrystalManager.Instance.AddToDict(this, isColorized, _nameScene);
         vector2s = LazerCardinals;
     }
 
     public override void Update()
     {
-        //if (isColorized || isShooting) return;
 
-        //bool playerInRange = CheckPlayerInAttackRange();
-
-        //if (playerInRange && !HasStartAttckedPlayer)
-        //{
-        //    HasStartAttckedPlayer = true;
-
-        //    vector2s = ChangeList ? LazerCardinals : LazerSubCardinals;
-
-        //    StartCoroutine(ShootInAllDirections(vector2s));
-        //}
-        //else if (!playerInRange)
-        //{
-        //    HasStartAttckedPlayer = false;
-        //}
     }
 
     public override void DisplayGoodUI()
@@ -64,6 +49,7 @@ public class CrystalMain : EnemiesMain
         if (isColorized)
         {
             UI.SwitchHealtBar(false);
+            
         }
         else
         {
@@ -83,36 +69,7 @@ public class CrystalMain : EnemiesMain
     {
         spriteRenderer.material.DOFloat(1f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
         isColorized = true;
+        CrystalManager.Instance.UpdateIsColorizedIfChanged(this, isColorized, _nameScene);
     }
-
-    //private IEnumerator ShootInAllDirections(Vector2[] directions)
-    //{
-    //    isShooting = true;
-
-    //    foreach (var direction in directions)
-    //    {
-    //        ShootLaser(direction);
-    //    }
-
-    //    yield return new WaitForSeconds(2f);
-
-    //    isShooting = false;
-
-    //    HasStartAttckedPlayer = false;
-    //    ChangeList = !ChangeList;
-    //}
-
-    //private async void ShootLaser(Vector2 direction)
-    //{
-    //    GameObject laser = pool.GetObject();
-    //    laser.transform.position = firePoint.position;
-
-    //    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-    //    laser.transform.rotation = Quaternion.Euler(0, 0, angle);
-
-    //    await Task.Delay(2000);
-
-    //    pool.Stock(laser);
-    //}
-
 }
+

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyID: deer01
   enemyPowerLevel: 1
-  enemyMaxHP: 100
+  enemyMaxHP: 3
   armorSpriteListPrefab:
   - {fileID: 1203507347480276920, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
   enemyMaxArmor: 1

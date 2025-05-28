@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyArmor : MonoBehaviour
 {
-    public GameObject glyphPrefab;
+    //public GameObject glyphPrefab;
     public List<GameObject> activeGlyphs = new List<GameObject>();
-    [SerializeField] EnemiesMain EnemiesMain;
+    [SerializeField] EnemyMain EnemiesMain;
     int enemyArmorCount;
 
     private void Start()
@@ -70,8 +70,6 @@ public class EnemyArmor : MonoBehaviour
         RePackInPool(last);
         UpdateGlyphPositions();
         if (activeGlyphs.Count == 0) EnemiesMain.UI.SwitchHealtBar(true);
-
-
     }
 
     void UpdateGlyphPositions()

@@ -76,7 +76,7 @@ public class PlayerMain : MonoBehaviour
 
     private void Update()
     {
-        GetDirection();
+        GetDirectionAnim();
     }
 
 
@@ -93,7 +93,7 @@ public class PlayerMain : MonoBehaviour
         }
     }
 
-    public void GetDirection()
+    public void GetDirectionAnim()
     {
         horizontal = Move._moveInput.x;
         vertical = Move._moveInput.y;

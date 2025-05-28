@@ -6,7 +6,7 @@ public class EnemyHealth : MonoBehaviour
 
     public float enemyCurrentHealth;
 
-    [SerializeField] EnemiesMain EnemyMain;
+    [SerializeField] EnemyMain EnemyMain;
 
     public void EnemyHealthChange(float healthChangeAmount)
     {

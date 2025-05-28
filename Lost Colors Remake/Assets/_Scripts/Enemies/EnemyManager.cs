@@ -66,7 +66,7 @@ public class EnemyManager : MonoBehaviour
         {
 
             var enemy = FindCloserEnemy();
-            if (enemy.TryGetComponent<EnemiesMain>(out var enemiesMain))
+            if (enemy.TryGetComponent<EnemyMain>(out var enemiesMain))
             {
                 enemiesMain.Armor.RemoveGlyph(glyphName);
             }
@@ -91,7 +91,7 @@ public class EnemyManager : MonoBehaviour
             float actualDist = Vector2.Distance(enemy.transform.position, PlayerMain.Instance.transform.position);
             if (actualDist < minDistance)
             {
-                if (enemy.TryGetComponent<EnemiesMain>(out var eMain))
+                if (enemy.TryGetComponent<EnemyMain>(out var eMain))
                 {
                     if (eMain.Armor.activeGlyphs.Count > 0 &&
                         eMain.spriteRenderer.TryGetComponent<Renderer>(out var renderer) &&

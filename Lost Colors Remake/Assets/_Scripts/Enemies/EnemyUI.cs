@@ -6,7 +6,7 @@ public class EnemyUI : MonoBehaviour
 {
     [SerializeField] Canvas enemyCanvas;
     [SerializeField] private Image healthbarSprite;
-    [SerializeField] private EnemiesMain enemiesMain;
+    [SerializeField] private EnemyMain enemiesMain;
     [SerializeField] private Image enemyGlyphe;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 

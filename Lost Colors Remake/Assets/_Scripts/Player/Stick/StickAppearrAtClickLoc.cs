@@ -53,9 +53,6 @@ public class StickAppearrAtClickLoc : MonoBehaviour
         moveAreaBasePos = joystickMoveArea.center;
         clickAreaBasePos = clickArea.center;
 
-        Debug.Log(Screen.width);
-        Debug.Log(Screen.height);
-
     }
 
     private void Update()

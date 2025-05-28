@@ -23,7 +23,9 @@ public class EPatrolState : EnemiesState
 
     public override void Do()
     {
-        //EnemiesMain.UpdateSpriteDirectionRB();
+        EnemiesMain.Animation.GetDirectionXAnimAgent();
+
+
         if (!walkPointSet)
         {
             SearchWalkPoint();

@@ -51,7 +51,11 @@ PrefabInstance:
     - target: {fileID: 4106339570460104945, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: a111fe2c7eb5ccb458f06571d12ad003, type: 2}
+      objectReference: {fileID: 22100000, guid: f7740c5318a6a92409c51684a6c1d74f, type: 2}
+    - target: {fileID: 6100100189013694717, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.18
+      objectReference: {fileID: 0}
     - target: {fileID: 6178907501439480039, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: enemyData
       value: 
@@ -60,10 +64,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: A_Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 7252232056931524908, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.806
+      objectReference: {fileID: 0}
     - target: {fileID: 7737749079377589711, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0e898b050fba61240a144783d02d0a49, type: 3}
+      objectReference: {fileID: -8452264258638841039, guid: 4cf6d546121de2e41a4a9b45324cbeb6, type: 3}
+    - target: {fileID: 8506361799353150479, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: m_Size.x
+      value: 1.631877
+      objectReference: {fileID: 0}
+    - target: {fileID: 8506361799353150479, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9349037
+      objectReference: {fileID: 0}
+    - target: {fileID: 8506361799353150479, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.051914215
+      objectReference: {fileID: 0}
+    - target: {fileID: 8506361799353150479, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.0395343
+      objectReference: {fileID: 0}
     - target: {fileID: 8561084106496603863, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: enemyData
       value: 

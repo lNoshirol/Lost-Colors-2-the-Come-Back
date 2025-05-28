@@ -173,6 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAnimator: {fileID: 4106339570460104945}
   enemyMain: {fileID: 6178907501439480039}
+  dirX: 0
 --- !u!1 &3478162577142185268
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeGlyphs: []
   EnemiesMain: {fileID: 6178907501439480039}
+  enemyArmorCount: 0
 --- !u!1 &6695722471592870552
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +705,6 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
-  projectile: {fileID: 0}
   spriteRenderer: {fileID: 7737749079377589711}
   EnemiesCurrentState: {fileID: 0}
   EIdleState: {fileID: 8739626910575148938}
@@ -714,10 +715,7 @@ MonoBehaviour:
   agent: {fileID: 4349718614920837913}
   enemyMesh: {fileID: 6695722471592870552}
   Armor: {fileID: 3190256811434328014}
-  spriteRightBW: {fileID: 0}
-  spriteLeftBW: {fileID: 0}
-  spriteRightColor: {fileID: 0}
-  spriteLeftColor: {fileID: 0}
+  Animation: {fileID: 5850043566281649089}
 --- !u!114 &3820118662184904292
 MonoBehaviour:
   m_ObjectHideFlags: 0

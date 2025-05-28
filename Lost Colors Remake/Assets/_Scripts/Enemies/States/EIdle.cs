@@ -6,7 +6,7 @@ public class EIdle : EnemiesState
     public float idleWaitTime;
     public override void OnEnter()
     {
-        //EnemiesMain.mat.color = Color.white;
+        EnemiesMain.agent.velocity = Vector3.zero;
         EnemiesMain.StartCoroutine(IdleWait());
     }
 

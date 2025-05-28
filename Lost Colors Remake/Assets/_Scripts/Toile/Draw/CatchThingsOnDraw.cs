@@ -11,11 +11,8 @@ public class CatchThingsOnDraw : MonoBehaviour
 
         if (hit.collider != null)
         {
-            Debug.Log("ta grand mere la pute");
-
             if (hit.collider.gameObject.layer == 9 && !_ennemyObjectOnDraw.Contains(hit.collider.gameObject))
             {
-                Debug.Log("Hit ennemy with line");
                 _ennemyObjectOnDraw.Add(hit.collider.gameObject);
             }
         }
@@ -31,7 +28,11 @@ public class CatchThingsOnDraw : MonoBehaviour
                 obj.TryGetComponent(out TorchInteract _torchInteract);
 
                 _torchInteract.Interact();
-                Debug.Log(_torchInteract.IsTrigger);
+            }
+            else if (obj.CompareTag("Enemy"))
+            {
+                obj.TryGetComponent(out EnemyHealth _health);
+                _health.EnemyLoseHP(0.5f);
             }
         }
     }

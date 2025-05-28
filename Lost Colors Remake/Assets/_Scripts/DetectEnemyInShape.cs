@@ -11,11 +11,11 @@ public class DetectEnemyInShape : MonoBehaviour
     [SerializeField] private List<Vector2> _target2DPos = new();
     private List<GameObject> _targets = new();
     private Vector2 _enemyPoint;
-
-    [Header("Debug")]
     public Vector2 intersection;
+
+/*    [Header("Debug")]
     public GameObject target;
-    public LineRenderer lineRenderer;
+    public LineRenderer lineRenderer;*/
 
     public void Init()
     {
@@ -48,7 +48,7 @@ public class DetectEnemyInShape : MonoBehaviour
             {
                 Debug.Log("Forme fermée via intersection " + Camera.main.ScreenToWorldPoint(ExternalDrawFunctions.GetDrawCenter(ExternalDrawFunctions.GetMinMaxCoordinates(ExternalDrawFunctions.Vec2ShapeToVec3Shape(_shapePoints)))));
                 Instantiate(PlayerMain.Instance.playerSprite, _shapePoints[0], Quaternion.identity);
-                target.transform.position = Camera.main.ScreenToWorldPoint(ExternalDrawFunctions.GetDrawCenter(ExternalDrawFunctions.GetMinMaxCoordinates(ExternalDrawFunctions.Vec2ShapeToVec3Shape(debug_shapePoints)))) + Vector3.forward*10;
+                //target.transform.position = Camera.main.ScreenToWorldPoint(ExternalDrawFunctions.GetDrawCenter(ExternalDrawFunctions.GetMinMaxCoordinates(ExternalDrawFunctions.Vec2ShapeToVec3Shape(debug_shapePoints)))) + Vector3.forward*10;
             }
             else
             {

@@ -32,8 +32,8 @@ public class DrawForDollarP : MonoBehaviour
 
     public event Action<DrawData> OnDrawFinish;
 
-    [Header("Debug")]
-    public TextMeshProUGUI touuchStart;
+/*    [Header("Debug")]
+    public TextMeshProUGUI touuchStart;*/
 
     private void Awake()
     {

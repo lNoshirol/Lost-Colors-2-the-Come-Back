@@ -6,14 +6,16 @@ public class DetectEnemyInShape : MonoBehaviour
 {
     [SerializeField] private RaycastDraw _rayCastDraw;
     [SerializeField] private DrawForDollarP _pen;
-    private List<Vector2> _shapePoints = new();
-    private List<Vector2> _target2DPos = new();
+    [SerializeField] private List<Vector2> _shapePoints = new();
+    [SerializeField] private List<Vector2> debug_shapePoints = new();
+    [SerializeField] private List<Vector2> _target2DPos = new();
     private List<GameObject> _targets = new();
     private Vector2 _enemyPoint;
 
     [Header("Debug")]
     public Vector2 intersection;
     public GameObject target;
+    public LineRenderer lineRenderer;
 
     public void Init()
     {
@@ -46,6 +48,7 @@ public class DetectEnemyInShape : MonoBehaviour
             {
                 Debug.Log("Forme fermée via intersection " + Camera.main.ScreenToWorldPoint(ExternalDrawFunctions.GetDrawCenter(ExternalDrawFunctions.GetMinMaxCoordinates(ExternalDrawFunctions.Vec2ShapeToVec3Shape(_shapePoints)))));
                 Instantiate(PlayerMain.Instance.playerSprite, _shapePoints[0], Quaternion.identity);
+                target.transform.position = Camera.main.ScreenToWorldPoint(ExternalDrawFunctions.GetDrawCenter(ExternalDrawFunctions.GetMinMaxCoordinates(ExternalDrawFunctions.Vec2ShapeToVec3Shape(debug_shapePoints)))) + Vector3.forward*10;
             }
             else
             {
@@ -188,7 +191,7 @@ public class DetectEnemyInShape : MonoBehaviour
     {
         List<Vector2> newShape = new()
         {
-            intersectionPoint
+            Camera.main.WorldToScreenPoint(intersectionPoint)
         };
 
         for (int i = 0; i < penultimatePointIndex; i++)
@@ -198,9 +201,9 @@ public class DetectEnemyInShape : MonoBehaviour
                 newShape.Add(_shapePoints[i]);
             }
         }
-        newShape.Add(intersectionPoint);
+        newShape.Add(Camera.main.WorldToScreenPoint(intersectionPoint));
         
-        _shapePoints = newShape;
+        debug_shapePoints = newShape;
     }
 
 
@@ -257,8 +260,6 @@ public class DetectEnemyInShape : MonoBehaviour
         float y = (A1 * C2 - A2 * C1) / denominator;
 
         intersection = Camera.main.ScreenToWorldPoint( new Vector2(x, y));
-
-        target.transform.position = intersection;
 
         return intersection;
     }

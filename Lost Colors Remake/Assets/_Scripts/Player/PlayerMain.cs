@@ -38,17 +38,13 @@ public class PlayerMain : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log($"NoDestroy Awake on {gameObject.name}, instance = {Instance}");
 
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
-            Debug.Log($"NoDestroy instance set and DontDestroyOnLoad called on {gameObject.name}");
         }
         else if (Instance != this)
         {
-            Debug.Log($"Duplicate NoDestroy detected on {gameObject.name}, destroying this instance.");
             Destroy(gameObject);
             return;
         }

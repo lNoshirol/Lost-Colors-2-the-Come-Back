@@ -7,12 +7,16 @@ public class EnemyArmor : MonoBehaviour
     //public GameObject glyphPrefab;
     public List<GameObject> activeGlyphs = new List<GameObject>();
     [SerializeField] EnemyMain EnemiesMain;
-    int enemyArmorCount;
+    public int enemyArmorCount;
+    bool enemyArmorCountSetup;
 
-    private void Start()
+    private void SetupArmorCount()
     {
-        enemyArmorCount = EnemiesMain.Stats.maxArmor;
-
+        if (!enemyArmorCountSetup)
+        {
+            enemyArmorCount = EnemiesMain.Stats.maxArmor;
+            enemyArmorCountSetup = true;
+        }
     }
 
     public GameObject SearchArmorInPool(string glyphName)
@@ -45,6 +49,7 @@ public class EnemyArmor : MonoBehaviour
 
     public void AddGlyph()
     {
+        SetupArmorCount();
         while (enemyArmorCount > 0)
         {
             int index = UnityEngine.Random.Range(0, EnemiesMain.Stats.armorList.Count);

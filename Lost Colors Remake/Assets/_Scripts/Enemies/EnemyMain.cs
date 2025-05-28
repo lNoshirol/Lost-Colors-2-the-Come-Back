@@ -10,12 +10,11 @@ public class EnemyMain : MonoBehaviour
     [SerializeField] private EnemyDATA enemyData;
     public bool isColorized;
 
-    [Header("Enemy Brain Needs")]
+    [Header("Enemy State Needs")]
     public bool playerInSightRange;
     public bool playerInAttackRange; 
     public LayerMask whatIsGround;
     public LayerMask whatIsPlayer;
-    public GameObject projectile;
 
     [Header("ShaderNeeds")]
     public SpriteRenderer spriteRenderer;
@@ -45,19 +44,21 @@ public class EnemyMain : MonoBehaviour
 
     public EnemyArmor Armor;
 
+    public EnemyAnimation Animation { get; protected set; }
+
     public Rigidbody2D rb { get; protected set; }
     public Transform player { get; private set; }
     public Vector2 position { get; private set; }
     public Vector2 velocity { get; private set; }
 
 
-    [Header("Enemy Sprite BW")]
-    public Sprite spriteRightBW;
-    public Sprite spriteLeftBW;
+    //[Header("Enemy Sprite BW")]
+    //public Sprite spriteRightBW;
+    //public Sprite spriteLeftBW;
 
-    [Header("Enemy Sprite Color")]
-    public Sprite spriteRightColor;
-    public Sprite spriteLeftColor;
+    //[Header("Enemy Sprite Color")]
+    //public Sprite spriteRightColor;
+    //public Sprite spriteLeftColor;
 
     //Delay for updates
     private float nextSightCheckTime = 0f;
@@ -212,36 +213,36 @@ public class EnemyMain : MonoBehaviour
     }
 
 
-    public void UpdateSpriteDirectionRB()
-    {
-        Vector2 direction = agent.velocity;
+    //public void UpdateSpriteDirectionRB()
+    //{
+    //    Vector2 direction = agent.velocity;
 
-        if (direction.x >= 0)
-        {
-            spriteRenderer.sprite = spriteRightBW;
-            spriteRenderer.material.SetTexture("_ColoredTex", spriteRightColor.texture);
-        }
-        else
-        {
-            spriteRenderer.sprite = spriteLeftBW;
-            spriteRenderer.material.SetTexture("_ColoredTex", spriteLeftColor.texture);
-        }
-    }
+    //    if (direction.x >= 0)
+    //    {
+    //        spriteRenderer.sprite = spriteRightBW;
+    //        spriteRenderer.material.SetTexture("_ColoredTex", spriteRightColor.texture);
+    //    }
+    //    else
+    //    {
+    //        spriteRenderer.sprite = spriteLeftBW;
+    //        spriteRenderer.material.SetTexture("_ColoredTex", spriteLeftColor.texture);
+    //    }
+    //}
 
-    public void UpdateSpriteDirectionPlayer()
-    {
-        Vector2 toPlayer = player.position - transform.position;
-        if (toPlayer.x >= 0)
-        {
-            spriteRenderer.sprite = spriteRightBW;
-            spriteRenderer.material.SetTexture("_ColoredTex", spriteRightColor.texture);
-        }
-        else
-        {
-            spriteRenderer.sprite = spriteLeftBW;
-            spriteRenderer.material.SetTexture("_ColoredTex", spriteLeftColor.texture);
-        }
-    }
+    //public void UpdateSpriteDirectionPlayer()
+    //{
+    //    Vector2 toPlayer = player.position - transform.position;
+    //    if (toPlayer.x >= 0)
+    //    {
+    //        spriteRenderer.sprite = spriteRightBW;
+    //        spriteRenderer.material.SetTexture("_ColoredTex", spriteRightColor.texture);
+    //    }
+    //    else
+    //    {
+    //        spriteRenderer.sprite = spriteLeftBW;
+    //        spriteRenderer.material.SetTexture("_ColoredTex", spriteLeftColor.texture);
+    //    }
+    //}
 
 
     public virtual void DisplayGoodUI()

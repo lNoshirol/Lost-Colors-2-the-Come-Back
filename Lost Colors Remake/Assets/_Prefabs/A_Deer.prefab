@@ -48,9 +48,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6178907501439480039, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: fa4cceb57dbd0ec4491dbfe6a0b39215, type: 2}
     - target: {fileID: 6695722471592870552, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: m_Name
-      value: Animal
+      value: A_Deer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

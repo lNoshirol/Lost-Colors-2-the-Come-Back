@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a111fe2c7eb5ccb458f06571d12ad003, type: 2}
+    - target: {fileID: 6178907501439480039, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: 140dfbccc6aabdb4294dd0664a46c2a5, type: 2}
     - target: {fileID: 6695722471592870552, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: m_Name
       value: A_Wolf

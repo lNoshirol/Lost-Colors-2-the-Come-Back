@@ -2,14 +2,22 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float enemyMaxHealth;
-
-    public float enemyCurrentHealth;
 
     [SerializeField] EnemyMain EnemyMain;
+    bool enemyHealthSetup = false;
+    public float enemyCurrentHealth;
 
+    private void SetupHealthCount()
+    {
+        if (!enemyHealthSetup)
+        {
+            enemyCurrentHealth = EnemyMain.Stats.maxHp;
+            enemyHealthSetup = true;
+        }
+    }
     public void EnemyLoseHP(float healthLoose)
     {
+        SetupHealthCount();
         if (EnemyMain.isColorized)
         {
             return;

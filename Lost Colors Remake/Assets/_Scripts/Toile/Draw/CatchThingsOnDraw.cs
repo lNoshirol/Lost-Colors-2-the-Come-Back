@@ -24,7 +24,6 @@ public class CatchThingsOnDraw : MonoBehaviour
         {
             if (obj.CompareTag("Torch"))
             {
-
                 obj.TryGetComponent(out TorchInteract _torchInteract);
 
                 _torchInteract.Interact();
@@ -35,13 +34,15 @@ public class CatchThingsOnDraw : MonoBehaviour
                 if (obj.TryGetComponent(out EnemyHealth _health))
                 {
                     Debug.Log("AIE AIE AIE AEI AIE AIE AIE AIE AEI");
+                    _health.EnemyLoseHP(0.5f);
                 }
-                _health.EnemyLoseHP(0.5f);
+                
             }
         }
+        ResetList();
     }
 
-    public void resetList()
+    public void ResetList()
     {
         _ennemyObjectOnDraw.Clear();
     }

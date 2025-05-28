@@ -30,7 +30,7 @@ public class EnemyUI : MonoBehaviour
 
     public void UpdateEnemyHealthUI()
     {
-        healthbarSprite.fillAmount = (float)enemiesMain.Health.enemyCurrentHealth / enemiesMain.Health.enemyMaxHealth;
+        healthbarSprite.fillAmount = (float)enemiesMain.Health.enemyCurrentHealth / enemiesMain.Stats.maxHp;
     }
 
 

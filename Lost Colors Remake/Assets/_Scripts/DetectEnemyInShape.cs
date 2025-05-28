@@ -27,7 +27,7 @@ public class DetectEnemyInShape : MonoBehaviour
     public List<GameObject> GetTargetsInShape()
     {
         Init();
-        Debug.Log("nombre de point de la forme : " + _shapePoints.Count);
+        //Debug.Log("nombre de point de la forme : " + _shapePoints.Count);
 
         List<GameObject> result = new();
         bool isLine = false;
@@ -42,18 +42,18 @@ public class DetectEnemyInShape : MonoBehaviour
             if (distance < closeThreshold)
             {
                 _shapePoints.Add(_shapePoints[0]); 
-                Debug.Log("Forme fermée via points proches " + Camera.main.ScreenToWorldPoint(ExternalDrawFunctions.GetDrawCenter(ExternalDrawFunctions.GetMinMaxCoordinates(ExternalDrawFunctions.Vec2ShapeToVec3Shape(_shapePoints)))));
+                //Debug.Log("Forme fermée via points proches " + Camera.main.ScreenToWorldPoint(ExternalDrawFunctions.GetDrawCenter(ExternalDrawFunctions.GetMinMaxCoordinates(ExternalDrawFunctions.Vec2ShapeToVec3Shape(_shapePoints)))));
             }
             else if(HasSelfIntersection(_shapePoints))
             {
-                Debug.Log("Forme fermée via intersection " + Camera.main.ScreenToWorldPoint(ExternalDrawFunctions.GetDrawCenter(ExternalDrawFunctions.GetMinMaxCoordinates(ExternalDrawFunctions.Vec2ShapeToVec3Shape(_shapePoints)))));
+                //Debug.Log("Forme fermée via intersection " + Camera.main.ScreenToWorldPoint(ExternalDrawFunctions.GetDrawCenter(ExternalDrawFunctions.GetMinMaxCoordinates(ExternalDrawFunctions.Vec2ShapeToVec3Shape(_shapePoints)))));
                 Instantiate(PlayerMain.Instance.playerSprite, _shapePoints[0], Quaternion.identity);
                 //target.transform.position = Camera.main.ScreenToWorldPoint(ExternalDrawFunctions.GetDrawCenter(ExternalDrawFunctions.GetMinMaxCoordinates(ExternalDrawFunctions.Vec2ShapeToVec3Shape(debug_shapePoints)))) + Vector3.forward*10;
             }
             else
             {
                 isLine = true;
-                Debug.Log("une ligne");
+                //Debug.Log("une ligne");
             }
         }
 
@@ -176,9 +176,9 @@ public class DetectEnemyInShape : MonoBehaviour
                     if (intersectionPoint != Vector2.positiveInfinity)
                     //Instantiate(PlayerMain.Instance.playerSprite.gameObject, new Vector3(intersectionPoint.x, intersectionPoint.y, 0), Quaternion.identity);
 
-                    Debug.DrawLine(a1, a2, Color.blue, 5f);
-                    Debug.DrawLine(b1, b2, Color.blue, 5f);
-                    Debug.Log($"Intersection entre {i}-{i + 1} et {j}-{j + 1}");
+                    //Debug.DrawLine(a1, a2, Color.blue, 5f);
+                    //Debug.DrawLine(b1, b2, Color.blue, 5f);
+                    //Debug.Log($"Intersection entre {i}-{i + 1} et {j}-{j + 1}");
                     IntersectionListUpdate(i + 1, j, intersection);
                     return true;
                 }

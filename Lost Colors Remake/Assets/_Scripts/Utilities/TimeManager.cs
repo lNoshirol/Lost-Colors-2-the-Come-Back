@@ -12,9 +12,6 @@ public class TimeManager : MonoBehaviour
     private float _baseTime;
     private float _baseFixed;
 
-    [SerializeField]
-    private PlayerMain _mainPlayer;
-
     public bool InSlowMotion = false;
 
     private void Start()
@@ -40,7 +37,7 @@ public class TimeManager : MonoBehaviour
 
     public IEnumerator DoSlowmotion(float value)
     {
-        _mainPlayer.Rigidbody2D.linearVelocity = new Vector2(0, 0);
+        PlayerMain.Instance.Rigidbody2D.linearVelocity = new Vector2(0, 0);
         InSlowMotion = true;
         yield return new WaitForSeconds(value);
         InSlowMotion = false;

@@ -15,12 +15,10 @@ public class EnemyUI : MonoBehaviour
         if (enemiesMain.Armor.activeGlyphs.Count > 0)
         {
             healthbarSprite.transform.parent.gameObject.SetActive(false);
-            enemyGlyphe.gameObject.SetActive(true);
         }
         else
         {
             healthbarSprite.transform.parent.gameObject.SetActive(true);
-            enemyGlyphe.gameObject.SetActive(false);
         }
     }
 

@@ -300,6 +300,18 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1159743132053632506, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: Dash
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159743132053632506, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: PlayerFeet
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159743132053632506, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: whatIsPlayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159743132053632506, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: playerFeetCollider
       value: 
       objectReference: {fileID: 5396709973687844584}

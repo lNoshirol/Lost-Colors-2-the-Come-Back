@@ -11,6 +11,10 @@ public class DetectEnemyInShape : MonoBehaviour
     private List<GameObject> _targets = new();
     private Vector2 _enemyPoint;
 
+    [Header("Debug")]
+    public Vector2 intersection;
+    public GameObject target;
+
     public void Init()
     {
         // à convertir en List<Vector2> + _pen.GetDrawData().points ne renvoit pas souvent de points
@@ -239,8 +243,10 @@ public class DetectEnemyInShape : MonoBehaviour
         float x = (B2 * C1 - B1 * C2) / denominator;
         float y = (A1 * C2 - A2 * C1) / denominator;
 
-        return new Vector2(x, y);
+        intersection = Camera.main.ScreenToWorldPoint( new Vector2(x, y));
+
+        target.transform.position = intersection;
+
+        return intersection;
     }
-
-
 }

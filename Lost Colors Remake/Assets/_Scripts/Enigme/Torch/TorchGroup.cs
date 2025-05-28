@@ -1,11 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class TorchGroup : MonoBehaviour
 {
     public List<TorchInteract> _torchList = new List<TorchInteract>();
     public event Action Triggered;
+
+    [Header("Debug")]
+    public TextMeshProUGUI triggeredTorch;
 
     private void Start()
     {
@@ -17,11 +21,18 @@ public class TorchGroup : MonoBehaviour
 
     public void CheckTriggeredTorch()
     {
+        int count = 0;
+
         foreach(var torch in _torchList)
         {
             if (!torch.IsTrigger)
             {
                 return;
+            }
+            else if (torch.IsTrigger)
+            {
+                count++;
+                triggeredTorch.text = count.ToString();
             }
         }
 

@@ -195,7 +195,7 @@ public class DrawForDollarP : MonoBehaviour
 
         _currentPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
 
-        if (PlayerMain.Instance.Inventory.currentPaintAmont == 0) return;
+        if (PlayerMain.Instance.Inventory.currentPaintAmont == 0) TriggerToile.instance.OpenAndCloseToileMagique();
 
         if (points.Count == 0)
         {

@@ -58,6 +58,7 @@ public class TriggerToile : MonoBehaviour
             //StopCoroutine(ToileMain.Instance.timerCo);
             //Time.timeScale = Time.timeScale / 3;
             coroutine = StartCoroutine(time.DoSlowmotion(ToileMain.Instance.toileTime));
+            PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
 
         }
         else

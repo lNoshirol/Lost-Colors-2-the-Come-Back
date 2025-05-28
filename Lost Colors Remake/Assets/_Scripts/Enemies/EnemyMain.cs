@@ -44,7 +44,7 @@ public class EnemyMain : MonoBehaviour
 
     public EnemyArmor Armor;
 
-    public EnemyAnimation Animation { get; protected set; }
+    public EnemyAnimation Animation;
 
     public Rigidbody2D rb { get; protected set; }
     public Transform player { get; private set; }
@@ -90,12 +90,12 @@ public class EnemyMain : MonoBehaviour
     public virtual void Update()
     {
         EnemiesCurrentState?.Do();
-
     }
 
     private void FixedUpdate()
     {
         EnemiesCurrentState?.FixedDo();
+        Debug.Log(Animation);
     }
 
     private void SnapToNavMesh()

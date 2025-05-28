@@ -11,13 +11,12 @@ public class EChaseState : EnemiesState
 
     public override void OnEnter()
     {
-        //EnemiesMain.mat.color = Color.magenta;
     }
     public override void Do()
     {
         EnemiesMain.agent.SetDestination(EnemiesMain.player.position);
 
-        //EnemiesMain.UpdateSpriteDirectionPlayer();
+        EnemiesMain.Animation.GetDirectionXAnimPlayer();
 
         if (EnemiesMain.CheckPlayerInAttackRange())
         {

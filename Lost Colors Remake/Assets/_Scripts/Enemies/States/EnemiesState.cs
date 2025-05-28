@@ -14,7 +14,6 @@ public abstract class EnemiesState : MonoBehaviour
     public virtual void FixedDo() { }
     public virtual void OnExit() { }
 
-    protected Animator animator ;
     protected EnemyMain EnemiesMain;
 
 

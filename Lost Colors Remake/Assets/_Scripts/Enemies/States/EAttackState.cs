@@ -27,7 +27,7 @@ public class EAttackState : EnemiesState
 
     public override void Do()
     {
-        //EnemiesMain.UpdateSpriteDirectionPlayer();
+        EnemiesMain.Animation.GetDirectionXAnimPlayer();
         if (!alreadyAttack) {
 
             int randomSpell = Random.Range(0, 2);

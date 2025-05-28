@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerDash : MonoBehaviour
@@ -7,7 +8,13 @@ public class PlayerDash : MonoBehaviour
     private Vector2 positionBeforeDash;
     public LayerMask whatIsGround;
     [SerializeField] private Collider2D playerFeetCollider;
-    
+
+    [Header("Layer For Dash")]
+    [SerializeField] int whatIsPlayer;
+    [SerializeField] int PlayerFeet;
+    [SerializeField] int Dash;
+
+
     public void DashOnClick()
     {
         if (isDashing) return;
@@ -22,16 +29,29 @@ public class PlayerDash : MonoBehaviour
 
     IEnumerator WaitDash(float delay)
     {
-       playerFeetCollider.gameObject.layer = 11;
-       isDashing = true;
-
-       PlayerMain.Instance.UI.DashButton(false);
-       yield return new WaitForSeconds(delay);
-       isDashing = false;
-       PlayerMain.Instance.UI.DashButton(true);
-        playerFeetCollider.gameObject.layer = 13;
+        SwitchLayer(true);
+        isDashing = true;
+        PlayerMain.Instance.UI.DashButton(false);
+        yield return new WaitForSeconds(delay);
+        isDashing = false;
+        PlayerMain.Instance.UI.DashButton(true);
+        SwitchLayer(false);
         PlayerMain.Instance.Dashing(false);
         CheckLayer();
+    }
+
+    void SwitchLayer(bool isDashing)
+    {
+        if(isDashing){
+            PlayerMain.Instance.gameObject.layer = Dash;
+            playerFeetCollider.gameObject.layer = Dash;
+
+        }
+        else
+        {
+            PlayerMain.Instance.gameObject.layer = whatIsPlayer;
+            playerFeetCollider.gameObject.layer = PlayerFeet;
+        }
     }
 
     void TakeDamageAndTP()

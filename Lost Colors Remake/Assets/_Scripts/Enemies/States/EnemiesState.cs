@@ -15,11 +15,11 @@ public abstract class EnemiesState : MonoBehaviour
     public virtual void OnExit() { }
 
     protected Animator animator ;
-    protected EnemiesMain EnemiesMain;
+    protected EnemyMain EnemiesMain;
 
 
 
-    public void Setup(EnemiesMain _enemiesMain)
+    public void Setup(EnemyMain _enemiesMain)
     {
         EnemiesMain = _enemiesMain;
     }

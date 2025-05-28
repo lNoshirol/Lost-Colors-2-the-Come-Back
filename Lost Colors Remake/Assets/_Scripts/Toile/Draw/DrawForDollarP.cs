@@ -2,6 +2,7 @@ using PDollarGestureRecognizer;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using TMPro;
 
 public class DrawForDollarP : MonoBehaviour
 {
@@ -31,6 +32,9 @@ public class DrawForDollarP : MonoBehaviour
 
     public event Action<DrawData> OnDrawFinish;
 
+    [Header("Debug")]
+    public TextMeshProUGUI touuchStart;
+
     private void Awake()
     {
         if (instance == null)
@@ -42,7 +46,6 @@ public class DrawForDollarP : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     void Start()
     {
         //Load pre-made gestures
@@ -75,6 +78,10 @@ public class DrawForDollarP : MonoBehaviour
             {
                 OnTouchStart();
             }
+            if (Input.GetTouch(0).phase == TouchPhase.Ended)
+            {
+                OnTouchEnd();
+            }
         }
 
         if (ClickManager.instance.TouchScreen || Input.touchCount > 0)
@@ -89,13 +96,10 @@ public class DrawForDollarP : MonoBehaviour
             _catchEnnemy.EnnemyOnPath(ray, IgnoreMeUwU);
         }
 
-
         //ToileMain.Instance.RaycastDraw.DebugRaycastLines();
-
-
     }
 
-    [Obsolete]
+
     public void OnTouchStart()
     {
 
@@ -107,7 +111,8 @@ public class DrawForDollarP : MonoBehaviour
         if (!ToileMain.Instance.gestureIsStarted && gameObject.transform.parent.gameObject.activeSelf)
             ToileMain.Instance.timerCo = StartCoroutine(ToileMain.Instance.ToileTimer());
 
-        lineRenderer.SetColors(_currentColor, _currentColor);
+        lineRenderer.startColor = _currentColor;
+        lineRenderer.endColor = _currentColor;
 
         PlayerMain.Instance.Inventory.SetStartAmount();
     }

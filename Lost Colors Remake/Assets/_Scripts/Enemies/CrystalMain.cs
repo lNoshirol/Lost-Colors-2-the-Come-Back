@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 
-public class CrystalMain : EnemiesMain
+public class CrystalMain : EnemyMain
 {
     [Header("Magic Crystal Components")]
     [SerializeField] private Transform firePoint;

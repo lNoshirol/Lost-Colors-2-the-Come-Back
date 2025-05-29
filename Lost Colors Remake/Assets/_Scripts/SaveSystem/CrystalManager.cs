@@ -55,8 +55,7 @@ public class CrystalManager : MonoBehaviour
         public string WhichScene {  get; set; }
     }
 
-    [SerializeField]
-    private List<ListCrystal> _ListCrystal = new();
+    public List<ListCrystal> _ListCrystal = new();
 
     #endregion
 

@@ -26,6 +26,9 @@ public class SaveSystem : MonoBehaviour
         WriteXML(xmlWriter, "PlayerHealth", playerMain.Health.playerActualHealth.ToString() );
         WriteVector3(xmlWriter, "PlayerPosition", playerMain.gameObject.transform.position);
         WriteXML(xmlWriter, "PlayerInventory", playerMain.Inventory.ItemDatabase[0].ToString());
+        WriteCrystalsList(xmlWriter);
+
+
         xmlWriter.Close();
     }
 
@@ -44,6 +47,9 @@ public class SaveSystem : MonoBehaviour
             xmlWriter.WriteStartElement("PlayerPosition");
             xmlWriter.WriteEndElement();
             xmlWriter.WriteStartElement("PlayerInventory");
+            xmlWriter.WriteEndElement();
+            xmlWriter.WriteEndDocument();
+            xmlWriter.WriteStartElement("CrystalsList");
             xmlWriter.WriteEndElement();
             xmlWriter.WriteEndDocument();
             xmlWriter.Close();
@@ -81,6 +87,10 @@ public class SaveSystem : MonoBehaviour
                     playerMain.Inventory.ItemDatabase[0] = bool.Parse(value);
                     break;
 
+                case "CrystalsList":
+
+                    break;
+
             }
         }
     }
@@ -103,4 +113,21 @@ public class SaveSystem : MonoBehaviour
         writer.WriteEndElement();
     }
 
+    private void WriteCrystalsList(XmlWriter writer)
+    {
+        var crystalList = CrystalManager.Instance._ListCrystal;
+
+        writer.WriteStartElement("CrystalsList");
+
+        foreach (var crystal in crystalList)
+        {
+            writer.WriteStartElement("Crystal");
+            writer.WriteElementString("CrystalName", crystal.CrystalName.name);
+            writer.WriteElementString("IsColorized", crystal.IsColorized.ToString());
+            writer.WriteElementString("WhichScene", crystal.WhichScene);
+            writer.WriteEndElement();
+        }
+
+        writer.WriteEndElement();
+    }
 }

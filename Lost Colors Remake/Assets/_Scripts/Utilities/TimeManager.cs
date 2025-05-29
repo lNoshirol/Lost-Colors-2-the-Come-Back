@@ -28,11 +28,6 @@ public class TimeManager : MonoBehaviour
             float timeScale = InSlowMotion ? 1 : .3f;
             DOVirtual.Float(origTimeScale, timeScale, .2f, SetTimeScale);
         }
-        else
-        {
-            Time.timeScale = _baseTime;
-            Time.fixedDeltaTime = _baseFixed;
-        }
     }
 
     public IEnumerator DoSlowmotion(float value)
@@ -41,6 +36,8 @@ public class TimeManager : MonoBehaviour
         InSlowMotion = true;
         yield return new WaitForSeconds(value);
         InSlowMotion = false;
+        Time.timeScale = _baseTime;
+        Time.fixedDeltaTime = _baseFixed;
     }
 
     void SetTimeScale(float x)

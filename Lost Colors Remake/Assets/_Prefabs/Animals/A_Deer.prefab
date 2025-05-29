@@ -52,6 +52,22 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 670b0b7ee4dc2a642ad06906c054c95f, type: 2}
+    - target: {fileID: 5850043566281649089, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: enemyAnimationOverrideBW
+      value: 
+      objectReference: {fileID: 22100000, guid: 670b0b7ee4dc2a642ad06906c054c95f, type: 2}
+    - target: {fileID: 5850043566281649089, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: enemyAnimationControllerBW
+      value: 
+      objectReference: {fileID: 22100000, guid: 670b0b7ee4dc2a642ad06906c054c95f, type: 2}
+    - target: {fileID: 5850043566281649089, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: enemyAnimationOverrideColor
+      value: 
+      objectReference: {fileID: 22100000, guid: af018559d68d5544bb6aada7f1bdb5cc, type: 2}
+    - target: {fileID: 5850043566281649089, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: enemyAnimationControllerColor
+      value: 
+      objectReference: {fileID: 22100000, guid: af018559d68d5544bb6aada7f1bdb5cc, type: 2}
     - target: {fileID: 6178907501439480039, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: enemyData
       value: 

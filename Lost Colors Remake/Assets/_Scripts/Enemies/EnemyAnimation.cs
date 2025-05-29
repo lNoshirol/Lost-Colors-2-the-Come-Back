@@ -1,12 +1,20 @@
+using UnityEditor.Animations;
 using UnityEngine;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class EnemyAnimation : MonoBehaviour
 {
-    public Animator enemyAnimator;
+    [SerializeField] private Animator enemyAnimator;
+    [SerializeField] private AnimatorOverrideController enemyAnimationOverrideBW;
+    [SerializeField] private AnimatorOverrideController enemyAnimationOverrideColor;
+
     public EnemyMain enemyMain;
     [SerializeField] float dirX;
 
+    private void Start()
+    {
+        enemyAnimator.runtimeAnimatorController = enemyAnimationOverrideBW;
+    }
     // Get the direction for Patrolling
     public void GetDirectionXAnimAgent()
     {
@@ -35,5 +43,10 @@ public class EnemyAnimation : MonoBehaviour
         {
             enemyAnimator.SetBool("IsMoving", false);
         }
+    }
+
+    public void SwitchAnimatorToColor()
+    {
+        enemyAnimator.runtimeAnimatorController = enemyAnimationOverrideColor;
     }
 }

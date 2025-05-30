@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sprt_enviro_tree_10_BW3_0: -1842604701055872905
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

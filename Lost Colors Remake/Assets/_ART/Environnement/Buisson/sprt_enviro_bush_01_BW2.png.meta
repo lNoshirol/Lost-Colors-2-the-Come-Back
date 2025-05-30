@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sprt_enviro_bush_01_BW2_0: 812980224022297841
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

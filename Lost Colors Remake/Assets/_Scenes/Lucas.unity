@@ -500,11 +500,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3954682243292039970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &273876505 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 5020887146147038619, guid: 63b04a5379ea37a40b4f2747f57bc4f5, type: 3}
-  m_PrefabInstance: {fileID: 1043085091}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &340088112
 GameObject:
   m_ObjectHideFlags: 0
@@ -7538,6 +7533,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5020887146147038619, guid: 63b04a5379ea37a40b4f2747f57bc4f5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e35cd79b35707a46aa3f0942b23b339, type: 3}
     - target: {fileID: 6327504314785771263, guid: 63b04a5379ea37a40b4f2747f57bc4f5, type: 3}
       propertyPath: m_Name
       value: CrystalAncien
@@ -7610,12 +7609,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d24fc978c05484b8373b02f7f32868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crystalTrunk: {fileID: 273876505}
   crystal: {fileID: 952882242}
-  smallCrystal: {fileID: 0}
-  crystalTrunkUncorrupted: {fileID: 21300000, guid: 3f46c25a34b8b1c459f5624066469b4e, type: 3}
   crystalUncorrupted: {fileID: 21300000, guid: 4dad2c4b78ae426419af16a81345aab9, type: 3}
-  smallCrystalUncorrupted: {fileID: 21300000, guid: 3a6548e4a5d1b3647a3928139369b43b, type: 3}
 --- !u!114 &1043085094
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,6 +20,12 @@ public class PlayerInventory : MonoBehaviour
     public Dictionary<ItemTypeEnum, bool> ItemDatabase;
     public Dictionary<string, bool> SpellDataBase;
 
+    private void Awake()
+    {
+        basePaintAmont = PlayerMain.Instance.toileInfo.paintAmount;
+        currentPaintAmont = basePaintAmont;
+    }
+
     void Start()
     {
         ItemDatabase = itemType.ToDictionary();

@@ -17,7 +17,9 @@ public class ToileMain : MonoBehaviour
     public bool gestureIsStarted = false;
 
     public Coroutine timerCo;
-    void Start()
+
+
+    private void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -27,7 +29,11 @@ public class ToileMain : MonoBehaviour
 
         Instance = this;
 
+        toileTime = (int)PlayerMain.Instance.toileInfo.toileTime;
+    }
 
+    void Start()
+    {
         ToileUI = GetComponent<ToileUI>();
         TriggerToile = GetComponent<TriggerToile>();
         RaycastDraw = GetComponent<RaycastDraw>();

@@ -30,7 +30,7 @@ public class PlayerMain : MonoBehaviour
 
     public Animator anim;
 
-
+    public ToileScriptable toileInfo;
 
     public GameObject paintBrushSocket;
 

@@ -47,15 +47,12 @@ public class ToileMain : MonoBehaviour
         timeAmount = toileTime;
         while (timeAmount > 0) {
             ToileUI.UpdateToileUI(timeAmount);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1*PlayerMain.Instance.toileInfo.slowMotionScale);
             timeAmount--;
             ToileUI.UpdateToileUI(timeAmount);
         }
         gestureIsStarted = false;
         TriggerToile.OpenAndCloseToileMagique();
         yield break;
-        
-        
     }
-
 }

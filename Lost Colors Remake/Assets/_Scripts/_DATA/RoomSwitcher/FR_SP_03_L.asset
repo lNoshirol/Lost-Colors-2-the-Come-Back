@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSceneName: FR_SP_03
   switcherID: FR_SP_03_L
-  targetSceneName: FR_SP_04
-  targetSwitcherID: FR_SP_04_R
+  targetSceneName: FR_SP_02
+  targetSwitcherID: FR_SP_02_R

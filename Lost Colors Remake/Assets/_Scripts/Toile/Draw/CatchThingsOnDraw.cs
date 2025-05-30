@@ -30,11 +30,9 @@ public class CatchThingsOnDraw : MonoBehaviour
             }
             else if (obj.CompareTag("Enemy"))
             {
-                Debug.Log("ouillle, ta mere la tepu; j'ai mal");
                 if (obj.TryGetComponent(out EnemyHealth _health))
                 {
-                    Debug.Log("AIE AIE AIE AEI AIE AIE AIE AIE AEI");
-                    _health.EnemyLoseHP(0.5f);
+                    _health.EnemyLoseHP(1.5f);
                 }
                 
             }

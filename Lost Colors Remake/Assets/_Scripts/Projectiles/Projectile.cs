@@ -25,9 +25,10 @@ public class Projectile : MonoBehaviour
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 8 || collision.gameObject.layer == 14)
         {
-            gameObject.SetActive(false);
+            //Play explosion VFX
+            gameObject.SetActive(false); //Repack dans la pool au lieu de faire ça
         }
     }
 }

@@ -207,6 +207,8 @@ public class EnemyMain : MonoBehaviour
     {
         spriteRenderer.material.DOFloat(1f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
         isColorized = true;
+        gameObject.layer = 0;
+        Animation.SwitchAnimatorToColor();
         EnemiesCurrentState = EIdleState;
         EnemiesCurrentState?.OnEnter();
     }

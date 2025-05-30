@@ -38,7 +38,6 @@ public class PlayerMain : MonoBehaviour
 
     private void Awake()
     {
-
         if (Instance == null)
         {
             Instance = this;
@@ -48,7 +47,6 @@ public class PlayerMain : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         Instance = this;
         DontDestroyOnLoad(gameObject);
         Move = GetComponent<PlayerMove>();
@@ -58,8 +56,6 @@ public class PlayerMain : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Attack = GetComponent<PlayerAttack>();
         Collider2D = GetComponent<Collider2D>();
-
-
     }
 
 

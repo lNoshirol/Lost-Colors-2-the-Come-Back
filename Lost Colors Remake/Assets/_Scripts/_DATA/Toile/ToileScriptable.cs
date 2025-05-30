@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ToileScriptable", menuName = "Toile/Creat ToileStat")]
+[CreateAssetMenu(fileName = "ToileData", menuName = "Scriptable Objects/RoomSwitcher", order = 2)]
 public class ToileScriptable : ScriptableObject
 {
     public float toileTime;

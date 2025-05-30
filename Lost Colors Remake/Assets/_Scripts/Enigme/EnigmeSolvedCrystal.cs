@@ -13,7 +13,7 @@ public class EnigmeSolvedCrystal : EnigmeSolved
     public override void Interact()
     {
         crystal.sprite = crystalUncorrupted;
-        crystalTrunk.sprite = crystalUncorrupted;
+        crystalTrunk.sprite = crystalTrunkUncorrupted;
 
         if (smallCrystal != null )
         {

@@ -8,7 +8,7 @@ public class CeciSeraSuppriméSubrepticement : MonoBehaviour
 {
     [Header("Wave values")]
     [SerializeField] private Vector2 _waveStartPoint, _waveRatio;
-    [SerializeField] private float _waveWidth, _waveDuration;
+    [SerializeField] private float _waveWidth, _waveDuration, _waveMaxRange;
 
     [Header("WaveVFX")]
     [SerializeField] private VisualEffect _vfx;
@@ -16,11 +16,32 @@ public class CeciSeraSuppriméSubrepticement : MonoBehaviour
     [Header("Affected tilemaps")]
     [SerializeField] private List<TilemapRenderer> _tilemapRenderers = new();
 
+    // Elliptic propagation
+    private float _waveProgress = 0f;
+    private HashSet<Transform> _touchedPaintables = new();
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
             Anim();
+        }
+
+        // Detect every paintable in wave
+        Collider2D[] hits = Physics2D.OverlapBoxAll(_waveStartPoint, _waveRatio * _waveProgress, 0f);
+
+        foreach (var hit in hits)
+        {
+            if (_touchedPaintables.Contains(hit.transform)) continue;
+
+            Vector2 pos = hit.transform.position;
+            Vector2 delta = pos - _waveStartPoint;
+
+            float ellipseValue = (delta.x * delta.x ) / ((_waveRatio.x * _waveProgress) * (_waveRatio.x * _waveProgress)) + (delta.y * delta.y) / ((_waveRatio.y * _waveProgress)* (_waveRatio.y * _waveProgress));
+            if (Mathf.Abs(ellipseValue -1f) < 0.05f)
+            {
+                print(hit.gameObject.name + "TOUCHE COULE ♫");
+            }
         }
     }
 
@@ -29,7 +50,7 @@ public class CeciSeraSuppriméSubrepticement : MonoBehaviour
         Setup();
         //_vfx.SetFloat("_WaveProgress", 0f);
 
-        _vfx.Play();
+        //_vfx.Play();
 
         // Anime Progress de 0 à 1 en 2 secondes
         //DOTween.To(
@@ -39,9 +60,11 @@ public class CeciSeraSuppriméSubrepticement : MonoBehaviour
         //    _waveDuration             // durée
         //); 
 
-        foreach (var renderer in _tilemapRenderers) 
+
+        foreach (var renderer in _tilemapRenderers)
         {
-            renderer.material.DOFloat(40f, "_WaveProgress", _waveDuration);
+            DOTween.To(() => _waveProgress, x => _waveProgress = x, _waveMaxRange, _waveDuration);
+            renderer.material.DOFloat(_waveMaxRange, "_WaveProgress", _waveDuration);
         }
     }
 

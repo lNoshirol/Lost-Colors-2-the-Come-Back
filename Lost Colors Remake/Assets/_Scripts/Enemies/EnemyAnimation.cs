@@ -1,6 +1,4 @@
-using UnityEditor.Animations;
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class EnemyAnimation : MonoBehaviour
 {

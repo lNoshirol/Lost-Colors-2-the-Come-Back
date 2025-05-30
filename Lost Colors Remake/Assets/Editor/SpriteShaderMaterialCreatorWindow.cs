@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class SpriteShaderMaterialCreatorWindow : EditorWindow
 {
+    public string ArtFolderPath = "Assets/_ART/";
     [MenuItem("Window/ScriptableObjectsMaker")]
     public static void ShowWindow()
     {

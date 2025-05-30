@@ -141,6 +141,10 @@ PrefabInstance:
       propertyPath: LootableSpells.spells.Array.data[0].spellName
       value: SimpleDash
       objectReference: {fileID: 0}
+    - target: {fileID: 3806985094790389137, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4859988009736222134, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_Sprite
       value: 

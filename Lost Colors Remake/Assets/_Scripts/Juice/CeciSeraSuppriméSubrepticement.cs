@@ -8,7 +8,7 @@ public class CeciSeraSuppriméSubrepticement : MonoBehaviour
 {
     [Header("Wave values")]
     [SerializeField] private Vector2 _waveStartPoint, _waveRatio;
-    [SerializeField] private float _waveWidth, _waveDuration;
+    [SerializeField] private float _waveWidth, _waveDuration, _waveMaxRange;
 
     [Header("WaveVFX")]
     [SerializeField] private VisualEffect _vfx;
@@ -63,8 +63,8 @@ public class CeciSeraSuppriméSubrepticement : MonoBehaviour
 
         foreach (var renderer in _tilemapRenderers)
         {
-            DOTween.To(() => _waveProgress, x => _waveProgress = x, 40, _waveDuration);
-            renderer.material.DOFloat(40f, "_WaveProgress", _waveDuration);
+            DOTween.To(() => _waveProgress, x => _waveProgress = x, _waveMaxRange, _waveDuration);
+            renderer.material.DOFloat(_waveMaxRange, "_WaveProgress", _waveDuration);
         }
     }
 

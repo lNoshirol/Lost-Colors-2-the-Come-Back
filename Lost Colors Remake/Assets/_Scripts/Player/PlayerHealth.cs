@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] public float playerBaseHealth;
     [SerializeField] public float playerActualHealth;
 
+    private bool isInvicible;
+    
     private void Start()
     {
         PlayerMain.Instance.UI.UpdatePlayerHealthUI();
@@ -37,13 +40,20 @@ public class PlayerHealth : MonoBehaviour
 
     public void PlayerLoseHP(float healthLoose)
     {
-        playerActualHealth = playerActualHealth - healthLoose;
-        JuiceManager.Instance.PlayerHit(0.25f);
-        PlayerMain.Instance.UI.UpdatePlayerHealthUI();
-        if(playerActualHealth <= 0)
+        if (!isInvicible)
         {
-            playerActualHealth = 0;
-            PlayerIsDead();
+            playerActualHealth = playerActualHealth - healthLoose;
+
+            StartCoroutine(Invicibility());
+            Debug.Log("ouille");
+
+            JuiceManager.Instance.PlayerHit(0.25f);
+            PlayerMain.Instance.UI.UpdatePlayerHealthUI();
+            if(playerActualHealth <= 0)
+            {
+                playerActualHealth = 0;
+                PlayerIsDead();
+            }
         }
     }
 
@@ -60,5 +70,14 @@ public class PlayerHealth : MonoBehaviour
     private void PlayerIsDead()
     {
         Debug.Log("GameOver");
+    }
+
+    IEnumerator Invicibility()
+    {
+        isInvicible = true;
+        PlayerMain.Instance.playerSprite.color = Color.red;
+        yield return new WaitForSeconds(2);
+        isInvicible = false;
+        PlayerMain.Instance.playerSprite.color = Color.white;
     }
 }

@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class EnigmeSolvedCrystal : EnigmeSolved
 {
-    public SpriteRenderer crystal;  
+    public SpriteRenderer crystal;
+    [SerializeField] private CeciSeraSuppriméSubrepticement _waveManager;
     
     public Sprite crystalUncorrupted;
 
@@ -10,6 +11,6 @@ public class EnigmeSolvedCrystal : EnigmeSolved
     {
         crystal.sprite = crystalUncorrupted;
 
-        Debug.Log("Changer couleur via shader");
+        _waveManager.Anim();
     }
 }

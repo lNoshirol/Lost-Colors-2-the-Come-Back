@@ -28,6 +28,8 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.layer == 8 || collision.gameObject.layer == 14)
         {
             //Play explosion VFX
+            gameObject.transform.parent = ProjectileManager.Instance.transform;
+            gameObject.transform.position = ProjectileManager.Instance.transform.position;
             gameObject.SetActive(false); //Repack dans la pool au lieu de faire ça
         }
     }

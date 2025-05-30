@@ -49,7 +49,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Contrast: 3.65
+    - _Contrast: 8.1
     - _Contraste: 2.41
     - _EUUH: 1
     - _MaskRadius: 0

@@ -119,7 +119,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3493542730746059274, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: LootableSpells.spells.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493542730746059274, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: LootableSpells.spells.Array.data[0].isLooted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493542730746059274, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: LootableSpells.spells.Array.data[0].spellName
+      value: SimpleDash
       objectReference: {fileID: 0}
     - target: {fileID: 6947117342389236955, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: toileInfo
@@ -236,7 +244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5397771579034108698, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 4.1171875
       objectReference: {fileID: 0}
     - target: {fileID: 6063194593018805751, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: time

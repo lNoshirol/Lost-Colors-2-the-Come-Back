@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/FR_SP_02.unity
     guid: 6d118bcdc5076b140b4e996b5c926c96
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/FR_SP_03.unity
     guid: 29c4224817385d74d90551a4d3e66b09
   m_configObjects:

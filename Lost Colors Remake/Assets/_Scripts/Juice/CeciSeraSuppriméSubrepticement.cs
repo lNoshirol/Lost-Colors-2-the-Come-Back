@@ -50,7 +50,7 @@ public class CeciSeraSuppriméSubrepticement : MonoBehaviour
         Setup();
         //_vfx.SetFloat("_WaveProgress", 0f);
 
-        //_vfx.Play();
+        _vfx.Play();
 
         // Anime Progress de 0 à 1 en 2 secondes
         //DOTween.To(

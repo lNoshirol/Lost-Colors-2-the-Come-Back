@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a9cd735323b0ce4abb431c017e94e84, type: 3}
+  m_Name: sprt_enviro_tree_04
+  m_EditorClassIdentifier: 
+  PropName: 
+  BWTexture: {fileID: 0}
+  ColoredTexture: {fileID: 2800000, guid: 29129ca66566d124d8524893f9c8e256, type: 3}

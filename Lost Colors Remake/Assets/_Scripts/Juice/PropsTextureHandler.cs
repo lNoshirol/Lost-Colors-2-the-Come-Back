@@ -1,16 +1,27 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PropsTextureHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Dictionary<string, Texture> PropsColoredTextures { get; set; } = new();
+
+    private void Start()
     {
-        
+        LoadTextures();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LoadTextures()
     {
-        
+        Texture2D[] loaded = Resources.LoadAll<Texture2D>("Environnement");
+        if(loaded.Length ==0)
+        {
+            print("too bad");
+            return;
+        }
+        foreach (Texture2D tex in loaded)
+        {
+           
+            print(tex);
+        }
     }
 }

@@ -3458,6 +3458,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1048309147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6405187685086154739, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
+  m_PrefabInstance: {fileID: 6668342049026401360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1048309148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048309147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d240b74186f5d43a017a109b94f541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1136326133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3640,7 +3657,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c08df8783fd73a74f9e8e61194333b9f, type: 2}
+  - {fileID: 2100000, guid: 02f0fb67435b1464fb411d6d32c0748d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36123,7 +36140,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 39bf8068474aeb740b5479dee66bb7d9, type: 2}
+  - {fileID: 2100000, guid: 02f0fb67435b1464fb411d6d32c0748d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -49849,6 +49866,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
+      propertyPath: _waveMaxRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: '_tilemapRenderers.Array.data[0]'
       value: 
       objectReference: {fileID: 1185692607}
@@ -49867,7 +49888,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6405187685086154739, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1048309148}
   m_SourcePrefab: {fileID: 100100000, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

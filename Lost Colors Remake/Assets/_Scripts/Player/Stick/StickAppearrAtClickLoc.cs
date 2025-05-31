@@ -18,6 +18,10 @@ public class StickAppearrAtClickLoc : MonoBehaviour
     public Vector3 moveAreaBasePos;
     public Vector3 clickAreaBasePos;
 
+    [Header("Debug")]
+    public GameObject moveAreaSquare;
+    public GameObject clickAreaSquare;
+
     private void Awake()
     {
         if (Instance == null)
@@ -44,11 +48,17 @@ public class StickAppearrAtClickLoc : MonoBehaviour
         clickArea.center = new (areaCenterX, areaCenterY);
 
         float areaSizeX = (Screen.width * 1.5f / 2712)*2;
-        float areaSizeY = (Screen.height * 1 / 1220)*2;
+        float areaSizeY = (Screen.height * 1f / 1220)*2;
 
         joystickMoveArea.size = new (areaSizeX, areaSizeY, 25);
         clickArea.size = new (areaSizeX * 2.82f, areaSizeY * 3.05f, 25);
 
+        Debug.Log(Screen.width + " " + Screen.height);
+        Debug.Log($"({Screen.width} * 1.5f / 2712) * 2 = {(Screen.width * 1.5f / 2712) * 2}");
+        Debug.Log($"({Screen.height} * 1 / 1220) * 2 = {(Screen.height * 1 / 1220) * 2}");
+
+        clickAreaSquare.transform.position = new(areaCenterX, areaCenterY);
+        moveAreaSquare.transform.position = new(areaCenterX, areaCenterY);
 
         moveAreaBasePos = joystickMoveArea.center;
         clickAreaBasePos = clickArea.center;

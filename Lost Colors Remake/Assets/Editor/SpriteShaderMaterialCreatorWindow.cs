@@ -6,33 +6,13 @@ using UnityEngine;
 
 public class SpriteShaderMaterialCreatorWindow : EditorWindow
 {
-    public string ArtFolderPath = "Assets/_ART/";
+    public static string ArtFolderPath = "Assets/_ART/";
 
-    private List<string> _assetPath = new();
-
-    [MenuItem("Window/SpriteShaderMaterialCreatorWindow")]
-    public static void ShowWindow()
+    [MenuItem("Tools/Generate Props Sprite Atlas as Scriptable")]
+    public static void GenerateSpriteAtlas()
     {
-        GetWindow<SpriteShaderMaterialCreatorWindow>("Scriptable Objects Maker");
-    }
-
-    private void OnGUI()
-    {
-        EditorGUILayout.Space();
-        EditorGUILayout.BeginHorizontal();
-        GUILayout.FlexibleSpace();
-        if (GUILayout.Button("Generate", GUILayout.Width(100), GUILayout.Height(25)))
-        {
-            GetSprites();
-        }
-        GUILayout.FlexibleSpace();
-        EditorGUILayout.EndHorizontal();
-    }
-
-    public void GetSprites()
-    {
-        // BW to Colored
-        Dictionary<string, string> sprites = new();
+        Dictionary<string, string> colored = new();
+        Dictionary<string, string> bw = new();
 
         string[] files = Directory.GetFiles(ArtFolderPath, "*.png", SearchOption.AllDirectories);
 
@@ -41,34 +21,54 @@ public class SpriteShaderMaterialCreatorWindow : EditorWindow
             // ajouter Player ptêt ? ou Animals, Character...
             if (!(file.Contains("Environnement"))) continue;
 
-            string fileName = Path.GetFileNameWithoutExtension(file);
-            string baseSpriteName = fileName.Replace("_BW", "");
+            string name = Path.GetFileNameWithoutExtension(file);
+            string baseName = name.Replace("_BW", "");
 
-            Debug.Log(baseSpriteName);
-
-            // On ajoute une valeur nulle si la clé n'est pas déjà dans le dico
-            if (!sprites.ContainsKey(baseSpriteName)) sprites[baseSpriteName] = null;
-
-            if (fileName.EndsWith("_BW") && !sprites.ContainsKey(baseSpriteName))
+            // Assigne le fichier à un dict
+            if (name.EndsWith("_BW"))
             {
-                // On remplace que si aucune version a encore été trouvée
-                if (!sprites.ContainsKey(baseSpriteName)) sprites[baseSpriteName] = file;
+                // BW
+                bw[baseName] = file;
             }
             else
             {
-                // On reset pour prioriser la version colorée
-                sprites[baseSpriteName] = file;
+                // Coloré
+                colored[baseName] = file;
             }
         }
 
-        foreach (string spriteName in sprites.Keys)
+        // TODO APRES SPORT : TRANSFORMER SCRIPTABLE EN DICT ON RUNTIME ET LUTILISER POUR TRANSFORMER LES SPRITES
+
+        foreach (var kvp in colored)
         {
-            PropsTexturePair newAsset = ScriptableObject.CreateInstance<PropsTexturePair>();
-            newAsset.name = spriteName;
-            newAsset.ColoredTexture = AssetDatabase.LoadAssetAtPath<Texture2D>(sprites[spriteName]);
-            AssetDatabase.CreateAsset(newAsset, $"Assets/_Scripts/_DATA/PropsTextures/{spriteName}.asset");
-            Debug.Log((sprites[spriteName]));
+            if (bw.ContainsKey(kvp.Key))
+            {
+                Debug.Log($"Pair trouvée ! {kvp.Key}, BW : {bw[kvp.Key]} avec Couleur : {kvp.Value}");
+            }
+            else
+                Debug.LogWarning($"Pas de version BW pour {kvp.Key}");
         }
+
+        var scriptable = ScriptableObject.CreateInstance<PropsTextureDatabase>();
+        foreach (var kvp in colored)
+        {
+            var key = kvp.Key;
+            if (!bw.TryGetValue(key, out string bwPath)) continue;
+
+            var colorSprite = AssetDatabase.LoadAssetAtPath<Sprite>(kvp.Value);
+            var bwSprite = AssetDatabase.LoadAssetAtPath<Sprite>(bwPath);
+
+            PropSpritePair newSpritePair = new();
+            newSpritePair.PropName = key;
+            newSpritePair.Colored = colorSprite;
+            newSpritePair.BW = bwSprite;
+
+            scriptable.Props.Add(newSpritePair);
+        }
+
+        AssetDatabase.CreateAsset(scriptable, "Assets/_Scripts/_DATA/PropsTextures/PropsTextureDatabase.asset");
         AssetDatabase.SaveAssets();
+        Selection.activeObject = scriptable;
+        Debug.Log($"ScriptableObject créé avec {scriptable.Props.Count} paires !");
     }
 }

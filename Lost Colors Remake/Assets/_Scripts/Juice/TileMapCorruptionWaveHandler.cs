@@ -28,12 +28,12 @@ public class TileMapCorruptionWaveHandler : MonoBehaviour
         }
 
         // Detect every paintable in wave
-        Collider2D[] hits = Physics2D.OverlapBoxAll(_waveStartPoint, _waveRatio * _waveProgress, 0f);
+        Vector2 overlapSize = new(_waveRatio.y, _waveRatio.x);
+        Collider2D[] hits = Physics2D.OverlapBoxAll(_waveStartPoint, overlapSize * 2 * _waveProgress, 0f, 2 | 4 | 7);
 
         foreach (var hit in hits)
         {
             if (_touchedPaintables.Contains(hit.transform)) continue;
-
             Vector2 pos = hit.transform.position;
             Vector2 delta = pos - _waveStartPoint;
 
@@ -41,6 +41,9 @@ public class TileMapCorruptionWaveHandler : MonoBehaviour
             if (Mathf.Abs(ellipseValue -1f) < 0.05f)
             {
                 print(hit.gameObject.name + "TOUCHE COULE ♫");
+                hit.TryGetComponent(out SpriteRenderer spriteRenderer);
+                spriteRenderer.material.SetTexture("_ColoredTex", PropsSpriteHandler.Instance.PropsColoredTextures[spriteRenderer.sprite.ToString().Replace("_BW (UnityEngine.Sprite)", "")].texture);
+                hit.GetComponent<Renderer>().material.DOFloat(1f, "_Transition", 2f);
             }
         }
     }
@@ -76,5 +79,8 @@ public class TileMapCorruptionWaveHandler : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(_waveStartPoint, 0.3f);
+        Gizmos.color = Color.cyan;
+        Vector2 overlapSize = new(_waveRatio.y, _waveRatio.x);
+        Gizmos.DrawWireCube(_waveStartPoint, overlapSize * 2 * _waveProgress);    
     }
 }

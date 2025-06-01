@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b4916529ae5de42a5164d9c08a4928, type: 3}
   m_Name: FR_SP_01_R
   m_EditorClassIdentifier: 
-  currentSceneName: FR_SP_01
-  switcherID: FR_SP_01_R
-  targetSceneName: FR_SP_02
-  targetSwitcherID: FR_SP_02_L
+  currentSceneName: FR_SP_01_Clean
+  switcherID: FR_SP_01_R_Clean
+  targetSceneName: FR_SP_02_Clean
+  targetSwitcherID: FR_SP_02_L_Clean

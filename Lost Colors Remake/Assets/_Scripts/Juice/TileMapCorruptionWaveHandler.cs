@@ -1,58 +1,86 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.VFX;
 
 public class TileMapCorruptionWaveHandler : MonoBehaviour
 {
-    [SerializeField] public Vector2 _waveStartPoint, _waveRatio;
-    public float _waveWidth, WaveProgress;
+    [Header("Wave values")]
+    [SerializeField] private Vector2 _waveStartPoint, _waveRatio;
+    [SerializeField] private float _waveWidth, _waveDuration, _waveMaxRange;
 
+    [Header("WaveVFX")]
+    [SerializeField] private VisualEffect _vfx;
 
-    private TilemapRenderer _tilemapRenderer;
+    [Header("Affected tilemaps")]
+    [SerializeField] private List<TilemapRenderer> _tilemapRenderers = new();
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        _tilemapRenderer = GetComponent<TilemapRenderer>();
-        
-        MaterialPropertyBlock mPropertyBlock = new();
-        mPropertyBlock.SetVector("_WaveDiffusionStartPoint", _waveStartPoint);
-        _tilemapRenderer.SetPropertyBlock(mPropertyBlock);
-    }
+    // Elliptic propagation
+    private float _waveProgress = 0f;
+    private HashSet<Transform> _touchedPaintables = new();
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            WaveAnim();
+            Anim();
         }
-        else if (Input.GetKey(KeyCode.LeftShift))
+
+        // Detect every paintable in wave
+        Vector2 overlapSize = new(_waveRatio.y, _waveRatio.x);
+        Collider2D[] hits = Physics2D.OverlapBoxAll(_waveStartPoint, overlapSize * 2 * _waveProgress, 0f, 2 | 4 | 7);
+
+        foreach (var hit in hits)
         {
-            Reset();
+            if (_touchedPaintables.Contains(hit.transform)) continue;
+            Vector2 pos = hit.transform.position;
+            Vector2 delta = pos - _waveStartPoint;
+
+            float ellipseValue = (delta.x * delta.x ) / ((_waveRatio.x * _waveProgress) * (_waveRatio.x * _waveProgress)) + (delta.y * delta.y) / ((_waveRatio.y * _waveProgress)* (_waveRatio.y * _waveProgress));
+            if (Mathf.Abs(ellipseValue -1f) < 0.05f)
+            {
+                print(hit.gameObject.name + "TOUCHE COULE ♫");
+                hit.TryGetComponent(out SpriteRenderer spriteRenderer);
+                spriteRenderer.material.SetTexture("_ColoredTex", PropsSpriteHandler.Instance.PropsColoredTextures[spriteRenderer.sprite.ToString().Replace("_BW (UnityEngine.Sprite)", "")].texture);
+                hit.GetComponent<Renderer>().material.DOFloat(1f, "_Transition", 2f);
+            }
         }
     }
 
-    public void Reset()
+    public void Anim()
     {
-        MaterialPropertyBlock propertyBlock = new();
-        propertyBlock.SetVector("_WaveDiffusionStartPoint", _waveStartPoint);
-        propertyBlock.SetFloat("_WaveProgress", 0f);
-        _tilemapRenderer.SetPropertyBlock(propertyBlock);
+        Setup();
+
+        _vfx.Play();
+
+        foreach (var renderer in _tilemapRenderers)
+        {
+            DOTween.To(() => _waveProgress, x => _waveProgress = x, _waveMaxRange, _waveDuration);
+            renderer.material.DOFloat(_waveMaxRange, "_WaveProgress", _waveDuration);
+
+        }
     }
 
-    private void WaveAnim()
+    private void Setup()
     {
         MaterialPropertyBlock mPropertyBlock = new();
-        _tilemapRenderer.material.DOFloat(0f, "_WaveProgress", 0f);
-        WaveProgress = _tilemapRenderer.material.GetFloat("_WaveProgress");
         mPropertyBlock.SetVector("_WaveDiffusionStartPoint", _waveStartPoint);
-        _tilemapRenderer.SetPropertyBlock(mPropertyBlock);
-        _tilemapRenderer.material.DOFloat(40f, "_WaveProgress", 2.4f);
+        mPropertyBlock.SetVector("_WaveRatio", _waveRatio);
+
+        foreach (var renderer in _tilemapRenderers)
+        {
+            renderer.material.DOFloat(0f, "_WaveProgress", 0f);
+            renderer.SetPropertyBlock(mPropertyBlock);
+        }
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(_waveStartPoint, 0.3f);
+        Gizmos.color = Color.cyan;
+        Vector2 overlapSize = new(_waveRatio.y, _waveRatio.x);
+        Gizmos.DrawWireCube(_waveStartPoint, overlapSize * 2 * _waveProgress);    
     }
 }

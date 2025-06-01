@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _deceleration;
     [SerializeField] private float _velocityPower;
     [SerializeField] private float _friction;
+    [SerializeField] private Joystick NEW_JOYSTICK;
     public bool canMove;
 
     public Vector2 _moveInput;
@@ -91,7 +92,8 @@ public class PlayerMove : MonoBehaviour
             PlayerMain.Instance.Rigidbody2D.AddForce(Vector3.up * -frictionY);
         }
 
-        Joystick.instance.MovePlayer();
+        //JoystickLucas.instance.MovePlayer();
+        SetMoveInput(new Vector2(NEW_JOYSTICK.Horizontal, NEW_JOYSTICK.Vertical));
     }
 
     public void Move()

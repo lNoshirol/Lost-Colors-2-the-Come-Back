@@ -5,7 +5,7 @@ public class SceneBootstrap : MonoBehaviour
 {
     private void Start()
     {
-        SceneManager.LoadScene("FR_SP_01", LoadSceneMode.Additive);
+        SceneManager.LoadScene("FR_SP_01_Clean", LoadSceneMode.Additive);
     }
 
 }

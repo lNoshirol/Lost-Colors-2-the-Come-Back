@@ -74,28 +74,28 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
             for (int i = 0; i < Input.touchCount; i++)
             {
-                if (Input.touches[i].phase == TouchPhase.Began && Joystick.instance.stickTouchFingerId == -1 && clickArea.Contains(Camera.main.ScreenToWorldPoint(Input.touches[i].position)))
+                if (Input.touches[i].phase == TouchPhase.Began && JoystickLucas.instance.stickTouchFingerId == -1 && clickArea.Contains(Camera.main.ScreenToWorldPoint(Input.touches[i].position)))
                 {
                     OnTouchStart(Input.touches[i]);
-                    Joystick.instance.stickTouch = Input.touches[i];
-                    Joystick.instance.stickTouchFingerId = Input.touches[i].fingerId;
+                    JoystickLucas.instance.stickTouch = Input.touches[i];
+                    JoystickLucas.instance.stickTouchFingerId = Input.touches[i].fingerId;
                 }
-                else if ((Input.touches[i].phase == TouchPhase.Moved || Input.touches[i].phase == TouchPhase.Stationary) && Input.touches[i].fingerId == Joystick.instance.stickTouchFingerId)
+                else if ((Input.touches[i].phase == TouchPhase.Moved || Input.touches[i].phase == TouchPhase.Stationary) && Input.touches[i].fingerId == JoystickLucas.instance.stickTouchFingerId)
                 {
-                    Joystick.instance.MoveStick(Input.touches[i]);
+                    JoystickLucas.instance.MoveStick(Input.touches[i]);
                 }
 
-                if (Input.touches[i].phase == TouchPhase.Ended && Input.touches[i].fingerId == Joystick.instance.stickTouchFingerId)
+                if (Input.touches[i].phase == TouchPhase.Ended && Input.touches[i].fingerId == JoystickLucas.instance.stickTouchFingerId)
                 {
-                    Joystick.instance.stickTouchFingerId = -1;
-                    Joystick.instance.Resetos();
+                    JoystickLucas.instance.stickTouchFingerId = -1;
+                    JoystickLucas.instance.Resetos();
                 }
 
-                if (Joystick.instance.stickTouchFingerId == -1)
+                if (JoystickLucas.instance.stickTouchFingerId == -1)
                 {
                     OnTouchEnd();
                     PlayerMain.Instance.Move.CancelMoveInput();
-                    Joystick.instance.stickTouchFingerId = -1;
+                    JoystickLucas.instance.stickTouchFingerId = -1;
                 }
             }
         }
@@ -103,7 +103,7 @@ public class StickAppearrAtClickLoc : MonoBehaviour
         {
             OnTouchEnd();
             PlayerMain.Instance.Move.CancelMoveInput();
-            Joystick.instance.stickTouchFingerId = -1;
+            JoystickLucas.instance.stickTouchFingerId = -1;
         }
     }
 
@@ -116,13 +116,13 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
         if (!clickArea.Contains(touchPosition))
         {
-            Joystick.instance.canMove = false;
+            JoystickLucas.instance.canMove = false;
             return;
         }
 
-        Joystick.instance._joystickAnime.BoolSwitcher("IsHere", true);
+        JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", true);
 
-        Joystick.instance.canMove = true;
+        JoystickLucas.instance.canMove = true;
 
         _stick.SetActive(true);
 
@@ -142,7 +142,7 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     public void OnTouchEnd()
     {
-        Joystick.instance._joystickAnime.BoolSwitcher("IsHere", false);
+        JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", false);
     }
 
     private void forceSetActive(bool active)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class TileMapCorruptionWaveHandler : MonoBehaviour
     [SerializeField] private List<TilemapRenderer> _tilemapRenderers = new();
 
     // Elliptic propagation
+    public event Action OnColorizeEvent;
     private float _waveProgress = 0f;
     private HashSet<Transform> _touchedPaintables = new();
 
@@ -32,33 +34,34 @@ public class TileMapCorruptionWaveHandler : MonoBehaviour
         Vector2 overlapSize = new(_waveRatio.y, _waveRatio.x);
         Collider2D[] hits = Physics2D.OverlapBoxAll(_waveStartPoint, overlapSize * 1.5f * _waveProgress, 0f, 2 | 4 | 7);
 
-        foreach (var hit in hits)
-        {
-            if (_touchedPaintables.Contains(hit.transform)) continue;
-            Vector2 pos = hit.transform.position;
-            Vector2 delta = pos - _waveStartPoint;
+        //foreach (var hit in hits)
+        //{
+        //    if (_touchedPaintables.Contains(hit.transform)) continue;
+        //    Vector2 pos = hit.transform.position;
+        //    Vector2 delta = pos - _waveStartPoint;
 
-            float ellipseValue = (delta.x * delta.x ) / ((_waveRatio.x * _waveProgress) * (_waveRatio.x * _waveProgress)) + (delta.y * delta.y) / ((_waveRatio.y * _waveProgress)* (_waveRatio.y * _waveProgress));
-            if (Mathf.Abs(ellipseValue -1f) < 0.05f)
-            {
-                print("touché " + hit.gameObject.name);
-                hit.TryGetComponent(out SpriteRenderer spriteRenderer);
-                spriteRenderer.material.SetTexture("_ColoredTex", PropsSpriteHandler.Instance.PropsColoredTextures[spriteRenderer.sprite.ToString().Replace("_BW (UnityEngine.Sprite)", "")].texture);
-                hit.GetComponent<Renderer>().material.DOFloat(1f, "_Transition", 2f);
-            }
-        }
+        //    float ellipseValue = (delta.x * delta.x ) / ((_waveRatio.x * _waveProgress) * (_waveRatio.x * _waveProgress)) + (delta.y * delta.y) / ((_waveRatio.y * _waveProgress)* (_waveRatio.y * _waveProgress));
+        //    if (Mathf.Abs(ellipseValue -1f) < 0.05f)
+        //    {
+        //        print("touché " + hit.gameObject.name);
+        //        hit.TryGetComponent(out SpriteRenderer spriteRenderer);
+        //        spriteRenderer.material.SetTexture("_ColoredTex", PropsSpriteHandler.Instance.PropsColoredTextures[spriteRenderer.sprite.ToString().Replace("_BW (UnityEngine.Sprite)", "")].texture);
+        //        hit.GetComponent<Renderer>().material.DOFloat(1f, "_Transition", 2f);
+        //    }
+        //}
     }
 
     public void Anim()
     {
         Setup();
 
-        _vfx.Play();
+        OnColorizeEvent?.Invoke();
+        //_vfx.Play();
 
         foreach (var renderer in _tilemapRenderers)
         {
-            DOTween.To(() => _waveProgress, x => _waveProgress = x, _waveMaxRange, WaveDuration);
-            renderer.material.DOFloat(_waveMaxRange, "_WaveProgress", WaveDuration);
+            DOTween.To(() => _waveProgress, x => _waveProgress = x, _waveMaxRange, WaveDuration).SetEase(Ease.Linear);
+            renderer.material.DOFloat(_waveMaxRange, "_WaveProgress", WaveDuration).SetEase(Ease.Linear);
 
         }
     }

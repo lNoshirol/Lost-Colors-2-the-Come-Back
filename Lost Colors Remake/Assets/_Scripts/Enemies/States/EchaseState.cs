@@ -11,6 +11,7 @@ public class EChaseState : EnemiesState
 
     public override void OnEnter()
     {
+        EnemiesMain.Animation.SetAnimTransitionParameter("IsMoving", true);
     }
     public override void Do()
     {
@@ -18,7 +19,7 @@ public class EChaseState : EnemiesState
 
         EnemiesMain.Animation.GetDirectionXAnimPlayer();
 
-        if (EnemiesMain.CheckPlayerInAttackRange())
+        if (EnemiesMain.CheckPlayerInAttackRange() && !EnemiesMain.alreadyAttack)
         {
             EnemiesMain.SwitchState(EnemiesMain.EAttackState);
         }

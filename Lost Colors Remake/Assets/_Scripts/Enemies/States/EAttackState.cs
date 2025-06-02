@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -16,14 +17,14 @@ public class EAttackState : EnemiesState
 
     public override void OnEnter()
     {
-        EnemiesMain.agent.isStopped = true;
     }
 
     public override void Do()
     {
         EnemiesMain.Animation.GetDirectionXAnimPlayer();
         if (!EnemiesMain.alreadyAttack) {
-
+            EnemiesMain.agent.enabled = false;
+            EnemiesMain.canLookAt = false;
             int randomSpell = Random.Range(0, 1);
             if (randomSpell == 0) 
             { 
@@ -36,16 +37,15 @@ public class EAttackState : EnemiesState
             EnemiesMain.alreadyAttack = true;
             Invoke(nameof(ResetAttack), attackCooldown);
         }
-        else if (!EnemiesMain.CheckPlayerInAttackRange()) {
+        else if (!EnemiesMain.CheckPlayerInAttackRange() || EnemiesMain.alreadyAttack) {
             EnemiesMain.SwitchState(EnemiesMain.EChaseState);
         }
     }
 
     public override void OnExit()
     {
-        ResetAttack();
-        EnemiesMain.agent.isStopped = false;
-        EnemiesMain.isAttacking = false;
+        EnemiesMain.canLookAt = true;
+        EnemiesMain.agent.enabled = true;
         EnemiesMain.Animation.SetAnimTransitionParameter("Attack", false);
         EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", false);
         EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", false);
@@ -64,6 +64,7 @@ public class EAttackState : EnemiesState
 
     private void ResetAttack()
     {
+        EnemiesMain.isAttacking = false;
         EnemiesMain.alreadyAttack = false;
     }
 
@@ -83,20 +84,19 @@ public class EAttackState : EnemiesState
     {
         yield return new WaitForSeconds(_animTime);
         SkillSetup();
-        EnemiesMain.Animation.SetAnimTransitionParameter("Attack", true);
         EnemiesMain.isAttacking = true;
+        EnemiesMain.Animation.SetAnimTransitionParameter("Attack", true);
         if (isCloseSkill)
         {
             closeSkill.Activate(context);
+
         }
         else
         {
             rangeSkill.Activate(context);
         }
-        yield return new WaitForSeconds(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length);
-        EnemiesMain.Animation.SetAnimTransitionParameter("Attack", false);
-        EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", false);
-        EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", false);
+        yield return new WaitForSeconds(2f);
+        OnExit();
     }
     //Vector2 direction = (EnemiesMain.player.position - transform.position).normalized;
     //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -104,3 +104,4 @@ public class EAttackState : EnemiesState
     //Rigidbody2D rb = Instantiate(EnemiesMain.projectile, transform.position, rotation).GetComponent<Rigidbody2D>();
     //rb.AddForce(direction * 10f, ForceMode2D.Impulse);
 }
+ 

@@ -19,7 +19,7 @@ public class EnemyAnimation : MonoBehaviour
     public void GetDirectionXAnimAgent()
     {
         dirX = enemyMain.agent.velocity.x;
-        if (dirX != 0)
+        if (dirX != 0 && enemyMain.canLookAt)
         {
             enemyAnimator.SetBool("IsMoving", true);
             enemyAnimator.SetFloat("X", dirX);
@@ -34,7 +34,7 @@ public class EnemyAnimation : MonoBehaviour
     public void GetDirectionXAnimPlayer()
     {
         dirX = enemyMain.player.position.x - enemyMain.transform.position.x;
-        if (dirX != 0)
+        if (dirX != 0 && enemyMain.canLookAt)
         {
             enemyAnimator.SetFloat("X", dirX);
         }

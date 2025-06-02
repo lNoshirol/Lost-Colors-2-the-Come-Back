@@ -7,8 +7,9 @@ using UnityEngine.VFX;
 public class TileMapCorruptionWaveHandler : MonoBehaviour
 {
     [Header("Wave values")]
-    [SerializeField] private Vector2 _waveStartPoint, _waveRatio;
-    [SerializeField] private float _waveWidth, _waveDuration, _waveMaxRange;
+    [field: SerializeField] public Vector2 _waveStartPoint, _waveRatio;
+    [field: SerializeField] public float WaveDuration { get; set; }
+    [SerializeField] private float _waveWidth, _waveMaxRange;
 
     [Header("WaveVFX")]
     [SerializeField] private VisualEffect _vfx;
@@ -56,8 +57,8 @@ public class TileMapCorruptionWaveHandler : MonoBehaviour
 
         foreach (var renderer in _tilemapRenderers)
         {
-            DOTween.To(() => _waveProgress, x => _waveProgress = x, _waveMaxRange, _waveDuration);
-            renderer.material.DOFloat(_waveMaxRange, "_WaveProgress", _waveDuration);
+            DOTween.To(() => _waveProgress, x => _waveProgress = x, _waveMaxRange, WaveDuration);
+            renderer.material.DOFloat(_waveMaxRange, "_WaveProgress", WaveDuration);
 
         }
     }

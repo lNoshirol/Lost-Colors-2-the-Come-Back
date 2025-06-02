@@ -1,8 +1,10 @@
+using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class EnemyAnimation : MonoBehaviour
 {
-    [SerializeField] private Animator enemyAnimator;
+    [SerializeField] public Animator enemyAnimator;
     [SerializeField] private AnimatorOverrideController enemyAnimationOverrideBW;
     [SerializeField] private AnimatorOverrideController enemyAnimationOverrideColor;
 
@@ -32,12 +34,12 @@ public class EnemyAnimation : MonoBehaviour
     public void GetDirectionXAnimPlayer()
     {
         dirX = enemyMain.player.position.x - enemyMain.transform.position.x;
-        if (dirX != 0)
+        if (dirX != 0 && !enemyMain.isAttacking)
         {
             enemyAnimator.SetBool("IsMoving", true);
             enemyAnimator.SetFloat("X", dirX);
         }
-        else
+        else if(!enemyMain.isAttacking)
         {
             enemyAnimator.SetBool("IsMoving", false);
         }
@@ -46,5 +48,16 @@ public class EnemyAnimation : MonoBehaviour
     public void SwitchAnimatorToColor()
     {
         enemyAnimator.runtimeAnimatorController = enemyAnimationOverrideColor;
+    }
+
+    // Work with isRangeAttacking Or isCloseAttacking
+    public void IsAttackingAnim(string AttackType, bool yesOrNo)
+    {
+        enemyAnimator.SetBool(AttackType, yesOrNo);
+    }
+
+    private void Update()
+    {
+        Debug.Log(enemyAnimator.GetCurrentAnimatorStateInfo(0));
     }
 }

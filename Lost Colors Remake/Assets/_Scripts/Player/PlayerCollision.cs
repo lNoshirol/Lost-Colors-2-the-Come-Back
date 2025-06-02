@@ -6,7 +6,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if(collision.gameObject.layer == 9 )
         {
-            PlayerMain.Instance.Health.PlayerLoseHP(0.5f);
+            PlayerMain.Instance.Health.PlayerLoseHP(1f);
         }
     }
 }

@@ -19,16 +19,16 @@ public class PlayerHealth : MonoBehaviour
     //    playerActualHealth -= healthChangeAmount;
 
     //    PlayerMain.Instance.UI.UpdatePlayerHealthUI();
-    //    if (!PlayerMain.Instance.isColorized && healthChangeAmount > 0)
+    //    if (!PlayerMain.Instance.IsColorized && healthChangeAmount > 0)
     //    {
     //        PlayerIsDead();
     //    }
-    //    if (!PlayerMain.Instance.isColorized && healthChangeAmount < 0)
+    //    if (!PlayerMain.Instance.IsColorized && healthChangeAmount < 0)
     //    {
     //        PlayerMain.Instance.ColorSwitch(true);
     //    }
 
-    //    if (playerActualHealth <= 0 && PlayerMain.Instance.isColorized) {
+    //    if (playerActualHealth <= 0 && PlayerMain.Instance.IsColorized) {
     //        playerActualHealth = 0;
     //        PlayerMain.Instance.ColorSwitch(false);
     //    }

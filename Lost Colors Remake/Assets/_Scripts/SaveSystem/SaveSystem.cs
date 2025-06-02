@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using UnityEngine;
@@ -88,7 +89,8 @@ public class SaveSystem : MonoBehaviour
                     break;
 
                 case "CrystalsList":
-
+                    var loadedList = LoadCrystalsList(node);
+                    CrystalManager.Instance.LoadList(loadedList);
                     break;
 
             }
@@ -122,7 +124,7 @@ public class SaveSystem : MonoBehaviour
         foreach (var crystal in crystalList)
         {
             writer.WriteStartElement("Crystal");
-            writer.WriteElementString("CrystalName", crystal.CrystalName.name);
+            writer.WriteElementString("Crystal", crystal.Crystal.name);
             writer.WriteElementString("IsColorized", crystal.IsColorized.ToString());
             writer.WriteElementString("WhichScene", crystal.WhichScene);
             writer.WriteEndElement();
@@ -130,4 +132,45 @@ public class SaveSystem : MonoBehaviour
 
         writer.WriteEndElement();
     }
+
+    private List<CrystalManager.ListCrystal> LoadCrystalsList(XmlNode crystalsListNode)
+    {
+        List<CrystalManager.ListCrystal> loadedList = new();
+
+        foreach (XmlNode crystalNode in crystalsListNode.ChildNodes)
+        {
+            string crystalName = crystalNode["Crystal"].InnerText;
+            bool isColorized = bool.Parse(crystalNode["IsColorized"].InnerText);
+            string whichScene = crystalNode["WhichScene"].InnerText;
+
+            GameObject crystalGO = GameObject.Find(crystalName);
+            Crystal crystalReference = null;
+
+            if (crystalGO != null)
+            {
+                crystalReference = crystalGO.GetComponent<Crystal>();
+                if (crystalReference == null)
+                {
+                    Debug.LogWarning($"Le GameObject '{crystalName}' n'a pas de composant CrystalMain.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"Le GameObject '{crystalName}' est introuvable dans la scène.");
+            }
+
+            CrystalManager.ListCrystal newCrystal = new CrystalManager.ListCrystal
+            {
+                Crystal = crystalReference,
+                IsColorized = isColorized,
+                WhichScene = whichScene
+            };
+
+            loadedList.Add(newCrystal);
+        }
+
+        return loadedList;
+    }
+
+
 }

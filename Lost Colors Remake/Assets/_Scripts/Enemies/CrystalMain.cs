@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CrystalMain : EnemyMain
 {
-    [Header("Magic CrystalName Components")]
+    [Header("Magic Crystal Components")]
     [SerializeField] private Transform firePoint;
 
     public Vector2[] LazerCardinals;
@@ -35,7 +35,6 @@ public class CrystalMain : EnemyMain
     {
         EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);
         DisplayGoodUI();
-        CrystalManager.Instance.AddToDict(this, isColorized, _nameScene);
         vector2s = LazerCardinals;
     }
 
@@ -69,7 +68,7 @@ public class CrystalMain : EnemyMain
     {
         spriteRenderer.material.DOFloat(1f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
         isColorized = true;
-        CrystalManager.Instance.UpdateIsColorizedIfChanged(this, isColorized, _nameScene);
+        //CrystalManager.Instance.UpdateIsColorizedIfChanged(this, isColorized, _nameScene);
     }
 }
 

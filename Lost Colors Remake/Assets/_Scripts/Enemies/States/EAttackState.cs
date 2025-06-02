@@ -8,14 +8,11 @@ public class EAttackState : EnemiesState
     float attackCooldown;
     [SerializeField]
     float attackAmount;
-    [SerializeField]
-    bool alreadyAttack;
 
     private SkillParentClass closeSkill;
     private SkillParentClass rangeSkill;
 
     SkillContext context;
-
 
     public override void OnEnter()
     {
@@ -25,7 +22,7 @@ public class EAttackState : EnemiesState
     public override void Do()
     {
         EnemiesMain.Animation.GetDirectionXAnimPlayer();
-        if (!alreadyAttack) {
+        if (!EnemiesMain.alreadyAttack) {
 
             int randomSpell = Random.Range(0, 1);
             if (randomSpell == 0) 
@@ -36,7 +33,7 @@ public class EAttackState : EnemiesState
             {
                 CastRangeSkill();
             }
-            alreadyAttack = true;
+            EnemiesMain.alreadyAttack = true;
             Invoke(nameof(ResetAttack), attackCooldown);
         }
         else if (!EnemiesMain.CheckPlayerInAttackRange()) {
@@ -49,8 +46,10 @@ public class EAttackState : EnemiesState
         ResetAttack();
         EnemiesMain.agent.isStopped = false;
         EnemiesMain.isAttacking = false;
+        EnemiesMain.Animation.AnimParameters("Attack", false);
+        EnemiesMain.Animation.AnimParameters("isCloseAttacking", false);
+        EnemiesMain.Animation.AnimParameters("isRangeAttacking", false);
     }
-
 
     void SkillSetup()
     {
@@ -63,20 +62,19 @@ public class EAttackState : EnemiesState
     {
     }
 
-
     private void ResetAttack()
     {
-        alreadyAttack = false;
+        EnemiesMain.alreadyAttack = false;
     }
 
     public void CastCloseSkill()
     {
-        EnemiesMain.Animation.IsAttackingAnim("isCloseAttacking", true);
+        EnemiesMain.Animation.AnimParameters("isCloseAttacking", true);
         StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length, true));
     }
     public void CastRangeSkill()
     {
-        EnemiesMain.Animation.IsAttackingAnim("isRangeAttacking", true);
+        EnemiesMain.Animation.AnimParameters("isRangeAttacking", true);
         StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length, false));
     }
 
@@ -85,7 +83,7 @@ public class EAttackState : EnemiesState
     {
         yield return new WaitForSeconds(_animTime);
         SkillSetup();
-        EnemiesMain.Animation.IsAttackingAnim("Attack", true);
+        EnemiesMain.Animation.AnimParameters("Attack", true);
         EnemiesMain.isAttacking = true;
         if (isCloseSkill)
         {
@@ -95,10 +93,11 @@ public class EAttackState : EnemiesState
         {
             rangeSkill.Activate(context);
         }
-
+        yield return new WaitForSeconds(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length);
+        EnemiesMain.Animation.AnimParameters("Attack", false);
+        EnemiesMain.Animation.AnimParameters("isCloseAttacking", false);
+        EnemiesMain.Animation.AnimParameters("isRangeAttacking", false);
     }
-
-
     //Vector2 direction = (EnemiesMain.player.position - transform.position).normalized;
     //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
     //Quaternion rotation = Quaternion.Euler(0, 0, angle);

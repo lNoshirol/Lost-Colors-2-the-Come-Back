@@ -18,7 +18,7 @@ MonoBehaviour:
   armorSpriteListPrefab:
   - {fileID: 1203507347480276920, guid: 73170e15d34e9bb48af12c6a22a6ec56, type: 3}
   enemyMaxArmor: 0
-  enemySightRange: 10
+  enemySightRange: 7
   enemyAttackRange: 5
   enemyIdleWaitTime: 0.5
   patrolSpeedMultiplier: 1
@@ -29,4 +29,3 @@ MonoBehaviour:
   enemyMaxSpeed: 2
   skillNameList:
   - SimpleDash
-  - Fireball

@@ -16,7 +16,7 @@ public class ToileUI : MonoBehaviour
 
     public void UpdateToilePaintAmount()
     {
-        _paintAmountUGUI.text = "paintAmount : " + PlayerMain.Instance.Inventory.currentPaintAmont;
+        //_paintAmountUGUI.text = "paintAmount : " + PlayerMain.Instance.Inventory.currentPaintAmont;
         _paintSlider.value = PlayerMain.Instance.Inventory.currentPaintAmont;
     }
 }

@@ -17,6 +17,7 @@ public class EnemyMain : MonoBehaviour
     public LayerMask whatIsPlayer;
 
     public bool isAttacking = false;
+    public bool alreadyAttack;
 
     [Header("ShaderNeeds")]
     public SpriteRenderer spriteRenderer;

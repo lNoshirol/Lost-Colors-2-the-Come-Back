@@ -51,13 +51,8 @@ public class EnemyAnimation : MonoBehaviour
     }
 
     // Work with isRangeAttacking Or isCloseAttacking
-    public void IsAttackingAnim(string AttackType, bool yesOrNo)
+    public void AnimParameters(string AttackType, bool yesOrNo)
     {
         enemyAnimator.SetBool(AttackType, yesOrNo);
-    }
-
-    private void Update()
-    {
-        Debug.Log(enemyAnimator.GetCurrentAnimatorStateInfo(0));
     }
 }

@@ -9,7 +9,11 @@ public class SetFpsLimit : MonoBehaviour
     private void Awake()
     {
         Application.targetFrameRate = targetedFps;
-        text.text = targetedFps.ToString() + " fps targeted";
+
+        if (text != null)
+        {
+            text.text = targetedFps.ToString() + " fps targeted";
+        }
         
     }
 }

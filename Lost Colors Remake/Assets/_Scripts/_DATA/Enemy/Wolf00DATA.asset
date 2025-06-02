@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c842e60bf7dec15469957e03a42addf2, type: 3}
+  m_Name: Wolf00DATA
+  m_EditorClassIdentifier: 
+  enemyID: wolf01
+  enemyPowerLevel: 1
+  enemyMaxHP: 2
+  armorSpriteListPrefab:
+  - {fileID: 1203507347480276920, guid: 769568728d598fc4eab594fde733fc15, type: 3}
+  enemyMaxArmor: 0
+  enemySightRange: 10
+  enemyAttackRange: 5
+  enemyIdleWaitTime: 0.5
+  patrolSpeedMultiplier: 1
+  chaseSpeedMultiplier: 1.5
+  enemyAttackAmount: 20
+  enemyAttackCooldown: 0.5
+  enemySpeed: 1
+  enemyMaxSpeed: 2
+  skillNameList: []

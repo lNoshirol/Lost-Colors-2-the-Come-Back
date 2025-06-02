@@ -17,7 +17,9 @@ public class ToileMain : MonoBehaviour
     public bool gestureIsStarted = false;
 
     public Coroutine timerCo;
-    void Start()
+
+
+    private void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -27,7 +29,11 @@ public class ToileMain : MonoBehaviour
 
         Instance = this;
 
+        toileTime = (int)PlayerMain.Instance.toileInfo.toileTime;
+    }
 
+    void Start()
+    {
         ToileUI = GetComponent<ToileUI>();
         TriggerToile = GetComponent<TriggerToile>();
         RaycastDraw = GetComponent<RaycastDraw>();
@@ -41,15 +47,12 @@ public class ToileMain : MonoBehaviour
         timeAmount = toileTime;
         while (timeAmount > 0) {
             ToileUI.UpdateToileUI(timeAmount);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1*PlayerMain.Instance.toileInfo.slowMotionScale);
             timeAmount--;
             ToileUI.UpdateToileUI(timeAmount);
         }
         gestureIsStarted = false;
         TriggerToile.OpenAndCloseToileMagique();
         yield break;
-        
-        
     }
-
 }

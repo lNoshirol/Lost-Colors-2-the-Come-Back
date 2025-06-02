@@ -52,13 +52,13 @@ public class StickAppear2 : MonoBehaviour
 
         if (!clickArea.Contains(touchPosition))
         {
-            Joystick.instance.canMove = false;
+            JoystickLucas.instance.canMove = false;
             return;
         }
 
-        Joystick.instance._joystickAnime.BoolSwitcher("IsHere", true);
+        JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", true);
 
-        Joystick.instance.canMove = true;
+        JoystickLucas.instance.canMove = true;
 
         _stick.SetActive(true);
 
@@ -78,7 +78,7 @@ public class StickAppear2 : MonoBehaviour
 
     public void OnTouchEnd()
     {
-        Joystick.instance._joystickAnime.BoolSwitcher("IsHere", false);
+        JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", false);
     }
 
     private void OnDrawGizmos()

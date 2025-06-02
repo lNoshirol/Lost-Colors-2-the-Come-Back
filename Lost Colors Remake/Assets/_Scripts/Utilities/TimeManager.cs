@@ -11,8 +11,14 @@ public class TimeManager : MonoBehaviour
 
     private float _baseTime;
     private float _baseFixed;
+    private float _timeScale;
 
     public bool InSlowMotion = false;
+
+    private void Awake()
+    {
+        _timeScale = PlayerMain.Instance.toileInfo.slowMotionScale;
+    }
 
     private void Start()
     {
@@ -24,8 +30,8 @@ public class TimeManager : MonoBehaviour
     {
         if (InSlowMotion)
         {
-            float origTimeScale = InSlowMotion ? .3f : 1;
-            float timeScale = InSlowMotion ? 1 : .3f;
+            float origTimeScale = InSlowMotion ? _timeScale : 1;
+            float timeScale = InSlowMotion ? 1 : _timeScale;
             DOVirtual.Float(origTimeScale, timeScale, .2f, SetTimeScale);
         }
     }

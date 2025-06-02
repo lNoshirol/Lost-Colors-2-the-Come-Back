@@ -32,7 +32,7 @@ public class CatchThingsOnDraw : MonoBehaviour
             {
                 if (obj.TryGetComponent(out EnemyHealth _health))
                 {
-                    _health.EnemyLoseHP(1.5f);
+                    _health.EnemyLoseHP(PlayerMain.Instance.toileInfo.lineDamage);
                 }
                 
             }

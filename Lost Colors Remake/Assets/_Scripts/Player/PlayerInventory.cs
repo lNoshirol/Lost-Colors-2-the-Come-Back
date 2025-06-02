@@ -5,9 +5,9 @@ using System;
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField]
-/*    [Range(0f, 100f)]*/
-    public float currentPaintAmont = 100f;
-    public float basePaintAmont = 100;
+    /*    [Range(0f, 100f)]*/
+    public float currentPaintAmont;
+    float basePaintAmont;
     private float _amountAtStart;
 
     [Header("NO UPDATE IN RUNTIME")]
@@ -20,8 +20,11 @@ public class PlayerInventory : MonoBehaviour
     public Dictionary<ItemTypeEnum, bool> ItemDatabase;
     public Dictionary<string, bool> SpellDataBase;
 
+
     void Start()
     {
+        basePaintAmont = PlayerMain.Instance.toileInfo.paintAmount;
+        currentPaintAmont = basePaintAmont;
         ItemDatabase = itemType.ToDictionary();
         SpellDataBase = LootableSpells.ToDictionary();
     }

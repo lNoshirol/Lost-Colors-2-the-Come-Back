@@ -144,7 +144,7 @@ public class DrawForDollarP : MonoBehaviour
             {
                 foreach (GameObject enemy in _detectEnemyInShape.GetTargetsInShape())
                 {
-                    if (_detectEnemyInShape.GetTargetsInShape().Count != 0) enemy.GetComponent<EnemyHealth>().EnemyLoseHP(1);
+                    if (_detectEnemyInShape.GetTargetsInShape().Count != 0) enemy.GetComponent<EnemyHealth>().EnemyLoseHP(PlayerMain.Instance.toileInfo.shapeDamage);
                     else { _catchEnnemy.CatchObjectOnLine(); }
                 }
 

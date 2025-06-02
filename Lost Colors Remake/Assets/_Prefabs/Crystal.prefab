@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3044564838469904244}
   - component: {fileID: 2721349982363630086}
   - component: {fileID: 2997569271759838238}
+  - component: {fileID: 7325701953120507807}
   m_Layer: 0
   m_Name: Crystal
   m_TagString: Untagged
@@ -120,6 +121,20 @@ MonoBehaviour:
   crystal: {fileID: 3044564838469904244}
   _waveManager: {fileID: 4701619983086102955}
   crystalUncorrupted: {fileID: 21300000, guid: c496d63d5dfa6b44eb911613b0638a11, type: 3}
+--- !u!114 &7325701953120507807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7004164340136316749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2524dd009eac0174cae4078c9fd22538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsColorized: 0
+  ColorWaveHandler: {fileID: 4701619983086102955}
 --- !u!1001 &4175212530179743052
 PrefabInstance:
   m_ObjectHideFlags: 0

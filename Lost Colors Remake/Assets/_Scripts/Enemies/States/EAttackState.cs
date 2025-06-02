@@ -37,14 +37,13 @@ public class EAttackState : EnemiesState
             EnemiesMain.alreadyAttack = true;
             Invoke(nameof(ResetAttack), attackCooldown);
         }
-        else if (!EnemiesMain.CheckPlayerInAttackRange() || EnemiesMain.alreadyAttack) {
+        else if (!EnemiesMain.CheckPlayerInAttackRange()) {
             EnemiesMain.SwitchState(EnemiesMain.EChaseState);
         }
     }
 
     public override void OnExit()
     {
-        EnemiesMain.canLookAt = true;
         EnemiesMain.agent.enabled = true;
         EnemiesMain.Animation.SetAnimTransitionParameter("Attack", false);
         EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", false);
@@ -95,7 +94,8 @@ public class EAttackState : EnemiesState
         {
             rangeSkill.Activate(context);
         }
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
+        EnemiesMain.canLookAt = true;
         OnExit();
     }
     //Vector2 direction = (EnemiesMain.player.position - transform.position).normalized;

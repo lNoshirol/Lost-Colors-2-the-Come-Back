@@ -15,13 +15,11 @@ public class TimeManager : MonoBehaviour
 
     public bool InSlowMotion = false;
 
-    private void Awake()
-    {
-        _timeScale = PlayerMain.Instance.toileInfo.slowMotionScale;
-    }
+
 
     private void Start()
     {
+        _timeScale = PlayerMain.Instance.toileInfo.slowMotionScale;
         _baseFixed = Time.fixedDeltaTime;
         _baseTime = Time.timeScale;
     }

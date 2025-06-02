@@ -29,7 +29,7 @@ public class ToileMain : MonoBehaviour
 
         Instance = this;
 
-        toileTime = (int)PlayerMain.Instance.toileInfo.toileTime;
+
     }
 
     void Start()
@@ -39,6 +39,7 @@ public class ToileMain : MonoBehaviour
         RaycastDraw = GetComponent<RaycastDraw>();
 
         ToileUI.UpdateToileUI(timeAmount);
+        toileTime = (int)PlayerMain.Instance.toileInfo.toileTime;
     }
 
     public IEnumerator ToileTimer()

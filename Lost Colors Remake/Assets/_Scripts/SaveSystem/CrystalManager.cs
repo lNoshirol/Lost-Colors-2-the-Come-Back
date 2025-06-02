@@ -46,7 +46,7 @@ public class CrystalManager : MonoBehaviour
     public class ListCrystal
     {
         [field: SerializeField]
-        public CrystalMain CrystalName{ get; set; }
+        public Crystal Crystal{ get; set; }
 
         [field: SerializeField]
         public bool IsColorized{ get; set; }
@@ -59,15 +59,15 @@ public class CrystalManager : MonoBehaviour
 
     #endregion
 
-    public void AddToDict(CrystalMain crystal, bool isColorized, string whichScene)
+    public void AddToDict(Crystal crystal, bool isColorized, string whichScene)
     {
-        bool ok = _ListCrystal.Any(item=> item.CrystalName == crystal && item.IsColorized==isColorized && item.WhichScene == whichScene);
+        bool ok = _ListCrystal.Any(item=> item.Crystal == crystal && item.IsColorized==isColorized && item.WhichScene == whichScene);
 
         if (!ok)
         {
             var newListCrystal = new ListCrystal
             {
-                CrystalName = crystal,
+                Crystal = crystal,
                 IsColorized = isColorized,
                 WhichScene = whichScene,
             };
@@ -82,11 +82,11 @@ public class CrystalManager : MonoBehaviour
 
     }
 
-    public void Check(CrystalMain crystal, bool isColorized, string whichScene)
+    public void Check(Crystal crystal, bool isColorized, string whichScene)
     {
         var newListCrystal = new ListCrystal
         {
-            CrystalName = crystal,
+            Crystal = crystal,
             IsColorized = isColorized,
             WhichScene = whichScene,
         };
@@ -94,22 +94,34 @@ public class CrystalManager : MonoBehaviour
         if (!_ListCrystal.Contains(newListCrystal)) _ListCrystal.Add(newListCrystal);
     }
 
-    public void UpdateIsColorizedIfChanged(CrystalMain crystal, bool newIsColorized, string whichScene)
+    public void UpdateIsColorizedIfChanged(Crystal crystal, bool newIsColorized, string whichScene)
     {
         var newListCrystal = new ListCrystal
         {
-            CrystalName = crystal,
+            Crystal = crystal,
             IsColorized = newIsColorized,
             WhichScene = whichScene,
         };
 
         for (int i =0;  i < _ListCrystal.Count; i++)
         {
-            if (_ListCrystal[i].CrystalName == newListCrystal.CrystalName && _ListCrystal[i].WhichScene == newListCrystal.WhichScene)
+            if (_ListCrystal[i].Crystal == newListCrystal.Crystal && _ListCrystal[i].WhichScene == newListCrystal.WhichScene)
             {
                 Debug.Log($"IsColorized a changé pour {newListCrystal.WhichScene} : {newListCrystal.IsColorized} -> {newIsColorized}");
                 _ListCrystal[i].IsColorized = newIsColorized;
             }
         }
     }
+
+    public void LoadList(List<ListCrystal> loadedList)
+    {
+        _ListCrystal.Clear();
+        _ListCrystal = loadedList;
+
+        foreach (var crystal in _ListCrystal)
+        {
+            UpdateIsColorizedIfChanged(crystal.Crystal, crystal.IsColorized, crystal.WhichScene);
+        }
+    }
+
 }

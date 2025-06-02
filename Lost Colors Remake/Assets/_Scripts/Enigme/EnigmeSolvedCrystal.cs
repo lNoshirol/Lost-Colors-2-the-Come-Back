@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnigmeSolvedCrystal : EnigmeSolved
 {
     public SpriteRenderer crystal;
-    [SerializeField] private CeciSeraSuppriméSubrepticement _waveManager;
+    [SerializeField] private TileMapCorruptionWaveHandler _waveManager;
     
     public Sprite crystalUncorrupted;
 

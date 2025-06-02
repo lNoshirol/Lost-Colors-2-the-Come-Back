@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a9cd735323b0ce4abb431c017e94e84, type: 3}
+  m_Name: PropsTextureDatabase
+  m_EditorClassIdentifier: 
+  Props:
+  - PropName: sprt_enviro_tree_01
+    BW: {fileID: 21300000, guid: 45b1af569b153474f9899b89c3361396, type: 3}
+    Colored: {fileID: 21300000, guid: 02d14286fb002994d9e3e6203813af1a, type: 3}
+  - PropName: sprt_enviro_tree_orange_04
+    BW: {fileID: 21300000, guid: efc22586920e14d4da409c14c354badf, type: 3}
+    Colored: {fileID: 21300000, guid: 219d188b396d7b548b41ac98211f7be7, type: 3}
+  - PropName: sprt_enviro_tree_09
+    BW: {fileID: 21300000, guid: 54f5df2c3a0c9a94cbbf5f2949b8395c, type: 3}
+    Colored: {fileID: 21300000, guid: 4d9d228c3ece30047aa753b702acd0f0, type: 3}
+  - PropName: sprt_enviro_tree_10
+    BW: {fileID: -2778182879858817317, guid: 7ddc9c3843281fb409de35b8db24d112, type: 3}
+    Colored: {fileID: 21300000, guid: 2a7751c30219be54bad6c1e1a615f04e, type: 3}
+  - PropName: sprt_enviro_tree_11
+    BW: {fileID: 21300000, guid: dcb83592e1b02044a9bfb86d20a04aea, type: 3}
+    Colored: {fileID: 21300000, guid: 672d5d5899a377144a53eb55e0ce430f, type: 3}
+  - PropName: sprt_enviro_tree_12
+    BW: {fileID: 21300000, guid: a0c72fdf54ea53c44a1c1503cdd4c3c0, type: 3}
+    Colored: {fileID: 21300000, guid: 491ba3206f1a24e43b414c953bcd0fcc, type: 3}
+  - PropName: sprt_crystal
+    BW: {fileID: 21300000, guid: 8215dd261ab9e5d4b87ea91b6e9a004c, type: 3}
+    Colored: {fileID: 21300000, guid: c496d63d5dfa6b44eb911613b0638a11, type: 3}
+  - PropName: sprt_enviro_stone_01
+    BW: {fileID: -4219277594607294297, guid: 17a498b935077954296bf199113c1daa, type: 3}
+    Colored: {fileID: -5631366215469227530, guid: 576f050313ba6f640b7ec5b2e3d51220, type: 3}
+  - PropName: sprt_enviro_bush
+    BW: {fileID: 21300000, guid: 5e528e1d59bdf504ea1837b537a31687, type: 3}
+    Colored: {fileID: 21300000, guid: 8ff5d0b1c81b9164d9924df3da90e6ef, type: 3}
+  - PropName: sprt_enviro_bush_01
+    BW: {fileID: 21300000, guid: 274a3ebcf30b6a042b0ae0ce2746a490, type: 3}
+    Colored: {fileID: 21300000, guid: c4eb83ce71b5b294b8389907eda0ccf8, type: 3}
+  - PropName: sprt_enviro_bush_02
+    BW: {fileID: 21300000, guid: 27dd54311777b5d478b8c8caa1502afe, type: 3}
+    Colored: {fileID: 21300000, guid: fe0ab5465d867204abd483e9758ce4d9, type: 3}
+  - PropName: sprt_enviro_bush_03
+    BW: {fileID: 21300000, guid: db7c8467596c6cd448979c16835ca1e1, type: 3}
+    Colored: {fileID: 21300000, guid: 915747779bbde804791d1a6c9df016eb, type: 3}
+  - PropName: sprt_enviro_bush_04
+    BW: {fileID: 21300000, guid: c8c88d3654627cf4daed392504312b2b, type: 3}
+    Colored: {fileID: 21300000, guid: 6e516b458a425ba4bbae31feb2bc5949, type: 3}
+  - PropName: sprt_flower_01
+    BW: {fileID: 21300000, guid: a3c9cf647a737be4cb2108f6248824bb, type: 3}
+    Colored: {fileID: 21300000, guid: d8cdc51e0061dbd43825cf83099b0ce3, type: 3}
+  - PropName: sprt_flower_02
+    BW: {fileID: 21300000, guid: 969c306e5a5d8984d93e4ebf4ff09a56, type: 3}
+    Colored: {fileID: 21300000, guid: 0fbdcb74864b5ae4b9a6840d08119a2e, type: 3}
+  - PropName: sprt_jar_01
+    BW: {fileID: 21300000, guid: 590cb6d44c996a342b7f9c1caf55bbb6, type: 3}
+    Colored: {fileID: 21300000, guid: b2e35dfc81df9e74e80ada7ffa17e5a7, type: 3}
+  - PropName: sprt_jar_01_crack
+    BW: {fileID: 21300000, guid: e9f0954857e9962409f3975961dde57a, type: 3}
+    Colored: {fileID: 21300000, guid: f87cb81889f0518448e08eea6dc8f199, type: 3}
+  - PropName: sprt_jar_02
+    BW: {fileID: 21300000, guid: b1c3a3e784f806f4c8f21a403d04dd61, type: 3}
+    Colored: {fileID: 21300000, guid: 30d00cadde0747644b247e40a96462c7, type: 3}
+  - PropName: sprt_jar_02_crack
+    BW: {fileID: 21300000, guid: 795437f33e4bf4244ad23c594974e558, type: 3}
+    Colored: {fileID: 21300000, guid: 6a837fea0c00fe7468620819e01741ac, type: 3}
+  - PropName: sprt_jar_03
+    BW: {fileID: 21300000, guid: df033331247150542869158f9ec43d16, type: 3}
+    Colored: {fileID: 21300000, guid: 915453fb4f2c43b47a89b5ac27e42fe2, type: 3}
+  - PropName: sprt_jar_03_crack
+    BW: {fileID: 21300000, guid: 07303cde55a9b3a4a907df0f1fe9d760, type: 3}
+    Colored: {fileID: 21300000, guid: f4945284dc37e594185b0e33d2a919ef, type: 3}
+  - PropName: sprt_jar_04
+    BW: {fileID: 21300000, guid: ec5607001c6b51649a668e3ca27dcebf, type: 3}
+    Colored: {fileID: 21300000, guid: 6d4ab12839a82a94080ea03e10312a2c, type: 3}
+  - PropName: sprt_jar_04_crack
+    BW: {fileID: 21300000, guid: cd38c8f3e8bfefd48b75f8eec1229790, type: 3}
+    Colored: {fileID: 21300000, guid: bfe99dcdd4afd9242afd568227bd1de0, type: 3}
+  - PropName: sprt_jar_05
+    BW: {fileID: 21300000, guid: f8f5efcd38a0bdc4aabfeb74e333c908, type: 3}
+    Colored: {fileID: 21300000, guid: 4e253bafa6f1c244a89c801d85ee2ff1, type: 3}
+  - PropName: sprt_jar_05_crack
+    BW: {fileID: 21300000, guid: 4ddddb3b3d4758649b9600baf126914c, type: 3}
+    Colored: {fileID: 21300000, guid: 37830b93d0805684a8403a925a310af2, type: 3}
+  - PropName: sprt_groundRock_01
+    BW: {fileID: 21300000, guid: f7c23584e98d1dc4988aa888f9d7bcef, type: 3}
+    Colored: {fileID: 21300000, guid: eb0452c4e8b84a846b075282ea6f8d4e, type: 3}
+  - PropName: sprt_groundRock_02
+    BW: {fileID: 21300000, guid: 9e00018998071904ebeb43e0c1bfbd5d, type: 3}
+    Colored: {fileID: 21300000, guid: dce19ca8840ce584ba7a98e475d052fe, type: 3}
+  - PropName: sprt_groundRock_03
+    BW: {fileID: 21300000, guid: f80899925d22cbc4faa79f0f458c9729, type: 3}
+    Colored: {fileID: 21300000, guid: 356095beffcd2024fbb9f1855313d4db, type: 3}
+  - PropName: sprt_groundRock_single_01
+    BW: {fileID: 21300000, guid: 40998b7f345f24a47928eb776a5d2677, type: 3}
+    Colored: {fileID: 21300000, guid: c1be615edc3a00149aa8c05871f0849b, type: 3}
+  - PropName: sprt_groundRock_single_02
+    BW: {fileID: 21300000, guid: e59c35b15ffdd6142981eea2de5015fd, type: 3}
+    Colored: {fileID: 21300000, guid: 4861768d0f2ca204fa0e96f77cd1099c, type: 3}
+  - PropName: sprt_groundRock_single_03
+    BW: {fileID: 21300000, guid: 08ced1901c72fc24a8d1e2c4b13755d0, type: 3}
+    Colored: {fileID: 21300000, guid: 4b0913c127dbdb249bb285978aa9e7c5, type: 3}
+  - PropName: sprt_groundRock_stairs
+    BW: {fileID: 21300000, guid: 1253a92203346434bba42cc09a7f050f, type: 3}
+    Colored: {fileID: 21300000, guid: 432590390fd7fa748b582e481b7c21ff, type: 3}
+  - PropName: sprt_grass_01
+    BW: {fileID: 21300000, guid: 125910ec15df4b54ab1956cc0eed86f5, type: 3}
+    Colored: {fileID: 21300000, guid: 1474dc2ab1a61404f97601ddf59ea40c, type: 3}
+  - PropName: sprt_grass_02
+    BW: {fileID: 21300000, guid: c8d85d66e30b46c46b19173cfc75e81b, type: 3}
+    Colored: {fileID: 21300000, guid: ba3a83f429d688140b3add7056145d0f, type: 3}
+  - PropName: sprt_tiles_grass_01
+    BW: {fileID: 21300000, guid: 6289cb76e8dc73343b2b95da5017b5bf, type: 3}
+    Colored: {fileID: 21300000, guid: f13935f26791daf4791bd61461c0f63b, type: 3}
+  - PropName: sprt_tiles_grass_02
+    BW: {fileID: 21300000, guid: eea7c82c5e85bb149aa994b81bdd0838, type: 3}
+    Colored: {fileID: 21300000, guid: 3747dd9df228a4c4b9996eef4bf879f9, type: 3}
+  - PropName: sprt_trunk_02
+    BW: {fileID: 21300000, guid: 8f0e600b6475b864f9193508fa1167ba, type: 3}
+    Colored: {fileID: 21300000, guid: 1c9b5843dea75cb4181811367ff28576, type: 3}

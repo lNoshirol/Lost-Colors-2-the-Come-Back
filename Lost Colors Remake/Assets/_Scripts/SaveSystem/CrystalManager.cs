@@ -107,7 +107,6 @@ public class CrystalManager : MonoBehaviour
         {
             if (_ListCrystal[i].Crystal == newListCrystal.Crystal && _ListCrystal[i].WhichScene == newListCrystal.WhichScene)
             {
-                Debug.Log($"IsColorized a changé pour {newListCrystal.WhichScene} : {newListCrystal.IsColorized} -> {newIsColorized}");
                 _ListCrystal[i].IsColorized = newIsColorized;
             }
         }
@@ -115,7 +114,6 @@ public class CrystalManager : MonoBehaviour
 
     public void LoadList(List<ListCrystal> loadedList)
     {
-        _ListCrystal.Clear();
         _ListCrystal = loadedList;
 
         foreach (var crystal in _ListCrystal)

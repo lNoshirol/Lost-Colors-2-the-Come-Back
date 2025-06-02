@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: a0c72fdf54ea53c44a1c1503cdd4c3c0
+guid: e41c8c6b48a3a924cabe07cda6e16e25
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6331130203004801801
-    second: sprt_enviro_tree_12-expor_BW_0
+      213: -4396311209248392762
+    second: sprt_groundSun_0
+  - first:
+      213: -5233799420585638049
+    second: sprt_groundSun_1
+  - first:
+      213: 5267776915523039975
+    second: sprt_groundSun_2
+  - first:
+      213: 588842104243482269
+    second: sprt_groundSun_3
+  - first:
+      213: 7124610407256744110
+    second: sprt_groundSun_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,8 +61,8 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.45, y: 0.02}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -109,30 +121,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprt_enviro_tree_12-expor_BW_0
+      name: sprt_groundSun_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 1
-        width: 80
-        height: 99
+        x: 21
+        y: 34
+        width: 86
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7fce627cf9e4328a0800000000000000
-      internalID: -6331130203004801801
+      spriteID: 6c97ea27f3a2df2c0800000000000000
+      internalID: -4396311209248392762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_groundSun_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 92
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f570956282fcd57b0800000000000000
+      internalID: -5233799420585638049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_groundSun_2
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 59
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2f0cdd137ea1940800000000000000
+      internalID: 5267776915523039975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_groundSun_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 58
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9ee93426ccfb2800800000000000000
+      internalID: 588842104243482269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_groundSun_4
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 22
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0e697ea63bfd260800000000000000
+      internalID: 7124610407256744110
       vertices: []
       indices: 
       edges: []
@@ -161,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprt_enviro_tree_12-expor_BW_0: -6331130203004801801
+      sprt_groundSun_0: -4396311209248392762
+      sprt_groundSun_1: -5233799420585638049
+      sprt_groundSun_2: 5267776915523039975
+      sprt_groundSun_3: 588842104243482269
+      sprt_groundSun_4: 7124610407256744110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

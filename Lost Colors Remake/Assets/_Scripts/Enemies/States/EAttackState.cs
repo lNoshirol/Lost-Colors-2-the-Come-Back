@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EAttackState : EnemiesState
 {
@@ -11,17 +13,12 @@ public class EAttackState : EnemiesState
 
     private SkillParentClass closeSkill;
     private SkillParentClass rangeSkill;
+
     SkillContext context;
 
 
-    private void Start()
-    {
-        
-    }
-
     public override void OnEnter()
     {
-
         EnemiesMain.agent.isStopped = true;
     }
 
@@ -30,15 +27,14 @@ public class EAttackState : EnemiesState
         EnemiesMain.Animation.GetDirectionXAnimPlayer();
         if (!alreadyAttack) {
 
-            int randomSpell = Random.Range(0, 2);
+            int randomSpell = Random.Range(0, 1);
             if (randomSpell == 0) 
             { 
-                CastCloseSpell();
-                
+                CastCloseSkill();
             }
             else
             {
-                CastRangeSpell();
+                CastRangeSkill();
             }
             alreadyAttack = true;
             Invoke(nameof(ResetAttack), attackCooldown);
@@ -47,6 +43,14 @@ public class EAttackState : EnemiesState
             EnemiesMain.SwitchState(EnemiesMain.EChaseState);
         }
     }
+
+    public override void OnExit()
+    {
+        ResetAttack();
+        EnemiesMain.agent.isStopped = false;
+        EnemiesMain.isAttacking = false;
+    }
+
 
     void SkillSetup()
     {
@@ -58,26 +62,40 @@ public class EAttackState : EnemiesState
     public override void FixedDo()
     {
     }
-    public override void OnExit()
-    {
-        ResetAttack();
-        EnemiesMain.agent.isStopped = false;
-    }
+
 
     private void ResetAttack()
     {
         alreadyAttack = false;
     }
 
-    public void CastCloseSpell()
+    public void CastCloseSkill()
     {
-        SkillSetup();
-        closeSkill.Activate(context);
+        EnemiesMain.Animation.IsAttackingAnim("isCloseAttacking", true);
+        StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length, true));
     }
-    public void CastRangeSpell()
+    public void CastRangeSkill()
     {
+        EnemiesMain.Animation.IsAttackingAnim("isRangeAttacking", true);
+        StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length, false));
+    }
+
+
+    IEnumerator WaitForEndAnime(float _animTime, bool isCloseSkill)
+    {
+        yield return new WaitForSeconds(_animTime);
         SkillSetup();
-        rangeSkill.Activate(context);
+        EnemiesMain.Animation.IsAttackingAnim("Attack", true);
+        EnemiesMain.isAttacking = true;
+        if (isCloseSkill)
+        {
+            closeSkill.Activate(context);
+        }
+        else
+        {
+            rangeSkill.Activate(context);
+        }
+
     }
 
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8940018168585845085}
   - component: {fileID: 3831425350855967840}
   - component: {fileID: 8884703754207691480}
+  - component: {fileID: -255255292953429347}
   m_Layer: 0
   m_Name: Jar04
   m_TagString: Untagged
@@ -125,7 +126,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.44}
     oldSize: {x: 8, y: 8}
     newSize: {x: 3.875, y: 3.875}
     adaptiveTilingThreshold: 0.5
@@ -159,3 +160,19 @@ PolygonCollider2D:
       - {x: 0.5973816, y: -0.71919966}
       - {x: 1.2143192, y: -0.6227298}
   m_UseDelaunayMesh: 0
+--- !u!114 &-255255292953429347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8491278905571278557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

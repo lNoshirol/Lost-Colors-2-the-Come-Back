@@ -48,6 +48,7 @@ public abstract class SkillParentClass
     #region Subskills
     protected void Dash(Rigidbody2D rb, Vector2 direction, float force)
     {
+        Debug.Log("Skill : Dash");
         rb.AddForce(direction * force, ForceMode2D.Impulse);
         //Delegate[] functions = { PrintRandomTest, PrintRandomTest, PrintRandomTest };
         //DelayedFunction(functions, 1f);
@@ -57,6 +58,7 @@ public abstract class SkillParentClass
     {
         rb.angularVelocity = 0;
         rb.linearVelocity = new Vector2(0,0);
+
     }
 
     protected void PrintRandomTest()

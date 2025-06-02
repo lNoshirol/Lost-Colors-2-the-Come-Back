@@ -46,9 +46,9 @@ public class EAttackState : EnemiesState
         ResetAttack();
         EnemiesMain.agent.isStopped = false;
         EnemiesMain.isAttacking = false;
-        EnemiesMain.Animation.AnimParameters("Attack", false);
-        EnemiesMain.Animation.AnimParameters("isCloseAttacking", false);
-        EnemiesMain.Animation.AnimParameters("isRangeAttacking", false);
+        EnemiesMain.Animation.SetAnimTransitionParameter("Attack", false);
+        EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", false);
+        EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", false);
     }
 
     void SkillSetup()
@@ -69,12 +69,12 @@ public class EAttackState : EnemiesState
 
     public void CastCloseSkill()
     {
-        EnemiesMain.Animation.AnimParameters("isCloseAttacking", true);
+        EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", true);
         StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length, true));
     }
     public void CastRangeSkill()
     {
-        EnemiesMain.Animation.AnimParameters("isRangeAttacking", true);
+        EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", true);
         StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length, false));
     }
 
@@ -83,7 +83,7 @@ public class EAttackState : EnemiesState
     {
         yield return new WaitForSeconds(_animTime);
         SkillSetup();
-        EnemiesMain.Animation.AnimParameters("Attack", true);
+        EnemiesMain.Animation.SetAnimTransitionParameter("Attack", true);
         EnemiesMain.isAttacking = true;
         if (isCloseSkill)
         {
@@ -94,9 +94,9 @@ public class EAttackState : EnemiesState
             rangeSkill.Activate(context);
         }
         yield return new WaitForSeconds(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length);
-        EnemiesMain.Animation.AnimParameters("Attack", false);
-        EnemiesMain.Animation.AnimParameters("isCloseAttacking", false);
-        EnemiesMain.Animation.AnimParameters("isRangeAttacking", false);
+        EnemiesMain.Animation.SetAnimTransitionParameter("Attack", false);
+        EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", false);
+        EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", false);
     }
     //Vector2 direction = (EnemiesMain.player.position - transform.position).normalized;
     //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

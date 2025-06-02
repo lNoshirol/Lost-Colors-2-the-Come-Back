@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1070503483309755330}
   - component: {fileID: 2562349980041032010}
   - component: {fileID: 5302611904345315973}
+  - component: {fileID: -7375652238303232701}
   m_Layer: 0
   m_Name: Jar02_crack
   m_TagString: Untagged
@@ -143,7 +144,20 @@ PolygonCollider2D:
       - {x: -2.1106873, y: -0.020899296}
       - {x: -2.129364, y: 0.4670329}
       - {x: 2.0144882, y: 0.42406368}
-    - []
-    - []
-    - []
   m_UseDelaunayMesh: 0
+--- !u!114 &-7375652238303232701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3233681054864488271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

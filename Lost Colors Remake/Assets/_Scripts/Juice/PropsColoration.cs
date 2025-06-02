@@ -7,7 +7,7 @@ public class PropsColoration : MonoBehaviour
 
     void Start()
     {
-        float distance = Vector3.Distance(CrystalManager.Instance._ListCrystal[0].CrystalName.transform.position, this.transform.position);        
+        float distance = Vector3.Distance(CrystalManager.Instance._ListCrystal[0].Crystal.transform.position, this.transform.position);        
         
     }
 

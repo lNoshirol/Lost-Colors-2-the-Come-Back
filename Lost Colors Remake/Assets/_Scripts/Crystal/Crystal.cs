@@ -8,6 +8,6 @@ public class Crystal : MonoBehaviour
 
     void Start()
     {
-        CrystalManager.Instance.AddToDict(this, IsColorized, SceneManager.GetActiveScene().name);   
+        CrystalManager.Instance.AddToDict(this, IsColorized, SceneManager.GetActiveScene().name);
     }
 }

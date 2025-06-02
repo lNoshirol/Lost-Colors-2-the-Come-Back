@@ -19,7 +19,7 @@ public class CrystalManager : MonoBehaviour
             {
                 GameObject go = new GameObject("CrystalManager");
                 _instance = go.AddComponent<CrystalManager>();
-                Debug.Log("<color=#8b59f0>Projectile Manager</color> instance <color=#58ed7d>created</color>");
+                Debug.Log("<color=#8b59f0>Crystal Manager</color> instance <color=#58ed7d>created</color>");
             }
             return _instance;
         }

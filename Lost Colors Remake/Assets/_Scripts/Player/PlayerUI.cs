@@ -6,7 +6,6 @@ using System.Collections.Generic;
 
 public class PlayerUI : MonoBehaviour
 {
-    [SerializeField] private Image healthbarSprite;
     [SerializeField] private CanvasGroup blackScreen;
     [SerializeField] private CanvasGroup playerControl;
     [SerializeField] private Button dashButton;

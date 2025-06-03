@@ -1,40 +1,39 @@
 using UnityEngine;
 
+// video link : https://www.youtube.com/watch?v=-AJ4J-lph6A
 public abstract class SingletonCreator<T> : MonoBehaviour where T : MonoBehaviour
 {
-    public static T Instance {  get; private set; }
+    public static T Instance { get; private set; }
 
     protected virtual void Awake()
     {
-        if(Instance != null && Instance != this)
+        if (Instance != null && Instance != this)
         {
-            Debug.LogWarning("Trying to create a duplicate singleton instance");
+            Debug.LogWarning($"Duplicate singleton of type {typeof(T)} detected on {gameObject.name}, destroying.");
             Destroy(gameObject);
+            return;
         }
-        else
-        {
-            Instance = this as T;
-        }
+
+        Instance = this as T;
     }
 
     protected virtual void OnApplicationQuit()
     {
         Instance = null;
-        Destroy(gameObject);    
     }
-
-
 }
-public abstract class SingletonCreatorPersistant<TDerived> : SingletonCreator<TDerived> where TDerived : MonoBehaviour
+
+public abstract class SingletonCreatorPersistent<T> : SingletonCreator<T> where T : MonoBehaviour
 {
     protected override void Awake()
     {
-        if (Instance != null)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
+
         DontDestroyOnLoad(gameObject);
-        base.Awake();
+        base.Awake(); 
     }
 }

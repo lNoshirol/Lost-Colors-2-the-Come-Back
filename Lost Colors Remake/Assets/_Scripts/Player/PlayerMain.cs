@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class PlayerMain : SingletonCreatorPersistant<PlayerMain>
+public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
 {
 
     public PlayerMove Move { get; private set; }

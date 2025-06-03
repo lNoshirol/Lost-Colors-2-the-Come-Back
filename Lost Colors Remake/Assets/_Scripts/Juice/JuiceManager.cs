@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class JuiceManager : SingletonCreatorPersistant<JuiceManager>
+public class JuiceManager : SingletonCreatorPersistent<JuiceManager>
 {
 
     bool waiting;

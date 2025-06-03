@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Threading.Tasks;
 
-public class WorldMain : SingletonCreatorPersistant<WorldMain>
+public class WorldMain : SingletonCreatorPersistent<WorldMain>
 {
 
     public List<GameObject> RoomSwitchList = new List<GameObject>();

@@ -2,16 +2,21 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : SingletonCreatorPersistant<EnemyManager>
+public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
 {
     public List<GameObject> CurrentEnemyList = new();
     public Dictionary<GameObject, bool> WorldEnemyDic = new();
     [SerializeField] private List<GameObject> glyphPrefabList = new List<GameObject>();
     public Dictionary<string, Pool> glyphPrefabPool = new();
     public List<GameObject> GlyphPoolList = new();
-    
 
-    private void Start()
+    protected override void Awake()
+    {
+        base.Awake();
+        CreateGlyphPool();
+    }
+
+    private void CreateGlyphPool()
     {
         foreach (GameObject glyph in glyphPrefabList)
         {
@@ -22,7 +27,6 @@ public class EnemyManager : SingletonCreatorPersistant<EnemyManager>
             GlyphPoolList.Add(parent);
         }
     }
-
     public void AddEnemiesToListAndDic(GameObject enemy, bool isColorized)
     {
         AddEnemiesToWorldDic(enemy);

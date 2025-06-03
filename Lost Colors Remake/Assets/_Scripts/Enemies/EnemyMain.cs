@@ -69,19 +69,17 @@ public class EnemyMain : MonoBehaviour
     private float nextAttackCheckTime = 0f;
     private float checkInterval = 0.2f;
 
-    private void Awake()
+    public virtual void Start()
     {
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = gameObject.GetComponent<NavMeshAgent>();
-        rb = gameObject.GetComponent <Rigidbody2D>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
 
         Health = GetComponent<EnemyHealth>();
         UI = GetComponent<EnemyUI>();
 
         SetupStats();
-    }
-    public virtual void Start()
-    {
         EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);
 
         SetupAndEnterState();

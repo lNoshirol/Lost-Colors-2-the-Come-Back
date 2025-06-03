@@ -2,11 +2,45 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using UnityEngine;
+using UnityEngine.LightTransport;
+using UnityEngine.SceneManagement;
 
 public class SaveSystem : MonoBehaviour
 {
+    // Singleton
+    #region Singleton
+    private static SaveSystem _instance;
+
+    public static SaveSystem Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                GameObject go = new GameObject("SaveSystem");
+                _instance = go.AddComponent<SaveSystem>();
+            }
+            return _instance;
+        }
+    }
+
+    private void Awake()
+    {
+        if (_instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
+    #endregion
+
     [SerializeField]
     private PlayerMain playerMain;
+
+    private string _lastScene;
 
 
     XmlWriter xmlWriter;
@@ -16,48 +50,55 @@ public class SaveSystem : MonoBehaviour
         Indent = true,
     };
 
-    public void ToSave()
+    private void Start()
     {
         string savePath = Path.Combine(Application.persistentDataPath, "savefile.xml");
 
-        xmlWriter = XmlWriter.Create(savePath, xml);
-
-        xmlWriter.WriteStartDocument();
-        xmlWriter.WriteStartElement("Data");
-        WriteXML(xmlWriter, "PlayerHealth", playerMain.Health.playerActualHealth.ToString() );
-        WriteVector3(xmlWriter, "PlayerPosition", playerMain.gameObject.transform.position);
-        WriteXML(xmlWriter, "PlayerInventory", playerMain.Inventory.ItemDatabase[0].ToString());
-        WriteCrystalsList(xmlWriter);
-
-
-        xmlWriter.Close();
-    }
-
-    private void Start()
-    {
-        XmlDocument saveFile = new XmlDocument();
-
-        if (!System.IO.File.Exists(Path.Combine(Application.persistentDataPath, "savefile.xml")))
+        if (!File.Exists(savePath))
         {
-            string savePath = Path.Combine(Application.persistentDataPath, "savefile.xml");
-            xmlWriter = xmlWriter = XmlWriter.Create(savePath, xml); ;
-            xmlWriter.WriteStartDocument();
-            xmlWriter.WriteStartElement("Data");
-            xmlWriter.WriteStartElement("PlayerHealth");
-            xmlWriter.WriteEndElement();
-            xmlWriter.WriteStartElement("PlayerPosition");
-            xmlWriter.WriteEndElement();
-            xmlWriter.WriteStartElement("PlayerInventory");
-            xmlWriter.WriteEndElement();
-            xmlWriter.WriteEndDocument();
-            xmlWriter.WriteStartElement("CrystalsList");
-            xmlWriter.WriteEndElement();
-            xmlWriter.WriteEndDocument();
-            xmlWriter.Close();
+            using (XmlWriter writer = XmlWriter.Create(savePath, xml))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("Data");
+                writer.WriteElementString("SceneName", "FR_SP_01_Clean");
+                writer.WriteElementString("PlayerHealth", "");
+                writer.WriteStartElement("PlayerPosition");
+                writer.WriteElementString("x", "0");
+                writer.WriteElementString("y", "0");
+                writer.WriteElementString("z", "0");
+                writer.WriteEndElement();
+                writer.WriteElementString("PlayerInventory", "");
+                writer.WriteStartElement("CrystalsList");
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+            }
         }
     }
 
-    public void LoadSave()
+
+    public void SaveData()
+    {
+        string savePath = Path.Combine(Application.persistentDataPath, "savefile.xml");
+
+        using (XmlWriter writer = XmlWriter.Create(savePath, xml))
+        {
+            writer.WriteStartDocument();
+            writer.WriteStartElement("Data");
+
+            WriteXML(writer, "SceneName", SceneManager.GetActiveScene().name);
+            WriteXML(writer, "PlayerHealth", playerMain.Health.playerActualHealth.ToString());
+            var world = WorldMain.Instance;
+            WriteVector3(writer, "PlayerPosition", world.FindCorrectSpawn(world.CurrentRoomName).transform.GetChild(0).transform.position);
+            WriteXML(writer, "PlayerInventory", playerMain.Inventory.ItemDatabase[0].ToString());
+            WriteCrystalsList(writer);
+
+            writer.WriteEndElement();
+            writer.WriteEndDocument();
+        }
+    }
+
+    public void LoadData()
     {
         XmlDocument saveFile = new XmlDocument();
         if (!System.IO.File.Exists(Path.Combine(Application.persistentDataPath, "savefile.xml"))) return;
@@ -149,14 +190,6 @@ public class SaveSystem : MonoBehaviour
             if (crystalGO != null)
             {
                 crystalReference = crystalGO.GetComponent<Crystal>();
-                if (crystalReference == null)
-                {
-                    Debug.LogWarning($"Le GameObject '{crystalName}' n'a pas de composant CrystalMain.");
-                }
-            }
-            else
-            {
-                Debug.LogWarning($"Le GameObject '{crystalName}' est introuvable dans la scène.");
             }
 
             CrystalManager.ListCrystal newCrystal = new CrystalManager.ListCrystal
@@ -172,5 +205,48 @@ public class SaveSystem : MonoBehaviour
         return loadedList;
     }
 
+    public string GetLastSavedScene()
+    {
+        XmlDocument saveFile = new XmlDocument();
+        saveFile.LoadXml(System.IO.File.ReadAllText(Path.Combine(Application.persistentDataPath, "savefile.xml")));
+
+        string key;
+        string value;
+
+        foreach (XmlNode node in saveFile.ChildNodes[1])
+        {
+            key = node.Name;
+            value = node.InnerText;
+            if (key == "SceneName")
+            {
+                _lastScene = value;
+            }
+        }
+
+        return _lastScene;
+    }
+
+    public void SetPlayerLastPosition()
+    {
+        XmlDocument saveFile = new XmlDocument();
+        saveFile.LoadXml(System.IO.File.ReadAllText(Path.Combine(Application.persistentDataPath, "savefile.xml")));
+
+        string key;
+        string value;
+
+        foreach (XmlNode node in saveFile.ChildNodes[1])
+        {
+            key = node.Name;
+            value = node.InnerText;
+            if (key == "PlayerPosition")
+            {
+                float x = float.Parse(node["x"].InnerText);
+                float y = float.Parse(node["y"].InnerText);
+                float z = float.Parse(node["z"].InnerText);
+                Vector3 loadedPosition = new Vector3(x, y, z);
+                playerMain.transform.position = loadedPosition;
+            }
+        }
+    }
 
 }

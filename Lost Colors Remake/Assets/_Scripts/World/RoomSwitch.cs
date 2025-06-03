@@ -4,6 +4,7 @@ using UnityEngine;
 public class RoomSwitch : MonoBehaviour
 {
     [SerializeField] private RoomSwitcherDATA roomSwitcherData;
+
     private void Start()
     {
         gameObject.name = roomSwitcherData.switcherID;

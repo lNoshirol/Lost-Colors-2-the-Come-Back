@@ -43,7 +43,6 @@ public class PlayerUI : MonoBehaviour
     {
         Fade(0, blackScreen);
         oldActualHealth = PlayerMain.Instance.Health.playerActualHealth;
-
     }
     public void Fade(int value, CanvasGroup group)
     {
@@ -92,7 +91,6 @@ public class PlayerUI : MonoBehaviour
             playerControl.gameObject.SetActive(true);
 
         }
-
     }
 
     public void DashButton(bool enable)

@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: f7740c5318a6a92409c51684a6c1d74f, type: 2}
+    - target: {fileID: 5275205786825405784, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -147
+      objectReference: {fileID: 0}
     - target: {fileID: 5850043566281649089, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: enemyAnimationOverrideBW
       value: 

@@ -61,9 +61,9 @@ public class CrystalManager : MonoBehaviour
 
     public void AddToDict(Crystal crystal, bool isColorized, string whichScene)
     {
-        bool ok = _ListCrystal.Any(item=> item.Crystal == crystal && item.IsColorized==isColorized && item.WhichScene == whichScene);
+        bool _isInDict = _ListCrystal.Any(item=> item.Crystal == crystal && item.IsColorized==isColorized && item.WhichScene == whichScene);
 
-        if (!ok)
+        if (!_isInDict)
         {
             var newListCrystal = new ListCrystal
             {
@@ -78,8 +78,6 @@ public class CrystalManager : MonoBehaviour
                 _ListCrystal.Add(newListCrystal);
             }
         }
-
-
     }
 
     public void Check(Crystal crystal, bool isColorized, string whichScene)

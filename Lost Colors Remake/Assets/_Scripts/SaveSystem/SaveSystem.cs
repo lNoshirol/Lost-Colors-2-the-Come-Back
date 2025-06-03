@@ -16,22 +16,6 @@ public class SaveSystem : MonoBehaviour
         Indent = true,
     };
 
-    public void ToSave()
-    {
-        string savePath = Path.Combine(Application.persistentDataPath, "savefile.xml");
-
-        xmlWriter = XmlWriter.Create(savePath, xml);
-
-        xmlWriter.WriteStartDocument();
-        xmlWriter.WriteStartElement("Data");
-        WriteXML(xmlWriter, "PlayerHealth", playerMain.Health.playerActualHealth.ToString() );
-        WriteVector3(xmlWriter, "PlayerPosition", playerMain.gameObject.transform.position);
-        WriteXML(xmlWriter, "PlayerInventory", playerMain.Inventory.ItemDatabase[0].ToString());
-        WriteCrystalsList(xmlWriter);
-
-
-        xmlWriter.Close();
-    }
 
     private void Start()
     {
@@ -57,7 +41,24 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
-    public void LoadSave()
+    public void SaveData()
+    {
+        string savePath = Path.Combine(Application.persistentDataPath, "savefile.xml");
+
+        xmlWriter = XmlWriter.Create(savePath, xml);
+
+        xmlWriter.WriteStartDocument();
+        xmlWriter.WriteStartElement("Data");
+        WriteXML(xmlWriter, "PlayerHealth", playerMain.Health.playerActualHealth.ToString() );
+        WriteVector3(xmlWriter, "PlayerPosition", playerMain.gameObject.transform.position);
+        WriteXML(xmlWriter, "PlayerInventory", playerMain.Inventory.ItemDatabase[0].ToString());
+        WriteCrystalsList(xmlWriter);
+
+
+        xmlWriter.Close();
+    }
+
+    public void LoadData()
     {
         XmlDocument saveFile = new XmlDocument();
         if (!System.IO.File.Exists(Path.Combine(Application.persistentDataPath, "savefile.xml"))) return;
@@ -77,11 +78,8 @@ public class SaveSystem : MonoBehaviour
                     playerMain.UI.UpdatePlayerHealthUI();
                     break;
                 case "PlayerPosition":
-                    float x = float.Parse(node["x"].InnerText);
-                    float y = float.Parse(node["y"].InnerText);
-                    float z = float.Parse(node["z"].InnerText);
-                    Vector3 loadedPosition = new Vector3(x, y, z);
-                    playerMain.transform.position = loadedPosition;
+                    var world = WorldMain.Instance;
+                    playerMain.transform.position = world.FindCorrectSpawn(world.CurrentRoomName).transform.GetChild(0).transform.position; ;
                     break;
 
                 case "PlayerInventory":
@@ -149,14 +147,6 @@ public class SaveSystem : MonoBehaviour
             if (crystalGO != null)
             {
                 crystalReference = crystalGO.GetComponent<Crystal>();
-                if (crystalReference == null)
-                {
-                    Debug.LogWarning($"Le GameObject '{crystalName}' n'a pas de composant CrystalMain.");
-                }
-            }
-            else
-            {
-                Debug.LogWarning($"Le GameObject '{crystalName}' est introuvable dans la scène.");
             }
 
             CrystalManager.ListCrystal newCrystal = new CrystalManager.ListCrystal
@@ -171,6 +161,4 @@ public class SaveSystem : MonoBehaviour
 
         return loadedList;
     }
-
-
 }

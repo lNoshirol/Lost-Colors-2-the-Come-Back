@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
@@ -6,18 +7,24 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] EnemyMain EnemyMain;
     bool enemyHealthSetup = false;
     public float enemyCurrentHealth;
+    private float maxHealth;
+    private Coroutine healthRecupCoro;
 
     private void SetupHealthCount()
     {
         if (!enemyHealthSetup)
         {
             enemyCurrentHealth = EnemyMain.Stats.maxHp;
+            maxHealth = EnemyMain.Stats.maxHp;
+
             enemyHealthSetup = true;
         }
     }
     public void EnemyLoseHP(float healthLoose)
     {
         SetupHealthCount();
+        if(healthRecupCoro != null)
+        StopCoroutine(healthRecupCoro);
         if (EnemyMain.isColorized)
         {
             return;
@@ -34,6 +41,8 @@ public class EnemyHealth : MonoBehaviour
             enemyCurrentHealth = 0;
             EnemyIsDead();
         }
+        healthRecupCoro = StartCoroutine(HealthRecup(3f, 1.5f));
+        EnemyMain.UI.UpdateEnemyHealthUI();
     }
 
     private void EnemyIsDead()
@@ -43,6 +52,22 @@ public class EnemyHealth : MonoBehaviour
         EnemyMain.ColorSwitch();
         EnemyMain.UI.SwitchHealtBar(false);
     }
+
+    IEnumerator HealthRecup(float firstRecupTime, float recupTimeBetween)
+    {
+        yield return new WaitForSeconds(firstRecupTime);
+        while (enemyCurrentHealth < maxHealth)
+        {
+            enemyCurrentHealth += 1f;
+            if (enemyCurrentHealth > maxHealth)
+            {
+                enemyCurrentHealth = maxHealth;
+            }
+            EnemyMain.UI.UpdateEnemyHealthUI();
+            yield return new WaitForSeconds(recupTimeBetween);
+        }
+    }
+
     // NEW METHOD IN ENEMYARMOR
     //public void ArmorLost()
     //{

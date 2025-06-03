@@ -669,15 +669,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791961219456, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791961219456, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791961219456, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791961219456, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -686,11 +686,11 @@ PrefabInstance:
     - target: {fileID: 8170153791961219459, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 52e899e7b4712da488fc12fbcd171628, type: 3}
+      objectReference: {fileID: -8135234125620388590, guid: ed3e6820b63f73043926b3060af1a52f, type: 3}
     - target: {fileID: 8170153792821263252, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 81fdd743dad4a2d459641711357dc52d, type: 3}
+      objectReference: {fileID: 5354010240508871109, guid: c5c832164f5cdee4c849c42a8ae656e8, type: 3}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -858,7 +858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5397771579034108698, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 5.125
       objectReference: {fileID: 0}
     - target: {fileID: 6063194593018805751, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: time

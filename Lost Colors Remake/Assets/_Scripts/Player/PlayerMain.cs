@@ -1,9 +1,8 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class PlayerMain : MonoBehaviour
+public class PlayerMain : SingletonCreatorPersistant<PlayerMain>
 {
-    public static PlayerMain Instance { get; private set; }
 
     public PlayerMove Move { get; private set; }
     public PlayerInventory Inventory { get; private set; }
@@ -36,19 +35,11 @@ public class PlayerMain : MonoBehaviour
 
     public bool isColorized;
 
-    private void Awake()
+
+
+
+    private void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
         Move = GetComponent<PlayerMove>();
         Inventory = GetComponent<PlayerInventory>();
         Health = GetComponent<PlayerHealth>();
@@ -56,14 +47,11 @@ public class PlayerMain : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Attack = GetComponent<PlayerAttack>();
         Collider2D = GetComponent<Collider2D>();
-    }
-
-
-    private void Start()
-    {
         if (Inventory.CheckBrushInDatabase()){
             ColorSwitch(true);
         }
+
+        UI.UpdatePlayerHealthUI();
     }
 
     private void Update()

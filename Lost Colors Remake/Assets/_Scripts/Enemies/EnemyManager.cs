@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager : SingletonCreatorPersistant<EnemyManager>
 {
     public List<GameObject> CurrentEnemyList = new();
     public Dictionary<GameObject, bool> WorldEnemyDic = new();
@@ -11,18 +11,9 @@ public class EnemyManager : MonoBehaviour
     public List<GameObject> GlyphPoolList = new();
     
 
-
-    public static EnemyManager Instance { get; private set; }
-    private void Awake()
+    private void Start()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-
-        foreach(GameObject glyph in glyphPrefabList)
+        foreach (GameObject glyph in glyphPrefabList)
         {
             GameObject parent = new(glyph.name + " List");
             parent.transform.parent = this.transform;

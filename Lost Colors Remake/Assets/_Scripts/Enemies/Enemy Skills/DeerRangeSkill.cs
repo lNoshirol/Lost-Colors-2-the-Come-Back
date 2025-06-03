@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DeerRangeSkill : SkillParentClass
@@ -22,8 +23,8 @@ public class DeerRangeSkill : SkillParentClass
         foreach(Vector2 pos in VFXListPos)
         {
             await Task.Delay(WaitTimeBetween * 1000);
-            Debug.Log(pos);
-            Gizmos.DrawCube(new Vector3(pos.x, pos.y, 0), new Vector3(1, 1, 1));
+            Debug.Log("VFX at " + pos);
+            //Gizmos.DrawCube(new Vector3(pos.x, pos.y, 0), new Vector3(1, 1, 1));
         }
     }
 

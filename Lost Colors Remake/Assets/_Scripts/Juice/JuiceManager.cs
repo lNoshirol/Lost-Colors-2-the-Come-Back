@@ -1,22 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-public class JuiceManager : MonoBehaviour
+public class JuiceManager : SingletonCreatorPersistant<JuiceManager>
 {
-    public static JuiceManager Instance;
 
     bool waiting;
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-    }
-
-    
     // TEMP
     public void WhiteSprite()
     {

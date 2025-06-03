@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc765c8fde128849bcef91b78d626e8, type: 3}
   m_Name: ToileData
   m_EditorClassIdentifier: 
-  toileTime: 60
+  toileTime: 3
   lineDamage: 1.5
   shapeDamage: 1
-  paintAmount: 100
+  paintAmount: 30
   slowMotionScale: 0.3

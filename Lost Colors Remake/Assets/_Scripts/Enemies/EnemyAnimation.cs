@@ -15,11 +15,11 @@ public class EnemyAnimation : MonoBehaviour
     {
         enemyAnimator.runtimeAnimatorController = enemyAnimationOverrideBW;
     }
-    // Get the direction for Patrolling
+    // Get the direction for Patrolling & Chase
     public void GetDirectionXAnimAgent()
     {
         dirX = enemyMain.agent.velocity.x;
-        if (dirX != 0)
+        if (dirX != 0 && enemyMain.canLookAt)
         {
             enemyAnimator.SetBool("IsMoving", true);
             enemyAnimator.SetFloat("X", dirX);
@@ -30,18 +30,13 @@ public class EnemyAnimation : MonoBehaviour
         }
     }
 
-    // Get the direction for Chasing and Attack
+    // Get the direction for Atack
     public void GetDirectionXAnimPlayer()
     {
         dirX = enemyMain.player.position.x - enemyMain.transform.position.x;
-        if (dirX != 0 && !enemyMain.isAttacking)
+        if (dirX != 0 && enemyMain.canLookAt)
         {
-            enemyAnimator.SetBool("IsMoving", true);
             enemyAnimator.SetFloat("X", dirX);
-        }
-        else if(!enemyMain.isAttacking)
-        {
-            enemyAnimator.SetBool("IsMoving", false);
         }
     }
 
@@ -50,14 +45,8 @@ public class EnemyAnimation : MonoBehaviour
         enemyAnimator.runtimeAnimatorController = enemyAnimationOverrideColor;
     }
 
-    // Work with isRangeAttacking Or isCloseAttacking
-    public void IsAttackingAnim(string AttackType, bool yesOrNo)
+    public void SetAnimTransitionParameter(string AttackType, bool yesOrNo)
     {
         enemyAnimator.SetBool(AttackType, yesOrNo);
-    }
-
-    private void Update()
-    {
-        Debug.Log(enemyAnimator.GetCurrentAnimatorStateInfo(0));
     }
 }

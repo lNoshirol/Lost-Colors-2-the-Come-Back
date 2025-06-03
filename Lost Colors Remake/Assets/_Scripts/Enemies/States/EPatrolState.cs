@@ -17,7 +17,8 @@ public class EPatrolState : EnemiesState
 
     public override void OnEnter()
     {
-        
+
+        EnemiesMain.Animation.SetAnimTransitionParameter("IsMoving", true);
         SearchWalkPoint();
     }
 

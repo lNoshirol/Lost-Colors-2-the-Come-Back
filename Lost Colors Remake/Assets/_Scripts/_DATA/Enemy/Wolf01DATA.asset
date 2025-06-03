@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 1203507347480276920, guid: 769568728d598fc4eab594fde733fc15, type: 3}
   enemyMaxArmor: 1
   enemySightRange: 10
-  enemyAttackRange: 5
+  enemyAttackRange: 3
   enemyIdleWaitTime: 0.5
   patrolSpeedMultiplier: 1
   chaseSpeedMultiplier: 1.5

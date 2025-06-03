@@ -1,22 +1,49 @@
 using DG.Tweening;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class PlayerUI : MonoBehaviour
 {
-    [SerializeField] private Image healthbarSprite;
     [SerializeField] private CanvasGroup blackScreen;
     [SerializeField] private CanvasGroup playerControl;
     [SerializeField] private Button dashButton;
     [SerializeField] private Button toileButton;
     [SerializeField] private float fadeSpeed;
+    [SerializeField] private Sprite fullHeart;
+    [SerializeField] private Sprite halfHeart;
+    [SerializeField] private Sprite emptyHeart;
+
+    private float oldActualHealth;
+    [SerializeField] private List<Image> heartList = new List<Image>();
     public void UpdatePlayerHealthUI()
     {
-        healthbarSprite.fillAmount = (float)PlayerMain.Instance.Health.playerActualHealth / PlayerMain.Instance.Health.playerBaseHealth;
+        float currentHealth = PlayerMain.Instance.Health.playerActualHealth;
+
+        for (int i = 0; i < heartList.Count; i++)
+        {
+            float heartHealth = currentHealth - i;
+
+            if (heartHealth >= 1f)
+            {
+                heartList[i].sprite = fullHeart;
+            }
+            else if (heartHealth >= 0.5f)
+            {
+                heartList[i].sprite = halfHeart;
+            }
+            else
+            {
+                heartList[i].sprite = emptyHeart;
+            }
+        }
     }
     private void Start()
     {
         Fade(0, blackScreen);
+        oldActualHealth = PlayerMain.Instance.Health.playerActualHealth;
+
     }
     public void Fade(int value, CanvasGroup group)
     {

@@ -19,12 +19,12 @@ MonoBehaviour:
   - PropName: sprt_enviro_tree_orange_04
     BW: {fileID: 21300000, guid: efc22586920e14d4da409c14c354badf, type: 3}
     Colored: {fileID: 21300000, guid: 219d188b396d7b548b41ac98211f7be7, type: 3}
-  - PropName: sprt_enviro_tree_09
-    BW: {fileID: 21300000, guid: 54f5df2c3a0c9a94cbbf5f2949b8395c, type: 3}
-    Colored: {fileID: 21300000, guid: 4d9d228c3ece30047aa753b702acd0f0, type: 3}
   - PropName: sprt_enviro_tree_10
     BW: {fileID: -2778182879858817317, guid: 7ddc9c3843281fb409de35b8db24d112, type: 3}
     Colored: {fileID: 21300000, guid: 2a7751c30219be54bad6c1e1a615f04e, type: 3}
+  - PropName: sprt_enviro_tree_09
+    BW: {fileID: 21300000, guid: 54f5df2c3a0c9a94cbbf5f2949b8395c, type: 3}
+    Colored: {fileID: -343186416968532926, guid: b01f7ee726635bb46a19ba4737247957, type: 3}
   - PropName: sprt_enviro_tree_11
     BW: {fileID: 21300000, guid: dcb83592e1b02044a9bfb86d20a04aea, type: 3}
     Colored: {fileID: 21300000, guid: 672d5d5899a377144a53eb55e0ce430f, type: 3}

@@ -17,6 +17,8 @@ public class EnemyMain : MonoBehaviour
     public LayerMask whatIsPlayer;
 
     public bool isAttacking = false;
+    public bool alreadyAttack;
+    public bool canLookAt = true;
 
     [Header("ShaderNeeds")]
     public SpriteRenderer spriteRenderer;
@@ -148,14 +150,14 @@ public class EnemyMain : MonoBehaviour
         return playerInAttackRange;
     }
 
-    //private void OnDrawGizmosSelected()
-    //{
-    //    Gizmos.color = Color.red;
-    //    if (transform.position == null && Stats.attackRange == null) return;
-    //    Gizmos.DrawWireSphere(transform.position, Stats.attackRange);
-    //    Gizmos.color = Color.green;
-    //    Gizmos.DrawWireSphere(transform.position, Stats.sightRange);
-    //}
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        if (transform.position == null && Stats.attackRange == null) return;
+        Gizmos.DrawWireSphere(transform.position, Stats.attackRange);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, Stats.sightRange);
+    }
 
     [System.Serializable]
     public class EnemyStats

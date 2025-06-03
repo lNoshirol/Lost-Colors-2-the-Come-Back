@@ -10,13 +10,16 @@ public class StickAppearrAtClickLoc : MonoBehaviour
     [Range(0, 100), OnValueChanged("ChangeCenterPosWidth")]
     public int percentageCenterPos;
 
-    [Header("Box")]
+    [Header("Box and rect")]
     [SerializeField] GameObject _stick;
     public Bounds joystickMoveArea;
     public Bounds clickArea;
 
     public Vector3 moveAreaBasePos;
     public Vector3 clickAreaBasePos;
+
+    public RectTransform clickAreaRect;
+    public RectTransform moveAreaRect;
 
     [Header("Debug")]
     public GameObject moveAreaSquare;
@@ -67,6 +70,12 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log($"Rect {moveAreaRect.rect} {moveAreaRect.rect.size} {moveAreaRect.rect.center}");
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Debug.Log($"Click in clickArea {RectTransformUtility.RectangleContainsScreenPoint(clickAreaRect, Input.mousePosition)}, click in move area {RectTransformUtility.RectangleContainsScreenPoint(moveAreaRect, Input.mousePosition)}, position {Input.mousePosition}, closest rect pos {Joysticktility.GetClosestPointOnRect(moveAreaRect, Input.mousePosition, Camera.main)}");
+        }
 
         if (Input.touchCount > 0)
         {
@@ -74,7 +83,7 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
             for (int i = 0; i < Input.touchCount; i++)
             {
-                if (Input.touches[i].phase == TouchPhase.Began && JoystickLucas.instance.stickTouchFingerId == -1 && clickArea.Contains(Camera.main.ScreenToWorldPoint(Input.touches[i].position)))
+                if (Input.touches[i].phase == TouchPhase.Began && JoystickLucas.instance.stickTouchFingerId == -1 && RectTransformUtility.RectangleContainsScreenPoint(clickAreaRect, Input.touches[i].position))
                 {
                     OnTouchStart(Input.touches[i]);
                     JoystickLucas.instance.stickTouch = Input.touches[i];
@@ -97,6 +106,36 @@ public class StickAppearrAtClickLoc : MonoBehaviour
                     PlayerMain.Instance.Move.CancelMoveInput();
                     JoystickLucas.instance.stickTouchFingerId = -1;
                 }
+
+                #region Old Version
+
+                /*if (Input.touches[i].phase == TouchPhase.Began && JoystickLucas.instance.stickTouchFingerId == -1 && clickArea.Contains(Camera.main.ScreenToWorldPoint(Input.touches[i].position)))
+                {
+                    OnTouchStart(Input.touches[i]);
+                    JoystickLucas.instance.stickTouch = Input.touches[i];
+                    JoystickLucas.instance.stickTouchFingerId = Input.touches[i].fingerId;
+                }
+                else if ((Input.touches[i].phase == TouchPhase.Moved || Input.touches[i].phase == TouchPhase.Stationary) && Input.touches[i].fingerId == JoystickLucas.instance.stickTouchFingerId)
+                {
+                    JoystickLucas.instance.MoveStick(Input.touches[i]);
+                }
+
+                if (Input.touches[i].phase == TouchPhase.Ended && Input.touches[i].fingerId == JoystickLucas.instance.stickTouchFingerId)
+                {
+                    JoystickLucas.instance.stickTouchFingerId = -1;
+                    JoystickLucas.instance.Resetos();
+                }
+
+                if (JoystickLucas.instance.stickTouchFingerId == -1)
+                {
+                    OnTouchEnd();
+                    PlayerMain.Instance.Move.CancelMoveInput();
+                    JoystickLucas.instance.stickTouchFingerId = -1;
+                }*/
+
+                #endregion
+
+
             }
         }
         else
@@ -114,19 +153,19 @@ public class StickAppearrAtClickLoc : MonoBehaviour
         Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
 
 
-        if (!clickArea.Contains(touchPosition))
+        if (!RectTransformUtility.RectangleContainsScreenPoint(moveAreaRect, touch.position))
         {
             JoystickLucas.instance.canMove = false;
             return;
         }
 
-        JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", true);
+        //JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", true);
 
         JoystickLucas.instance.canMove = true;
 
         _stick.SetActive(true);
 
-        if (joystickMoveArea.Contains(touchPosition))
+        if (RectTransformUtility.RectangleContainsScreenPoint(clickAreaRect, touch.position))
         {
             _stick.transform.position = touchPosition;
             //Debug.Log("Position Changed inside bounds");
@@ -142,7 +181,7 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     public void OnTouchEnd()
     {
-        JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", false);
+        //JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", false);
     }
 
     private void forceSetActive(bool active)
@@ -158,6 +197,9 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(clickArea.center, clickArea.size);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(moveAreaRect.rect.center, moveAreaRect.rect.size);
     }
 
     #region C'est pas propre ? M'en branle ça sert due dans l'editeur

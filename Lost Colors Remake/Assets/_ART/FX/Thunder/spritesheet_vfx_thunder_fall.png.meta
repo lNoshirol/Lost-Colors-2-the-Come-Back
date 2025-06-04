@@ -1,0 +1,369 @@
+fileFormatVersion: 2
+guid: 2fffa3a22f79e3b4e85a27e44fd55880
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1305025001409620555
+    second: spritesheet_vfx_thunder_fall_0
+  - first:
+      213: 5370683279649968832
+    second: spritesheet_vfx_thunder_fall_1
+  - first:
+      213: -3675418739055833836
+    second: spritesheet_vfx_thunder_fall_2
+  - first:
+      213: 1702354088661599828
+    second: spritesheet_vfx_thunder_fall_3
+  - first:
+      213: 7066822705136648407
+    second: spritesheet_vfx_thunder_fall_4
+  - first:
+      213: -6325826596599551951
+    second: spritesheet_vfx_thunder_fall_5
+  - first:
+      213: -4443732207724051602
+    second: spritesheet_vfx_thunder_fall_6
+  - first:
+      213: 673757037778174442
+    second: spritesheet_vfx_thunder_fall_7
+  - first:
+      213: 1267827141917942363
+    second: spritesheet_vfx_thunder_fall_8
+  - first:
+      213: -1281106978059926129
+    second: spritesheet_vfx_thunder_fall_9
+  - first:
+      213: -4270659682849795964
+    second: spritesheet_vfx_thunder_fall_10
+  - first:
+      213: -547107624260082561
+    second: spritesheet_vfx_thunder_fall_11
+  - first:
+      213: -4895486490688909921
+    second: spritesheet_vfx_thunder_fall_12
+  - first:
+      213: -5946179496323036150
+    second: spritesheet_vfx_thunder_fall_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_vfx_thunder_fall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 42
+        width: 96
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b5d9ffecae93ede0800000000000000
+      internalID: -1305025001409620555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_vfx_thunder_fall_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 42
+        width: 96
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c29aacdcff788a40800000000000000
+      internalID: 5370683279649968832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_vfx_thunder_fall_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 42
+        width: 96
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d43c9412a4efcc0800000000000000
+      internalID: -3675418739055833836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_vfx_thunder_fall_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 42
+        width: 96
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 456cb90360aff9710800000000000000
+      internalID: 1702354088661599828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_vfx_thunder_fall_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 42
+        width: 96
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d0c5560fc5621260800000000000000
+      internalID: 7066822705136648407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_vfx_thunder_fall_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 42
+        width: 96
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13827fed9362638a0800000000000000
+      internalID: -6325826596599551951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_vfx_thunder_fall_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 42
+        width: 96
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6345a9d911b452c0800000000000000
+      internalID: -4443732207724051602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_vfx_thunder_fall_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 42
+        width: 96
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae100b5c47aa95900800000000000000
+      internalID: 673757037778174442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: de1f4805f3330c44684e5bfcd9d9ff69
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritesheet_vfx_thunder_fall_0: -1305025001409620555
+      spritesheet_vfx_thunder_fall_1: 5370683279649968832
+      spritesheet_vfx_thunder_fall_2: -3675418739055833836
+      spritesheet_vfx_thunder_fall_3: 1702354088661599828
+      spritesheet_vfx_thunder_fall_4: 7066822705136648407
+      spritesheet_vfx_thunder_fall_5: -6325826596599551951
+      spritesheet_vfx_thunder_fall_6: -4443732207724051602
+      spritesheet_vfx_thunder_fall_7: 673757037778174442
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

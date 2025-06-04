@@ -4,29 +4,39 @@ using UnityEngine;
 
 public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
 {
+    [Header("Enemies List")]
     public List<GameObject> CurrentEnemyList = new();
     public Dictionary<GameObject, bool> WorldEnemyDic = new();
+
+    [Header("Glyph Pool")]
     [SerializeField] private List<GameObject> glyphPrefabList = new List<GameObject>();
-    public Dictionary<string, Pool> glyphPrefabPool = new();
-    public List<GameObject> GlyphPoolList = new();
+    public Dictionary<string, Pool> glyphPool = new();
+
+    [Header("VFX Pool")]
+    [SerializeField] private List<GameObject> vfxPrefabList = new List<GameObject>();
+    public Dictionary<string, Pool> vfxPool = new();
+
 
     protected override void Awake()
     {
         base.Awake();
-        CreateGlyphPool();
+        CreateEnemyPool(glyphPrefabList, glyphPool);
+        CreateEnemyPool(vfxPrefabList, vfxPool);
+
     }
 
-    private void CreateGlyphPool()
+    private void CreateEnemyPool(List<GameObject> prefabList, Dictionary<string, Pool> PrefabPool)
     {
-        foreach (GameObject glyph in glyphPrefabList)
+        foreach (GameObject glyph in prefabList)
         {
             GameObject parent = new(glyph.name + " List");
             parent.transform.parent = this.transform;
             Pool newPool = new(glyph, 10, parent.transform);
-            glyphPrefabPool.Add(glyph.name, newPool);
-            GlyphPoolList.Add(parent);
+            PrefabPool.Add(glyph.name, newPool);
         }
     }
+    
+
     public void AddEnemiesToListAndDic(GameObject enemy, bool isColorized)
     {
         AddEnemiesToWorldDic(enemy);
@@ -50,10 +60,6 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
         CurrentEnemyList.Add(currentEnemies);
     }
 
-    public void UpdateEnemyWorldDic()
-    {
-
-    }
 
     public void ArmorLost(string glyphName)
     {
@@ -109,5 +115,33 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
             }
         }
         return closerEnemy;
+    }
+
+    public GameObject SearchInPool(string searchName, Dictionary<string, Pool> pool)
+    {
+        foreach (KeyValuePair<string, Pool> item in pool)
+        {
+            if (item.Key.Contains(searchName))
+            {
+                return item.Value.GetObject();
+            }
+        }
+        return null;
+    }
+
+    public void RePackInPool(GameObject item, Dictionary<string, Pool> pool)
+    {
+        string cleanName = item.name.Replace("(Clone)", "");
+
+        foreach (KeyValuePair<string, Pool> entry in pool)
+        {
+            if (entry.Key.Contains(cleanName))
+            {
+                entry.Value.Stock(item);
+                return;
+            }
+        }
+
+        Debug.LogWarning($"RePackInPool: Aucun pool trouvé pour l'objet {item.name}");
     }
 }

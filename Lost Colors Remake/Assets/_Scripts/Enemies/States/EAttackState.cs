@@ -26,6 +26,7 @@ public class EAttackState : EnemiesState
             EnemiesMain.agent.enabled = false;
             EnemiesMain.canLookAt = false;
             int randomSpell = Random.Range(1, 2);
+            Debug.Log("J'attaque");
             if (randomSpell == 0) 
             { 
                 CastCloseSkill();
@@ -58,7 +59,7 @@ public class EAttackState : EnemiesState
 
     void SkillSetupRange()
     {
-        context = new(null, null, EnemiesMain.player.position, 4, 10);
+        context = new(null, null, EnemiesMain.player.position, 3, 3);
         rangeSkill = new DeerRangeSkill();
     }
 

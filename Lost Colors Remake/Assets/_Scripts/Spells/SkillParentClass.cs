@@ -97,7 +97,7 @@ public abstract class SkillParentClass
     protected List<Vector2> Vector2AroundPlayer(Vector2 playerPos, float maxDistanceWithPlayer, float numberOfTime)
     {
         List<Vector2> vector2List = new List<Vector2>();
-        for (int i = 0; i <= numberOfTime; i++)
+        for (int i = 0; i < numberOfTime; i++)
         {
             vector2List.Add(new Vector2(playerPos.x + Random.Range(-maxDistanceWithPlayer, maxDistanceWithPlayer), playerPos.y + Random.Range(-maxDistanceWithPlayer, maxDistanceWithPlayer)));
         }

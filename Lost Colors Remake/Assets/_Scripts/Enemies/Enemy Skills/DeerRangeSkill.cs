@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DeerRangeSkill : SkillParentClass
@@ -14,16 +15,16 @@ public class DeerRangeSkill : SkillParentClass
         {
             VFXListPos.Add(pos);
         };
-        WaitForEachFX(1);
+        WaitForEachFX(0.5f);
     }
 
-    async void WaitForEachFX(int WaitTimeBetween)
+    async void WaitForEachFX(float WaitTimeBetween)
     {
         foreach(Vector2 pos in VFXListPos)
         {
-            await Task.Delay(WaitTimeBetween * 1000);
-            Debug.Log(pos);
-            Gizmos.DrawCube(new Vector3(pos.x, pos.y, 0), new Vector3(1, 1, 1));
+            await Task.Delay((int)(WaitTimeBetween * 1000));
+            GameObject newVFX = EnemyManager.Instance.SearchInPool("Thunder", EnemyManager.Instance.vfxPool);
+            newVFX.transform.position = pos;
         }
     }
 

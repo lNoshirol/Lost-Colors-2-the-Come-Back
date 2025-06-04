@@ -1,9 +1,8 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class PlayerMain : MonoBehaviour
+public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
 {
-    public static PlayerMain Instance { get; private set; }
 
     public PlayerMove Move { get; private set; }
     public PlayerInventory Inventory { get; private set; }
@@ -12,6 +11,8 @@ public class PlayerMain : MonoBehaviour
     public PlayerUI UI { get; private set; }
 
     public PlayerAttack Attack { get; private set; }
+
+    public PlayerCollision Collision { get; private set; }
 
     public Rigidbody2D Rigidbody2D { get; private set; }
     public Collider2D Collider2D { get; private set; }
@@ -25,6 +26,8 @@ public class PlayerMain : MonoBehaviour
     public Sprite playerSpriteUpColor;
     public Sprite playerSpriteDownColor;
 
+    public Sprite playerSpriteHitFrame;
+
     float horizontal;
     float vertical;
 
@@ -36,19 +39,11 @@ public class PlayerMain : MonoBehaviour
 
     public bool isColorized;
 
-    private void Awake()
+
+
+
+    private void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
         Move = GetComponent<PlayerMove>();
         Inventory = GetComponent<PlayerInventory>();
         Health = GetComponent<PlayerHealth>();
@@ -56,14 +51,12 @@ public class PlayerMain : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Attack = GetComponent<PlayerAttack>();
         Collider2D = GetComponent<Collider2D>();
-    }
-
-
-    private void Start()
-    {
+        Collision = GetComponent<PlayerCollision>();
         if (Inventory.CheckBrushInDatabase()){
             ColorSwitch(true);
         }
+
+        UI.UpdatePlayerHealthUI();
     }
 
     private void Update()
@@ -85,7 +78,7 @@ public class PlayerMain : MonoBehaviour
         }
     }
 
-    public void GetDirectionAnim()
+    private void GetDirectionAnim()
     {
         horizontal = Move._moveInput.x;
         vertical = Move._moveInput.y;
@@ -107,5 +100,24 @@ public class PlayerMain : MonoBehaviour
     {
         anim.SetBool("IsDashing", isDashing);
     }
+
+    public void HitFrameSpriteSwitch(bool yesOrNo)
+    {
+        Sprite oldSprite = playerSprite.sprite;
+        anim.enabled = !yesOrNo;
+
+        if (yesOrNo)
+        {
+            playerSprite.sprite = playerSpriteHitFrame;
+            if (!Collision.collisionLocationAtPlayerRight)
+                playerSprite.flipX = true;
+        }
+        else
+        {
+            playerSprite.sprite = oldSprite;
+            playerSprite.flipX = false;
+        }
+    }
+
 }
 

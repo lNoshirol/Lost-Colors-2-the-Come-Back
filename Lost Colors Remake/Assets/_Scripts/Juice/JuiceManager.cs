@@ -1,22 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-public class JuiceManager : MonoBehaviour
+public class JuiceManager : SingletonCreatorPersistent<JuiceManager>
 {
-    public static JuiceManager Instance;
 
     bool waiting;
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-    }
-
-    
     // TEMP
     public void WhiteSprite()
     {
@@ -34,6 +22,7 @@ public class JuiceManager : MonoBehaviour
     {
         if (waiting) return;
         Time.timeScale = 0f;
+        PlayerMain.Instance.HitFrameSpriteSwitch(true);
         StartCoroutine(Wait(stopDuration));
 
     }
@@ -42,6 +31,7 @@ public class JuiceManager : MonoBehaviour
     {
         waiting = true;
         yield return new WaitForSecondsRealtime(waitDuration);
+        PlayerMain.Instance.HitFrameSpriteSwitch(false);
         Time.timeScale = 1f;
         waiting = false;
     }

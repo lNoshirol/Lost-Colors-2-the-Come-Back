@@ -9,11 +9,6 @@ public class PlayerHealth : MonoBehaviour
 
     private bool isInvicible;
     
-    private void Start()
-    {
-        PlayerMain.Instance.UI.UpdatePlayerHealthUI();
-    }
-
     //public void PlayerHealthChange(int healthChangeAmount)
     //{
     //    playerActualHealth -= healthChangeAmount;

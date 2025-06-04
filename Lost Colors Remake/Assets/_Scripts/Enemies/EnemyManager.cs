@@ -2,35 +2,40 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
 {
+    [Header("Enemies List")]
     public List<GameObject> CurrentEnemyList = new();
     public Dictionary<GameObject, bool> WorldEnemyDic = new();
+
+    [Header("Glyph Pool")]
     [SerializeField] private List<GameObject> glyphPrefabList = new List<GameObject>();
-    public Dictionary<string, Pool> glyphPrefabPool = new();
-    public List<GameObject> GlyphPoolList = new();
-    
+    public Dictionary<string, Pool> glyphPool = new();
+
+    [Header("VFX Pool")]
+    [SerializeField] private List<GameObject> vfxPrefabList = new List<GameObject>();
+    public Dictionary<string, Pool> vfxPool = new();
 
 
-    public static EnemyManager Instance { get; private set; }
-    private void Awake()
+    protected override void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
+        base.Awake();
+        CreateEnemyPool(glyphPrefabList, glyphPool);
+        CreateEnemyPool(vfxPrefabList, vfxPool);
 
-        foreach(GameObject glyph in glyphPrefabList)
+    }
+
+    private void CreateEnemyPool(List<GameObject> prefabList, Dictionary<string, Pool> PrefabPool)
+    {
+        foreach (GameObject glyph in prefabList)
         {
             GameObject parent = new(glyph.name + " List");
             parent.transform.parent = this.transform;
             Pool newPool = new(glyph, 10, parent.transform);
-            glyphPrefabPool.Add(glyph.name, newPool);
-            GlyphPoolList.Add(parent);
+            PrefabPool.Add(glyph.name, newPool);
         }
     }
+    
 
     public void AddEnemiesToListAndDic(GameObject enemy, bool isColorized)
     {
@@ -55,10 +60,6 @@ public class EnemyManager : MonoBehaviour
         CurrentEnemyList.Add(currentEnemies);
     }
 
-    public void UpdateEnemyWorldDic()
-    {
-
-    }
 
     public void ArmorLost(string glyphName)
     {
@@ -114,5 +115,33 @@ public class EnemyManager : MonoBehaviour
             }
         }
         return closerEnemy;
+    }
+
+    public GameObject SearchInPool(string searchName, Dictionary<string, Pool> pool)
+    {
+        foreach (KeyValuePair<string, Pool> item in pool)
+        {
+            if (item.Key.Contains(searchName))
+            {
+                return item.Value.GetObject();
+            }
+        }
+        return null;
+    }
+
+    public void RePackInPool(GameObject item, Dictionary<string, Pool> pool)
+    {
+        string cleanName = item.name.Replace("(Clone)", "");
+
+        foreach (KeyValuePair<string, Pool> entry in pool)
+        {
+            if (entry.Key.Contains(cleanName))
+            {
+                entry.Value.Stock(item);
+                return;
+            }
+        }
+
+        Debug.LogWarning($"RePackInPool: Aucun pool trouvé pour l'objet {item.name}");
     }
 }

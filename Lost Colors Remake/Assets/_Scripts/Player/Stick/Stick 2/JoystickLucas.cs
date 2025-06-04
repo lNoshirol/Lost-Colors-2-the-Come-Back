@@ -82,10 +82,7 @@ public class JoystickLucas : MonoBehaviour
 
     public void MovePlayer()
     {
-
+        //a garder au cas où
         //PlayerMain.Instance.Move.SetMoveInput(_direction);
-        _stickAppearrAtClickLoc.clickArea.center = Player.position + _stickAppearrAtClickLoc.clickAreaBasePos;
-        _stickAppearrAtClickLoc.joystickMoveArea.center = Player.position + _stickAppearrAtClickLoc.moveAreaBasePos;
-
     }
 }

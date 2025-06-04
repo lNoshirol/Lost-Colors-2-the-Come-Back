@@ -12,6 +12,8 @@ public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
 
     public PlayerAttack Attack { get; private set; }
 
+    public PlayerCollision Collision { get; private set; }
+
     public Rigidbody2D Rigidbody2D { get; private set; }
     public Collider2D Collider2D { get; private set; }
     [field: SerializeField] public GameObject ProjectileSocket { get; private set; }
@@ -23,6 +25,8 @@ public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
     public Sprite playerSpriteLeftColor;
     public Sprite playerSpriteUpColor;
     public Sprite playerSpriteDownColor;
+
+    public Sprite playerSpriteHitFrame;
 
     float horizontal;
     float vertical;
@@ -47,6 +51,7 @@ public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Attack = GetComponent<PlayerAttack>();
         Collider2D = GetComponent<Collider2D>();
+        Collision = GetComponent<PlayerCollision>();
         if (Inventory.CheckBrushInDatabase()){
             ColorSwitch(true);
         }
@@ -73,7 +78,7 @@ public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
         }
     }
 
-    public void GetDirectionAnim()
+    private void GetDirectionAnim()
     {
         horizontal = Move._moveInput.x;
         vertical = Move._moveInput.y;
@@ -95,5 +100,24 @@ public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
     {
         anim.SetBool("IsDashing", isDashing);
     }
+
+    public void HitFrameSpriteSwitch(bool yesOrNo)
+    {
+        Sprite oldSprite = playerSprite.sprite;
+        anim.enabled = !yesOrNo;
+
+        if (yesOrNo)
+        {
+            playerSprite.sprite = playerSpriteHitFrame;
+            if (!Collision.collisionLocationAtPlayerRight)
+                playerSprite.flipX = true;
+        }
+        else
+        {
+            playerSprite.sprite = oldSprite;
+            playerSprite.flipX = false;
+        }
+    }
+
 }
 

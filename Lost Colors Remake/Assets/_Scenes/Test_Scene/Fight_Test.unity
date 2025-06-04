@@ -33870,6 +33870,10 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 5.625
       objectReference: {fileID: 0}
+    - target: {fileID: 3759690937926007033, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
+      propertyPath: playerSpriteHitFrame
+      value: 
+      objectReference: {fileID: 7667166989105497379, guid: 4f4cb33ad87e41b42b2b24179abb6dd7, type: 3}
     - target: {fileID: 5540059816647526382, guid: f8c6e4df0f06bb043b5a946866a808aa, type: 3}
       propertyPath: m_Sprite
       value: 

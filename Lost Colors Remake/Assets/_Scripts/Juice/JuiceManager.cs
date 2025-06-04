@@ -22,6 +22,7 @@ public class JuiceManager : SingletonCreatorPersistent<JuiceManager>
     {
         if (waiting) return;
         Time.timeScale = 0f;
+        PlayerMain.Instance.HitFrameSpriteSwitch(true);
         StartCoroutine(Wait(stopDuration));
 
     }
@@ -30,6 +31,7 @@ public class JuiceManager : SingletonCreatorPersistent<JuiceManager>
     {
         waiting = true;
         yield return new WaitForSecondsRealtime(waitDuration);
+        PlayerMain.Instance.HitFrameSpriteSwitch(false);
         Time.timeScale = 1f;
         waiting = false;
     }

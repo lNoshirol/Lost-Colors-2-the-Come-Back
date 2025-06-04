@@ -602,7 +602,7 @@ PrefabInstance:
       objectReference: {fileID: -1901725852595451577, guid: c2b21fc8c5558c748b3fbced0029a8d4, type: 3}
     - target: {fileID: 5303053309062978632, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6155382798469952730, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_Sprite
@@ -616,6 +616,10 @@ PrefabInstance:
       propertyPath: toileInfo
       value: 
       objectReference: {fileID: 11400000, guid: 78fd53d86cd59364492064ca5707b82b, type: 2}
+    - target: {fileID: 6947117342389236955, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: playerSpriteHitFrame
+      value: 
+      objectReference: {fileID: 7667166989105497379, guid: 4f4cb33ad87e41b42b2b24179abb6dd7, type: 3}
     - target: {fileID: 7144547678544492511, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_IsActive
       value: 0

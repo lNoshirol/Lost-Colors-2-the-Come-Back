@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading.Tasks;
 
-public class ProjectileManager : MonoBehaviour
+public class ProjectileManager : AsyncSingletonPersistent<ProjectileManager>
 {
     public List<ObjectAmount> ProjectileList = new();
 
@@ -9,39 +10,14 @@ public class ProjectileManager : MonoBehaviour
 
     public Dictionary<string, GenericPool<Projectile>> V2 = new();
     
-    // Singleton
-    #region Singleton
-    private static ProjectileManager _instance;
-
-    public static ProjectileManager Instance
+    protected override async Task OnInitializeAsync()
     {
-        get
-        {
-            if (_instance == null)
-            {
-                GameObject go = new GameObject("Projectile Manager");
-                _instance = go.AddComponent<ProjectileManager>();
-                Debug.Log("<color=#8b59f0>Projectile Manager</color> instance <color=#58ed7d>created</color>");
-            }
-            return _instance;
-        }
+        await Bootstrap.Instance.WaitUntilInitializedAsync();
+        ProjectilePoolCreate();
     }
 
-    private void Awake()
-    {
-        if (_instance != null)
-        {
-            Destroy(this.gameObject);
-            Debug.Log("<color=#8b59f0>Projectile Manager</color> instance <color=#eb624d>destroyed</color>");
-        }
-        else
-        {
-            _instance = this;
-        }
-    }
-    #endregion
 
-    private void Start()
+    void ProjectilePoolCreate()
     {
         foreach (ObjectAmount duo in ProjectileList)
         {

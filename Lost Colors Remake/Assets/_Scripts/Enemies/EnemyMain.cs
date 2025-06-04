@@ -69,9 +69,9 @@ public class EnemyMain : MonoBehaviour
     private float nextAttackCheckTime = 0f;
     private float checkInterval = 0.2f;
 
-    public virtual void Start()
+    public virtual async void Start()
     {
-
+        await Bootstrap.Instance.WaitUntilInitializedAsync();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = gameObject.GetComponent<NavMeshAgent>();
         rb = gameObject.GetComponent<Rigidbody2D>();

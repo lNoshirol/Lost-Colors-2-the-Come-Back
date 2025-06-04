@@ -23,7 +23,7 @@ public class DeerRangeSkill : SkillParentClass
         foreach(Vector2 pos in VFXListPos)
         {
             await Task.Delay((int)(WaitTimeBetween * 1000));
-            GameObject newVFX = EnemyManager.Instance.SearchInPool("Thunder", EnemyManager.Instance.vfxPool);
+            GameObject newVFX = EnemyManager.Instance.SearchInPool("Thunder", ProjectileManager.Instance.ProjectilePools);
             newVFX.transform.position = pos;
         }
     }

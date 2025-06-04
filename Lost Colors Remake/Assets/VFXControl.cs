@@ -13,7 +13,7 @@ public class VFXControl : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         animator.SetBool(transition1Name, true);
         yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
-        EnemyManager.Instance.RePackInPool(gameObject, EnemyManager.Instance.vfxPool);
+        EnemyManager.Instance.RePackInPool(gameObject, ProjectileManager.Instance.ProjectilePools);
     }
 
     public void OnPlay()

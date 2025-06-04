@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8774797591882746761}
   - component: {fileID: 911874613802812906}
-  - component: {fileID: 638309806987700850}
   m_Layer: 0
   m_Name: Manager_Projectile
   m_TagString: Untagged
@@ -46,17 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileList:
-  - ObjectPrefab: {fileID: 5537566206245424735, guid: 372614bd1b97bd349b0782a71dd2cab8, type: 3}
+  - ObjectPrefab: {fileID: 2406300365909940566, guid: 4ad5a906d8ab0f54899a4f00c4eff44b, type: 3}
     Amount: 10
---- !u!114 &638309806987700850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7423478363100298427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8593ac382c018f74f817de411a2d6434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

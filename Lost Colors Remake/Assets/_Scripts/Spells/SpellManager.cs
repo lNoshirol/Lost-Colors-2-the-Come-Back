@@ -1,8 +1,7 @@
-using System;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Threading.Tasks;
 
-public class SpellManager : MonoBehaviour
+public class SpellManager : AsyncSingletonPersistent<SpellManager>
 {
     // spell name --> spell IDs
     public Dictionary<string, string> SpellsIDs { get; private set; } = new()
@@ -17,37 +16,11 @@ public class SpellManager : MonoBehaviour
         { "SimpleDash;Spirale;0430A2", new SimpleDash() }
     };
 
-    // Singleton
-    #region Singleton
-    private static SpellManager _instance;
-
-    public static SpellManager Instance
+    protected override async Task OnInitializeAsync()
     {
-        get
-        {
-            if (_instance == null)
-            {
-                GameObject go = new GameObject("Spell Manager");
-                _instance = go.AddComponent<SpellManager>();
-                Debug.Log("<color=#8b59f0>SpellManager</color> instance <color=#58ed7d>created</color>");
-            }
-            return _instance;
-        }
+        await Bootstrap.Instance.WaitUntilInitializedAsync();
     }
 
-    private void Awake()
-    {
-        if (_instance != null)
-        {
-            Destroy(this.gameObject);
-            Debug.Log("<color=#8b59f0>SpellManager</color> instance <color=#eb624d>destroyed</color>");
-        }
-        else
-        {
-            _instance = this;
-        }
-    }
-    #endregion
 
     #region SpellDetectionMethods
 

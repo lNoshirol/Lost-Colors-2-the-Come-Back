@@ -1,8 +1,13 @@
 using System.Collections;
 using UnityEngine;
+using System.Threading.Tasks;
 
-public class JuiceManager : SingletonCreatorPersistent<JuiceManager>
+public class JuiceManager : AsyncSingletonPersistent<JuiceManager>
 {
+    protected override async Task OnInitializeAsync()
+    {
+        await Bootstrap.Instance.WaitUntilInitializedAsync();
+    }
 
     bool waiting;
     // TEMP

@@ -1,8 +1,8 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading.Tasks;
 
-public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
+public class EnemyManager : AsyncSingletonPersistent<EnemyManager>
 {
     [Header("Enemies List")]
     public List<GameObject> CurrentEnemyList = new();
@@ -12,17 +12,11 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
     [SerializeField] private List<GameObject> glyphPrefabList = new List<GameObject>();
     public Dictionary<string, Pool> glyphPool = new();
 
-    [Header("VFX Pool")]
-    [SerializeField] private List<GameObject> vfxPrefabList = new List<GameObject>();
-    public Dictionary<string, Pool> vfxPool = new();
 
-
-    protected override void Awake()
+    protected override async Task OnInitializeAsync()
     {
-        base.Awake();
+        await Bootstrap.Instance.WaitUntilInitializedAsync();
         CreateEnemyPool(glyphPrefabList, glyphPool);
-        CreateEnemyPool(vfxPrefabList, vfxPool);
-
     }
 
     private void CreateEnemyPool(List<GameObject> prefabList, Dictionary<string, Pool> PrefabPool)

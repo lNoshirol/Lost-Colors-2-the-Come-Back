@@ -1,29 +1,41 @@
+using System.Threading.Tasks;
 using UnityEngine;
 
 // video link : https://www.youtube.com/watch?v=-AJ4J-lph6A
-public abstract class SingletonCreator<T> : MonoBehaviour where T : MonoBehaviour
+
+// On attend une ini de la part du boostrap pour pas avoir de soucis de conflit d'awake
+public abstract class AsyncSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     public static T Instance { get; private set; }
+
+    private TaskCompletionSource<bool> _initTCS = new();
+
+    public Task WaitUntilInitializedAsync() => _initTCS.Task;
 
     protected virtual void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            Debug.LogWarning($"Duplicate singleton of type {typeof(T)} detected on {gameObject.name}, destroying.");
             Destroy(gameObject);
             return;
         }
 
         Instance = this as T;
+        DontDestroyOnLoad(gameObject);
+
+        _ = InitializeAsync(); 
     }
 
-    protected virtual void OnApplicationQuit()
+    private async Task InitializeAsync()
     {
-        Instance = null;
+        await OnInitializeAsync();
+        _initTCS.SetResult(true);
     }
+
+    protected abstract Task OnInitializeAsync();
 }
 
-public abstract class SingletonCreatorPersistent<T> : SingletonCreator<T> where T : MonoBehaviour
+public abstract class AsyncSingletonPersistent<T> : AsyncSingleton<T> where T : MonoBehaviour
 {
     protected override void Awake()
     {
@@ -34,6 +46,27 @@ public abstract class SingletonCreatorPersistent<T> : SingletonCreator<T> where 
         }
 
         DontDestroyOnLoad(gameObject);
-        base.Awake(); 
+        base.Awake(); // Calls the non-async Awake()
     }
 }
+
+
+// Pas besoin d'attendre une initilisation
+public abstract class SingletonCreatorBootStrap<T> : MonoBehaviour where T : MonoBehaviour
+{
+    public static T Instance { get; private set; }
+
+    protected virtual void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this as T;
+        DontDestroyOnLoad(gameObject);
+    }
+}
+
+

@@ -1,21 +1,12 @@
+using System.Threading.Tasks;
 using UnityEngine;
 
-public class CameraMain : MonoBehaviour
+public class CameraMain : AsyncSingletonPersistent<CameraMain>
 {
-
-    public static CameraMain Instance { get; private set; }
-    private void Awake()
+    protected override async Task OnInitializeAsync()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
+        await Bootstrap.Instance.WaitUntilInitializedAsync();
     }
-
-
-
     public void CenterCameraAtPosition(Vector2 targetPosition)
     {
         transform.position = targetPosition;

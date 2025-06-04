@@ -1,7 +1,8 @@
 using DG.Tweening;
 using UnityEngine;
+using System.Threading.Tasks;
 
-public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
+public class PlayerMain : AsyncSingletonPersistent<PlayerMain>
 {
 
     public PlayerMove Move { get; private set; }
@@ -39,11 +40,12 @@ public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
 
     public bool isColorized;
 
+    bool isInit = false;
 
 
-
-    private void Start()
+    protected override async Task OnInitializeAsync()
     {
+        await Bootstrap.Instance.WaitUntilInitializedAsync();
         Move = GetComponent<PlayerMove>();
         Inventory = GetComponent<PlayerInventory>();
         Health = GetComponent<PlayerHealth>();
@@ -52,15 +54,21 @@ public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
         Attack = GetComponent<PlayerAttack>();
         Collider2D = GetComponent<Collider2D>();
         Collision = GetComponent<PlayerCollision>();
-        if (Inventory.CheckBrushInDatabase()){
+        if (Inventory.CheckBrushInDatabase())
+        {
             ColorSwitch(true);
         }
 
         UI.UpdatePlayerHealthUI();
+        isInit = true;
     }
 
     private void Update()
     {
+        if (!isInit)
+        {
+            return;
+        }
         GetDirectionAnim();
     }
 

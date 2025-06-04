@@ -1,10 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using System.Collections;
 using System.Threading.Tasks;
 
-public class WorldMain : SingletonCreatorPersistent<WorldMain>
+public class WorldMain : AsyncSingletonPersistent<WorldMain>
 {
 
     public List<GameObject> RoomSwitchList = new List<GameObject>();
@@ -13,8 +12,9 @@ public class WorldMain : SingletonCreatorPersistent<WorldMain>
 
     public string CurrentRoomName;
 
-    private void Start()
+    protected override async Task OnInitializeAsync()
     {
+        await Bootstrap.Instance.WaitUntilInitializedAsync();
         CurrentRoomName = SceneManager.GetActiveScene().name;
     }
 

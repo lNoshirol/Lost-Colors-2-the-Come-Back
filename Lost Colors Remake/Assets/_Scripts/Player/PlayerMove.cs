@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.XR;
+using System.Threading.Tasks;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -15,15 +15,15 @@ public class PlayerMove : MonoBehaviour
     private Vector3 _movementForce;
 
 
-    private void Start()
+    private async void Start()
     {
+        await Bootstrap.Instance.WaitUntilInitializedAsync();
         canMove = true;
-
         ClickManager.instance.OnClickEnd += CancelMoveInput;
     }
     void Update()
     {
-        if (!canMove) return;
+        if (!canMove) return; 
 
         if (Input.GetKey(KeyCode.W))
         {

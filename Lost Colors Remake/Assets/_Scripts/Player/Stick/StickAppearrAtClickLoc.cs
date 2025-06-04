@@ -148,8 +148,6 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     public void OnTouchStart(Touch touch)
     {
-        //Debug.Log("begin touch");
-
         Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
 
 
@@ -159,29 +157,24 @@ public class StickAppearrAtClickLoc : MonoBehaviour
             return;
         }
 
-        //JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", true);
+        JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", true);
 
         JoystickLucas.instance.canMove = true;
 
         _stick.SetActive(true);
 
-        if (RectTransformUtility.RectangleContainsScreenPoint(clickAreaRect, touch.position))
+        if (RectTransformUtility.RectangleContainsScreenPoint(moveAreaRect, touch.position))
         {
-            _stick.transform.position = touchPosition;
+            _stick.transform.position = Camera.main.ScreenToViewportPoint(touchPosition);
             //Debug.Log("Position Changed inside bounds");
 
         }
         else
-        {
-            touchPosition = joystickMoveArea.ClosestPoint(touchPosition);
-            _stick.transform.position = touchPosition;
-            //Debug.Log("Position Changed snap to closest point");
-        }
     }
 
     public void OnTouchEnd()
     {
-        //JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", false);
+        JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", false);
     }
 
     private void forceSetActive(bool active)

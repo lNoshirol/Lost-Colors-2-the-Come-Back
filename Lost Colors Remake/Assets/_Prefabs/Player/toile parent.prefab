@@ -556,6 +556,7 @@ GameObject:
   - component: {fileID: 8593728354961014140}
   - component: {fileID: 4333591921870223713}
   - component: {fileID: 9169271867914752391}
+  - component: {fileID: 7516696645342225222}
   m_Layer: 0
   m_Name: Pen
   m_TagString: Untagged
@@ -646,6 +647,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rayCastDraw: {fileID: 7024166662064212045}
   _pen: {fileID: 8593728354961014140}
+  _shapePoints: []
+  debug_shapePoints: []
+  _target2DPos: []
+  intersection: {x: 0, y: 0}
+--- !u!114 &7516696645342225222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4051118564437541767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc32f8b28a5e6744905682c4d103039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4112627805323202930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,8 +1070,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016c14075139c574f91fca0330221b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerUGUI: {fileID: 6716359628346611034}
-  paintAmountUGUI: {fileID: 1486202130978860090}
+  _timerUGUI: {fileID: 0}
+  _paintAmountUGUI: {fileID: 0}
+  _paintSlider: {fileID: 0}
 --- !u!114 &2783852351091157190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,6 +1088,7 @@ MonoBehaviour:
   _isActive: 0
   toile: {fileID: 8563378748978628323}
   toileButton: {fileID: 8570678730969406698}
+  time: {fileID: 0}
 --- !u!114 &7024166662064212045
 MonoBehaviour:
   m_ObjectHideFlags: 0

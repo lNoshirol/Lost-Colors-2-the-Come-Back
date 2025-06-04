@@ -21,6 +21,8 @@ public class ApplyDamageAfterDraw : MonoBehaviour
 
     public void AddEnnemyDamage(EnemyHealth enemy, float damage)
     {
+        if (_ennemyAndDamage.ContainsKey(enemy)) return;
+
         _ennemyAndDamage.Add(enemy, damage);
     }
 
@@ -32,5 +34,7 @@ public class ApplyDamageAfterDraw : MonoBehaviour
         {
             var.Key.EnemyLoseHP(var.Value);
         }
+
+        _ennemyAndDamage.Clear();
     }
 }

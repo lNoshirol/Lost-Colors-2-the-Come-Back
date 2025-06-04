@@ -41,16 +41,8 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log($"Rect {moveAreaRect.rect} {moveAreaRect.rect.size} {moveAreaRect.rect.center}");
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-        }
-
         if (Input.touchCount > 0)
         {
-            //Debug.Log(Input.GetTouch(0).phase);
-
             for (int i = 0; i < Input.touchCount; i++)
             {
                 if (Input.touches[i].phase == TouchPhase.Began && JoystickLucas.instance.stickTouchFingerId == -1 && RectTransformUtility.RectangleContainsScreenPoint(moveAreaRect, Input.touches[i].position))
@@ -134,19 +126,11 @@ public class StickAppearrAtClickLoc : MonoBehaviour
         if (RectTransformUtility.RectangleContainsScreenPoint(moveAreaRect, touch.position))
         {
             _stick.transform.position = Camera.main.ScreenToViewportPoint(touchPosition);
-            //Debug.Log("Position Changed inside bounds");
-
         }
     }
 
     public void OnTouchEnd()
     {
         JoystickLucas.instance._joystickAnime.BoolSwitcher("IsHere", false);
-    }
-
-    private void forceSetActive(bool active)
-    {
-        _stick.SetActive(active);
-        OnTouchEnd();
     }
 }

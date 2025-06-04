@@ -32,7 +32,10 @@ public class CatchThingsOnDraw : MonoBehaviour
             {
                 if (obj.TryGetComponent(out EnemyHealth _health))
                 {
-                    _health.EnemyLoseHP(PlayerMain.Instance.toileInfo.lineDamage);
+                    ApplyDamageAfterDraw.Instance.AddEnnemyDamage(_health, PlayerMain.Instance.toileInfo.lineDamage);
+                    
+                    //ancienne ligne au cas où prb
+                    //_health.EnemyLoseHP(PlayerMain.Instance.toileInfo.lineDamage);
                 }
                 
             }

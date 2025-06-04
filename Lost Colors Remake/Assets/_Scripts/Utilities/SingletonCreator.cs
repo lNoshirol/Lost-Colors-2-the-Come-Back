@@ -21,8 +21,6 @@ public abstract class AsyncSingleton<T> : MonoBehaviour where T : MonoBehaviour
         }
 
         Instance = this as T;
-        DontDestroyOnLoad(gameObject);
-
         _ = InitializeAsync(); 
     }
 
@@ -68,5 +66,3 @@ public abstract class SingletonCreatorBootStrap<T> : MonoBehaviour where T : Mon
         DontDestroyOnLoad(gameObject);
     }
 }
-
-

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 public class PlayerMain : AsyncSingletonPersistent<PlayerMain>
 {
 
+    public new static PlayerMain Instance => (PlayerMain)AsyncSingleton<PlayerMain>.Instance;
     public PlayerMove Move { get; private set; }
     public PlayerInventory Inventory { get; private set; }
     public PlayerHealth Health { get; private set; }
@@ -45,7 +46,7 @@ public class PlayerMain : AsyncSingletonPersistent<PlayerMain>
 
     protected override async Task OnInitializeAsync()
     {
-        await Bootstrap.Instance.WaitUntilInitializedAsync();
+        //await Bootstrap.Instance.WaitUntilInitializedAsync();
         Move = GetComponent<PlayerMove>();
         Inventory = GetComponent<PlayerInventory>();
         Health = GetComponent<PlayerHealth>();
@@ -60,7 +61,8 @@ public class PlayerMain : AsyncSingletonPersistent<PlayerMain>
         }
 
         UI.UpdatePlayerHealthUI();
-        isInit = true;
+
+        Debug.Log("PlayerMain initialization complete.");
     }
 
     private void Update()

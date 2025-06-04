@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _velocityPower;
     [SerializeField] private float _friction;
     [SerializeField] private Joystick NEW_JOYSTICK;
-    public bool canMove;
+    public bool canMove = false;
 
     public Vector2 _moveInput;
     private Vector3 _movementForce;
@@ -17,7 +17,9 @@ public class PlayerMove : MonoBehaviour
 
     private async void Start()
     {
-        await Bootstrap.Instance.WaitUntilInitializedAsync();
+        Debug.Log("waitStart");
+        await PlayerMain.Instance.WaitUntilInitializedAsync();
+        Debug.Log("waitFinish");
         canMove = true;
         ClickManager.instance.OnClickEnd += CancelMoveInput;
     }

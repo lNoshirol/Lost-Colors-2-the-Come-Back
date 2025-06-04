@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 
 public class ProjectileManager : AsyncSingletonPersistent<ProjectileManager>
 {
+
+    public new static ProjectileManager Instance => (ProjectileManager)AsyncSingleton<ProjectileManager>.Instance;
     public List<ObjectAmount> ProjectileList = new();
 
     public Dictionary<string, Pool> ProjectilePools = new();

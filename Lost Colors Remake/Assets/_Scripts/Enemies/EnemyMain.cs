@@ -72,12 +72,12 @@ public class EnemyMain : MonoBehaviour
     public virtual async void Start()
     {
         await Bootstrap.Instance.WaitUntilInitializedAsync();
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = gameObject.GetComponent<NavMeshAgent>();
         rb = gameObject.GetComponent<Rigidbody2D>();
-
         Health = GetComponent<EnemyHealth>();
-        UI = GetComponent<EnemyUI>();
+        UI = GetComponent<EnemyUI>();                           
 
         SetupStats();
         EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);

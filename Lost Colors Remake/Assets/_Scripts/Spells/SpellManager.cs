@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 
 public class SpellManager : AsyncSingletonPersistent<SpellManager>
 {
+
+    public new static SpellManager Instance => (SpellManager)AsyncSingleton<SpellManager>.Instance;
     // spell name --> spell IDs
     public Dictionary<string, string> SpellsIDs { get; private set; } = new()
     {

@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 
 public class EnemyManager : AsyncSingletonPersistent<EnemyManager>
 {
+    public new static EnemyManager Instance => (EnemyManager)AsyncSingleton<EnemyManager>.Instance;
     [Header("Enemies List")]
     public List<GameObject> CurrentEnemyList = new();
     public Dictionary<GameObject, bool> WorldEnemyDic = new();

@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 
 public class JuiceManager : AsyncSingletonPersistent<JuiceManager>
 {
+
+    public new static JuiceManager Instance => (JuiceManager)AsyncSingleton<JuiceManager>.Instance;
     protected override async Task OnInitializeAsync()
     {
         await Bootstrap.Instance.WaitUntilInitializedAsync();

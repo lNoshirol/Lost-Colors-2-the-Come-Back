@@ -1987,7 +1987,7 @@ MonoBehaviour:
   _velocityPower: 0.87
   _friction: 1
   NEW_JOYSTICK: {fileID: 1257073785171190507}
-  canMove: 1
+  canMove: 0
   _moveInput: {x: 0, y: 0}
 --- !u!114 &3104881093840233777
 MonoBehaviour:

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 public class WorldMain : AsyncSingletonPersistent<WorldMain>
 {
 
+    public new static WorldMain Instance => (WorldMain)AsyncSingleton<WorldMain>.Instance;
+
     public List<GameObject> RoomSwitchList = new List<GameObject>();
 
     public GameObject currentRoomSwitcher;

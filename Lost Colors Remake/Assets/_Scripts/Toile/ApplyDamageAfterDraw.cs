@@ -34,7 +34,7 @@ public class ApplyDamageAfterDraw : MonoBehaviour
 
     public void ApplyDamage()
     {
-        Debug.Log("tabasse tout le monde");
+        Debug.Log($"tabasse tout le monde {_damageToEnemy.Count}");
         
         _tabassedEnemy.Clear();
 
@@ -42,6 +42,7 @@ public class ApplyDamageAfterDraw : MonoBehaviour
         {
             model.targetedEnemy.EnemyLoseHP(model.damage);
             _tabassedEnemy.Add(model.targetedEnemy);
+            Debug.Log($"Target : {model.targetedEnemy}, Damage : {model.damage}, {Time.time}");
         }
 
         _damageToEnemy.Clear();

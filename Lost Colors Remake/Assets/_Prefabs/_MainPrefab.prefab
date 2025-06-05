@@ -475,38 +475,8 @@ PrefabInstance:
     - {fileID: 5824079099671957834, guid: 4ea2eb6935ed44f448eff50fedd93aff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1360371448084880824, guid: 4ea2eb6935ed44f448eff50fedd93aff, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2331247978106844828}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ea2eb6935ed44f448eff50fedd93aff, type: 3}
---- !u!1 &2474490134714325926 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1360371448084880824, guid: 4ea2eb6935ed44f448eff50fedd93aff, type: 3}
-  m_PrefabInstance: {fileID: 3510033869589300766}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2331247978106844828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2474490134714325926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb145ec07c54b5b4e85ea110a0913cdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalizePos: {x: 0, y: 0, z: 0}
-  normalPos: {x: 0, y: 0, z: 0}
-  endPos: {x: 0, y: 0}
-  targetPos: {x: 0, y: 0, z: 0}
-  targetPos2: {x: 0, y: 0, z: 0}
-  Player: {fileID: 5107161207423582509}
-  speed: 0
-  canMove: 0
-  stickTouchFingerId: -1
-  _joystickAnime: {fileID: 0}
 --- !u!4 &6438741061305640855 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7632798538168918409, guid: 4ea2eb6935ed44f448eff50fedd93aff, type: 3}

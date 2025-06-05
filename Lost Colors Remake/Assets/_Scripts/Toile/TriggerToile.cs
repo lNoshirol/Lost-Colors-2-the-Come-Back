@@ -86,5 +86,8 @@ public class TriggerToile : MonoBehaviour
         //StopCoroutine(ToileMain.Instance.timerCo);
         Time.timeScale = 1;
         PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
+
+        ApplyDamageAfterDraw.Instance.ApplyDamage();
+
     }
 }

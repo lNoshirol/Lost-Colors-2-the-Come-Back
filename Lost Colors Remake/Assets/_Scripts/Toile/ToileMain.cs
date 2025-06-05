@@ -53,7 +53,6 @@ public class ToileMain : MonoBehaviour
             ToileUI.UpdateToileUI(timeAmount);
         }
         gestureIsStarted = false;
-        ApplyDamageAfterDraw.Instance.ApplyDamage();
         TriggerToile.OpenAndCloseToileMagique();
         yield break;
     }

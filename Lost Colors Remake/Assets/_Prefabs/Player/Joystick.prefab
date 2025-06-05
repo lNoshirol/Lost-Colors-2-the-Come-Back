@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 93863987148853018}
   - component: {fileID: 1286500181104319879}
-  - component: {fileID: 5824079099671957834}
   - component: {fileID: 3651949796112755146}
   - component: {fileID: 6092526858358962239}
   - component: {fileID: 2975349240800554628}
+  - component: {fileID: 8635292192006885060}
   m_Layer: 0
   m_Name: sprt_joystick_move_round_0
   m_TagString: Untagged
@@ -91,23 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5824079099671957834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360371448084880824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d415668c598f20f4abfc8a3ead8623bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endPos: {x: 0, y: 0}
-  Player: {fileID: 0}
-  speed: 4
-  canMove: 0
-  _joystickAnime: {fileID: 0}
 --- !u!58 &3651949796112755146
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -170,6 +153,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393c72e7ddad1c74b8c2809134d45c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8635292192006885060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360371448084880824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb145ec07c54b5b4e85ea110a0913cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalizePos: {x: 0, y: 0, z: 0}
+  normalPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 0, y: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetPos2: {x: 0, y: 0, z: 0}
+  Player: {fileID: 0}
+  speed: 0
+  canMove: 0
+  stickTouchFingerId: -1
+  _joystickAnime: {fileID: 0}
 --- !u!1 &2545978886534432471
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,12 +331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5624df5d284f364fb79e5d97bd1fe6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  percentageCenterPos: 0
   _stick: {fileID: 2545978886534432471}
-  joystickMoveArea:
-    m_Center: {x: -6.35, y: -0.9, z: 0}
-    m_Extent: {x: 2, y: 1.7, z: 0}
-  clickArea:
-    m_Center: {x: -6.25, y: -1, z: 0}
-    m_Extent: {x: 4, y: 3.5, z: 0}
   moveAreaBasePos: {x: 0, y: 0, z: 0}
   clickAreaBasePos: {x: 0, y: 0, z: 0}
+  moveAreaRect: {fileID: 0}

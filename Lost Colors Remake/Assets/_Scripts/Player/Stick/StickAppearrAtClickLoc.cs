@@ -125,7 +125,7 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
         if (RectTransformUtility.RectangleContainsScreenPoint(moveAreaRect, touch.position))
         {
-            _stick.transform.position = Camera.main.ScreenToViewportPoint(touchPosition);
+            _stick.transform.position = /*Camera.main.ScreenToWorldPoint(touchPosition)*/ touchPosition;
         }
     }
 

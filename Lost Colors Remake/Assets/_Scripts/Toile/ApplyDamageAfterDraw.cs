@@ -5,7 +5,10 @@ public class ApplyDamageAfterDraw : MonoBehaviour
 {
     public static ApplyDamageAfterDraw Instance;
     
-    private Dictionary<EnemyHealth, float> _ennemyAndDamage = new Dictionary<EnemyHealth, float>();
+    [SerializeField] private List<DamageStructModel> _damageToEnemy = new ();
+
+    public int damageToEnemyCount = 0;
+    public List<EnemyHealth> _tabassedEnemy = new();
 
     private void Awake()
     {
@@ -19,22 +22,29 @@ public class ApplyDamageAfterDraw : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        damageToEnemyCount = _damageToEnemy.Count;
+    }
+
     public void AddEnnemyDamage(EnemyHealth enemy, float damage)
     {
-        if (_ennemyAndDamage.ContainsKey(enemy)) return;
-
-        _ennemyAndDamage.Add(enemy, damage);
+        _damageToEnemy.Add(new(enemy, damage));
     }
 
     public void ApplyDamage()
     {
-        Debug.Log("tabasse tout le monde");
+        Debug.Log($"tabasse tout le monde {_damageToEnemy.Count}");
+        
+        _tabassedEnemy.Clear();
 
-        foreach (var var in _ennemyAndDamage)
+        foreach(DamageStructModel model in _damageToEnemy)
         {
-            var.Key.EnemyLoseHP(var.Value);
+            model.targetedEnemy.EnemyLoseHP(model.damage);
+            _tabassedEnemy.Add(model.targetedEnemy);
+            Debug.Log($"Target : {model.targetedEnemy}, Damage : {model.damage}, {Time.time}");
         }
 
-        _ennemyAndDamage.Clear();
+        _damageToEnemy.Clear();
     }
 }

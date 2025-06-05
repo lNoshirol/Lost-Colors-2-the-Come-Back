@@ -46,7 +46,6 @@ public class EAttackState : EnemiesState
     public override void OnExit()
     {
         EnemiesMain.agent.enabled = true;
-        EnemiesMain.Animation.SetAnimTransitionParameter("Attack", false);
         EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", false);
         EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", false);
     }
@@ -76,39 +75,24 @@ public class EAttackState : EnemiesState
     public void CastCloseSkill()
     {
         EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", true);
-        StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length, true));
+        //StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length));
+        SkillSetupClose();
+        closeSkill.Activate(context);
     }
     public void CastRangeSkill()
     {
         EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", true);
-        StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length, false));
+        //StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length));
+        SkillSetupRange();
+        rangeSkill.Activate(context);
     }
 
-
-    IEnumerator WaitForEndAnime(float _animTime, bool isCloseSkill)
+    IEnumerator WaitForEndAnime(float _animTime)
     {
-        yield return new WaitForSeconds(_animTime);
-
+        Debug.Log("START");
         EnemiesMain.isAttacking = true;
-        EnemiesMain.Animation.SetAnimTransitionParameter("Attack", true);
-        if (isCloseSkill)
-        {
-            SkillSetupClose();
-            closeSkill.Activate(context);
-        }
-        else
-        {
-            SkillSetupRange();
-            rangeSkill.Activate(context);
-        }
-        yield return new WaitForSeconds(1.5f);
-        EnemiesMain.canLookAt = true;
+        yield return new WaitForSeconds(_animTime);
         OnExit();
     }
-    //Vector2 direction = (EnemiesMain.player.position - transform.position).normalized;
-    //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-    //Quaternion rotation = Quaternion.Euler(0, 0, angle);
-    //Rigidbody2D rb = Instantiate(EnemiesMain.projectile, transform.position, rotation).GetComponent<Rigidbody2D>();
-    //rb.AddForce(direction * 10f, ForceMode2D.Impulse);
 }
  

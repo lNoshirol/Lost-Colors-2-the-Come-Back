@@ -8,14 +8,16 @@ using UnityEngine;
 public class DeerRangeSkill : SkillParentClass
 {
     List<Vector2> VFXListPos = new();
-    public override void Activate(SkillContext context)
+    private float timeToWaitBeforeAttack = 0.6f;
+    public override async void Activate(SkillContext context)
     {
+        await Task.Delay((int)(timeToWaitBeforeAttack * 1000));
         VFXListPos.Add(context.Direction);
         foreach (Vector2 pos in Vector2AroundPlayer(context.Direction, context.MaxDistance, context.Strength))
         {
             VFXListPos.Add(pos);
         };
-        WaitForEachFX(0.5f);
+        WaitForEachFX(0.1f);
     }
 
     async void WaitForEachFX(float WaitTimeBetween)

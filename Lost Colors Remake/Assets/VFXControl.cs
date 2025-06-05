@@ -5,10 +5,10 @@ using UnityEngine;
 public class VFXControl : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    [SerializeField] int transition1WaitTime;
+    [SerializeField] float transition1WaitTime;
     [SerializeField] string transition1Name;
 
-    IEnumerator WaitForNext(int waitTime)
+    IEnumerator WaitForNext(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
         animator.SetBool(transition1Name, true);

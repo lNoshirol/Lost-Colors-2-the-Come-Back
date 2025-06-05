@@ -45,6 +45,7 @@ public class EAttackState : EnemiesState
 
     public override void OnExit()
     {
+        EnemiesMain.canLookAt = true;
         EnemiesMain.agent.enabled = true;
         EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", false);
         EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", false);
@@ -58,7 +59,7 @@ public class EAttackState : EnemiesState
 
     void SkillSetupRange()
     {
-        context = new(null, null, EnemiesMain.player.position, 3, 3);
+        context = new(null, null, EnemiesMain.player.position, 5, 3);
         rangeSkill = new DeerRangeSkill();
     }
 
@@ -75,24 +76,21 @@ public class EAttackState : EnemiesState
     public void CastCloseSkill()
     {
         EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", true);
-        //StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length));
         SkillSetupClose();
         closeSkill.Activate(context);
     }
     public void CastRangeSkill()
     {
         EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", true);
-        //StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length));
         SkillSetupRange();
         rangeSkill.Activate(context);
+        StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length));
     }
 
     IEnumerator WaitForEndAnime(float _animTime)
     {
-        Debug.Log("START");
         EnemiesMain.isAttacking = true;
         yield return new WaitForSeconds(_animTime);
-        OnExit();
+        EnemiesMain.SwitchState(EnemiesMain.EIdleState);
     }
 }
- 

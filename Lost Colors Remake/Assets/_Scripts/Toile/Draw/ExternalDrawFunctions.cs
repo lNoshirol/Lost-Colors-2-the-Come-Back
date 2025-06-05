@@ -247,15 +247,15 @@ public class ExternalDrawFunctions : MonoBehaviour
         }
     }
 
-    public static float GetDrawLenght(List<Vector3> points)
+    public static float GetDrawLength(List<Vector3> points)
     {
-        float _lenght = 0;
+        float _length = 0;
 
         for (int i = 1; i < points.Count; i++)
         {
-            _lenght += Vector3.Distance(points[i-1], points[i]);
+            _length += Vector3.Distance(points[i-1], points[i]);
         }
 
-        return _lenght;
+        return _length;
     }
 }

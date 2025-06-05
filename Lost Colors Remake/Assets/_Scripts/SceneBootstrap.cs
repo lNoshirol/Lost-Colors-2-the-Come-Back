@@ -5,8 +5,9 @@ public class SceneBootstrap : MonoBehaviour
 {
     private void Start()
     {
-        string sceneToLoad = SaveSystem.Instance.GetLastSavedScene();
-        SaveSystem.Instance.SetPlayerLastPosition();
+        string sceneToLoad = SaveSystemJson.Instance.GetLastSavedScene();
+        Debug.Log(SaveSystemJson.Instance);
+        SaveSystemJson.Instance.SetPlayerLastPosition();
         SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Additive);
     }
 

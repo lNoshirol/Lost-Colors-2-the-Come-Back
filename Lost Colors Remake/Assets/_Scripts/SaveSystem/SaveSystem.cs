@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using UnityEngine;
-using UnityEngine.LightTransport;
 using UnityEngine.SceneManagement;
 
 public class SaveSystem : MonoBehaviour
@@ -75,7 +74,6 @@ public class SaveSystem : MonoBehaviour
             }
         }
     }
-
 
     public void SaveData()
     {

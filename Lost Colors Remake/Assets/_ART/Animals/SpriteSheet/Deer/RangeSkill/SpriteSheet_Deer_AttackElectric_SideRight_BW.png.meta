@@ -1,0 +1,561 @@
+fileFormatVersion: 2
+guid: 88efd28a98165c44f8924d312e85200b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -601312780957940068
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_0
+  - first:
+      213: 1382299316592828296
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_1
+  - first:
+      213: 2307951531495086437
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_2
+  - first:
+      213: -3508710858352315789
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_3
+  - first:
+      213: -1823077846669480864
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_4
+  - first:
+      213: -5233168977083446897
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_5
+  - first:
+      213: 4063051783779870013
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_6
+  - first:
+      213: -7600650640401688479
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_7
+  - first:
+      213: -750995757297194041
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_8
+  - first:
+      213: -7819873273787165894
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_9
+  - first:
+      213: -4171906951511368723
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_10
+  - first:
+      213: -6557112022652703413
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_11
+  - first:
+      213: 1236884220709170775
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_12
+  - first:
+      213: 3198766849827402494
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_13
+  - first:
+      213: -7446344465990562132
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_14
+  - first:
+      213: -2892585036210930002
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_15
+  - first:
+      213: 6524924717895028927
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_16
+  - first:
+      213: 7736988844995394871
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_17
+  - first:
+      213: 9221044571045208913
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_18
+  - first:
+      213: 8293212378217254130
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_19
+  - first:
+      213: -8721635104468817512
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_20
+  - first:
+      213: 5298589748699591644
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_21
+  - first:
+      213: -6399917844458445553
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_22
+  - first:
+      213: 6132589034116639429
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_23
+  - first:
+      213: 6864528437965336977
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_24
+  - first:
+      213: 9030423965001487465
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_25
+  - first:
+      213: 8584865208732345779
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_26
+  - first:
+      213: 3472044348048421515
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_27
+  - first:
+      213: -8830386311168386011
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_28
+  - first:
+      213: 4706284106776169037
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_29
+  - first:
+      213: -1965371612273685099
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_30
+  - first:
+      213: -9222837896879596490
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_31
+  - first:
+      213: -351795606936091495
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_32
+  - first:
+      213: 3708432977390064108
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_33
+  - first:
+      213: 7782850181668992049
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_34
+  - first:
+      213: -7509201581588970343
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_35
+  - first:
+      213: -2092939758093637235
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_36
+  - first:
+      213: -5811651647363916876
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_37
+  - first:
+      213: 1400142251961791330
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_38
+  - first:
+      213: -380463835808147331
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_39
+  - first:
+      213: 8751219295494177701
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_40
+  - first:
+      213: -3831456637546341390
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_41
+  - first:
+      213: 1889479585776494551
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_42
+  - first:
+      213: 3368714529375803053
+    second: SpriteSheet_Deer_AttackElectric_SideRight_BW_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96891c2635b7a7f0800000000000000
+      internalID: -601312780957940068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fd7ca97e9ee2310800000000000000
+      internalID: 1382299316592828296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569559990bd770020800000000000000
+      internalID: 2307951531495086437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 372ba54701e8e4fc0800000000000000
+      internalID: -3508710858352315789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ca1678b5023b6e0800000000000000
+      internalID: -1823077846669480864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89c857ba8c0067b0800000000000000
+      internalID: -5233168977083446897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d356734021cd26830800000000000000
+      internalID: 4063051783779870013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16813053380158690800000000000000
+      internalID: -7600650640401688479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cba972765de395f0800000000000000
+      internalID: -750995757297194041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a33585f50ba3a7390800000000000000
+      internalID: -7819873273787165894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb9e273bb86a16c0800000000000000
+      internalID: -4171906951511368723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4da7514b557005a0800000000000000
+      internalID: -6557112022652703413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_AttackElectric_SideRight_BW_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ee7ab35ab4a2110800000000000000
+      internalID: 1236884220709170775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fa7ae7a8883543e45a1b0fdd54baad2f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_0: -601312780957940068
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_1: 1382299316592828296
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_10: -4171906951511368723
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_11: -6557112022652703413
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_12: 1236884220709170775
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_2: 2307951531495086437
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_3: -3508710858352315789
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_4: -1823077846669480864
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_5: -5233168977083446897
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_6: 4063051783779870013
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_7: -7600650640401688479
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_8: -750995757297194041
+      SpriteSheet_Deer_AttackElectric_SideRight_BW_9: -7819873273787165894
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

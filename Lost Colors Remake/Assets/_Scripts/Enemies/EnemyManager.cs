@@ -65,7 +65,6 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
     {
         if (FindCloserEnemy() != null)
         {
-
             var enemy = FindCloserEnemy();
             if (enemy.TryGetComponent<EnemyMain>(out var enemiesMain))
             {

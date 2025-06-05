@@ -75,7 +75,6 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
-
     public void SaveData()
     {
         string savePath = Path.Combine(Application.persistentDataPath, "savefile.xml");

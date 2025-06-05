@@ -47,7 +47,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void EditPaintAmount()
     {
-        currentPaintAmont = Mathf.Clamp(_amountAtStart - ExternalDrawFunctions.GetDrawLenght(DrawForDollarP.instance.GetDrawPoints()), 0f, 100f);
+        currentPaintAmont = Mathf.Clamp(_amountAtStart - ExternalDrawFunctions.GetDrawLength(DrawForDollarP.instance.GetDrawPoints()), 0f, 100f);
     }
 
     public void SetStartAmount()

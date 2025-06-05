@@ -7,6 +7,7 @@ public class EIdle : EnemiesState
     public override void OnEnter()
     {
         EnemiesMain.agent.velocity = Vector3.zero;
+        EnemiesMain.Animation.enemyAnimator.SetBool("IsMoving", false);
         EnemiesMain.StartCoroutine(IdleWait());
     }
 

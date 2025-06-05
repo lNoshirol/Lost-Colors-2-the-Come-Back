@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 75dd69948f69ebc4eab49c28d5194383
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4652397668656166606
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_0
+  - first:
+      213: 5922089143399797301
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_1
+  - first:
+      213: 2285366502459552266
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_2
+  - first:
+      213: -8893842555754639515
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_3
+  - first:
+      213: 7703471033479071300
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_4
+  - first:
+      213: -8517969391154827908
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_5
+  - first:
+      213: -5945866950091813621
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_6
+  - first:
+      213: -2908788561569753059
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_7
+  - first:
+      213: 3758211524568013839
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_8
+  - first:
+      213: -6758878003047559109
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_9
+  - first:
+      213: -3168815611300471251
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_10
+  - first:
+      213: 2306046682076692068
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_11
+  - first:
+      213: -1319267864471722444
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_12
+  - first:
+      213: -5441429124627904876
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_13
+  - first:
+      213: 5367936608889188288
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_14
+  - first:
+      213: 5654634244255506602
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_15
+  - first:
+      213: 7131038853077602776
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_16
+  - first:
+      213: -3205260354977157789
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_17
+  - first:
+      213: -8751120405873698274
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_18
+  - first:
+      213: -2639650038019230395
+    second: SpriteSheet_Deer_ChargeFull_SideLeft_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec63b1ab703a09040800000000000000
+      internalID: 4652397668656166606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 532da8803bc7f2250800000000000000
+      internalID: 5922089143399797301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a02bda0c9b047bf10800000000000000
+      internalID: 2285366502459552266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56f0eff2159b29480800000000000000
+      internalID: -8893842555754639515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4460808171a38ea60800000000000000
+      internalID: 7703471033479071300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7de09808f71ac980800000000000000
+      internalID: -8517969391154827908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0dca0ee2890c7da0800000000000000
+      internalID: -5945866950091813621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d185ae4f638e1a7d0800000000000000
+      internalID: -2908788561569753059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0cd7a04879d72430800000000000000
+      internalID: 3758211524568013839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30162c2444a332a0800000000000000
+      internalID: -6758878003047559109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e19b99dfa1604d0800000000000000
+      internalID: -3168815611300471251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e36a84d39b00020800000000000000
+      internalID: 2306046682076692068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4362396fdd401bde0800000000000000
+      internalID: -1319267864471722444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 496c6148a092c74b0800000000000000
+      internalID: -5441429124627904876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cfa7adb7edbe7a40800000000000000
+      internalID: 5367936608889188288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa0eb97b2eb497e40800000000000000
+      internalID: 5654634244255506602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d113351e0a86f260800000000000000
+      internalID: 7131038853077602776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_17
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36da1f870b0a483d0800000000000000
+      internalID: -3205260354977157789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_18
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ad9353b56cd8680800000000000000
+      internalID: -8751120405873698274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Deer_ChargeFull_SideLeft_19
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5457480a6441e5bd0800000000000000
+      internalID: -2639650038019230395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c8be46cc9c7cff14ca18bb6ca8b5b473
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpriteSheet_Deer_ChargeFull_SideLeft_0: 4652397668656166606
+      SpriteSheet_Deer_ChargeFull_SideLeft_1: 5922089143399797301
+      SpriteSheet_Deer_ChargeFull_SideLeft_10: -3168815611300471251
+      SpriteSheet_Deer_ChargeFull_SideLeft_11: 2306046682076692068
+      SpriteSheet_Deer_ChargeFull_SideLeft_12: -1319267864471722444
+      SpriteSheet_Deer_ChargeFull_SideLeft_13: -5441429124627904876
+      SpriteSheet_Deer_ChargeFull_SideLeft_14: 5367936608889188288
+      SpriteSheet_Deer_ChargeFull_SideLeft_15: 5654634244255506602
+      SpriteSheet_Deer_ChargeFull_SideLeft_16: 7131038853077602776
+      SpriteSheet_Deer_ChargeFull_SideLeft_17: -3205260354977157789
+      SpriteSheet_Deer_ChargeFull_SideLeft_18: -8751120405873698274
+      SpriteSheet_Deer_ChargeFull_SideLeft_19: -2639650038019230395
+      SpriteSheet_Deer_ChargeFull_SideLeft_2: 2285366502459552266
+      SpriteSheet_Deer_ChargeFull_SideLeft_3: -8893842555754639515
+      SpriteSheet_Deer_ChargeFull_SideLeft_4: 7703471033479071300
+      SpriteSheet_Deer_ChargeFull_SideLeft_5: -8517969391154827908
+      SpriteSheet_Deer_ChargeFull_SideLeft_6: -5945866950091813621
+      SpriteSheet_Deer_ChargeFull_SideLeft_7: -2908788561569753059
+      SpriteSheet_Deer_ChargeFull_SideLeft_8: 3758211524568013839
+      SpriteSheet_Deer_ChargeFull_SideLeft_9: -6758878003047559109
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

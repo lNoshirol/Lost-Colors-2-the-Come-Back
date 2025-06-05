@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 506930966765360781}
-  transition1WaitTime: 2
+  transition1WaitTime: 0.5
   transition1Name: NextMoove
 --- !u!61 &7449813155870386759
 BoxCollider2D:

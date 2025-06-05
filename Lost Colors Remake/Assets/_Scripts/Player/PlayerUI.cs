@@ -84,7 +84,6 @@ public class PlayerUI : MonoBehaviour
         else
         {
             playerControl.gameObject.SetActive(true);
-
         }
     }
 
@@ -103,6 +102,5 @@ public class PlayerUI : MonoBehaviour
             toileButton.interactable = true;
         else
             toileButton.interactable = false;
-
     }
 }

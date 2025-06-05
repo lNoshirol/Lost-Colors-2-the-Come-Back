@@ -36,6 +36,7 @@ public class WorldMain : SingletonCreatorPersistent<WorldMain>
     }
     public async void SwitchRoom(string roomName, string switcherName)
     {
+        Debug.Log("Switch");
         PlayerMain.Instance.Rigidbody2D.linearVelocity = new Vector3(0, 0, 0);
         PlayerMain.Instance.UI.SwitchRoomUI();
         await Task.Delay(1000);
@@ -45,5 +46,19 @@ public class WorldMain : SingletonCreatorPersistent<WorldMain>
         //CameraMain.Instance.CenterCameraAtPosition(CameraMain.Instance.transform.position);
         PlayerMain.Instance.UI.SwitchRoomUI();
         await Task.Delay(500);
+    }
+
+    public IEnumerator SwitchRoomC(string roomName, string switcherName)
+    {
+        Debug.Log("Switch");
+        PlayerMain.Instance.Rigidbody2D.linearVelocity = new Vector3(0, 0, 0);
+        PlayerMain.Instance.UI.SwitchRoomUI();
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(roomName);
+        yield return new WaitForSeconds(0.1f);
+        PlayerMain.Instance.transform.position = FindCorrectSpawn(switcherName).transform.GetChild(0).transform.position;
+        //CameraMain.Instance.CenterCameraAtPosition(CameraMain.Instance.transform.position);
+        PlayerMain.Instance.UI.SwitchRoomUI();
+        yield return new WaitForSeconds(1f);
     }
 }

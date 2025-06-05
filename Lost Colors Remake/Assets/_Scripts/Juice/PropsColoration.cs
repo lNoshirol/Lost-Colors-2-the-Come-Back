@@ -14,8 +14,7 @@ public class PropsColoration : MonoBehaviour
         float distance = Vector2.Distance(CrystalManager.Instance._ListCrystal[0].Crystal.transform.position, this.transform.position);
         float vitesse = CrystalManager.Instance._ListCrystal[0].Crystal.ColorWaveHandler.WaveDuration;
         _timeBeforeTouch = distance / vitesse;
-        print($"Nom : {this.name}, distance : {distance}, vitesse : {vitesse}, cd : {_timeBeforeTouch}");
-        //print(this.gameObject.name + ", distance: " + distance + ", vitesse: " + vitesse + ", time: " + _timeBeforeTouch);
+        //print($"Nom : {this.name}, distance : {distance}, vitesse : {vitesse}, cd : {_timeBeforeTouch}");
     }
 
     private void LaunchCoroutine()

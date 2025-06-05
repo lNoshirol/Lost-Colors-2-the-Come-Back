@@ -17,6 +17,7 @@ public class DrawForDollarP : MonoBehaviour
     private DrawData _drawData;
     [SerializeField] private Color _currentColor;
 
+    
 
     public List<Gesture> trainingSet = new List<Gesture>();
 
@@ -58,6 +59,7 @@ public class DrawForDollarP : MonoBehaviour
 
         ClickManager.instance.OnClickStart += OnTouchStart;
         ClickManager.instance.OnClickEnd += OnTouchEnd;
+
 
         //Debug.Log("CastSpriteShape.cs l59/ " + _currentColor.ToString());
 
@@ -133,7 +135,7 @@ public class DrawForDollarP : MonoBehaviour
 
             OnDrawFinish?.Invoke(_drawData);
 
-            Debug.Log(gestureResult.GestureClass + " " + gestureResult.Score);
+            //Debug.Log(gestureResult.GestureClass + " " + gestureResult.Score);
 
             //TryMakeAdaptativeCollider(GetDrawCenter(points), gestureResult);
 
@@ -144,8 +146,17 @@ public class DrawForDollarP : MonoBehaviour
             {
                 foreach (GameObject enemy in _detectEnemyInShape.GetTargetsInShape())
                 {
-                    if (_detectEnemyInShape.GetTargetsInShape().Count != 0) enemy.GetComponent<EnemyHealth>().EnemyLoseHP(PlayerMain.Instance.toileInfo.shapeDamage);
-                    else { _catchEnnemy.CatchObjectOnLine(); }
+                    if (_detectEnemyInShape.GetTargetsInShape().Count != 0)
+                    {
+                        ApplyDamageAfterDraw.Instance.AddEnnemyDamage(enemy.GetComponent<EnemyHealth>(), PlayerMain.Instance.toileInfo.shapeDamage);
+
+                        //ancienne ligne garder au cas où probleme
+                        //enemy.GetComponent<EnemyHealth>().EnemyLoseHP(PlayerMain.Instance.toileInfo.shapeDamage);
+                    }
+                    else 
+                    { 
+                        _catchEnnemy.CatchObjectOnLine();
+                    }
                 }
 
                 return;

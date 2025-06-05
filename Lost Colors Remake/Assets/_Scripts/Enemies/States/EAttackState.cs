@@ -25,7 +25,8 @@ public class EAttackState : EnemiesState
         if (!EnemiesMain.alreadyAttack) {
             EnemiesMain.agent.enabled = false;
             EnemiesMain.canLookAt = false;
-            int randomSpell = Random.Range(0, 1);
+            int randomSpell = Random.Range(1, 2);
+            Debug.Log("J'attaque");
             if (randomSpell == 0) 
             { 
                 CastCloseSkill();
@@ -50,11 +51,16 @@ public class EAttackState : EnemiesState
         EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", false);
     }
 
-    void SkillSetup()
+    void SkillSetupClose()
     {
         context = new(EnemiesMain.rb, this.gameObject, (EnemiesMain.player.position - transform.position).normalized, 10);
-        rangeSkill = new DeerRangeSkill();
         closeSkill = new DeerCloseSkill();
+    }
+
+    void SkillSetupRange()
+    {
+        context = new(null, null, EnemiesMain.player.position, 3, 3);
+        rangeSkill = new DeerRangeSkill();
     }
 
     public override void FixedDo()
@@ -82,16 +88,17 @@ public class EAttackState : EnemiesState
     IEnumerator WaitForEndAnime(float _animTime, bool isCloseSkill)
     {
         yield return new WaitForSeconds(_animTime);
-        SkillSetup();
+
         EnemiesMain.isAttacking = true;
         EnemiesMain.Animation.SetAnimTransitionParameter("Attack", true);
         if (isCloseSkill)
         {
+            SkillSetupClose();
             closeSkill.Activate(context);
-
         }
         else
         {
+            SkillSetupRange();
             rangeSkill.Activate(context);
         }
         yield return new WaitForSeconds(1.5f);

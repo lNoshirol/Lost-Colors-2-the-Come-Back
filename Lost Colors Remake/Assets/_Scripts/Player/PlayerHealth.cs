@@ -9,11 +9,6 @@ public class PlayerHealth : MonoBehaviour
 
     private bool isInvicible;
     
-    private void Start()
-    {
-        PlayerMain.Instance.UI.UpdatePlayerHealthUI();
-    }
-
     //public void PlayerHealthChange(int healthChangeAmount)
     //{
     //    playerActualHealth -= healthChangeAmount;
@@ -45,7 +40,6 @@ public class PlayerHealth : MonoBehaviour
             playerActualHealth = playerActualHealth - healthLoose;
 
             StartCoroutine(Invicibility());
-            Debug.Log("ouille");
 
             JuiceManager.Instance.PlayerHit(0.25f);
             PlayerMain.Instance.UI.UpdatePlayerHealthUI();

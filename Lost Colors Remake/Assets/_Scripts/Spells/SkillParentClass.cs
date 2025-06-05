@@ -1,3 +1,6 @@
+using NUnit.Framework;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.VFX;
@@ -91,6 +94,16 @@ public abstract class SkillParentClass
         transform.rotation = target.rotation;
     }
 
+    protected List<Vector2> Vector2AroundPlayer(Vector2 playerPos, float maxDistanceWithPlayer, float numberOfTime)
+    {
+        List<Vector2> vector2List = new List<Vector2>();
+        for (int i = 0; i < numberOfTime; i++)
+        {
+            vector2List.Add(new Vector2(playerPos.x + Random.Range(-maxDistanceWithPlayer, maxDistanceWithPlayer), playerPos.y + Random.Range(-maxDistanceWithPlayer, maxDistanceWithPlayer)));
+        }
+        return vector2List;
+    }
+
     protected void /*Vector3*/ GetNearestEnemyPosition()
     {
         // Récupérer la positon de l'ennemi le plus proche
@@ -107,14 +120,15 @@ public class SkillContext
     public GameObject Caster;
     public Vector3 Direction;
     public float Strength;
+    public float MaxDistance;
 
     // Constructeur qui permet d'injecter que les données dont on a besoin
-    public SkillContext(Rigidbody2D _rigidbody2D = null, GameObject caster = null, Vector2? direction = null, float strength = 0f) // Vector3? est un Nullable, d'où le cast en vector3 après (évite les problèmes de Vector3 inconstant)
+    public SkillContext(Rigidbody2D _rigidbody2D = null, GameObject caster = null, Vector2? direction = null, float strength = 0f, float maxDistance = 0) // Vector3? est un Nullable, d'où le cast en vector3 après (évite les problèmes de Vector3 inconstant)
     {
         Rigidbody2D = _rigidbody2D;
         Caster = caster;
-        Direction = (Vector3)direction;
+        Direction = (Vector2)direction;
         Strength = strength;
-        
+        MaxDistance = maxDistance;
     }
 }

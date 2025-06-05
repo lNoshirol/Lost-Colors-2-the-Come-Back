@@ -14,9 +14,9 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private Sprite fullHeart;
     [SerializeField] private Sprite halfHeart;
     [SerializeField] private Sprite emptyHeart;
-
-    private float oldActualHealth;
     [SerializeField] private List<Image> heartList = new List<Image>();
+
+
     public void UpdatePlayerHealthUI()
     {
         float currentHealth = PlayerMain.Instance.Health.playerActualHealth;
@@ -38,12 +38,6 @@ public class PlayerUI : MonoBehaviour
                 heartList[i].sprite = emptyHeart;
             }
         }
-    }
-    private void Start()
-    {
-        Fade(0, blackScreen);
-        oldActualHealth = PlayerMain.Instance.Health.playerActualHealth;
-
     }
     public void Fade(int value, CanvasGroup group)
     {
@@ -92,7 +86,6 @@ public class PlayerUI : MonoBehaviour
             playerControl.gameObject.SetActive(true);
 
         }
-
     }
 
     public void DashButton(bool enable)

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bbc331154fd62da4aab07a3864f7b056
+guid: d1bee9ff2dac42f4d8ebfc01d241b31a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8466883264868023446
-    second: brushTexture_0
+      213: 4940963645153949180
+    second: render_shader-nodes_textures_voronoi_smoothness-distance-zero_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: brushTexture_0
+      name: render_shader-nodes_textures_voronoi_smoothness-distance-zero_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 256
-        height: 253
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69c782d4879608570800000000000000
-      internalID: 8466883264868023446
+      spriteID: cf53585c144d19440800000000000000
+      internalID: 4940963645153949180
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      brushTexture_0: 8466883264868023446
+      render_shader-nodes_textures_voronoi_smoothness-distance-zero_0: 4940963645153949180
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

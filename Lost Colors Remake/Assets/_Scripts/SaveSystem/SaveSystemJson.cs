@@ -74,7 +74,6 @@ public class SaveSystemJson : MonoBehaviour
 
             File.WriteAllText(_savePath, JsonUtility.ToJson(initialData, true));
         }
-        Debug.Log(_savePath);
     }
 
     public void SaveDataToJson()
@@ -102,6 +101,23 @@ public class SaveSystemJson : MonoBehaviour
         playerMain.transform.position = data.PlayerPosition;
         playerMain.Inventory.ItemDatabase[0] = data.PlayerInventory;
         CrystalManager.Instance.LoadList(LoadCrystalsList(data.CrystalsList));
+    }
+    
+    public void ResetData()
+    {
+        if (File.Exists(_savePath))
+        {
+            SaveData initialData = new SaveData
+            {
+                SceneName = "FR_SP_01_Clean",
+                PlayerHealth = 3,
+                PlayerPosition = Vector3.zero,
+                PlayerInventory = false,
+                CrystalsList = new()
+            };
+
+            File.WriteAllText(_savePath, JsonUtility.ToJson(initialData, true));
+        }
     }
 
     private List<CrystalManager.ListCrystal> LoadCrystalsList(List<CrystalData> crystalsData)

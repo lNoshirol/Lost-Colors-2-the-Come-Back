@@ -2515,7 +2515,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.AnimationCurve, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"frames":[{"time":0.0,"value":1.2000000476837159,"inTangent":-1.192399501800537,"outTangent":-1.192399501800537,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":0.9950703978538513,"value":0.013478636741638184,"inTangent":-1.192399501800537,"outTangent":-1.192399501800537,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
+      m_SerializableObject: '{"frames":[{"time":0.0026354938745498659,"value":1.4974592924118043,"inTangent":-3.0073280334472658,"outTangent":-3.0073280334472658,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":0.16826289892196656,"value":0.999363362789154,"inTangent":-2.0998637676239015,"outTangent":-2.0998637676239015,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":0.9950703978538513,"value":0.013478636741638184,"inTangent":-1.1923993825912476,"outTangent":-1.1923993825912476,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
     m_Space: -1
   m_Property:
     name: Size
@@ -3201,7 +3201,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.AnimationCurve, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"frames":[{"time":0.0,"value":0.0,"inTangent":5.0,"outTangent":5.0,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":0.20000000298023225,"value":1.0,"inTangent":4.166666507720947,"outTangent":4.166666507720947,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":0.5,"value":2.0,"inTangent":6.666665554046631,"outTangent":6.666665554046631,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":0.6000000238418579,"value":3.0,"inTangent":6.249999046325684,"outTangent":6.249999046325684,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":1.0,"value":4.0,"inTangent":2.500000238418579,"outTangent":2.500000238418579,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
+      m_SerializableObject: '{"frames":[{"time":0.0,"value":0.0,"inTangent":6.666666507720947,"outTangent":6.666666507720947,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":0.15000000596046449,"value":1.0,"inTangent":6.666666507720947,"outTangent":6.666666507720947,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":0.30000001192092898,"value":2.0,"inTangent":5.0,"outTangent":5.0,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":0.6000000238418579,"value":3.0,"inTangent":2.9166667461395265,"outTangent":2.9166667461395265,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":1.0,"value":4.0,"inTangent":2.500000238418579,"outTangent":2.500000238418579,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
     m_Space: -1
   m_Property:
     name: TexIndex

@@ -12,6 +12,7 @@ public class EnigmeSolvedCrystal : EnigmeSolved
     {
         CrystalColorLerp();
         _waveManager.Anim();
+        ToileMain.Instance.TriggerToile.OpenAndCloseToileMagique();
     }
 
     private void CrystalColorLerp()

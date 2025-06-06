@@ -31,7 +31,6 @@ public class CrystalManager : MonoBehaviour
         if (_instance != null)
         {
             Destroy(this.gameObject);
-            Debug.Log("<color=#8b59f0>CrystalManager</color> instance <color=#eb624d>destroyed</color>");
         }
         else
         {
@@ -98,11 +97,12 @@ public class CrystalManager : MonoBehaviour
         if (!_ListCrystal.Contains(newListCrystal)) _ListCrystal.Add(newListCrystal);
     }
 
-    public void UpdateIsColorizedIfChanged(Crystal crystal, bool newIsColorized, string whichScene)
+    public void UpdateIsColorizedIfChanged(Crystal crystal, string name, bool newIsColorized, string whichScene)
     {
         var newListCrystal = new ListCrystal
         {
             Crystal = crystal,
+            CrystalName = name,
             IsColorized = newIsColorized,
             WhichScene = whichScene,
         };
@@ -122,8 +122,13 @@ public class CrystalManager : MonoBehaviour
 
         foreach (var crystal in _ListCrystal)
         {
-            UpdateIsColorizedIfChanged(crystal.Crystal, crystal.IsColorized, crystal.WhichScene);
+            UpdateIsColorizedIfChanged(crystal.Crystal, crystal.CrystalName, crystal.IsColorized, crystal.WhichScene);
         }
+    }
+
+    public void ClearListCrystal()
+    {
+        _ListCrystal?.Clear();
     }
 
 }

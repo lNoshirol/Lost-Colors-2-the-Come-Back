@@ -41,7 +41,7 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     private void Update()
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && !TriggerToile.instance._isActive)
         {
             for (int i = 0; i < Input.touchCount; i++)
             {

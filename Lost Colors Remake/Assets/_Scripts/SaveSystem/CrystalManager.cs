@@ -49,6 +49,9 @@ public class CrystalManager : MonoBehaviour
         public Crystal Crystal{ get; set; }
 
         [field: SerializeField]
+        public string CrystalName { get; set; }
+
+        [field: SerializeField]
         public bool IsColorized{ get; set; }
 
         [field: SerializeField]
@@ -59,15 +62,18 @@ public class CrystalManager : MonoBehaviour
 
     #endregion
 
-    public void AddToDict(Crystal crystal, bool isColorized, string whichScene)
+    public void AddToDict(Crystal crystal, string name, bool isColorized, string whichScene)
     {
-        bool _isInDict = _ListCrystal.Any(item=> item.Crystal == crystal && item.IsColorized==isColorized && item.WhichScene == whichScene);
+        bool _isInDict = _ListCrystal.Any(item=> item.Crystal == crystal && item.CrystalName == name && item.IsColorized == isColorized && item.WhichScene == whichScene);
+
+        if (SceneManager.GetActiveScene().name != whichScene) return;
 
         if (!_isInDict)
         {
             var newListCrystal = new ListCrystal
             {
                 Crystal = crystal,
+                CrystalName = crystal.gameObject.name,
                 IsColorized = isColorized,
                 WhichScene = whichScene,
             };

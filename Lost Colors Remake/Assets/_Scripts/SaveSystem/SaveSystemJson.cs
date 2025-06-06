@@ -126,8 +126,8 @@ public class SaveSystemJson : MonoBehaviour
 
         foreach (var crystalData in crystalsData)
         {
-            GameObject crystalGO = GameObject.Find(crystalData.Crystal);
-            Crystal crystalReference = crystalGO != null ? crystalGO.GetComponent<Crystal>() : null;
+            GameObject crystal = GameObject.Find("Crystal_01");
+            Crystal crystalReference = crystal != null ? crystal.GetComponent<Crystal>() : null;
 
             loadedList.Add(new CrystalManager.ListCrystal
             {
@@ -148,7 +148,7 @@ public class SaveSystemJson : MonoBehaviour
         {
             list.Add(new CrystalData
             {
-                Crystal = crystal.Crystal.name,
+                Crystal = crystal.CrystalName,
                 IsColorized = crystal.IsColorized,
                 WhichScene = crystal.WhichScene
             });
@@ -171,6 +171,6 @@ public class SaveSystemJson : MonoBehaviour
         if (!File.Exists(_savePath)) return;
 
         SaveData data = JsonUtility.FromJson<SaveData>(File.ReadAllText(_savePath));
-        playerMain.transform.position = data.PlayerPosition;
+        //playerMain.transform.position = data.PlayerPosition;
     }
 }

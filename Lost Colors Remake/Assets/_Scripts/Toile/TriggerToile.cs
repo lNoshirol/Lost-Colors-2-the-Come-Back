@@ -52,6 +52,7 @@ public class TriggerToile : MonoBehaviour
             ToileMain.Instance.ToileUI.UpdateToileUI(ToileMain.Instance.toileTime);
             _isActive = true;
             toile.SetActive(_isActive);
+            DrawForDollarP.instance.SetActiveLine(true);
             WhenTriggerToile?.Invoke(!_isActive);
             PlayerMain.Instance.UI.HidePlayerControls();
             PlayerMain.Instance.Move.canMove = false;

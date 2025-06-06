@@ -23,8 +23,13 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
+    string savePath;
+
+
     private void Awake()
     {
+        savePath = Path.Combine(Application.persistentDataPath, "savefile.xml");
+
         if (_instance != null)
         {
             Destroy(this.gameObject);
@@ -32,6 +37,29 @@ public class SaveSystem : MonoBehaviour
         else
         {
             _instance = this;
+        } 
+
+        if (!File.Exists(savePath))
+        {
+            Debug.LogWarning("CreateXML");
+            using (XmlWriter writer = XmlWriter.Create(savePath, xml))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("Data");
+                writer.WriteElementString("SceneName", "FR_SP_01_Clean");
+                writer.WriteElementString("PlayerHealth", "");
+                writer.WriteStartElement("PlayerPosition");
+                writer.WriteElementString("x", "0");
+                writer.WriteElementString("y", "0");
+                writer.WriteElementString("z", "0");
+                writer.WriteEndElement();
+                writer.WriteElementString("PlayerInventory", "");
+                writer.WriteStartElement("CrystalsList");
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+                Debug.LogWarning("CreateXML" + savePath);
+            }
         }
     }
     #endregion
@@ -49,36 +77,9 @@ public class SaveSystem : MonoBehaviour
         Indent = true,
     };
 
-    private void Start()
-    {
-        string savePath = Path.Combine(Application.persistentDataPath, "savefile.xml");
-
-        if (!File.Exists(savePath))
-        {
-            using (XmlWriter writer = XmlWriter.Create(savePath, xml))
-            {
-                writer.WriteStartDocument();
-                writer.WriteStartElement("Data");
-                writer.WriteElementString("SceneName", "FR_SP_01_Clean");
-                writer.WriteElementString("PlayerHealth", "");
-                writer.WriteStartElement("PlayerPosition");
-                writer.WriteElementString("x", "0");
-                writer.WriteElementString("y", "0");
-                writer.WriteElementString("z", "0");
-                writer.WriteEndElement();
-                writer.WriteElementString("PlayerInventory", "");
-                writer.WriteStartElement("CrystalsList");
-                writer.WriteEndElement();
-                writer.WriteEndElement();
-                writer.WriteEndDocument();
-            }
-        }
-    }
 
     public void SaveData()
     {
-        string savePath = Path.Combine(Application.persistentDataPath, "savefile.xml");
-
         using (XmlWriter writer = XmlWriter.Create(savePath, xml))
         {
             writer.WriteStartDocument();
@@ -98,9 +99,11 @@ public class SaveSystem : MonoBehaviour
 
     public void LoadData()
     {
+        Debug.LogWarning("LoadXML" + savePath);
+
         XmlDocument saveFile = new XmlDocument();
-        if (!System.IO.File.Exists(Path.Combine(Application.persistentDataPath, "savefile.xml"))) return;
-        saveFile.LoadXml(System.IO.File.ReadAllText(Path.Combine(Application.persistentDataPath, "savefile.xml")));
+        if (!System.IO.File.Exists(savePath)) return;
+        saveFile.LoadXml(System.IO.File.ReadAllText(savePath));
 
         string key;
         string value;
@@ -126,12 +129,6 @@ public class SaveSystem : MonoBehaviour
                 case "PlayerInventory":
                     playerMain.Inventory.ItemDatabase[0] = bool.Parse(value);
                     break;
-
-                case "CrystalsList":
-                    var loadedList = LoadCrystalsList(node);
-                    CrystalManager.Instance.LoadList(loadedList);
-                    break;
-
             }
         }
     }
@@ -163,7 +160,8 @@ public class SaveSystem : MonoBehaviour
         foreach (var crystal in crystalList)
         {
             writer.WriteStartElement("Crystal");
-            writer.WriteElementString("Crystal", crystal.Crystal.name);
+            writer.WriteElementString("Crystal", crystal.CrystalName);
+            writer.WriteElementString("Crystal", crystal.CrystalName);
             writer.WriteElementString("IsColorized", crystal.IsColorized.ToString());
             writer.WriteElementString("WhichScene", crystal.WhichScene);
             writer.WriteEndElement();
@@ -178,9 +176,19 @@ public class SaveSystem : MonoBehaviour
 
         foreach (XmlNode crystalNode in crystalsListNode.ChildNodes)
         {
-            string crystalName = crystalNode["Crystal"].InnerText;
+            string crystal = crystalNode["Crystal"].InnerText;
+            string crystalName = crystalNode["CrystalName"].InnerText;
             bool isColorized = bool.Parse(crystalNode["IsColorized"].InnerText);
             string whichScene = crystalNode["WhichScene"].InnerText;
+
+
+            bool isInActiveScene = (whichScene == SceneManager.GetActiveScene().name);
+
+            if (!isInActiveScene)
+            {
+                Debug.Log($"Cristal '{crystalName}' ignoré (appartient à la scène '{whichScene}', scène active : '{SceneManager.GetActiveScene().name}').");
+                break;
+            }
 
             GameObject crystalGO = GameObject.Find(crystalName);
             Crystal crystalReference = null;
@@ -206,7 +214,7 @@ public class SaveSystem : MonoBehaviour
     public string GetLastSavedScene()
     {
         XmlDocument saveFile = new XmlDocument();
-        saveFile.LoadXml(System.IO.File.ReadAllText(Path.Combine(Application.persistentDataPath, "savefile.xml")));
+        saveFile.LoadXml(System.IO.File.ReadAllText(savePath));
 
         string key;
         string value;
@@ -227,10 +235,11 @@ public class SaveSystem : MonoBehaviour
     public void SetPlayerLastPosition()
     {
         XmlDocument saveFile = new XmlDocument();
-        saveFile.LoadXml(System.IO.File.ReadAllText(Path.Combine(Application.persistentDataPath, "savefile.xml")));
+        saveFile.LoadXml(System.IO.File.ReadAllText(savePath));
 
         string key;
         string value;
+        Vector3 loadedPosition;
 
         foreach (XmlNode node in saveFile.ChildNodes[1])
         {
@@ -241,10 +250,32 @@ public class SaveSystem : MonoBehaviour
                 float x = float.Parse(node["x"].InnerText);
                 float y = float.Parse(node["y"].InnerText);
                 float z = float.Parse(node["z"].InnerText);
-                Vector3 loadedPosition = new Vector3(x, y, z);
+                loadedPosition = new Vector3(x, y, z);
                 playerMain.transform.position = loadedPosition;
             }
         }
     }
 
+    public void SaveCrystalWhenIsColorized()
+    {
+        XmlDocument saveFile = new XmlDocument();
+        if (!System.IO.File.Exists(savePath)) return;
+        saveFile.LoadXml(System.IO.File.ReadAllText(savePath));
+
+        string key;
+        string value;
+
+        foreach (XmlNode node in saveFile.ChildNodes[1])
+        {
+            key = node.Name;
+            value = node.InnerText;
+            switch (key)
+            {
+                case "CrystalsList":
+                    var loadedList = LoadCrystalsList(node);
+                    CrystalManager.Instance.LoadList(loadedList);
+                    break;
+            }
+        }
+    }
 }

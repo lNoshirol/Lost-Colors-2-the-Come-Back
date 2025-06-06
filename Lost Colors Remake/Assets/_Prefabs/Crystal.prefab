@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7004164340136316749}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.49305, y: -35.84261, z: 1.4662863}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8215dd261ab9e5d4b87ea91b6e9a004c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -147,6 +147,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ColorWaveHandler
       objectReference: {fileID: 0}
+    - target: {fileID: 7031742689834878305, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7031742689834878305, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.36
+      objectReference: {fileID: 0}
     - target: {fileID: 8676686837861418380, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -193,15 +201,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: _waveMaxRange
-      value: 1000
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: _waveStartPoint.x
-      value: 21.86
+      value: 13.3
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: _waveStartPoint.y
-      value: -39.4
+      value: -42.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
+      propertyPath: _tilemapRenderers.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
+      propertyPath: <WaveDuration>k__BackingField
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

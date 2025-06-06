@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3459280333614610736}
   - component: {fileID: 7116310578798437150}
   m_Layer: 0
-  m_Name: CrsitalManager
+  m_Name: Manager_Crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

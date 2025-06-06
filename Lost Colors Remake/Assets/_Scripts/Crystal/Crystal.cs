@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEngine.Rendering.DebugUI;
 
 public class Crystal : MonoBehaviour
 {

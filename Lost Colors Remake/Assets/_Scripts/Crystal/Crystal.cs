@@ -15,9 +15,10 @@ public class Crystal : MonoBehaviour
     void Start()
     {
         TryGetComponent(out EnigmeSolvedCrystal enigmeSolvedCrystal);
-        enigmeSolvedCrystal.ISColorized += LOL;
+        // NEED TO FINISH
+        //enigmeSolvedCrystal.ISColorized += LOL;
 
-        foreach(GameObject p in EnemyManager.Instance.CurrentEnemyList)
+        foreach (GameObject p in EnemyManager.Instance.CurrentEnemyList)
         {
             p.TryGetComponent(out EnemyMain enemy);
             _list.Add(enemy);

@@ -249,4 +249,9 @@ public class DrawForDollarP : MonoBehaviour
     {
         points.Clear();
     }
+
+    public void SetActiveLine(bool myBool)
+    {
+        lineRenderer.gameObject.SetActive(myBool);
+    }
 }

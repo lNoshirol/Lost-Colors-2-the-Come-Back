@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyArmor : MonoBehaviour
@@ -58,5 +59,17 @@ public class EnemyArmor : MonoBehaviour
             float x = i * spacing - totalWidth / 2f;
             activeGlyphs[i].transform.localPosition = new Vector3(x, 0, 0);
         }
+    }
+
+    public bool IsGlyphInArmorList(string glyphName)
+    {
+        foreach (GameObject glyph in activeGlyphs)
+        {
+            if (glyph.name.Contains(glyphName))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

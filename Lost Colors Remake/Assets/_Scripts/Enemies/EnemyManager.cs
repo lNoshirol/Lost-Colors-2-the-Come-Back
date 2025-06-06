@@ -16,6 +16,8 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
     [SerializeField] private List<GameObject> vfxPrefabList = new List<GameObject>();
     public Dictionary<string, Pool> vfxPool = new();
 
+    [Header("debug")]
+    public List<GameObject> _enemyOnTheScreen;
 
     protected override void Awake()
     {
@@ -61,7 +63,7 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
     }
 
 
-    public void ArmorLost(string glyphName)
+/*    public void ArmorLost(string glyphName)
     {
         if (FindCloserEnemy() != null)
         {
@@ -79,7 +81,26 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
         {
             Debug.Log("No enemy on screen with armor");
         }
-        
+    }*/
+
+    public void ArmorLost(string glyphName)
+    {
+        if (FindClosestEnemyWithGlyph(glyphName) != null)
+        {
+            var enemy = FindClosestEnemyWithGlyph(glyphName);
+            if (enemy.TryGetComponent<EnemyMain>(out var enemiesMain))
+            {
+                enemiesMain.Armor.RemoveGlyph(glyphName);
+            }
+            else if (enemy.TryGetComponent<CrystalMain>(out var crystalMain))
+            {
+                crystalMain.Armor.RemoveGlyph(glyphName);
+            }
+        }
+        else
+        {
+            Debug.Log("No enemy on screen with armor");
+        }
     }
 
     public GameObject FindCloserEnemy()
@@ -114,6 +135,57 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
             }
         }
         return closerEnemy;
+    }
+
+    public GameObject FindClosestEnemyWithGlyph(string glyphName)
+    {
+        GameObject closestEnemy = null;
+        float minDistance = Mathf.Infinity;
+
+        foreach(GameObject enemy in FindAllEnnemyOnScreen())
+        {
+            float currentDistance = Vector2.Distance(enemy.transform.position, PlayerMain.Instance.transform.position);
+
+            if (currentDistance < minDistance && enemy.TryGetComponent(out EnemyMain enemyMain) && enemyMain.Armor.IsGlyphInArmorList(glyphName))
+            {
+                closestEnemy = enemy;
+                minDistance = currentDistance;
+            }
+        }
+
+        return closestEnemy;
+    }
+
+    public List<GameObject> FindAllEnnemyOnScreen()
+    {
+        List<GameObject> enemysOnScreen = new();
+
+        foreach(GameObject enemy in CurrentEnemyList)
+        {
+            if (enemy.TryGetComponent(out EnemyMain enemyMain) && enemyMain.spriteRenderer.isVisible)
+            {
+                enemysOnScreen.Add(enemy);
+            }
+        }
+
+        return enemysOnScreen;
+    }
+
+    public bool DoEnemyOnScreenHaveRecognizedGlyph(string glyphName)
+    {
+        _enemyOnTheScreen = FindAllEnnemyOnScreen();
+
+        if (FindAllEnnemyOnScreen().Count == 0) return false;
+
+        foreach(GameObject enemy in FindAllEnnemyOnScreen())
+        {
+            if (enemy.TryGetComponent(out EnemyMain enemyMain) && enemyMain.Armor.IsGlyphInArmorList(glyphName))
+            {
+                Debug.LogWarning($"Target glyph : {glyphName}, Current Checking enemy : {enemyMain.Armor.activeGlyphs[0].name} Test logic unity : {enemyMain.Armor.IsGlyphInArmorList(glyphName)}");
+                return true;
+            }
+        }
+        return false;
     }
 
     public GameObject SearchInPool(string searchName, Dictionary<string, Pool> pool)

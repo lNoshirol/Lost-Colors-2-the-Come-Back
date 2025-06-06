@@ -22,21 +22,30 @@ MonoBehaviour:
   - PropName: sprt_enviro_tree_10
     BW: {fileID: -2778182879858817317, guid: 7ddc9c3843281fb409de35b8db24d112, type: 3}
     Colored: {fileID: 21300000, guid: 2a7751c30219be54bad6c1e1a615f04e, type: 3}
-  - PropName: sprt_enviro_tree_09
-    BW: {fileID: 21300000, guid: 54f5df2c3a0c9a94cbbf5f2949b8395c, type: 3}
-    Colored: {fileID: -343186416968532926, guid: b01f7ee726635bb46a19ba4737247957, type: 3}
   - PropName: sprt_enviro_tree_11
     BW: {fileID: 21300000, guid: dcb83592e1b02044a9bfb86d20a04aea, type: 3}
     Colored: {fileID: 21300000, guid: 672d5d5899a377144a53eb55e0ce430f, type: 3}
   - PropName: sprt_enviro_tree_12
     BW: {fileID: 21300000, guid: a0c72fdf54ea53c44a1c1503cdd4c3c0, type: 3}
     Colored: {fileID: 21300000, guid: 491ba3206f1a24e43b414c953bcd0fcc, type: 3}
+  - PropName: sprt_enviro_tree_09
+    BW: {fileID: 21300000, guid: 54f5df2c3a0c9a94cbbf5f2949b8395c, type: 3}
+    Colored: {fileID: -343186416968532926, guid: b01f7ee726635bb46a19ba4737247957, type: 3}
   - PropName: sprt_crystal
     BW: {fileID: 21300000, guid: 8215dd261ab9e5d4b87ea91b6e9a004c, type: 3}
     Colored: {fileID: 21300000, guid: c496d63d5dfa6b44eb911613b0638a11, type: 3}
   - PropName: sprt_enviro_stone_01
     BW: {fileID: -4219277594607294297, guid: 17a498b935077954296bf199113c1daa, type: 3}
     Colored: {fileID: -5631366215469227530, guid: 576f050313ba6f640b7ec5b2e3d51220, type: 3}
+  - PropName: sprt_rock03
+    BW: {fileID: 21300000, guid: 24e0f38091f97c043a41b9029db83475, type: 3}
+    Colored: {fileID: 21300000, guid: ab66329084429e94196c4fddada58c76, type: 3}
+  - PropName: sprt_rock02
+    BW: {fileID: 21300000, guid: a3ec94294ca00ef449a0c5a817621be5, type: 3}
+    Colored: {fileID: 21300000, guid: e46b8b32bf567ff44bd371fabf5d9803, type: 3}
+  - PropName: sprt_rock01
+    BW: {fileID: 21300000, guid: 6bca45565f9770349aa9ee4658c38cc1, type: 3}
+    Colored: {fileID: 21300000, guid: 420306b230b20bb44a29e6b0f0ee01f1, type: 3}
   - PropName: sprt_enviro_bush
     BW: {fileID: 21300000, guid: 5e528e1d59bdf504ea1837b537a31687, type: 3}
     Colored: {fileID: 21300000, guid: 8ff5d0b1c81b9164d9924df3da90e6ef, type: 3}
@@ -88,6 +97,12 @@ MonoBehaviour:
   - PropName: sprt_jar_05_crack
     BW: {fileID: 21300000, guid: 4ddddb3b3d4758649b9600baf126914c, type: 3}
     Colored: {fileID: 21300000, guid: 37830b93d0805684a8403a925a310af2, type: 3}
+  - PropName: sprt_broken_jar_01
+    BW: {fileID: 21300000, guid: 65e677b8c0c53d046b55fbfb416c675b, type: 3}
+    Colored: {fileID: 21300000, guid: fd6a39c3b9ded1843aa9a2b9b26d211f, type: 3}
+  - PropName: sprt_broken_jar_02
+    BW: {fileID: 21300000, guid: 9cb28bbe35b76ab4a8ee8a58fcfc76dd, type: 3}
+    Colored: {fileID: 21300000, guid: df4367ed5758b4647a4f4b6d86df2fa4, type: 3}
   - PropName: sprt_groundRock_01
     BW: {fileID: 21300000, guid: f7c23584e98d1dc4988aa888f9d7bcef, type: 3}
     Colored: {fileID: 21300000, guid: eb0452c4e8b84a846b075282ea6f8d4e, type: 3}
@@ -124,3 +139,15 @@ MonoBehaviour:
   - PropName: sprt_trunk_02
     BW: {fileID: 21300000, guid: 8f0e600b6475b864f9193508fa1167ba, type: 3}
     Colored: {fileID: 21300000, guid: 1c9b5843dea75cb4181811367ff28576, type: 3}
+  - PropName: sprt_groundMoon
+    BW: {fileID: 21300000, guid: 50c7835e11469774b8d46d777d9265f5, type: 3}
+    Colored: {fileID: 21300000, guid: f9a2a87e38024ef498532537c3046c42, type: 3}
+  - PropName: sprt_groundSun
+    BW: {fileID: 21300000, guid: 07499ceef1b997147abe8b7a84b1caea, type: 3}
+    Colored: {fileID: 21300000, guid: e41c8c6b48a3a924cabe07cda6e16e25, type: 3}
+  - PropName: sprt_littleJar_01
+    BW: {fileID: 5112630054652273042, guid: 844c4b6f66fa37e48a508caf9545397e, type: 3}
+    Colored: {fileID: -4737717839468219108, guid: e00eee10654cfae4c9aefecd98576ad7, type: 3}
+  - PropName: sprt_totem_01
+    BW: {fileID: 21300000, guid: 38ede315afea5f646a0ffb2b0d4f1c1a, type: 3}
+    Colored: {fileID: 21300000, guid: cc1b4056f2c00234ca8fd179824174d3, type: 3}

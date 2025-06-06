@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/Build/Menu_Clean.unity
+    path: Assets/_Scenes/_Build/Menu_Clean.unity
     guid: ec48f168c4cefad488faf2d3f2005122
   - enabled: 1
-    path: Assets/_Scenes/Build/PercistentScene.unity
+    path: Assets/_Scenes/_Build/PercistentScene.unity
     guid: bc10bf8e973285b4e9eafa7b14100136
   - enabled: 1
-    path: Assets/_Scenes/Build/FR_SP_01_Clean.unity
+    path: Assets/_Scenes/_Build/FR_SP_01_Clean.unity
     guid: 96ad9da3d788ba743b21004a3112ef6f
   - enabled: 1
     path: Assets/_Scenes/Build/FR_SP_02_Clean.unity

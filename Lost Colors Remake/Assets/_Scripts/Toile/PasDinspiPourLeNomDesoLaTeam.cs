@@ -17,7 +17,7 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
 
     public void DrawFinish(DrawData result)
     {
-        if (EnemyManager.Instance.DoEnemyOnScreenHaveRecognizedGlyph(result.result.GestureClass))
+        if (EnemyManager.Instance.DoEnemyOnScreenHaveRecognizedGlyph(result.result.GestureClass) && result.result.Score > 0.9f)
         {
             StartCoroutine(GoodDraw(result));
             closestEnemyDetected = EnemyManager.Instance.FindClosestEnemyWithGlyph(result.result.GestureClass);
@@ -31,7 +31,7 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
     public IEnumerator GoodDraw(DrawData result)
     {
         Time.timeScale = 0;
-        Debug.LogWarning($"Play sound DrawSuccess {Time.timeScale}");
+        Debug.LogWarning($"{result.result.Score}");
         yield return new WaitForSecondsRealtime(0.1f);
         closestEnemyDetected.TryGetComponent(out EnemyMain enemyMain);
 

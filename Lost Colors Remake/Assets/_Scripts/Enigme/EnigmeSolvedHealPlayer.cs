@@ -6,6 +6,6 @@ public class EnigmeSolvedHealPlayer : EnigmeSolved
 
     public override void Interact()
     {
-        //PlayerMain.Instance.Health.PlayerHealthChange(-_healAmount);
+        PlayerMain.Instance.Health.PlayerGainHP(_healAmount);
     }
 }

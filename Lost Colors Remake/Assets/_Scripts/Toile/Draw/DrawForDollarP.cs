@@ -135,7 +135,7 @@ public class DrawForDollarP : MonoBehaviour
 
             OnDrawFinish?.Invoke(_drawData);
 
-            Debug.Log(gestureResult.GestureClass + " " + gestureResult.Score);
+            //Debug.Log(gestureResult.GestureClass + " " + gestureResult.Score);
 
             //TryMakeAdaptativeCollider(GetDrawCenter(points), gestureResult);
 

@@ -16,10 +16,10 @@ public class Enigma : MonoBehaviour
 
     private void SolveEnigme(DrawData drawData)
     {
-        if (Vector3.Distance(PlayerMain.Instance.transform.position, transform.position) <= castDistanceAuthorize && drawData.result.GestureClass == drawTargetName && !_isSolved)
+        if (Vector3.Distance(PlayerMain.Instance.transform.position, transform.position) <= castDistanceAuthorize && drawData.result.GestureClass == drawTargetName && drawData.result.Score > 0.9f && !_isSolved)
         {
             OnEnigmaSolve?.Invoke();
-            //Debug.Log("Choix numéro 2 ça marche");
+            Debug.Log("Choix numéro 2 ça marche");
         }
     }
 

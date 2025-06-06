@@ -88,6 +88,7 @@ public class TriggerToile : MonoBehaviour
         PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
 
         ApplyDamageAfterDraw.Instance.ApplyDamage();
+        ApplyDamageAfterDraw.Instance.TejArmor();
 
     }
 }

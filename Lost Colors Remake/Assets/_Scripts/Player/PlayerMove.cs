@@ -96,14 +96,14 @@ public class PlayerMove : MonoBehaviour
 
 
         //Juste pour avoir un semblant d'anime quand on est au clavier
-        if (new Vector2(NEW_JOYSTICK.Horizontal, NEW_JOYSTICK.Vertical) != new Vector2(0, 0))
-        {
-            SetMoveInput(new Vector2(NEW_JOYSTICK.Horizontal, NEW_JOYSTICK.Vertical));
-        }
-        else
-        {
-            SetMoveInput(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
-        }
+        //if (new Vector2(NEW_JOYSTICK.Horizontal, NEW_JOYSTICK.Vertical) != new Vector2(0, 0))
+        //{
+        //    SetMoveInput(new Vector2(NEW_JOYSTICK.Horizontal, NEW_JOYSTICK.Vertical));
+        //}
+        //else
+        //{
+        //    SetMoveInput(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+        //}
     }
 
 

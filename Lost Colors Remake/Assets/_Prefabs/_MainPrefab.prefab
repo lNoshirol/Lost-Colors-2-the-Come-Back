@@ -411,6 +411,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5107161207423582509}
     m_Modifications:
+    - target: {fileID: 1286500181104319879, guid: 4ea2eb6935ed44f448eff50fedd93aff, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 52e899e7b4712da488fc12fbcd171628, type: 3}
     - target: {fileID: 4206514531747674323, guid: 4ea2eb6935ed44f448eff50fedd93aff, type: 3}
       propertyPath: moveAreaRect
       value: 
@@ -427,6 +431,10 @@ PrefabInstance:
       propertyPath: clickAreaSquare
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6450819324933926182, guid: 4ea2eb6935ed44f448eff50fedd93aff, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 81fdd743dad4a2d459641711357dc52d, type: 3}
     - target: {fileID: 7632798538168918409, guid: 4ea2eb6935ed44f448eff50fedd93aff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -537,7 +545,7 @@ PrefabInstance:
     - target: {fileID: 1776172642768014284, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d519d0edf13a4ab4cbdde07cfa6b5ed6, type: 3}
+      objectReference: {fileID: 21300000, guid: 56ede2d0acc61114cab192199dcc1319, type: 3}
     - target: {fileID: 2565415180576906570, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -577,7 +585,7 @@ PrefabInstance:
     - target: {fileID: 6155382798469952730, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d519d0edf13a4ab4cbdde07cfa6b5ed6, type: 3}
+      objectReference: {fileID: 21300000, guid: 07612a935a263134bb62d84422d21bfc, type: 3}
     - target: {fileID: 6228343933667218483, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: NEW_JOYSTICK
       value: 

@@ -171,6 +171,6 @@ public class SaveSystemJson : MonoBehaviour
         if (!File.Exists(_savePath)) return;
 
         SaveData data = JsonUtility.FromJson<SaveData>(File.ReadAllText(_savePath));
-        playerMain.transform.position = data.PlayerPosition;
+        //playerMain.transform.position = data.PlayerPosition;
     }
 }

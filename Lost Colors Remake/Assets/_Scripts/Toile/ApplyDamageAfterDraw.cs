@@ -6,6 +6,7 @@ public class ApplyDamageAfterDraw : MonoBehaviour
     public static ApplyDamageAfterDraw Instance;
     
     [SerializeField] private List<DamageStructModel> _damageToEnemy = new ();
+    [SerializeField] private List<string> _enemyArmorToTej = new();
 
     public int damageToEnemyCount = 0;
     public List<EnemyHealth> _tabassedEnemy = new();
@@ -32,6 +33,11 @@ public class ApplyDamageAfterDraw : MonoBehaviour
         _damageToEnemy.Add(new(enemy, damage));
     }
 
+    public void AddEnemyGlyphToTej(string glyphName)
+    {
+        _enemyArmorToTej.Add(glyphName);
+    }
+
     public void ApplyDamage()
     {
         Debug.Log($"tabasse tout le monde {_damageToEnemy.Count}");
@@ -42,9 +48,20 @@ public class ApplyDamageAfterDraw : MonoBehaviour
         {
             model.targetedEnemy.EnemyLoseHP(model.damage);
             _tabassedEnemy.Add(model.targetedEnemy);
-            Debug.Log($"Target : {model.targetedEnemy}, Damage : {model.damage}, {Time.time}");
         }
 
         _damageToEnemy.Clear();
+    }
+
+    public void TejArmor()
+    {
+        Debug.Log("Tej armor");
+
+        foreach(string glyphName in _enemyArmorToTej)
+        {
+            EnemyManager.Instance.ArmorLost(glyphName);
+        }
+
+        _enemyArmorToTej.Clear();
     }
 }

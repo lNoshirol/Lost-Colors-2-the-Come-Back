@@ -163,7 +163,7 @@ public class DrawForDollarP : MonoBehaviour
             }
             else
             {
-                EnemyManager.Instance.ArmorLost(gestureResult.GestureClass);
+                ApplyDamageAfterDraw.Instance.AddEnemyGlyphToTej(gestureResult.GestureClass);
             }
             touchingScreen = false;
 

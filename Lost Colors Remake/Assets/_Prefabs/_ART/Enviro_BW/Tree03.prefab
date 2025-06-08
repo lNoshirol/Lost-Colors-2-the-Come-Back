@@ -209,10 +209,10 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.2577864, y: -0.21538879}
+  m_Offset: {x: -1.2577864, y: -0.93}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.11}
+    pivot: {x: 0.5, y: 0.29}
     oldSize: {x: 4, y: 4}
     newSize: {x: 3.875, y: 3.875}
     adaptiveTilingThreshold: 0.5
@@ -255,10 +255,10 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.28, y: 0.46}
+  m_Offset: {x: -0.28, y: -0.26}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.11}
+    pivot: {x: 0.5, y: 0.29}
     oldSize: {x: 4, y: 4}
     newSize: {x: 3.875, y: 3.875}
     adaptiveTilingThreshold: 0.5
@@ -301,10 +301,10 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.37, y: -0.29}
+  m_Offset: {x: 0.37, y: -1.01}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.11}
+    pivot: {x: 0.5, y: 0.29}
     oldSize: {x: 4, y: 4}
     newSize: {x: 3.875, y: 3.875}
     adaptiveTilingThreshold: 0.5
@@ -347,10 +347,10 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.15, y: -0.09}
+  m_Offset: {x: 1.15, y: -0.75}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.11}
+    pivot: {x: 0.5, y: 0.29}
     oldSize: {x: 4, y: 4}
     newSize: {x: 3.875, y: 3.875}
     adaptiveTilingThreshold: 0.5

@@ -53,7 +53,7 @@ public class EAttackState : EnemiesState
 
     void SkillSetupClose()
     {
-        context = new(EnemiesMain.rb, this.gameObject, (EnemiesMain.player.position - transform.position).normalized, 10);
+        context = new(EnemiesMain.rb, this.gameObject, (EnemiesMain.player.position - transform.position).normalized, 10, 0, EnemiesMain.agent);
         closeSkill = new DeerCloseSkill();
     }
 

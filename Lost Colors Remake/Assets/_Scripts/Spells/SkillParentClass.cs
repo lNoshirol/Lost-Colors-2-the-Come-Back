@@ -1,9 +1,13 @@
+using NavMeshPlus.Extensions;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.VFX;
+using DG.Tweening;
+using DG.Tweening.Core.Easing;
 
 public abstract class SkillParentClass
 {
@@ -55,6 +59,21 @@ public abstract class SkillParentClass
         rb.AddForce(direction * force, ForceMode2D.Impulse);
         //Delegate[] functions = { PrintRandomTest, PrintRandomTest, PrintRandomTest };
         //DelayedFunction(functions, 1f);
+    }
+
+    protected void EnemyDash(NavMeshAgent agent, float force, float dashDuration)
+    {
+        float originalSpeed = agent.speed;
+        DOTween.To(
+             () => 0f,
+             t => {
+                 agent.speed = originalSpeed + (force * t);
+             },
+             1f,
+             dashDuration
+         )
+         .SetEase(Ease.OutBack)
+         .OnComplete(() => agent.speed = originalSpeed);
     }
 
     protected void StopRigidBody(Rigidbody2D rb)
@@ -121,14 +140,16 @@ public class SkillContext
     public Vector3 Direction;
     public float Strength;
     public float MaxDistance;
+    public NavMeshAgent Agent;
 
     // Constructeur qui permet d'injecter que les données dont on a besoin
-    public SkillContext(Rigidbody2D _rigidbody2D = null, GameObject caster = null, Vector2? direction = null, float strength = 0f, float maxDistance = 0) // Vector3? est un Nullable, d'où le cast en vector3 après (évite les problèmes de Vector3 inconstant)
+    public SkillContext(Rigidbody2D _rigidbody2D = null, GameObject caster = null, Vector2? direction = null, float strength = 0f, float maxDistance = 0, NavMeshAgent agent = null) // Vector3? est un Nullable, d'où le cast en vector3 après (évite les problèmes de Vector3 inconstant)
     {
         Rigidbody2D = _rigidbody2D;
         Caster = caster;
         Direction = (Vector2)direction;
         Strength = strength;
         MaxDistance = maxDistance;
+        Agent = agent;
     }
 }

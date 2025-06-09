@@ -17,7 +17,7 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
 
     public void DrawFinish(DrawData result)
     {
-        if (EnemyManager.Instance.DoEnemyOnScreenHaveRecognizedGlyph(result.result.GestureClass) && result.result.Score > 0.9f)
+        if (EnemyManager.Instance.DoEnemyOnScreenHaveRecognizedGlyph(result.result.GestureClass) && result.result.Score > PlayerMain.Instance.toileInfo.tolerance)
         {
             StartCoroutine(GoodDraw(result));
             closestEnemyDetected = EnemyManager.Instance.FindClosestEnemyWithGlyph(result.result.GestureClass);

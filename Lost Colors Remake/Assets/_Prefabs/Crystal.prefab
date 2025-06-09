@@ -354,15 +354,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: _waveStartPoint.x
-      value: 13.3
+      value: 2.98
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: _waveStartPoint.y
-      value: -42.2
+      value: 9.04
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: _tilemapRenderers.Array.size
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: <WaveDuration>k__BackingField

@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e9f0954857e9962409f3975961dde57a, type: 3}
     - target: {fileID: 3279538772906276407, guid: 8985a79573d020548b1b3c20d3b970da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 23.33
       objectReference: {fileID: 0}
     - target: {fileID: 3279538772906276407, guid: 8985a79573d020548b1b3c20d3b970da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 19.45373
       objectReference: {fileID: 0}
     - target: {fileID: 3279538772906276407, guid: 8985a79573d020548b1b3c20d3b970da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8922628521492933615, guid: 8985a79573d020548b1b3c20d3b970da, type: 3}
       propertyPath: m_Name
-      value: Jar01_Crack
+      value: Jar01_crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

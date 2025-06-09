@@ -69,6 +69,7 @@ public abstract class SkillParentClass
 
     protected void EnemyDash(NavMeshAgent agent, float force, float dashDuration)
     {
+        agent.isStopped = false;
         float originalSpeed = agent.speed;
 
         agent.acceleration = 100;
@@ -76,7 +77,9 @@ public abstract class SkillParentClass
         agent.autoBraking = false;
 
         agent.speed = originalSpeed + force;
-        agent.SetDestination(PlayerMain.Instance.PlayerGameObject.transform.position);
+        Vector3 direction = (PlayerMain.Instance.PlayerGameObject.transform.position - PlayerMain.Instance.PlayerGameObject.transform.position).normalized;
+        Vector3 overshootTarget = PlayerMain.Instance.PlayerGameObject.transform.position + direction * 5f;
+        agent.SetDestination(overshootTarget);
 
         DOTween.To(() => agent.speed, x => agent.speed = x, originalSpeed, dashDuration)
                .SetEase(Ease.OutCubic)

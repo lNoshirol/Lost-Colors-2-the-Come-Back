@@ -33,7 +33,7 @@ public class EAttackState : EnemiesState
     {
         EnemiesMain.Animation.GetDirectionXAnimPlayer();
         if (!EnemiesMain.alreadyAttack) {
-            EnemiesMain.agent.enabled = false;
+            EnemiesMain.agent.isStopped = true;
             EnemiesMain.canLookAt = false;
             int randomSpell = Random.Range(0, 2);
             Debug.Log("J'attaque");
@@ -56,7 +56,7 @@ public class EAttackState : EnemiesState
     public override void OnExit()
     {
         EnemiesMain.canLookAt = true;
-        EnemiesMain.agent.enabled = true;
+        EnemiesMain.agent.isStopped = false;
         EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", false);
         EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", false);
     }

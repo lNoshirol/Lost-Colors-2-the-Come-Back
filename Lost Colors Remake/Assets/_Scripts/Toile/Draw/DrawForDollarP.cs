@@ -123,11 +123,8 @@ public class DrawForDollarP : MonoBehaviour
     {
         if (points.Count > 10)
         {
-            //List<Point> drawReady = _extDrawFunc.Vec3ToPoints(_extDrawFunc.RecenterAndRotate(points)); //20% de précision si on dégage le recenter and rotate
             List<Point> drawReady = _extDrawFunc.Vec3ToPoints(points);
 
-            //GetSpellTargetPointFromCentroid(points);
-            //GetSpellTargetPointFromCenter(points);
 
             Gesture candidate = new Gesture(drawReady.ToArray());
             Result gestureResult = PointCloudRecognizer.Classify(candidate, trainingSet.ToArray());
@@ -135,14 +132,10 @@ public class DrawForDollarP : MonoBehaviour
 
             OnDrawFinish?.Invoke(_drawData);
 
-            //Debug.Log(gestureResult.GestureClass + " " + gestureResult.Score);
-
-            //TryMakeAdaptativeCollider(GetDrawCenter(points), gestureResult);
 
             _catchEnnemy.CatchObjectOnLine();
 
-            //TEMP A FIXER PLUS TARD
-            if (gestureResult.Score < 0.9)
+            if (gestureResult.Score < 0.8)
             {
                 foreach (GameObject enemy in _detectEnemyInShape.GetTargetsInShape())
                 {
@@ -166,27 +159,6 @@ public class DrawForDollarP : MonoBehaviour
                 ApplyDamageAfterDraw.Instance.AddEnemyGlyphToTej(gestureResult.GestureClass);
             }
             touchingScreen = false;
-
-            //switch (gestureResult.GestureClass)
-            //{
-            //    case "thunder":
-            //        foreach (GameObject enemy in EnemyManager.Instance.CurrentEnemyList)
-            //        {
-            //            EnemyHealth health = enemy.GetComponent<EnemyHealth>();
-            //            if (health.enemyArmorId == "raccoon_armor")
-            //            {
-            //                //health.ArmorLost();
-            //            }
-            //        }
-            //        foreach (GameObject enemy in _detectEnemyInShape.GetTargetsInShape())
-            //        {
-            //            Debug.Log(enemy);
-            //            enemy.GetComponent<EnemyHealth>().EnemyHealthChange(100);
-
-            //        }
-            //        break;
-
-            //}
         }
 
         touchingScreen = false;

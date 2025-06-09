@@ -35,7 +35,7 @@ public class EAttackState : EnemiesState
         if (!EnemiesMain.alreadyAttack) {
             EnemiesMain.agent.enabled = false;
             EnemiesMain.canLookAt = false;
-            int randomSpell = Random.Range(0, 1);
+            int randomSpell = Random.Range(0, 2);
             Debug.Log("J'attaque");
             if (randomSpell == 0) 
             { 

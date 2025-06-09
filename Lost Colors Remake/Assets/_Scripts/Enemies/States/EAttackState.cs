@@ -9,14 +9,24 @@ public class EAttackState : EnemiesState
     float attackCooldown;
     [SerializeField]
     float attackAmount;
-
+    [SerializeField]
+    string attackName;
     private SkillParentClass closeSkill;
     private SkillParentClass rangeSkill;
 
     SkillContext context;
+    public enum AnimalType
+    {
+        Deer,
+        Wolf
+    }
+
+    public AnimalType animalType;
+
 
     public override void OnEnter()
     {
+        AnimalContextCheck();
     }
 
     public override void Do()
@@ -25,7 +35,7 @@ public class EAttackState : EnemiesState
         if (!EnemiesMain.alreadyAttack) {
             EnemiesMain.agent.enabled = false;
             EnemiesMain.canLookAt = false;
-            int randomSpell = Random.Range(0, 2);
+            int randomSpell = Random.Range(0, 1);
             Debug.Log("J'attaque");
             if (randomSpell == 0) 
             { 
@@ -53,14 +63,12 @@ public class EAttackState : EnemiesState
 
     void SkillSetupClose()
     {
-        context = new(EnemiesMain.rb, this.gameObject, (EnemiesMain.player.position - transform.position).normalized, 10, 0, EnemiesMain.agent);
-        closeSkill = new DeerCloseSkill();
+        context = new(null, null, EnemiesMain.player.transform.position, 10, 2, EnemiesMain.agent);
     }
 
     void SkillSetupRange()
     {
         context = new(null, null, EnemiesMain.player.position, 5, 3);
-        rangeSkill = new DeerRangeSkill();
     }
 
     public override void FixedDo()
@@ -94,4 +102,27 @@ public class EAttackState : EnemiesState
         yield return new WaitForSeconds(_animTime);
         EnemiesMain.SwitchState(EnemiesMain.EIdleState);
     }
+
+    void AnimalContextCheck()
+    {
+        switch (animalType)
+        {
+            case AnimalType.Deer:
+                closeSkill = new DeerCloseSkill();
+                rangeSkill = new DeerRangeSkill();
+                break;
+            case AnimalType.Wolf:
+                //mettre ici les skills du loup
+                break;
+            default:
+                Debug.LogError("Unknow animal type, please select one");
+                break;
+        }
+    }
+
+
+
 }
+
+
+

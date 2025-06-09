@@ -26,8 +26,7 @@ public class DeerRangeSkill : SkillParentClass
         {
             await Task.Delay((int)(WaitTimeBetween * 1000));
             if (EnemyManager.Instance == null) return;
-            GameObject newVFX = EnemyManager.Instance.SearchInPool("Thunder", EnemyManager.Instance.vfxPool);
-            newVFX.transform.position = pos;
+            SearchVFX("Thunder").transform.position = pos;
         }
     }
 

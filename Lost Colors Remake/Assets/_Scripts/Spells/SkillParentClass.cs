@@ -26,6 +26,12 @@ public abstract class SkillParentClass
         // jouer le VFX
     }
 
+    protected GameObject SearchVFX(string vfxName)
+    {
+       GameObject newVFX = EnemyManager.Instance.SearchInPool(vfxName, EnemyManager.Instance.vfxPool);
+       return newVFX;
+    }
+
     protected void PlaySFX(AudioClip sfx)
     {
         // jouer le son dans le sound manager
@@ -64,16 +70,19 @@ public abstract class SkillParentClass
     protected void EnemyDash(NavMeshAgent agent, float force, float dashDuration)
     {
         float originalSpeed = agent.speed;
-        DOTween.To(
-             () => 0f,
-             t => {
-                 agent.speed = originalSpeed + (force * t);
-             },
-             1f,
-             dashDuration
-         )
-         .SetEase(Ease.OutBack)
-         .OnComplete(() => agent.speed = originalSpeed);
+
+        agent.acceleration = 100;
+        agent.angularSpeed = 720;
+        agent.autoBraking = false;
+
+        agent.speed = originalSpeed + force;
+        agent.SetDestination(PlayerMain.Instance.PlayerGameObject.transform.position);
+
+        DOTween.To(() => agent.speed, x => agent.speed = x, originalSpeed, dashDuration)
+               .SetEase(Ease.OutCubic)
+               .OnComplete(() => {
+                   agent.speed = originalSpeed;
+               });
     }
 
     protected void StopRigidBody(Rigidbody2D rb)

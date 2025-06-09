@@ -54,9 +54,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6971127474480141792, guid: ee95d9cd18978fc429418074f36ffa6e, type: 3}
       propertyPath: m_Name
-      value: GroundDall01_Crack
+      value: GroundDallCrack01
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

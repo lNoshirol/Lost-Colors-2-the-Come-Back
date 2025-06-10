@@ -36,7 +36,7 @@ public class EAttackState : EnemiesState
             EnemiesMain.agent.isStopped = true;
             EnemiesMain.canLookAt = false;
             int randomSpell = Random.Range(0, 2);
-            Debug.Log("J'attaque");
+            //Debug.Log("J'attaque");
             if (randomSpell == 0) 
             { 
                 CastCloseSkill();

@@ -10,7 +10,7 @@ public class TriggerToile : MonoBehaviour
 
     public bool _isActive;
     [SerializeField] private GameObject toile;
-    [SerializeField] private Button toileButton;
+    [SerializeField] private Button toileButtonIn;
 
     public event Action<bool> WhenTriggerToile;
 
@@ -68,12 +68,14 @@ public class TriggerToile : MonoBehaviour
             StartCoroutine(DeactivateAfterFrame());
             StopCoroutine(coroutine);
             time.InSlowMotion = false;
+            PlayerMain.Instance.UI.StartToileCooldownAsync(PlayerMain.Instance.toileInfo.cooldown);
+
         }
     }
 
     public void EnableToileButton()
     {
-        toileButton.interactable = true;
+        toileButtonIn.interactable = true;
     }
 
     IEnumerator DeactivateAfterFrame()
@@ -92,4 +94,6 @@ public class TriggerToile : MonoBehaviour
         ApplyDamageAfterDraw.Instance.ApplyDamage();
         ApplyDamageAfterDraw.Instance.TejArmor();
     }
+
+
 }

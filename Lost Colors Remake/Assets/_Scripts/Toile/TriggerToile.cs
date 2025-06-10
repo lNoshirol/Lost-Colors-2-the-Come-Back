@@ -77,7 +77,7 @@ public class TriggerToile : MonoBehaviour
 
     public void EnableToileButton()
     {
-        toileButtonIn.interactable = true;
+            toileButtonIn.interactable = true;
     }
 
     IEnumerator DeactivateAfterFrame()

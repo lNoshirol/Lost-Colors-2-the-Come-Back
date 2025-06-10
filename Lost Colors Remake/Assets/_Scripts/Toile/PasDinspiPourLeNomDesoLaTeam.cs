@@ -9,6 +9,8 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
 {
     [SerializeField] private GameObject closestEnemyDetected;
 
+    private Coroutine runningCoroutine;
+
     private void Start()
     {
         DrawForDollarP.instance.OnDrawFinish += DrawFinish;
@@ -19,12 +21,14 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
     {
         if (EnemyManager.Instance.DoEnemyOnScreenHaveRecognizedGlyph(result.result.GestureClass) && result.result.Score > PlayerMain.Instance.toileInfo.tolerance)
         {
-            StartCoroutine(GoodDraw(result));
+           /* runningCoroutine = */
+                StartCoroutine(GoodDraw(result));
             closestEnemyDetected = EnemyManager.Instance.FindClosestEnemyWithGlyph(result.result.GestureClass);
         }
         else if (EnemyManager.Instance.FindAllEnnemyOnScreen().Count > 0) 
         {
-            StartCoroutine(WrongDraw(result));
+          /*  runningCoroutine = */
+                StartCoroutine(WrongDraw(result));
         }
     }
 
@@ -69,7 +73,10 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
 
     }
 
-
+    public void StopRunningCoroutine()
+    {
+        StopCoroutine(runningCoroutine);
+    }
 
 
 

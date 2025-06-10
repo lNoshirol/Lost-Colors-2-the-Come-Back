@@ -32,7 +32,7 @@ public class EPatrolState : EnemiesState
             SearchWalkPoint();
         }
 
-        if (walkPointSet)
+        else if (walkPointSet)
         {
             SetEnemyDestination(walkPoint);
         }

@@ -1,5 +1,7 @@
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class EnigmeSolvedCrystal : EnigmeSolved
 {
@@ -8,8 +10,9 @@ public class EnigmeSolvedCrystal : EnigmeSolved
 
     [SerializeField]
     private Crystal Crystal;
-    
+
     public Sprite crystalUncorrupted;
+    [SerializeField] private Volume _localDarkVolume;
 
     public override void Interact()
     {
@@ -20,8 +23,18 @@ public class EnigmeSolvedCrystal : EnigmeSolved
 
     private void CrystalColorLerp()
     {
+        StartCoroutine(FadePPVolume());
         crystal.material.SetTexture("_ColoredTex", crystalUncorrupted.texture);
         crystal.material.DOFloat(1f, "_Transition", 2f);
         Crystal.CrystalSave();
+    }
+
+    private IEnumerator FadePPVolume()
+    {
+        for (float i = 1; i > 0; i-=0.01f) 
+        {
+            _localDarkVolume.weight = i;
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }

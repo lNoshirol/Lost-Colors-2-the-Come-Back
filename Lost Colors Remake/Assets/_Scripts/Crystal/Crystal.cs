@@ -12,9 +12,9 @@ public class Crystal : MonoBehaviour
 
     void Start()
     {
-        TryGetComponent(out EnigmeSolvedCrystal enigmeSolvedCrystal);
-        // NEED TO FINISH
-        //enigmeSolvedCrystal.ISColorized += LOL;
+        //TryGetComponent(out EnigmeSolvedCrystal enigmeSolvedCrystal);
+        //NEED TO FINISH
+        //enigmeSolvedCrystal.IsColorized += CrystalSave;
 
         foreach (GameObject p in EnemyManager.Instance.CurrentEnemyList)
         {
@@ -23,7 +23,7 @@ public class Crystal : MonoBehaviour
         }
     }
     
-    public void LOL()
+    public void CrystalSave()
     {
         CrystalManager.Instance.AddToDict(this, name, true, SceneManager.GetActiveScene().name);
         SaveSystem.Instance.SaveCrystalWhenIsColorized();

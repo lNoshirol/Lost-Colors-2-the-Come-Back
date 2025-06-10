@@ -256,26 +256,4 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
-    public void SaveCrystalWhenIsColorized()
-    {
-        XmlDocument saveFile = new XmlDocument();
-        if (!System.IO.File.Exists(savePath)) return;
-        saveFile.LoadXml(System.IO.File.ReadAllText(savePath));
-
-        string key;
-        string value;
-
-        foreach (XmlNode node in saveFile.ChildNodes[1])
-        {
-            key = node.Name;
-            value = node.InnerText;
-            switch (key)
-            {
-                case "CrystalsList":
-                    var loadedList = LoadCrystalsList(node);
-                    CrystalManager.Instance.LoadList(loadedList);
-                    break;
-            }
-        }
-    }
 }

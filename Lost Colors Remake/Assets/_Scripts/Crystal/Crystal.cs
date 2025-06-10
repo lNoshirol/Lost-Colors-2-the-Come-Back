@@ -22,10 +22,4 @@ public class Crystal : MonoBehaviour
             _list.Add(enemy);
         }
     }
-    
-    public void CrystalSave()
-    {
-        CrystalManager.Instance.AddToDict(this, name, true, SceneManager.GetActiveScene().name);
-        SaveSystem.Instance.SaveCrystalWhenIsColorized();
-    }
 }

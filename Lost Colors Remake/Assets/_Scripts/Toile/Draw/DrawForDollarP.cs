@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using TMPro;
+using Unity.Mathematics;
 
 public class DrawForDollarP : MonoBehaviour
 {
     public static DrawForDollarP instance;
 
-    [SerializeField] LineRenderer lineRenderer;
     [SerializeField] private float distanceBetweenPoint;
     private float currentDistance;
     [SerializeField] private List<Vector3> points = new();
     public Vector2 _currentPoint;
     [SerializeField] float _drawOffset;
     private DrawData _drawData;
-    [SerializeField] private Color _currentColor;
+
+    [Header("Visual")]
+    [SerializeField] LineRenderer lineRenderer;
+    private Color _currentColor;
+    [SerializeField] private List<Color> _possibleColors;
 
     
 
@@ -113,6 +117,7 @@ public class DrawForDollarP : MonoBehaviour
         if (!ToileMain.Instance.gestureIsStarted && gameObject.transform.parent.gameObject.activeSelf)
             ToileMain.Instance.timerCo = StartCoroutine(ToileMain.Instance.ToileTimer());
 
+        _currentColor = _possibleColors[UnityEngine.Random.Range(0, _possibleColors.Count)];
         lineRenderer.startColor = _currentColor;
         lineRenderer.endColor = _currentColor;
 

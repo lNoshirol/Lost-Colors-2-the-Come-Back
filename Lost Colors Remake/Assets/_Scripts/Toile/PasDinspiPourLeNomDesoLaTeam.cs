@@ -31,7 +31,7 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
     public IEnumerator GoodDraw(DrawData result)
     {
         Time.timeScale = 0;
-        Debug.LogWarning($"{result.result.Score}");
+        Debug.LogWarning($"{result.result.Score}, play good sound");
         yield return new WaitForSecondsRealtime(0.1f);
         closestEnemyDetected.TryGetComponent(out EnemyMain enemyMain);
 

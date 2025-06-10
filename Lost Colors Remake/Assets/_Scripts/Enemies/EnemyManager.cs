@@ -99,7 +99,7 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
         }
         else
         {
-            Debug.Log("No enemy on screen with armor");
+            //Debug.Log("No enemy on screen with armor");
         }
     }
 
@@ -181,7 +181,7 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
         {
             if (enemy.TryGetComponent(out EnemyMain enemyMain) && enemyMain.Armor.IsGlyphInArmorList(glyphName))
             {
-                Debug.LogWarning($"Target glyph : {glyphName}, Current Checking enemy : {enemyMain.Armor.activeGlyphs[0].name} Test logic unity : {enemyMain.Armor.IsGlyphInArmorList(glyphName)}");
+                //Debug.LogWarning($"Target glyph : {glyphName}, Current Checking enemy : {enemyMain.Armor.activeGlyphs[0].name} Test logic unity : {enemyMain.Armor.IsGlyphInArmorList(glyphName)}");
                 return true;
             }
         }

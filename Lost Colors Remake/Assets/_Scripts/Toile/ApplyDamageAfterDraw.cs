@@ -40,7 +40,7 @@ public class ApplyDamageAfterDraw : MonoBehaviour
 
     public void ApplyDamage()
     {
-        Debug.Log($"tabasse tout le monde {_damageToEnemy.Count}");
+        //Debug.Log($"tabasse tout le monde {_damageToEnemy.Count}");
         
         _tabassedEnemy.Clear();
 
@@ -55,7 +55,7 @@ public class ApplyDamageAfterDraw : MonoBehaviour
 
     public void TejArmor()
     {
-        Debug.Log("Tej armor");
+        //Debug.Log("Tej armor");
 
         foreach(string glyphName in _enemyArmorToTej)
         {

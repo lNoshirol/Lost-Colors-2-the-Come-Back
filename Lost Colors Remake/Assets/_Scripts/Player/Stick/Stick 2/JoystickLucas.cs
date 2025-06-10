@@ -60,7 +60,7 @@ public class JoystickLucas : MonoBehaviour
             targetPos = Camera.main.ScreenToWorldPoint(touch.position) - normalPos;
             targetPos2 = Camera.main.ScreenToWorldPoint(touch.position);
 
-            Debug.Log("trying to move");
+            //Debug.Log("trying to move");
             endPos = Camera.main.ScreenToWorldPoint(touch.position /*new Vector2(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y)*/ /*Input.mousePosition*/);
 
             Vector2 offset = endPos - new Vector2(transform.parent.position.x, transform.parent.position.y);

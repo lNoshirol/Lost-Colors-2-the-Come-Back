@@ -56,6 +56,7 @@ public class TriggerToile : MonoBehaviour
             WhenTriggerToile?.Invoke(!_isActive);
             PlayerMain.Instance.UI.HidePlayerControls();
             PlayerMain.Instance.Move.canMove = false;
+            PlayerMain.Instance.Rigidbody2D.linearVelocity = new Vector2(0,0);
             //StopCoroutine(ToileMain.Instance.timerCo);
             //Time.timeScale = Time.timeScale / 3;
             coroutine = StartCoroutine(time.DoSlowmotion(ToileMain.Instance.toileTime));

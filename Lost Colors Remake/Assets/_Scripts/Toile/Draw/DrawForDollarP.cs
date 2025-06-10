@@ -135,7 +135,7 @@ public class DrawForDollarP : MonoBehaviour
 
             _catchEnnemy.CatchObjectOnLine();
 
-            if (gestureResult.Score < PlayerMain.Instance.toileInfo.tolerance)
+            if (gestureResult.Score < 0.9)
             {
                 foreach (GameObject enemy in _detectEnemyInShape.GetTargetsInShape())
                 {

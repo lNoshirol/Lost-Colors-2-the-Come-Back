@@ -207,7 +207,7 @@ public class EnemyMain : MonoBehaviour
 
     public virtual void ColorSwitch()
     {
-        spriteRenderer.material.DOFloat(1f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
+        //spriteRenderer.material.DOFloat(1f, "_Transition", 2.5f).SetEase(Ease.OutQuad);
         isColorized = true;
         gameObject.layer = 0;
         Animation.SwitchAnimatorToColor();

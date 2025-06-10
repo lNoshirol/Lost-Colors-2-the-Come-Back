@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2456282809993031852, guid: d4ea82356d2c91b4e8933847bac6bb3a, type: 3}
       propertyPath: m_Name
-      value: Jar03_Crack
+      value: Jar03_crack
       objectReference: {fileID: 0}
     - target: {fileID: 5323717478227936074, guid: d4ea82356d2c91b4e8933847bac6bb3a, type: 3}
       propertyPath: m_Sprite
@@ -18,11 +18,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 07303cde55a9b3a4a907df0f1fe9d760, type: 3}
     - target: {fileID: 8378578003573108084, guid: d4ea82356d2c91b4e8933847bac6bb3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 23.416948
       objectReference: {fileID: 0}
     - target: {fileID: 8378578003573108084, guid: d4ea82356d2c91b4e8933847bac6bb3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 10.609346
       objectReference: {fileID: 0}
     - target: {fileID: 8378578003573108084, guid: d4ea82356d2c91b4e8933847bac6bb3a, type: 3}
       propertyPath: m_LocalPosition.z

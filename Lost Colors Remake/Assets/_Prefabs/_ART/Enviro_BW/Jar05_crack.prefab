@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 108799575354657454, guid: 002150990947d9642974cf698de6a044, type: 3}
       propertyPath: m_Name
-      value: Jar05_Crack
+      value: Jar05_crack
       objectReference: {fileID: 0}
     - target: {fileID: 6328191748448343926, guid: 002150990947d9642974cf698de6a044, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 25.63
       objectReference: {fileID: 0}
     - target: {fileID: 6328191748448343926, guid: 002150990947d9642974cf698de6a044, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.1100004
       objectReference: {fileID: 0}
     - target: {fileID: 6328191748448343926, guid: 002150990947d9642974cf698de6a044, type: 3}
       propertyPath: m_LocalPosition.z

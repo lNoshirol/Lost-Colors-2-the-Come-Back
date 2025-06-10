@@ -80,6 +80,7 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
 
     #region Debug et Test
 
+    [Header("Debug")]
     public Slider slider;
     public float time;
     public float unscaledTime;

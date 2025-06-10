@@ -5,6 +5,9 @@ public class EnigmeSolvedCrystal : EnigmeSolved
 {
     public SpriteRenderer crystal;
     [SerializeField] private TileMapCorruptionWaveHandler _waveManager;
+
+    [SerializeField]
+    private Crystal Crystal;
     
     public Sprite crystalUncorrupted;
 
@@ -19,5 +22,6 @@ public class EnigmeSolvedCrystal : EnigmeSolved
     {
         crystal.material.SetTexture("_ColoredTex", crystalUncorrupted.texture);
         crystal.material.DOFloat(1f, "_Transition", 2f);
+        Crystal.CrystalSave();
     }
 }

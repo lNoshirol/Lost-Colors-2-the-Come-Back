@@ -62,7 +62,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 40caa172827390649b13662933c1698c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crystal: {fileID: 3044564838469904244}
   _waveManager: {fileID: 4701619983086102955}
+  Crystal: {fileID: 7325701953120507807}
   crystalUncorrupted: {fileID: 21300000, guid: c496d63d5dfa6b44eb911613b0638a11, type: 3}
 --- !u!114 &7325701953120507807
 MonoBehaviour:
@@ -354,15 +355,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: _waveStartPoint.x
-      value: 2.98
+      value: 13.3
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: _waveStartPoint.y
-      value: 9.04
+      value: -41.4
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: _tilemapRenderers.Array.size
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: <WaveDuration>k__BackingField

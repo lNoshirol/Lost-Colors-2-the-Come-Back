@@ -68,7 +68,7 @@ public class TriggerToile : MonoBehaviour
             StartCoroutine(DeactivateAfterFrame());
             StopCoroutine(coroutine);
             time.InSlowMotion = false;
-            PlayerMain.Instance.UI.StartToileCooldownAsync(PlayerMain.Instance.toileInfo.toileCooldown);
+            PlayerMain.Instance.UI.StartToileCooldownAsync(PlayerMain.Instance.toileInfo.cooldown);
 
         }
     }

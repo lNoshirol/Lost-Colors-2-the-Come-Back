@@ -9,4 +9,5 @@ public class ToileScriptable : ScriptableObject
     public float paintAmount;
     public float slowMotionScale;
     public float tolerance;
+    public float cooldown;
 }

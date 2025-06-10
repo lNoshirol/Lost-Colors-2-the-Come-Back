@@ -68,4 +68,5 @@ public class PropsColoration : MonoBehaviour
 
         return Vector2.Distance(new Vector2(closestX, closestY), point);
     }
+
 }

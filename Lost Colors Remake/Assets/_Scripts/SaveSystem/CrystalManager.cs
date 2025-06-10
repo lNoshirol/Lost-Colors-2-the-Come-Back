@@ -5,41 +5,8 @@ using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
-public class CrystalManager : MonoBehaviour
+public class CrystalManager : SingletonCreatorPersistent<CrystalManager>
 {
-    // Singleton
-    #region Singleton
-    private static CrystalManager _instance;
-
-    public static CrystalManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                GameObject go = new GameObject("CrystalManager");
-                _instance = go.AddComponent<CrystalManager>();
-                Debug.Log("<color=#8b59f0>Crystal Manager</color> instance <color=#58ed7d>created</color>");
-            }
-            return _instance;
-        }
-    }
-
-    private void Awake()
-    {
-        Debug.LogWarning(gameObject.name);
-        if (_instance != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _instance = this;
-        }
-    }
-    #endregion
-
-
     #region Dictionnaire
     [Serializable]
     public class ListCrystal

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -20,16 +22,17 @@ public class EFleeState : EnemiesState
             FleeFromPlayer(fleeDistance);
         }
 
-        if (fleePointSet)
+        else if (fleePointSet)
         {
             SetEnemyDestination(fleePoint);
+            WaitAndFleeAgain(2f);
         }
 
-        if (FleeDestinationReach())
-        {
-            Debug.Log("Destination atteinte");
-            FleeFromPlayer(fleeDistance);
-        }
+        //if (FleeDestinationReach())
+        //{
+        //    Debug.Log("Destination atteinte");
+        //    fleePointSet = false;
+        //}
     }
 
     public override void FixedDo()
@@ -65,7 +68,12 @@ public class EFleeState : EnemiesState
 
     private bool FleeDestinationReach()
     {
-        return Vector2.Distance(transform.position, fleePoint) < 2f;
+        return Vector3.Distance(transform.position, fleePoint) < 0.5f;
     }
 
+    IEnumerator WaitAndFleeAgain(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        fleePointSet = false;
+    }
 }

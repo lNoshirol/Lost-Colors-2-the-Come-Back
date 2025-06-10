@@ -11,22 +11,14 @@ public class EAttackState : EnemiesState
     float attackAmount;
     [SerializeField]
     string attackName;
-    private SkillParentClass closeSkill;
-    private SkillParentClass rangeSkill;
+
 
     SkillContext context;
-    public enum AnimalType
-    {
-        Deer,
-        Wolf
-    }
 
-    public AnimalType animalType;
 
 
     public override void OnEnter()
     {
-        AnimalContextCheck();
     }
 
     public override void Do()
@@ -36,7 +28,6 @@ public class EAttackState : EnemiesState
             EnemiesMain.agent.isStopped = true;
             EnemiesMain.canLookAt = false;
             int randomSpell = Random.Range(0, 2);
-            //Debug.Log("J'attaque");
             if (randomSpell == 0) 
             { 
                 CastCloseSkill();
@@ -85,14 +76,14 @@ public class EAttackState : EnemiesState
     {
         EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", true);
         SkillSetupClose();
-        closeSkill.Activate(context);
+        EnemiesMain.closeSkill.Activate(context);
         StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length));
     }
     public void CastRangeSkill()
     {
         EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", true);
         SkillSetupRange();
-        rangeSkill.Activate(context);
+        EnemiesMain.rangeSkill.Activate(context);
         StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length));
     }
 
@@ -103,22 +94,7 @@ public class EAttackState : EnemiesState
         EnemiesMain.SwitchState(EnemiesMain.EIdleState);
     }
 
-    void AnimalContextCheck()
-    {
-        switch (animalType)
-        {
-            case AnimalType.Deer:
-                closeSkill = new DeerCloseSkill();
-                rangeSkill = new DeerRangeSkill();
-                break;
-            case AnimalType.Wolf:
-                //mettre ici les skills du loup
-                break;
-            default:
-                Debug.LogError("Unknow animal type, please select one");
-                break;
-        }
-    }
+
 
 
 

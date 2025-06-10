@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.U2D;
+using static EnemyDATA;
 
 public class EnemyMain : MonoBehaviour
 {
@@ -56,6 +57,7 @@ public class EnemyMain : MonoBehaviour
     public Vector2 velocity { get; private set; }
 
 
+
     //[Header("Enemy Sprite BW")]
     //public Sprite spriteRightBW;
     //public Sprite spriteLeftBW;
@@ -69,6 +71,10 @@ public class EnemyMain : MonoBehaviour
     private float nextAttackCheckTime = 0f;
     private float checkInterval = 0.2f;
 
+    //ATTACK STATE
+    public SkillParentClass closeSkill;
+    public SkillParentClass rangeSkill;
+
     public virtual void Start()
     {
 
@@ -80,6 +86,7 @@ public class EnemyMain : MonoBehaviour
         UI = GetComponent<EnemyUI>();
 
         SetupStats();
+
         EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);
 
         SetupAndEnterState();
@@ -163,7 +170,6 @@ public class EnemyMain : MonoBehaviour
         //All the stat from the scriptable 
         [Header("Globale Stats")]
         public bool isColorized;
-        public int powerLevel;
         public float maxHp;
         public List<GameObject> armorList;
         public int maxArmor;
@@ -174,30 +180,44 @@ public class EnemyMain : MonoBehaviour
         public float chaseSpeedMultiplier;
         public float attackAmount;
         public float attackCooldown;
+        public string animalType;
         public float speed;
-        public float maxSpeed;
-        public List<string> skillNameList;
+        public float angularSpeed;
+        public float acceleration;
     }
 
     protected void SetupStats()
     {
         Stats = new EnemyStats
         {
-            powerLevel = enemyData.enemyPowerLevel,
             maxHp = enemyData.enemyMaxHP,
+
             armorList = new List<GameObject>(enemyData.armorSpriteListPrefab),
             maxArmor = enemyData.enemyMaxArmor,
+
             sightRange = enemyData.enemySightRange,
             attackRange = enemyData.enemyAttackRange,
+
             idleWaitTime = enemyData.enemyIdleWaitTime,
+
             patrolSpeedMultiplier = enemyData.patrolSpeedMultiplier,
             chaseSpeedMultiplier = enemyData.chaseSpeedMultiplier,
+
             attackAmount = enemyData.enemyAttackAmount,
             attackCooldown = enemyData.enemyAttackCooldown,
+            animalType = enemyData.animalType.ToString(),
+
+
             speed = enemyData.enemySpeed,
-            maxSpeed = enemyData.enemyMaxSpeed,
-            skillNameList = new List<string>(enemyData.skillNameList)
+            angularSpeed = enemyData.enemyAngularSpeed,
+            acceleration = enemyData.enemyAcceleration,
+
         };
+
+        agent.speed = Stats.speed;
+        agent.acceleration = Stats.acceleration;
+        agent.angularSpeed = Stats.angularSpeed;
+        AnimalContextCheck();
     }
 
     public EnemiesState GetChaseOrFleeState()
@@ -265,6 +285,23 @@ public class EnemyMain : MonoBehaviour
                 UI.SwitchHealtBar(false);
                 Armor.AddGlyph();
             }
+        }
+    }
+
+    void AnimalContextCheck()
+    {
+        switch (Stats.animalType)
+        {
+            case "Deer":
+                closeSkill = new DeerCloseSkill();
+                rangeSkill = new DeerRangeSkill();
+                break;
+            case "Wolf":
+                //mettre ici les skills du loup
+                break;
+            default:
+                Debug.LogError("Unknow animal type, please select one");
+                break;
         }
     }
 

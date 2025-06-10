@@ -25,8 +25,9 @@ MonoBehaviour:
   chaseSpeedMultiplier: 1.5
   enemyAttackAmount: 20
   enemyAttackCooldown: 0.5
-  enemySpeed: 1
-  enemyMaxSpeed: 2
+  enemySpeed: 3.5
+  enemyAngularSpeed: 120
+  enemyAcceleration: 8
   skillNameList:
   - SimpleDash
   - Fireball

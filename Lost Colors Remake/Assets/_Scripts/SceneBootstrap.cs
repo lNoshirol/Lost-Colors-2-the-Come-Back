@@ -8,7 +8,7 @@ public class SceneBootstrap : MonoBehaviour
         //string sceneToLoad = SaveSystem.Instance.GetLastSavedScene();
         //SaveSystem.Instance.SetPlayerLastPosition();
         //SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Additive);
-        SceneManager.LoadScene("FR_SP_01_Clean", LoadSceneMode.Additive);
+        SceneManager.LoadScene("FR_SP_01_Clean");
     }
 
 }

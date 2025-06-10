@@ -14,6 +14,11 @@ public class Enigma : MonoBehaviour
         DrawForDollarP.instance.OnDrawFinish += SolveEnigme;
     }
 
+    private void OnDestroy()
+    {
+        DrawForDollarP.instance.OnDrawFinish -= SolveEnigme;
+    }
+
     private void SolveEnigme(DrawData drawData)
     {
         if (Vector3.Distance(PlayerMain.Instance.transform.position, transform.position) <= castDistanceAuthorize && drawData.result.GestureClass == drawTargetName && drawData.result.Score > PlayerMain.Instance.toileInfo.tolerance && !_isSolved)

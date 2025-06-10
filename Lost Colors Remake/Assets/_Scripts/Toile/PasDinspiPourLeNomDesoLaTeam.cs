@@ -39,28 +39,22 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.1f);
         closestEnemyDetected.TryGetComponent(out EnemyMain enemyMain);
 
-        enemyMain.Armor.activeGlyphs[0].SetActive(false);
-        DrawForDollarP.instance.SetActiveLine(false);
-        yield return new WaitForSecondsRealtime(0.1f);
+        for (int i = 0; i < 6; i++)
+        {
+            if (i % 2 == 0)
+            {
+                enemyMain.Armor.activeGlyphs[0].SetActive(false);
+                DrawForDollarP.instance.SetActiveLine(false);
+            }
+            else
+            {
+                enemyMain.Armor.activeGlyphs[0].SetActive(true);
+                DrawForDollarP.instance.SetActiveLine(true);
+            }
 
-        enemyMain.Armor.activeGlyphs[0].SetActive(true);
-        DrawForDollarP.instance.SetActiveLine(true);
-        yield return new WaitForSecondsRealtime(0.1f);
+            yield return new WaitForSecondsRealtime(0.1f);
+        }
 
-        enemyMain.Armor.activeGlyphs[0].SetActive(false);
-        DrawForDollarP.instance.SetActiveLine(false);
-        yield return new WaitForSecondsRealtime(0.1f);
-
-        enemyMain.Armor.activeGlyphs[0].SetActive(true);
-        DrawForDollarP.instance.SetActiveLine(true);
-        yield return new WaitForSecondsRealtime(0.1f);
-
-        enemyMain.Armor.activeGlyphs[0].SetActive(false);
-        DrawForDollarP.instance.SetActiveLine(false);
-        yield return new WaitForSecondsRealtime(0.1f);
-
-        enemyMain.Armor.activeGlyphs[0].SetActive(true);
-        DrawForDollarP.instance.SetActiveLine(true);
         Time.timeScale = PlayerMain.Instance.toileInfo.slowMotionScale;
     }
 

@@ -381,7 +381,6 @@ MonoBehaviour:
   attackCooldown: 5
   attackAmount: 0
   attackName: 
-  animalType: 0
 --- !u!1 &5411484367494692842
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +782,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!114 &2704634170682903598
 MonoBehaviour:

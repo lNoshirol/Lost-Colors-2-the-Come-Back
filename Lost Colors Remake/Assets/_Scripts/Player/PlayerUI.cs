@@ -3,6 +3,9 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
+using System;
+using System.Threading.Tasks;
 
 public class PlayerUI : MonoBehaviour
 {
@@ -102,5 +105,12 @@ public class PlayerUI : MonoBehaviour
             toileButton.interactable = true;
         else
             toileButton.interactable = false;
+    }
+
+    public async void StartToileCooldownAsync(float cooldownTime)
+    {
+        toileButton.interactable = false;
+        await Task.Delay(TimeSpan.FromSeconds(cooldownTime));
+        toileButton.interactable = true;
     }
 }

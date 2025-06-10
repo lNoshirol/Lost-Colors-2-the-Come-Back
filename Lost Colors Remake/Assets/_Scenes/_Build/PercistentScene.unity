@@ -290,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5502357473904131515, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 3.96875
       objectReference: {fileID: 0}
     - target: {fileID: 8112059751028652844, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_IsActive
@@ -773,6 +773,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3dece92e015b0b4791d65dcfdb39348, type: 3}
+--- !u!1001 &1995721463
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3593487576507803105, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: m_Name
+      value: PropsSpriteDatabase
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973461642909574098, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.82934284
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973461642909574098, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5436053
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973461642909574098, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.09854944
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973461642909574098, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973461642909574098, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973461642909574098, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973461642909574098, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973461642909574098, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973461642909574098, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973461642909574098, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4986271928651781964, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: _textureDatabase
+      value: 
+      objectReference: {fileID: 11400000, guid: 65b50979293433748b54b45cd2bfcb6a, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
 --- !u!1001 &71540311676566459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -901,3 +962,4 @@ SceneRoots:
   - {fileID: 1072790847}
   - {fileID: 902526042}
   - {fileID: 71540311676566459}
+  - {fileID: 1995721463}

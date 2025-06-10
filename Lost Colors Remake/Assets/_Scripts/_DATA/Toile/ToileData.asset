@@ -17,3 +17,4 @@ MonoBehaviour:
   shapeDamage: 1
   paintAmount: 30
   slowMotionScale: 0.3
+  toileCooldown: 1.5

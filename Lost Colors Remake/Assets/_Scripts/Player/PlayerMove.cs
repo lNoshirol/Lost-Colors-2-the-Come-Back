@@ -62,8 +62,11 @@ public class PlayerMove : MonoBehaviour
         }
 
 
-        float targetSpeedX = _moveInput.x * _topSpeed;
-        float targetSpeedZ = _moveInput.y * _topSpeed;
+
+        Vector2 _normalizedMoveInput = _moveInput.normalized/2;
+
+        float targetSpeedX = _normalizedMoveInput.x * _topSpeed;
+        float targetSpeedZ = _normalizedMoveInput.y * _topSpeed;
 
         float speedDifX = targetSpeedX - PlayerMain.Instance.Rigidbody2D.linearVelocity.x;
         float speedDifZ = targetSpeedZ - PlayerMain.Instance.Rigidbody2D.linearVelocity.y;
@@ -78,14 +81,14 @@ public class PlayerMove : MonoBehaviour
 
         PlayerMain.Instance.Rigidbody2D.AddForce(_movementForce * Time.deltaTime * 50);
 
-        if (Mathf.Abs(_moveInput.x) < 0.01f)
+        if (Mathf.Abs(_normalizedMoveInput.x) < 0.01f)
         {
             float frictionX = Mathf.Min(Mathf.Abs(PlayerMain.Instance.Rigidbody2D.linearVelocity.x), Mathf.Abs(_friction));
             frictionX *= Mathf.Sign(PlayerMain.Instance.Rigidbody2D.linearVelocity.x);
             PlayerMain.Instance.Rigidbody2D.AddForce(Vector3.right * -frictionX);
         }
 
-        if (Mathf.Abs(_moveInput.y) < 0.01f)
+        if (Mathf.Abs(_normalizedMoveInput.y) < 0.01f)
         {
             float frictionY = Mathf.Min(Mathf.Abs(PlayerMain.Instance.Rigidbody2D.linearVelocity.y), Mathf.Abs(_friction));
             frictionY *= Mathf.Sign(PlayerMain.Instance.Rigidbody2D.linearVelocity.y);

@@ -63,7 +63,7 @@ public class PlayerMove : MonoBehaviour
 
 
 
-        Vector2 _normalizedMoveInput = _moveInput.normalized/2;
+        Vector2 _normalizedMoveInput = _moveInput.normalized/1.5f;
 
         float targetSpeedX = _normalizedMoveInput.x * _topSpeed;
         float targetSpeedZ = _normalizedMoveInput.y * _topSpeed;

@@ -58,6 +58,7 @@ public class PlayerInventory : MonoBehaviour
     public void ResetCurrentPaintAmount()
     {
         currentPaintAmont = basePaintAmont;
+        _amountAtStart = basePaintAmont;
         ToileMain.Instance.ToileUI.UpdateToilePaintAmount();
     }
 }

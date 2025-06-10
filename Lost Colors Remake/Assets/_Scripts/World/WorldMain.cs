@@ -15,7 +15,8 @@ public class WorldMain : SingletonCreatorPersistent<WorldMain>
 
     private void Start()
     {
-        CurrentRoomName = SceneManager.GetActiveScene().name;
+        //while (SceneManager.GetActiveScene().name == "PercistentScene") return;
+        //CurrentRoomName = SceneManager.GetActiveScene().name;
     }
 
     public void CleanSpawnList()
@@ -36,10 +37,12 @@ public class WorldMain : SingletonCreatorPersistent<WorldMain>
     }
     public async void SwitchRoom(string roomName, string switcherName)
     {
-        Debug.Log("Switch");
+        //Debug.Log("Switch");
         PlayerMain.Instance.Rigidbody2D.linearVelocity = new Vector3(0, 0, 0);
         PlayerMain.Instance.UI.SwitchRoomUI();
         await Task.Delay(1000);
+        RoomSwitchList.Clear();
+        EnemyManager.Instance.CurrentEnemyList.Clear();
         SceneManager.LoadScene(roomName);
         await Task.Delay(10);
         PlayerMain.Instance.transform.position = FindCorrectSpawn(switcherName).transform.GetChild(0).transform.position;
@@ -50,7 +53,7 @@ public class WorldMain : SingletonCreatorPersistent<WorldMain>
 
     public IEnumerator SwitchRoomC(string roomName, string switcherName)
     {
-        Debug.Log("Switch");
+        //Debug.Log("Switch");
         PlayerMain.Instance.Rigidbody2D.linearVelocity = new Vector3(0, 0, 0);
         PlayerMain.Instance.UI.SwitchRoomUI();
         yield return new WaitForSeconds(2);

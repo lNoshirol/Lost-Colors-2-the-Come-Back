@@ -3251,8 +3251,8 @@ MonoBehaviour:
     m_Bits: 128
   playerFeetCollider: {fileID: 740655096172282084}
   whatIsPlayer: 8
-  PlayerFeet: 13
-  Dash: 11
+  playerFeetLayer: 13
+  dashLayer: 11
 --- !u!50 &3806985094790389137
 Rigidbody2D:
   serializedVersion: 5

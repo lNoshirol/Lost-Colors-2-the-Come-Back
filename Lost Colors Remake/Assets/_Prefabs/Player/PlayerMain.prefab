@@ -3244,6 +3244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5299195ea2269b547a970ab862981fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashTime: 0.5
+  dashPower: 30
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128

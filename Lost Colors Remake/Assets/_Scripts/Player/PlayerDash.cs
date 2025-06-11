@@ -5,9 +5,13 @@ using UnityEngine;
 public class PlayerDash : MonoBehaviour
 {
     private bool isDashing;
+    [SerializeField] float dashTime;
+    [SerializeField] float dashPower;
     private Vector2 positionBeforeDash;
     public LayerMask whatIsGround;
     [SerializeField] private Collider2D playerFeetCollider;
+
+
 
     [Header("Layer For Dash")]
     [SerializeField] int whatIsPlayer;
@@ -15,16 +19,14 @@ public class PlayerDash : MonoBehaviour
     [SerializeField] int Dash;
 
 
+
     public void DashOnClick()
     {
         if (isDashing) return;
         positionBeforeDash = PlayerMain.Instance.PlayerGameObject.transform.position;
         PlayerMain.Instance.Dashing(true);
-
-        SimpleDash dash = (SimpleDash)SpellManager.Instance.GetSpell("SimpleDash");
-        SkillContext context = new(PlayerMain.Instance.Rigidbody2D, PlayerMain.Instance.gameObject, PlayerMain.Instance.Move._moveInput, 20);
-        dash.Activate(context);
-        StartCoroutine(WaitDash(0.5f));
+        PlayerMain.Instance.Rigidbody2D.linearVelocity = PlayerMain.Instance.Move._moveInput * dashPower;
+        StartCoroutine(WaitDash(dashTime));
     }
 
     IEnumerator WaitDash(float delay)

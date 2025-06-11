@@ -45,7 +45,6 @@ public class CatchThingsOnDraw : MonoBehaviour
 
     public void ResetList()
     {
-        Debug.LogError($"Touches Ennemy : {_ennemyObjectOnDraw.Count}, ignore ça {Time.time}");
         _ennemyObjectOnDraw.Clear();
     }
 }

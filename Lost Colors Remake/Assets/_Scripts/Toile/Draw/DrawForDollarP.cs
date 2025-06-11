@@ -121,12 +121,13 @@ public class DrawForDollarP : MonoBehaviour
         lineRenderer.startColor = _currentColor;
         lineRenderer.endColor = _currentColor;
 
+        AddPoint2D();
         PlayerMain.Instance.Inventory.SetStartAmount();
     }
 
     public void OnTouchEnd()
     {
-        if (points.Count > 10)
+        if (points.Count > 1)
         {
             List<Point> drawReady = _extDrawFunc.Vec3ToPoints(points);
 

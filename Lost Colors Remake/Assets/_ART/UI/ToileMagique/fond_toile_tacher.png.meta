@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fond_toile_tacher_0: -1321476646110731889
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

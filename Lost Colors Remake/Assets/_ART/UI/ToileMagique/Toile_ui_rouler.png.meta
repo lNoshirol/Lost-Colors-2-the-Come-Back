@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Toile_ui_rouler_0: 465996012182219380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

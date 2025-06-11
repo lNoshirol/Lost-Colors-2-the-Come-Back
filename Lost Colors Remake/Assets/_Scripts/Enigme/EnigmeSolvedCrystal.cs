@@ -7,10 +7,6 @@ public class EnigmeSolvedCrystal : EnigmeSolved
 {
     public SpriteRenderer crystal;
     [SerializeField] private TileMapCorruptionWaveHandler _waveManager;
-    
-
-    [SerializeField]
-    private Crystal Crystal;
 
     public Sprite crystalUncorrupted;
     [SerializeField] private Volume _localDarkVolume;

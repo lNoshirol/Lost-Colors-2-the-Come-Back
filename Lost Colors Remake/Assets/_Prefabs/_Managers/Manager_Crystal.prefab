@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1480034241501647769}
   - component: {fileID: 3459280333614610736}
-  - component: {fileID: 7116310578798437150}
   m_Layer: 0
   m_Name: Manager_Crystal
   m_TagString: Untagged
@@ -46,15 +45,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ListCrystal: []
---- !u!114 &7116310578798437150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4324307795195781945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8593ac382c018f74f817de411a2d6434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

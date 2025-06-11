@@ -77,7 +77,10 @@ public class TriggerToile : MonoBehaviour
 
     public void EnableToileButton()
     {
-        toileButtonIn.interactable = true;
+        if (toileButtonIn != null)
+        {
+            toileButtonIn.interactable = true;
+        }
     }
 
     IEnumerator DeactivateAfterFrame()
@@ -95,6 +98,7 @@ public class TriggerToile : MonoBehaviour
 
         ApplyDamageAfterDraw.Instance.ApplyDamage();
         ApplyDamageAfterDraw.Instance.TejArmor();
+        ApplyDamageAfterDraw.Instance.TriggerVfxPlay();
     }
 
 

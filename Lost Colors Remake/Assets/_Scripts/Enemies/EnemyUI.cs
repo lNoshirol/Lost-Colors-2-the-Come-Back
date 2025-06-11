@@ -42,6 +42,8 @@ public class EnemyUI : MonoBehaviour
         else
         {
             healthbarSprite.transform.parent.parent.gameObject.SetActive(true);
+            Canvas.ForceUpdateCanvases();
+            LayoutRebuilder.ForceRebuildLayoutImmediate(healthbarSprite.rectTransform);
         }
     }
 }

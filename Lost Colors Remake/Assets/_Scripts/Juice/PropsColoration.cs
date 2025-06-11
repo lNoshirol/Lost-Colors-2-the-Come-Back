@@ -10,10 +10,15 @@ public class PropsColoration : MonoBehaviour
     private async void Start()
     {
         await Task.Delay(1);
-        CrystalManager.Instance._ListCrystal[0].Crystal.ColorWaveHandler.OnColorizeEvent += LaunchCoroutine;
-        float distance = Vector2.Distance(CrystalManager.Instance._ListCrystal[0].Crystal.transform.position, this.transform.position);
-        float vitesse = CrystalManager.Instance._ListCrystal[0].Crystal.ColorWaveHandler.WaveDuration;
-        _timeBeforeTouch = distance / vitesse;
+
+        if (CrystalManager.Instance._ListCrystal.Count > 0)
+        {
+            CrystalManager.Instance._ListCrystal[0].Crystal.ColorWaveHandler.OnColorizeEvent += LaunchCoroutine;
+            float distance = Vector2.Distance(CrystalManager.Instance._ListCrystal[0].Crystal.transform.position, this.transform.position);
+            float vitesse = CrystalManager.Instance._ListCrystal[0].Crystal.ColorWaveHandler.WaveDuration;
+            _timeBeforeTouch = distance / vitesse;
+        }
+
         //print($"Nom : {this.name}, distance : {distance}, vitesse : {vitesse}, cd : {_timeBeforeTouch}");
     }
 
@@ -63,4 +68,5 @@ public class PropsColoration : MonoBehaviour
 
         return Vector2.Distance(new Vector2(closestX, closestY), point);
     }
+
 }

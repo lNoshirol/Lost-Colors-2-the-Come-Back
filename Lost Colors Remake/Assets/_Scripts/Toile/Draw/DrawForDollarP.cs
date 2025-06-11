@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using TMPro;
+using Unity.Mathematics;
 
 public class DrawForDollarP : MonoBehaviour
 {
     public static DrawForDollarP instance;
 
-    [SerializeField] LineRenderer lineRenderer;
     [SerializeField] private float distanceBetweenPoint;
     private float currentDistance;
     [SerializeField] private List<Vector3> points = new();
     public Vector2 _currentPoint;
     [SerializeField] float _drawOffset;
     private DrawData _drawData;
-    [SerializeField] private Color _currentColor;
+
+    [Header("Visual")]
+    [SerializeField] LineRenderer lineRenderer;
+    private Color _currentColor;
+    [SerializeField] private List<Color> _possibleColors;
 
     
 
@@ -113,15 +117,17 @@ public class DrawForDollarP : MonoBehaviour
         if (!ToileMain.Instance.gestureIsStarted && gameObject.transform.parent.gameObject.activeSelf)
             ToileMain.Instance.timerCo = StartCoroutine(ToileMain.Instance.ToileTimer());
 
+        _currentColor = _possibleColors[UnityEngine.Random.Range(0, _possibleColors.Count)];
         lineRenderer.startColor = _currentColor;
         lineRenderer.endColor = _currentColor;
 
+        AddPoint2D();
         PlayerMain.Instance.Inventory.SetStartAmount();
     }
 
     public void OnTouchEnd()
     {
-        if (points.Count > 10)
+        if (points.Count > 1)
         {
             List<Point> drawReady = _extDrawFunc.Vec3ToPoints(points);
 
@@ -130,10 +136,10 @@ public class DrawForDollarP : MonoBehaviour
             Result gestureResult = PointCloudRecognizer.Classify(candidate, trainingSet.ToArray());
             _drawData = new DrawData(points, _extDrawFunc.GetDrawDim(ExternalDrawFunctions.GetMinMaxCoordinates(points)), gestureResult, _extDrawFunc.GetSpellTargetPointFromCenter(points), ColorUtility.ToHtmlStringRGB(_currentColor));
 
-            OnDrawFinish?.Invoke(_drawData);
+            //OnDrawFinish?.Invoke(_drawData);
 
 
-            _catchEnnemy.CatchObjectOnLine();
+            _catchEnnemy.CatchObjectOnLine(_drawData);
 
             if (gestureResult.Score < PlayerMain.Instance.toileInfo.tolerance)
             {
@@ -141,21 +147,30 @@ public class DrawForDollarP : MonoBehaviour
                 {
                     if (_detectEnemyInShape.GetTargetsInShape().Count != 0)
                     {
-                        ApplyDamageAfterDraw.Instance.AddEnnemyDamage(enemy.GetComponent<EnemyHealth>(), PlayerMain.Instance.toileInfo.shapeDamage);
+                        _drawData.result.GestureClass = "Rond";
+
+                        OnDrawFinish?.Invoke(_drawData);
+
+                        ApplyDamageAfterDraw.Instance.AddEnnemyDamage(enemy.GetComponent<EnemyHealth>(), PlayerMain.Instance.toileInfo.shapeDamage, _drawData);
 
                         //ancienne ligne garder au cas où probleme
                         //enemy.GetComponent<EnemyHealth>().EnemyLoseHP(PlayerMain.Instance.toileInfo.shapeDamage);
                     }
                     else 
-                    { 
-                        _catchEnnemy.CatchObjectOnLine();
+                    {
+                        _drawData.result.GestureClass = "Trait";
+
+                        OnDrawFinish?.Invoke(_drawData);
+
+                        _catchEnnemy.CatchObjectOnLine(_drawData);
                     }
                 }
 
-                return;
+                //return;
             }
             else
             {
+                OnDrawFinish?.Invoke(_drawData);
                 ApplyDamageAfterDraw.Instance.AddEnemyGlyphToTej(gestureResult.GestureClass);
             }
             touchingScreen = false;

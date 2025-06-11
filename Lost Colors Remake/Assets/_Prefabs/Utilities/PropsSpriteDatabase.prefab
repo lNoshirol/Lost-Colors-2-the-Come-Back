@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4973461642909574098}
   - component: {fileID: 4986271928651781964}
-  - component: {fileID: 4206107710460428376}
   m_Layer: 0
   m_Name: PropsSpriteDatabase
   m_TagString: Untagged
@@ -46,15 +45,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textureDatabase: {fileID: 11400000, guid: 65b50979293433748b54b45cd2bfcb6a, type: 2}
---- !u!114 &4206107710460428376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3593487576507803105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8593ac382c018f74f817de411a2d6434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

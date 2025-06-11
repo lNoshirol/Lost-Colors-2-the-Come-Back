@@ -22,7 +22,7 @@ public class PlayerDash : MonoBehaviour
         PlayerMain.Instance.Dashing(true);
 
         SimpleDash dash = (SimpleDash)SpellManager.Instance.GetSpell("SimpleDash");
-        SkillContext context = new(PlayerMain.Instance.Rigidbody2D, PlayerMain.Instance.gameObject, PlayerMain.Instance.Move._moveInput, 15);
+        SkillContext context = new(PlayerMain.Instance.Rigidbody2D, PlayerMain.Instance.gameObject, PlayerMain.Instance.Move._moveInput, 20);
         dash.Activate(context);
         StartCoroutine(WaitDash(0.5f));
     }

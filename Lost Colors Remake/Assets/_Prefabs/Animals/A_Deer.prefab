@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5047171982902470119, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1221312069
+      objectReference: {fileID: 0}
     - target: {fileID: 5275205786825405784, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.21

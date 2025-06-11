@@ -10,7 +10,7 @@ public class EnemyUI : MonoBehaviour
     //[SerializeField] private Image enemyGlyphe;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    void Start()
+/*    void Start()
     {
         if (enemiesMain.Armor.activeGlyphs.Count > 0)
         {
@@ -20,7 +20,7 @@ public class EnemyUI : MonoBehaviour
         {
             healthbarSprite.transform.parent.gameObject.SetActive(true);
         }
-    }
+    }*/
 
     // Update is called once per frame
     void LateUpdate()

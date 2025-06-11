@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Wolf01DATA
   m_EditorClassIdentifier: 
   enemyID: wolf01
-  enemyPowerLevel: 1
   enemyMaxHP: 2
+  enemySpeed: 3.5
+  enemyAngularSpeed: 120
+  enemyAcceleration: 8
   armorSpriteListPrefab:
   - {fileID: 1203507347480276920, guid: 769568728d598fc4eab594fde733fc15, type: 3}
   enemyMaxArmor: 1
@@ -25,6 +27,4 @@ MonoBehaviour:
   chaseSpeedMultiplier: 1.5
   enemyAttackAmount: 20
   enemyAttackCooldown: 0.5
-  enemySpeed: 1
-  enemyMaxSpeed: 2
-  skillNameList: []
+  animalType: 1

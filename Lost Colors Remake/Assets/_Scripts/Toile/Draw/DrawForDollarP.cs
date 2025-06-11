@@ -121,12 +121,13 @@ public class DrawForDollarP : MonoBehaviour
         lineRenderer.startColor = _currentColor;
         lineRenderer.endColor = _currentColor;
 
+        AddPoint2D();
         PlayerMain.Instance.Inventory.SetStartAmount();
     }
 
     public void OnTouchEnd()
     {
-        if (points.Count > 10)
+        if (points.Count > 1)
         {
             List<Point> drawReady = _extDrawFunc.Vec3ToPoints(points);
 
@@ -135,10 +136,10 @@ public class DrawForDollarP : MonoBehaviour
             Result gestureResult = PointCloudRecognizer.Classify(candidate, trainingSet.ToArray());
             _drawData = new DrawData(points, _extDrawFunc.GetDrawDim(ExternalDrawFunctions.GetMinMaxCoordinates(points)), gestureResult, _extDrawFunc.GetSpellTargetPointFromCenter(points), ColorUtility.ToHtmlStringRGB(_currentColor));
 
-            OnDrawFinish?.Invoke(_drawData);
+            //OnDrawFinish?.Invoke(_drawData);
 
 
-            _catchEnnemy.CatchObjectOnLine();
+            _catchEnnemy.CatchObjectOnLine(_drawData);
 
             if (gestureResult.Score < PlayerMain.Instance.toileInfo.tolerance)
             {
@@ -146,21 +147,30 @@ public class DrawForDollarP : MonoBehaviour
                 {
                     if (_detectEnemyInShape.GetTargetsInShape().Count != 0)
                     {
-                        ApplyDamageAfterDraw.Instance.AddEnnemyDamage(enemy.GetComponent<EnemyHealth>(), PlayerMain.Instance.toileInfo.shapeDamage);
+                        _drawData.result.GestureClass = "Rond";
+
+                        OnDrawFinish?.Invoke(_drawData);
+
+                        ApplyDamageAfterDraw.Instance.AddEnnemyDamage(enemy.GetComponent<EnemyHealth>(), PlayerMain.Instance.toileInfo.shapeDamage, _drawData);
 
                         //ancienne ligne garder au cas où probleme
                         //enemy.GetComponent<EnemyHealth>().EnemyLoseHP(PlayerMain.Instance.toileInfo.shapeDamage);
                     }
                     else 
-                    { 
-                        _catchEnnemy.CatchObjectOnLine();
+                    {
+                        _drawData.result.GestureClass = "Trait";
+
+                        OnDrawFinish?.Invoke(_drawData);
+
+                        _catchEnnemy.CatchObjectOnLine(_drawData);
                     }
                 }
 
-                return;
+                //return;
             }
             else
             {
+                OnDrawFinish?.Invoke(_drawData);
                 ApplyDamageAfterDraw.Instance.AddEnemyGlyphToTej(gestureResult.GestureClass);
             }
             touchingScreen = false;

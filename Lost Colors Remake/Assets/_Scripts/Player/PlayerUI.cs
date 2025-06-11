@@ -110,6 +110,10 @@ public class PlayerUI : MonoBehaviour
     public async void StartToileCooldownAsync(float cooldownTime)
     {
         toileButton.interactable = false;
+        toileButton.gameObject.TryGetComponent(out Image truc);
+        truc.fillAmount = 0;
+        truc.DOFillAmount(1, cooldownTime).SetEase(Ease.Linear);
+        print(truc);
         await Task.Delay(TimeSpan.FromSeconds(cooldownTime));
         toileButton.interactable = true;
     }

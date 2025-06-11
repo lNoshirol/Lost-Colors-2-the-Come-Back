@@ -69,7 +69,7 @@ public class TriggerToile : MonoBehaviour
             PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
 
             StopCoroutine(coroutine);
-            time.InSlowMotion = false;
+            time.StopSlowMotion();
             PlayerMain.Instance.UI.StartToileCooldownAsync(PlayerMain.Instance.toileInfo.cooldown);
 
         }
@@ -77,7 +77,10 @@ public class TriggerToile : MonoBehaviour
 
     public void EnableToileButton()
     {
+        if (toileButtonIn != null)
+        {
             toileButtonIn.interactable = true;
+        }
     }
 
     IEnumerator DeactivateAfterFrame()
@@ -95,6 +98,7 @@ public class TriggerToile : MonoBehaviour
 
         ApplyDamageAfterDraw.Instance.ApplyDamage();
         ApplyDamageAfterDraw.Instance.TejArmor();
+        ApplyDamageAfterDraw.Instance.TriggerVfxPlay();
     }
 
 

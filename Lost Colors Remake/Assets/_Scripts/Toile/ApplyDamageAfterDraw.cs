@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +8,12 @@ public class ApplyDamageAfterDraw : MonoBehaviour
     
     [SerializeField] private List<DamageStructModel> _damageToEnemy = new ();
     [SerializeField] private List<string> _enemyArmorToTej = new();
+    private List<DrawData> _drawVfxToPlay = new();
 
     public int damageToEnemyCount = 0;
     public List<EnemyHealth> _tabassedEnemy = new();
+
+    public event Action<List<DrawData>> VfxToPlay;
 
     private void Awake()
     {
@@ -23,19 +27,32 @@ public class ApplyDamageAfterDraw : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        DrawForDollarP.instance.OnDrawFinish += AddVfxToPlay;
+    }
+
     private void Update()
     {
         damageToEnemyCount = _damageToEnemy.Count;
     }
 
-    public void AddEnnemyDamage(EnemyHealth enemy, float damage)
+    public void AddEnnemyDamage(EnemyHealth enemy, float damage, DrawData drawData)
     {
-        _damageToEnemy.Add(new(enemy, damage));
+        _damageToEnemy.Add(new(enemy, damage, drawData));
     }
 
     public void AddEnemyGlyphToTej(string glyphName)
     {
         _enemyArmorToTej.Add(glyphName);
+    }
+
+    public void AddVfxToPlay(DrawData _drawData)
+    {
+        if (!_drawVfxToPlay.Contains(_drawData))
+        {
+            _drawVfxToPlay.Add(_drawData);
+        }
     }
 
     public void ApplyDamage()
@@ -48,6 +65,7 @@ public class ApplyDamageAfterDraw : MonoBehaviour
         {
             model.targetedEnemy.EnemyLoseHP(model.damage);
             _tabassedEnemy.Add(model.targetedEnemy);
+
         }
 
         _damageToEnemy.Clear();
@@ -63,5 +81,10 @@ public class ApplyDamageAfterDraw : MonoBehaviour
         }
 
         _enemyArmorToTej.Clear();
+    }
+
+    public void TriggerVfxPlay()
+    {
+        VfxToPlay?.Invoke(_drawVfxToPlay);
     }
 }

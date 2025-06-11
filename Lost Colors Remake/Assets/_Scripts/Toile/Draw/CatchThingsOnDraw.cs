@@ -18,7 +18,7 @@ public class CatchThingsOnDraw : MonoBehaviour
         }
     }
 
-    public void CatchObjectOnLine()
+    public void CatchObjectOnLine(DrawData drawData)
     {
         foreach (GameObject obj in _ennemyObjectOnDraw)
         {
@@ -32,7 +32,7 @@ public class CatchThingsOnDraw : MonoBehaviour
             {
                 if (obj.TryGetComponent(out EnemyHealth _health))
                 {
-                    ApplyDamageAfterDraw.Instance.AddEnnemyDamage(_health, PlayerMain.Instance.toileInfo.lineDamage);
+                    ApplyDamageAfterDraw.Instance.AddEnnemyDamage(_health, PlayerMain.Instance.toileInfo.lineDamage, drawData);
                     
                     //ancienne ligne au cas où prb
                     //_health.EnemyLoseHP(PlayerMain.Instance.toileInfo.lineDamage);

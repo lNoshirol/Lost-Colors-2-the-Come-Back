@@ -98,6 +98,7 @@ public class TriggerToile : MonoBehaviour
 
         ApplyDamageAfterDraw.Instance.ApplyDamage();
         ApplyDamageAfterDraw.Instance.TejArmor();
+        ApplyDamageAfterDraw.Instance.TriggerVfxPlay();
     }
 
 

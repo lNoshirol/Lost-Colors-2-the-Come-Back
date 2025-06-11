@@ -86,5 +86,7 @@ public class ApplyDamageAfterDraw : MonoBehaviour
     public void TriggerVfxPlay()
     {
         VfxToPlay?.Invoke(_drawVfxToPlay);
+
+        _drawVfxToPlay.Clear();
     }
 }

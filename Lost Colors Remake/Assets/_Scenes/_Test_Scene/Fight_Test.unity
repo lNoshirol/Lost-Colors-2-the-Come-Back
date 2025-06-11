@@ -33961,6 +33961,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1159743132053632506, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: dashTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159743132053632506, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: dashPower
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 1896550570282578273, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: toileButtonIn
       value: 

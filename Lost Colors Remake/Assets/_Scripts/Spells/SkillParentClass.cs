@@ -8,6 +8,7 @@ using UnityEngine.AI;
 using UnityEngine.VFX;
 using DG.Tweening;
 using DG.Tweening.Core.Easing;
+using System.Collections;
 
 public abstract class SkillParentClass
 {
@@ -59,8 +60,12 @@ public abstract class SkillParentClass
     #endregion
 
     #region Subskills
-    protected void Dash(Rigidbody2D rb, Vector2 direction, float force)
+
+    // OLD
+    protected IEnumerator Dash(Rigidbody2D rb, Vector2 direction, float force, float dashTime)
     {
+
+        yield return new WaitForSeconds(dashTime);
         //Debug.Log("Skill : Dash");
         rb.AddForce(direction * force, ForceMode2D.Impulse);
         //Delegate[] functions = { PrintRandomTest, PrintRandomTest, PrintRandomTest };

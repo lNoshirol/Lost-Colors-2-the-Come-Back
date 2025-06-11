@@ -7,6 +7,9 @@ public class EnemyAnimation : MonoBehaviour
     [SerializeField] public Animator enemyAnimator;
     [SerializeField] private AnimatorOverrideController enemyAnimationOverrideBW;
     [SerializeField] private AnimatorOverrideController enemyAnimationOverrideColor;
+    public GameObject currentVfxSocket;
+    [SerializeField] private GameObject vfxSocketRight;
+    [SerializeField] private GameObject vfxSocketLeft;
 
     public EnemyMain enemyMain;
     [SerializeField] float dirX;
@@ -30,7 +33,7 @@ public class EnemyAnimation : MonoBehaviour
         }
     }
 
-    // Get the direction for Atack
+    // Get the direction for Attack
     public void GetDirectionXAnimPlayer()
     {
         dirX = enemyMain.player.position.x - enemyMain.transform.position.x;
@@ -38,6 +41,18 @@ public class EnemyAnimation : MonoBehaviour
         {
             enemyAnimator.SetFloat("X", dirX);
         }
+        GetGoodSocketVFXOrientation();
+    }
+
+    public void GetGoodSocketVFXOrientation()
+    {
+        if (enemyMain.agent.velocity.x > 0) currentVfxSocket = vfxSocketRight;
+        else
+        {
+            currentVfxSocket = vfxSocketLeft;
+        }
+
+
     }
 
     public void SwitchAnimatorToColor()

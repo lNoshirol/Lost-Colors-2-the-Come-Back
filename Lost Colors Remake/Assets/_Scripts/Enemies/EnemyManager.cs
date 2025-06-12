@@ -32,7 +32,7 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
         {
             GameObject parent = new(glyph.name + " List");
             parent.transform.parent = this.transform;
-            Pool newPool = new(glyph, 10, parent.transform);
+            Pool newPool = new(glyph, 20, parent.transform);
             PrefabPool.Add(glyph.name, newPool);
         }
     }

@@ -116,10 +116,10 @@ TextureImporter:
       name: sprt_toile_anim_2_0
       rect:
         serializedVersion: 2
-        x: 165
-        y: 34
-        width: 203
-        height: 291
+        x: 0
+        y: 0
+        width: 201
+        height: 289
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

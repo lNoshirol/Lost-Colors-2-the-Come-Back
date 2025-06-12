@@ -14,6 +14,11 @@ public class EnemyAnimation : MonoBehaviour
     public EnemyMain enemyMain;
     [SerializeField] float dirX;
 
+    [Header("Enemy Hit Frames")]
+    [SerializeField] private Sprite _whiteHitFrame;
+    [SerializeField] private Sprite _BWHitFrame;
+    [SerializeField] private Sprite _coloredHitFrame;
+
     private void Start()
     {
         enemyAnimator.runtimeAnimatorController = enemyAnimationOverrideBW;
@@ -51,8 +56,6 @@ public class EnemyAnimation : MonoBehaviour
         {
             currentVfxSocket = vfxSocketLeft;
         }
-
-
     }
 
     public void SwitchAnimatorToColor()
@@ -63,5 +66,26 @@ public class EnemyAnimation : MonoBehaviour
     public void SetAnimTransitionParameter(string AttackType, bool yesOrNo)
     {
         enemyAnimator.SetBool(AttackType, yesOrNo);
+    }
+
+    public IEnumerator OnDieAnim()
+    {
+        enemyAnimator.enabled = false;
+        print("white");
+        enemyMain.spriteRenderer.sprite = _whiteHitFrame;
+        yield return new WaitForSeconds(0.9f);
+        print("bw");
+        enemyMain.spriteRenderer.sprite = _BWHitFrame;
+        yield return new WaitForSeconds(0.9f);
+        print("white");
+        enemyMain.spriteRenderer.sprite = _whiteHitFrame;
+        yield return new WaitForSeconds(0.9f);
+        print("bw");
+        enemyMain.spriteRenderer.sprite = _BWHitFrame;
+    }
+
+    public void HitAnim()
+    {
+
     }
 }

@@ -46,6 +46,7 @@ public class TimeManager : MonoBehaviour
         {
             float origTimeScale = InSlowMotion ? _timeScale : 1;
             float timeScale = InSlowMotion ? 1 : _timeScale;
+            Debug.LogWarning(timeScale);
             DOVirtual.Float(origTimeScale, timeScale, .2f, SetTimeScale);
         }
     }
@@ -70,7 +71,7 @@ public class TimeManager : MonoBehaviour
 
     void SetTimeScale(float x)
     {
-        Time.timeScale = x;
+        Time.timeScale = x * 1.5F;
     }
 
     public void StopSlowMotion()

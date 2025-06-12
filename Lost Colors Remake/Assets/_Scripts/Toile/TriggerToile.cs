@@ -61,7 +61,7 @@ public class TriggerToile : MonoBehaviour
             //Time.timeScale = Time.timeScale / 3;
             coroutine = StartCoroutine(time.DoSlowmotion(ToileMain.Instance.toileTime));
             PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
-
+            SoundsManager.Instance.SlowDownAllSound();
         }
         else
         {
@@ -69,6 +69,7 @@ public class TriggerToile : MonoBehaviour
             PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
 
             StopCoroutine(coroutine);
+            SoundsManager.Instance.BackToNormal();
             time.StopSlowMotion();
             PlayerMain.Instance.UI.StartToileCooldownAsync(PlayerMain.Instance.toileInfo.cooldown);
 

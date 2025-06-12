@@ -8,7 +8,7 @@ using static EnemyDATA;
 public class EnemyMain : MonoBehaviour
 {
     [Header("ScriptableDATA")]
-    [SerializeField] private EnemyDATA enemyData;
+    public EnemyDATA enemyData;
     public bool isColorized;
 
     [Header("Enemy State Needs")]

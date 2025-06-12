@@ -8,5 +8,8 @@ public class WolfRangeSkill : SkillParentClass
     {
         await Task.Delay((int)(timeToWaitBeforeAttack * 1000));
         SearchVFX("FlameThrower").transform.position = context.Direction;
+        var sound = SoundsManager.Instance;
+        int RandowWolf = Random.Range(0, sound.SoundEffectWolfAttackRanged.Length);
+        sound.PlaySound(sound.SoundEffectWolfAttackRanged[RandowWolf], false);
     }
 }

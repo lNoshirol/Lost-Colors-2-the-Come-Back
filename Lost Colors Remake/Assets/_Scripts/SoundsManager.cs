@@ -155,4 +155,34 @@ public class SoundsManager : MonoBehaviour
         _musicSource.pitch = 1;
         _ambiantSource.pitch = 1;
     }
+
+
+    public async Task CrossfadeToMusic(AudioClip newClip, float fadeDuration = 2f)
+    {
+        if (_musicSource.clip == newClip) return;
+        float startVolume = _musicSource.volume;
+        for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+        {
+            _musicSource.volume = Mathf.Lerp(startVolume, 0f, t / fadeDuration);
+            await Task.Yield();
+        }
+        _musicSource.volume = 0f;
+
+        _musicSource.clip = newClip;
+        _musicSource.Play();
+
+        for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+        {
+            _musicSource.volume = Mathf.Lerp(0f, startVolume, t / fadeDuration);
+            await Task.Yield();
+        }
+        _musicSource.volume = startVolume;
+    }
+
+    public void ChangeMusicSmoothly(AudioClip newMusic)
+    {
+        _ = CrossfadeToMusic(newMusic, 2f);
+    }
+
+
 }

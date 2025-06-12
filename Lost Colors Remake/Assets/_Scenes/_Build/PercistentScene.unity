@@ -384,6 +384,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5502357473904131515, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: orthographic size
+      value: 4.765625
+      objectReference: {fileID: 0}
     - target: {fileID: 8528153680925208856, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_Name
       value: PlayerMain
@@ -1049,6 +1053,10 @@ PrefabInstance:
     - target: {fileID: 7232632753115461920, guid: 71d9d864a845c714faab6f3ddc6711a2, type: 3}
       propertyPath: m_Name
       value: Manager_SFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232632753115461920, guid: 71d9d864a845c714faab6f3ddc6711a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

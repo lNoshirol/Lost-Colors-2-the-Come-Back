@@ -66,7 +66,7 @@ public class PlayerDash : MonoBehaviour
 
     void TakeDamageAndTP()
     {
-        PlayerMain.Instance.Health.PlayerLoseHP(1);
+        PlayerMain.Instance.Health.PlayerLoseHP(0.5f);
         PlayerMain.Instance.PlayerGameObject.transform.position = positionBeforeDash;
     }
 }

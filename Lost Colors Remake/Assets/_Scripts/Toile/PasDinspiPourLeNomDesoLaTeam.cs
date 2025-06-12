@@ -63,8 +63,7 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
         Debug.LogWarning("Play sound DrawBad");
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(1);
-
-
+        Time.timeScale = PlayerMain.Instance.toileInfo.slowMotionScale;
     }
 
     public void StopRunningCoroutine()

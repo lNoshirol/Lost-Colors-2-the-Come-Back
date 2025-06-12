@@ -7,5 +7,8 @@ public class WolfCloseSkill : SkillParentClass
     public override void Activate(SkillContext context)
     {
         DelayedFunction(() => EnemyDash(context.Agent, context.Strength, context.MaxDistance), timeToWaitBeforeAttack);
+        var sound = SoundsManager.Instance;
+        int RandowWolf = Random.Range(0, sound.SoundEffectWolfAttackMelee.Length);
+        sound.PlaySound(sound.SoundEffectWolfAttackMelee[RandowWolf], false);
     }
 }

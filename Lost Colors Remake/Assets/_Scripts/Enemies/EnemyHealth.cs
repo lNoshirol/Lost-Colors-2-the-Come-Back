@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
@@ -22,6 +23,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void EnemyLoseHP(float healthLoose)
     {
+        PlaySound();
+
         SetupHealthCount();
         if(healthRecupCoro != null)
         StopCoroutine(healthRecupCoro);
@@ -68,6 +71,26 @@ public class EnemyHealth : MonoBehaviour
             }
             EnemyMain.UI.UpdateEnemyHealthUI();
             yield return new WaitForSeconds(recupTimeBetween);
+        }
+    }
+
+    public void PlaySound()
+    {
+        var sound = SoundsManager.Instance;
+
+        switch (EnemyMain.Stats.animalType)
+        {
+            case "Deer":             
+                int RandowDeer = Random.Range(0, sound.SoundEffectDeerHit.Length);
+                sound.PlaySound(sound.SoundEffectDeerHit[RandowDeer], false);
+                break;
+            case "Wolf":
+                int RandomWolf = Random.Range(0, sound.SoundEffectWolfHit.Length);
+                sound.PlaySound(sound.SoundEffectWolfHit[RandomWolf], false);
+                break;
+            default:
+                Debug.LogError("Unknow animal type, please select one");
+                break;
         }
     }
      

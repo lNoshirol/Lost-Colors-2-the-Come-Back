@@ -7,6 +7,6 @@ public class WolfRangeSkill : SkillParentClass
     public override async void Activate(SkillContext context)
     {
         await Task.Delay((int)(timeToWaitBeforeAttack * 1000));
-        SearchVFX("FlameThrower").transform.position = context.Direction;
+        SearchVFX("FlameThrower").transform.position = context.Caster.position;
     }
 }

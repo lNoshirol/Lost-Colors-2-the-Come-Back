@@ -12,8 +12,6 @@ public abstract class EnigmeSolved : MonoBehaviour
         {
             _torchGroup.Triggered += Interact;
         }
-
-        Debug.Log("ça marche ?");
     }
 
     public abstract void Interact();

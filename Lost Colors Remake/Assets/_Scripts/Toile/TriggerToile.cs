@@ -97,8 +97,9 @@ public class TriggerToile : MonoBehaviour
         Time.timeScale = 1;
         PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
 
-        ApplyDamageAfterDraw.Instance.ApplyDamage();
         ApplyDamageAfterDraw.Instance.TejArmor();
+        ApplyDamageAfterDraw.Instance.ApplyDamage();
+
         ApplyDamageAfterDraw.Instance.TriggerVfxPlay();
     }
 

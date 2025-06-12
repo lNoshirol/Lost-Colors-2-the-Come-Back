@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1a4a50f0d9b47214b9fb161f64b2c0ef
+guid: d64116e615cdb0c48ad2469fadc74b29
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2704930142048647738
-    second: sprt_toile_anim_2_0
+      213: 2029372496570097870
+    second: Sprite_Deer_HitFrame_SideLeft_Color_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprt_toile_anim_2_0
+      name: Sprite_Deer_HitFrame_SideLeft_Color_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 201
-        height: 289
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c581fcfd58267ad0800000000000000
-      internalID: -2704930142048647738
+      spriteID: ec022079887c92c10800000000000000
+      internalID: 2029372496570097870
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprt_toile_anim_2_0: -2704930142048647738
+      Sprite_Deer_HitFrame_SideLeft_Color_0: 2029372496570097870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

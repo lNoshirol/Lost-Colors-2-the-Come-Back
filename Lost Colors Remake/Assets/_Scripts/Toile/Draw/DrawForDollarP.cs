@@ -131,13 +131,10 @@ public class DrawForDollarP : MonoBehaviour
         {
             List<Point> drawReady = _extDrawFunc.Vec3ToPoints(points);
 
-
             Gesture candidate = new Gesture(drawReady.ToArray());
             Result gestureResult = PointCloudRecognizer.Classify(candidate, trainingSet.ToArray());
-            _drawData = new DrawData(points, _extDrawFunc.GetDrawDim(ExternalDrawFunctions.GetMinMaxCoordinates(points)), gestureResult, _extDrawFunc.GetSpellTargetPointFromCenter(points), ColorUtility.ToHtmlStringRGB(_currentColor));
-
-            //OnDrawFinish?.Invoke(_drawData);
-
+            _drawData = new DrawData(points, _extDrawFunc.GetDrawDim(ExternalDrawFunctions.GetMinMaxCoordinates(points)), 
+                gestureResult, _extDrawFunc.GetSpellTargetPointFromCenter(points), ColorUtility.ToHtmlStringRGB(_currentColor));
 
             _catchEnnemy.CatchObjectOnLine(_drawData);
 
@@ -152,9 +149,6 @@ public class DrawForDollarP : MonoBehaviour
                         OnDrawFinish?.Invoke(_drawData);
 
                         ApplyDamageAfterDraw.Instance.AddEnnemyDamage(enemy.GetComponent<EnemyHealth>(), PlayerMain.Instance.toileInfo.shapeDamage, _drawData);
-
-                        //ancienne ligne garder au cas où probleme
-                        //enemy.GetComponent<EnemyHealth>().EnemyLoseHP(PlayerMain.Instance.toileInfo.shapeDamage);
                     }
                     else 
                     {
@@ -165,8 +159,6 @@ public class DrawForDollarP : MonoBehaviour
                         _catchEnnemy.CatchObjectOnLine(_drawData);
                     }
                 }
-
-                //return;
             }
             else
             {
@@ -175,7 +167,6 @@ public class DrawForDollarP : MonoBehaviour
             }
             touchingScreen = false;
         }
-
         touchingScreen = false;
     }
 
@@ -190,7 +181,6 @@ public class DrawForDollarP : MonoBehaviour
 
     private void AddPoint2D()
     {
-
         _currentPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
 
         if (PlayerMain.Instance.Inventory.currentPaintAmont == 0) TriggerToile.instance.OpenAndCloseToileMagique();

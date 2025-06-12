@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d5a4d4f98b8950d4192194cd26f009bd
+guid: a853937b7a79f1c43b001a97195a4641
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1321476646110731889
-    second: fond_toile_tacher_0
+      213: -4062564446692537281
+    second: sprt_toile_anim_3 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fond_toile_tacher_0
+      name: sprt_toile_anim_3 1_0
       rect:
         serializedVersion: 2
-        x: 193
-        y: 53
-        width: 406
-        height: 255
+        x: 2
+        y: 4
+        width: 387
+        height: 290
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f816899edfb29ade0800000000000000
-      internalID: -1321476646110731889
+      spriteID: f3c82cdf82fde97c0800000000000000
+      internalID: -4062564446692537281
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fond_toile_tacher_0: -1321476646110731889
+      sprt_toile_anim_3 1_0: -4062564446692537281
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

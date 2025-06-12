@@ -21,10 +21,12 @@ public class Enigma : MonoBehaviour
 
     private void SolveEnigme(DrawData drawData)
     {
-        if (Vector3.Distance(PlayerMain.Instance.transform.position, transform.position) <= castDistanceAuthorize && drawData.result.GestureClass == drawTargetName && drawData.result.Score > PlayerMain.Instance.toileInfo.tolerance && !_isSolved)
+        if (Vector3.Distance(PlayerMain.Instance.transform.position, transform.position) <= castDistanceAuthorize && 
+            drawData.result.GestureClass == drawTargetName && 
+            drawData.result.Score > PlayerMain.Instance.toileInfo.tolerance && 
+            !_isSolved)
         {
             OnEnigmaSolve?.Invoke();
-            //Debug.Log("Choix numéro 2 ça marche");
         }
     }
 

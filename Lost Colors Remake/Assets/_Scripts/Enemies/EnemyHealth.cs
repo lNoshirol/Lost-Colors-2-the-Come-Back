@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-
     [SerializeField] EnemyMain EnemyMain;
     bool enemyHealthSetup = false;
     public float enemyCurrentHealth;
@@ -20,6 +19,7 @@ public class EnemyHealth : MonoBehaviour
             enemyHealthSetup = true;
         }
     }
+
     public void EnemyLoseHP(float healthLoose)
     {
         SetupHealthCount();
@@ -47,8 +47,11 @@ public class EnemyHealth : MonoBehaviour
 
     private void EnemyIsDead()
     {
-        Debug.Log("Enemy dead");
         PlayerMain.Instance.Health.PlayerGainHP(0.5f);
+        EnemyMain.Animation.enemyAnimator.enabled = false;
+
+        //StartCoroutine(EnemyMain.Animation.OnDieAnim()); // deactive animator, hitf b, hitf bw, color lerp hitf bw / hitf color, active animator
+
         EnemyMain.ColorSwitch();
         EnemyMain.UI.SwitchHealtBar(false);
     }
@@ -67,7 +70,7 @@ public class EnemyHealth : MonoBehaviour
             yield return new WaitForSeconds(recupTimeBetween);
         }
     }
-
+     
     // NEW METHOD IN ENEMYARMOR
     //public void ArmorLost()
     //{

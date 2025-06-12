@@ -3,11 +3,23 @@ using UnityEngine;
 
 public class Enigma : MonoBehaviour
 {
-    [SerializeField] float castDistanceAuthorize;
-    [SerializeField] string drawTargetName;
+    [SerializeField] float _castDistanceAuthorize;
+    [SerializeField] string _drawTargetName;
 
     [SerializeField] bool _isSolved;
     public event Action OnEnigmaSolve;
+
+
+    private void SolveEnigme(DrawData drawData)
+    {
+        if (Vector3.Distance(PlayerMain.Instance.transform.position, transform.position) <= _castDistanceAuthorize && 
+            drawData.result.GestureClass == _drawTargetName && 
+            drawData.result.Score > PlayerMain.Instance.toileInfo.tolerance && 
+            !_isSolved)
+        {
+            OnEnigmaSolve?.Invoke();
+        }
+    }
 
     private void Start()
     {
@@ -19,20 +31,9 @@ public class Enigma : MonoBehaviour
         DrawForDollarP.instance.OnDrawFinish -= SolveEnigme;
     }
 
-    private void SolveEnigme(DrawData drawData)
-    {
-        if (Vector3.Distance(PlayerMain.Instance.transform.position, transform.position) <= castDistanceAuthorize && 
-            drawData.result.GestureClass == drawTargetName && 
-            drawData.result.Score > PlayerMain.Instance.toileInfo.tolerance && 
-            !_isSolved)
-        {
-            OnEnigmaSolve?.Invoke();
-        }
-    }
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, castDistanceAuthorize);
+        Gizmos.DrawWireSphere(transform.position, _castDistanceAuthorize);
     }
 }

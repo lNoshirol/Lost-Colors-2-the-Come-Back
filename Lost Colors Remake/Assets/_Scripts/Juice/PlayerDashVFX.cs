@@ -1,16 +1,27 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerDashVFX : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private GameObject _spriteTrailPrefab;
+    [SerializeField] private int _numOfIntermediateSprites;
+    private Pool _spritesPool;
+
     void Start()
     {
-        
+        _spritesPool = new(_spriteTrailPrefab, _numOfIntermediateSprites, this.transform);
     }
 
-    // Update is called once per frame
-    void Update()
+    public IEnumerator BalanceSpriteTrail()
     {
+        for (int i = 0; i < _numOfIntermediateSprites; i++)
+        {
+            GameObject sprite = _spritesPool.GetObject();
+            sprite.transform.position = PlayerMain.Instance.transform.position;
+            sprite.TryGetComponent(out SpriteRenderer renderer);
+            renderer.flipX = PlayerMain.Instance.Move._moveInput.x < 0;
+            yield return new WaitForSeconds(0.6f);
+        }
         
     }
 }

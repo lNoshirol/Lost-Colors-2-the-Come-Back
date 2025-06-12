@@ -24,7 +24,6 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
         base.Awake();
         CreateEnemyPool(glyphPrefabList, glyphPool);
         CreateEnemyPool(vfxPrefabList, vfxPool);
-
     }
 
     private void CreateEnemyPool(List<GameObject> prefabList, Dictionary<string, Pool> PrefabPool)

@@ -52,15 +52,19 @@ public class TimeManager : MonoBehaviour
 
     public IEnumerator DoSlowmotion(float value)
     {
+        _chromaticAberration.intensity.value = 0f;
+        _lensDistortion.intensity.value = 0f;
+
+        DOTween.To(() => _chromaticAberration.intensity.value, x => _chromaticAberration.intensity.value = x, 0.85f, 0.3f).SetEase(Ease.InBounce);
+        DOTween.To(() => _lensDistortion.intensity.value, x => _lensDistortion.intensity.value = x, 0.3f, 0.3f).SetEase(Ease.OutQuint);
+
+         yield return new WaitForSeconds(0.3f);
+
         PlayerMain.Instance.Rigidbody2D.linearVelocity = Vector2.zero;
         InSlowMotion = true;
 
 
-        _chromaticAberration.intensity.value = 0f;
-        _lensDistortion.intensity.value = 0f;
 
-        DOTween.To(() => _chromaticAberration.intensity.value, x => _chromaticAberration.intensity.value = x,0.85f,0.3f).SetEase(Ease.InBounce);
-        DOTween.To(() => _lensDistortion.intensity.value, x => _lensDistortion.intensity.value = x,0.3f,0.3f).SetEase(Ease.InOutElastic);
 
         yield return new WaitForSeconds(value);
 

@@ -58,6 +58,8 @@ public class EnemyMain : MonoBehaviour
 
 
 
+
+
     //[Header("Enemy Sprite BW")]
     //public Sprite spriteRightBW;
     //public Sprite spriteLeftBW;
@@ -75,10 +77,13 @@ public class EnemyMain : MonoBehaviour
     public SkillParentClass closeSkill;
     public SkillParentClass rangeSkill;
 
+    public SkillContext contextRange;
+    public SkillContext contextClose;
+
     public virtual void Start()
     {
 
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = PlayerMain.Instance.PlayerGameObject.transform;
         agent = gameObject.GetComponent<NavMeshAgent>();
         rb = gameObject.GetComponent<Rigidbody2D>();
 
@@ -235,7 +240,6 @@ public class EnemyMain : MonoBehaviour
         EnemiesCurrentState?.OnEnter();
     }
 
-
     //public void UpdateSpriteDirectionRB()
     //{
     //    Vector2 direction = agent.velocity;
@@ -288,21 +292,25 @@ public class EnemyMain : MonoBehaviour
         }
     }
 
-    void AnimalContextCheck()
+    public void AnimalContextCheck()
     {
         switch (Stats.animalType)
         {
             case "Deer":
                 closeSkill = new DeerCloseSkill();
                 rangeSkill = new DeerRangeSkill();
+                contextClose = new(null, player, new Vector2(0,0), 10, 2, agent);
+                contextRange = new(null, player, new Vector2(0, 0), 5, 3);
                 break;
             case "Wolf":
-                //mettre ici les skills du loup
+                closeSkill = new WolfCloseSkill();
+                rangeSkill = new WolfRangeSkill();
+                contextClose = new(null, player, new Vector2(0,0), 10, 2, agent);
+                contextRange = new(null, player, new Vector2(0,0), 1);
                 break;
             default:
                 Debug.LogError("Unknow animal type, please select one");
                 break;
         }
     }
-
 }

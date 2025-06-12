@@ -9,11 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3401627644540716847}
-  - component: {fileID: 7923571696968261277}
-  - component: {fileID: 4107692437769112178}
   - component: {fileID: 7750755499950590422}
   - component: {fileID: 7629682015650270922}
   - component: {fileID: 9099306488593737325}
+  - component: {fileID: 4107692437769112178}
   m_Layer: 0
   m_Name: Manager_SFX
   m_TagString: Untagged
@@ -36,121 +35,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &7923571696968261277
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7232632753115461920}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &4107692437769112178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7232632753115461920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88cad7653ad56c045b4b35049d52fea0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sfxSource: {fileID: 7750755499950590422}
-  _ambiantSource: {fileID: 7629682015650270922}
-  _musicSource: {fileID: 9099306488593737325}
-  _theOneAndOnlyMusic: {fileID: 8300000, guid: 5e394efe86f61df4099b436ee4c73275, type: 3}
-  _theOneAmbiantSound: {fileID: 8300000, guid: ce49f9c911e51e04a9d130b26091a43c, type: 3}
-  _hasToPlayTheOneAndOnlyMusicBecauseItsTooMuchAUnMoment: 1
 --- !u!82 &7750755499950590422
 AudioSource:
   m_ObjectHideFlags: 0
@@ -261,7 +145,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.65
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -358,7 +242,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -442,3 +326,58 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4107692437769112178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7232632753115461920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88cad7653ad56c045b4b35049d52fea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxSource: {fileID: 7750755499950590422}
+  _ambiantSource: {fileID: 7629682015650270922}
+  _musicSource: {fileID: 9099306488593737325}
+  _theOneAndOnlyMusic: {fileID: 8300000, guid: 5e394efe86f61df4099b436ee4c73275, type: 3}
+  _theOneAmbiantSound: {fileID: 8300000, guid: ce49f9c911e51e04a9d130b26091a43c, type: 3}
+  _hasToPlayTheOneAndOnlyMusicBecauseItsTooMuchAUnMoment: 1
+  AudioAmbiance:
+  - {fileID: 8300000, guid: ce49f9c911e51e04a9d130b26091a43c, type: 3}
+  - {fileID: 8300000, guid: 686325dda9014964ead0c94a0b62d31e, type: 3}
+  - {fileID: 8300000, guid: ab20f0ea17b3aa44caabea30b1b7cbbe, type: 3}
+  - {fileID: 8300000, guid: c8da111ea85ba2e458e5174a02275305, type: 3}
+  - {fileID: 8300000, guid: 548465e63744430458d785473d322703, type: 3}
+  - {fileID: 8300000, guid: b44005865316c0c47b79ceaead564492, type: 3}
+  - {fileID: 8300000, guid: c8022790dea2c7d49a01f23826170297, type: 3}
+  - {fileID: 8300000, guid: 687956a651c703e41b4540d8ef15ade9, type: 3}
+  - {fileID: 8300000, guid: e708c45a40e3af64087321e1d436ed7e, type: 3}
+  SoundEffectDeerAttackMelee: []
+  SoundEffectDeerAttackRanged: []
+  SoundEffectDeerHit: []
+  SoundEffectDeerRun: []
+  SoundEffectWolfAttackMelee: []
+  SoundEffectWolfAttackRanged: []
+  SoundEffectWolfHit: []
+  SoundEffectWolfRun: []
+  Activate: []
+  Idle: []
+  InvalidPattern: []
+  ValidPattern: []
+  Circle: []
+  Slash: []
+  OpeningCanva: []
+  Trace: []
+  Combo: []
+  Run: []
+  Dash: []
+  Death: []
+  Heal: []
+  Hit: []
+  MusicMenu: {fileID: 8300000, guid: 66244fd7f2d191b4b8bfa2963b2dff2c, type: 3}
+  MusicMain: {fileID: 8300000, guid: ba16d76b44e4605449f0a090e130ae4a, type: 3}
+  MusicForestNoColored: {fileID: 8300000, guid: 5e394efe86f61df4099b436ee4c73275, type: 3}
+  MusicForestColored: {fileID: 8300000, guid: 22aa2a2b0672a3746a73669737d032c4, type: 3}
+  MusicFight: {fileID: 8300000, guid: 8fdb1e0dfab618a408be05fb1e89539a, type: 3}

@@ -153,14 +153,14 @@ public abstract class SkillParentClass
 public class SkillContext
 {
     public Rigidbody2D Rigidbody2D;
-    public GameObject Caster;
+    public Transform Caster;
     public Vector3 Direction;
     public float Strength;
     public float MaxDistance;
     public NavMeshAgent Agent;
 
     // Constructeur qui permet d'injecter que les données dont on a besoin
-    public SkillContext(Rigidbody2D _rigidbody2D = null, GameObject caster = null, Vector2? direction = null, float strength = 0f, float maxDistance = 0, NavMeshAgent agent = null) // Vector3? est un Nullable, d'où le cast en vector3 après (évite les problèmes de Vector3 inconstant)
+    public SkillContext(Rigidbody2D _rigidbody2D = null, Transform caster = null, Vector2? direction = null, float strength = 0f, float maxDistance = 0, NavMeshAgent agent = null) // Vector3? est un Nullable, d'où le cast en vector3 après (évite les problèmes de Vector3 inconstant)
     {
         Rigidbody2D = _rigidbody2D;
         Caster = caster;

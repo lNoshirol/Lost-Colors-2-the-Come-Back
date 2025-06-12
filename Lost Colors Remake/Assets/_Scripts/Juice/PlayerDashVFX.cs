@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerDashVFX : MonoBehaviour
 {
+    [SerializeField] private Sprite _fixedDashSprite;
     [SerializeField] private GameObject _spriteTrailPrefab;
     [SerializeField] private int _numOfIntermediateSprites;
     [SerializeField] private TrailRenderer _trail;
@@ -18,16 +19,18 @@ public class PlayerDashVFX : MonoBehaviour
 
     public IEnumerator BalanceSpriteTrail()
     {
+        PlayerMain.Instance.anim.enabled = false;
         _trail.emitting = true;
         List<GameObject> usedSprites = new();
         for (int i = 0; i < _numOfIntermediateSprites; i++)
         {
             GameObject sprite = _spritesPool.GetObject();
             sprite.transform.SetParent(null);
+            sprite.transform.rotation = Quaternion.identity;
             sprite.transform.position = PlayerMain.Instance.transform.position + Vector3.up * 0.4f;
             sprite.TryGetComponent(out SpriteRenderer renderer);
             renderer.flipX = PlayerMain.Instance.Move._moveInput.x < 0;
-            renderer.DOFade(0, 0.2f);
+            renderer.DOFade(0, 0.25f);
             usedSprites.Add(sprite);
             yield return new WaitForSeconds(0.1f);
         }
@@ -37,6 +40,8 @@ public class PlayerDashVFX : MonoBehaviour
             _spritesPool.Stock(sprite);
             sprite.TryGetComponent(out SpriteRenderer renderer);
             renderer.DOFade(1, 0f);
+            sprite.transform.SetParent(this.transform);
         }
+        PlayerMain.Instance.anim.enabled = true;
     }
 }

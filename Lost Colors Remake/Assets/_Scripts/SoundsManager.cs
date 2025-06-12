@@ -105,6 +105,11 @@ public class SoundsManager : MonoBehaviour
         _sfxSource.pitch = (!isPitchRandom) ? 1 : 1 + Random.Range(-0.2f, 0.2f);
         _sfxSource.PlayOneShot(audioClip);
     }
+    public void PlaySoundLoop(AudioClip audioClip, bool loop, AudioSource source)
+    {
+        source.loop = loop;
+        _sfxSource.PlayOneShot(audioClip);
+    }
 
     public async void PlayMusic(AudioClip music, bool loop)
     {

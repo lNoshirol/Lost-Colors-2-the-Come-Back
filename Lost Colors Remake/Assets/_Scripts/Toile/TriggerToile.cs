@@ -61,6 +61,10 @@ public class TriggerToile : MonoBehaviour
             //Time.timeScale = Time.timeScale / 3;
             coroutine = StartCoroutine(time.DoSlowmotion(ToileMain.Instance.toileTime));
             PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
+            var Sound = SoundsManager.Instance;
+            int RandomSound = UnityEngine.Random.Range(0, Sound.OpeningCanva.Length);
+            Sound.PlaySound(Sound.OpeningCanva[RandomSound], false);
+
             SoundsManager.Instance.SlowDownAllSound();
         }
         else
@@ -70,6 +74,8 @@ public class TriggerToile : MonoBehaviour
 
             StopCoroutine(coroutine);
             SoundsManager.Instance.BackToNormal();
+            var Sound = SoundsManager.Instance;
+            Sound.PlaySound(Sound.ClosingCanva[0], false);
             time.StopSlowMotion();
             PlayerMain.Instance.UI.StartToileCooldownAsync(PlayerMain.Instance.toileInfo.cooldown);
 

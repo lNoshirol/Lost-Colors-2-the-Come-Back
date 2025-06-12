@@ -4,6 +4,7 @@ using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
 {
@@ -35,7 +36,9 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
     public IEnumerator GoodDraw(DrawData result)
     {
         Time.timeScale = 0;
-        Debug.LogWarning($"{result.result.Score}, play good sound");
+        var SoundWrong = SoundsManager.Instance;
+        int RandomSound = Random.Range(0, SoundWrong.ValidPattern.Length);
+        SoundWrong.PlaySound(SoundWrong.ValidPattern[RandomSound], false);
         yield return new WaitForSecondsRealtime(0.1f);
         closestEnemyDetected.TryGetComponent(out EnemyMain enemyMain);
 
@@ -60,7 +63,9 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
 
     public IEnumerator WrongDraw(DrawData result)
     {
-        Debug.LogWarning("Play sound DrawBad");
+        var SoundWrong = SoundsManager.Instance;
+        int RandomSound = Random.Range(0, SoundWrong.InvalidPattern.Length);
+        SoundWrong.PlaySound(SoundWrong.InvalidPattern[RandomSound], false);
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(1);
         Time.timeScale = PlayerMain.Instance.toileInfo.slowMotionScale;

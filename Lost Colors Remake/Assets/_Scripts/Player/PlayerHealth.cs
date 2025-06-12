@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -37,6 +38,10 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!isInvicible)
         {
+            var SoundHit = SoundsManager.Instance;
+            int RandowSound = Random.Range(0, SoundHit.Hit.Length);
+            SoundHit.PlaySound(SoundHit.Hit[RandowSound], false);
+
             playerActualHealth = playerActualHealth - healthLoose;
 
             StartCoroutine(Invicibility());
@@ -63,6 +68,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void PlayerIsDead()
     {
+        // A METTRE QUAND LE JOUEUR POURRA SAVOIR QUAND IL EST MORT GENRE LE PANEL
+        //var SoundDeath = SoundsManager.Instance;
+        //int RandowSound = Random.Range(0, SoundDeath.Death.Length);
+        //SoundDeath.PlaySound(SoundDeath.Death[RandowSound], false);
         Debug.Log("GameOver");
     }
 

@@ -28,6 +28,7 @@ public class DeerRangeSkill : SkillParentClass
             if (EnemyManager.Instance == null) return;
             SearchVFX("Thunder").transform.position = pos;
         }
+        VFXListPos.Clear();
     }
 
     //Debug.Log("Cerf fireball");

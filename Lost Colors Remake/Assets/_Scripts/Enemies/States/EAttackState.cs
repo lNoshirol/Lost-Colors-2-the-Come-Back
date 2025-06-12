@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Threading.Tasks;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static EnemyDATA;
+using static EnemyMain;
 
 public class EAttackState : EnemiesState
 {
@@ -13,10 +16,6 @@ public class EAttackState : EnemiesState
     string attackName;
 
 
-    SkillContext context;
-
-
-
     public override void OnEnter()
     {
     }
@@ -24,12 +23,13 @@ public class EAttackState : EnemiesState
     public override void Do()
     {
         EnemiesMain.Animation.GetDirectionXAnimPlayer();
-        if (!EnemiesMain.alreadyAttack) {
+        if (!EnemiesMain.alreadyAttack)
+        {
             EnemiesMain.agent.isStopped = true;
             EnemiesMain.canLookAt = false;
             int randomSpell = Random.Range(0, 2);
-            if (randomSpell == 0) 
-            { 
+            if (randomSpell == 0)
+            {
                 CastCloseSkill();
             }
             else
@@ -39,7 +39,8 @@ public class EAttackState : EnemiesState
             EnemiesMain.alreadyAttack = true;
             Invoke(nameof(ResetAttack), attackCooldown);
         }
-        else if (!EnemiesMain.CheckPlayerInAttackRange()) {
+        else if (!EnemiesMain.CheckPlayerInAttackRange())
+        {
             EnemiesMain.SwitchState(EnemiesMain.EChaseState);
         }
     }
@@ -50,16 +51,6 @@ public class EAttackState : EnemiesState
         EnemiesMain.agent.isStopped = false;
         EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", false);
         EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", false);
-    }
-
-    void SkillSetupClose()
-    {
-        context = new(null, null, EnemiesMain.player.transform.position, 10, 2, EnemiesMain.agent);
-    }
-
-    void SkillSetupRange()
-    {
-        context = new(null, null, EnemiesMain.player.position, 5, 3);
     }
 
     public override void FixedDo()
@@ -75,30 +66,19 @@ public class EAttackState : EnemiesState
     public void CastCloseSkill()
     {
         EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", true);
-        SkillSetupClose();
-        EnemiesMain.closeSkill.Activate(context);
+        EnemiesMain.closeSkill.Activate(EnemiesMain.contextClose);
         StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length));
     }
     public void CastRangeSkill()
     {
         EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", true);
-        SkillSetupRange();
-        EnemiesMain.rangeSkill.Activate(context);
+        EnemiesMain.rangeSkill.Activate(EnemiesMain.contextRange);
         StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length));
     }
-
     IEnumerator WaitForEndAnime(float _animTime)
     {
         EnemiesMain.isAttacking = true;
         yield return new WaitForSeconds(_animTime);
         EnemiesMain.SwitchState(EnemiesMain.EIdleState);
     }
-
-
-
-
-
 }
-
-
-

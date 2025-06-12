@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5461466389415720599}
   - component: {fileID: 2432365439197721015}
   m_Layer: 0
-  m_Name: FlameThrowerTest
+  m_Name: VFX_FlameThrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6281174737589849976}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: a76c7883b390eb64d998f668d921f4be, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 20bd470f95c219745ba9fd2a67e96613, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0

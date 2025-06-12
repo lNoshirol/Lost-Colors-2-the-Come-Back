@@ -13,6 +13,20 @@ public class SoundsManager : MonoBehaviour
     [SerializeField] private AudioClip _theOneAmbiantSound;
     [SerializeField] private bool _hasToPlayTheOneAndOnlyMusicBecauseItsTooMuchAUnMoment;
 
+
+    [Header("Ambiance")]
+    public AudioClip[] AudioAmbiance;
+
+    [Header("Sound Effect")]
+    public AudioClip[] AudioSoundEffect;
+
+    [Header("Music")]
+    public AudioClip MusicMenu;
+    public AudioClip MusicMain;
+    public AudioClip MusicForestNoColored;
+    public AudioClip MusicForestColored;
+    public AudioClip MusicFight;
+
     // Singleton
     #region Singleton
     private static SoundsManager _instance;

@@ -15,7 +15,8 @@ public class SoundsManager : MonoBehaviour
 
 
     [Header("Ambiance")]
-    public AudioClip[] AudioAmbiance;
+    public AudioClip[] AudioSoundsBW;
+    public AudioClip[] AudioSoundsColor;
 
     [Header("Sound Effect")]
     [Header("Deer")]
@@ -45,6 +46,7 @@ public class SoundsManager : MonoBehaviour
     [Header("MagicCanvas")]
     public AudioClip[] OpeningCanva;
     public AudioClip[] Trace;
+    public AudioClip[] ClosingCanva;
 
     [Header("Player")]
     public AudioClip[] Combo;
@@ -134,8 +136,7 @@ public class SoundsManager : MonoBehaviour
     public void StopSound()
     {
         _musicSource.Stop();
-        _ambiantSource.Stop();
-        
+        _ambiantSource.Stop();        
     }
 
     public void SlowDownAllSound()

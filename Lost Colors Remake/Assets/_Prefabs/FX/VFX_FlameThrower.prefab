@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1963825411403820113}
   - component: {fileID: 5461466389415720599}
   - component: {fileID: 2432365439197721015}
+  - component: {fileID: 5016065287230482706}
   m_Layer: 0
   m_Name: VFX_FlameThrower
   m_TagString: Untagged
@@ -138,6 +139,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5016065287230482706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6281174737589849976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 044c50a89f96b1d439581d7e432b3e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2432365439197721015}
+  transition1WaitTime: 0.2
+  transition1Name: 
 --- !u!1 &6682251224876653147
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450608060102594530}
   - component: {fileID: 8014983642460675414}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FlameCollider
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -201,7 +217,7 @@ PolygonCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}

@@ -20,5 +20,4 @@ public class VFXControl : MonoBehaviour
     {
         StartCoroutine(WaitForNext(transition1WaitTime));
     }
-
 }

@@ -79,9 +79,8 @@ public class EnemyAnimation : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         enemyMain.spriteRenderer.material.SetTexture("_ColoredTex", _coloredHitFrame.texture);
         enemyMain.spriteRenderer.material.DOFloat(1f, "_Transition", 2f);
-        yield return new WaitForSeconds(2.01f);
+        yield return new WaitForSeconds(2.1f);
         enemyMain.spriteRenderer.material.DOFloat(0f, "_Transition", 1f);
-        print(enemyMain.spriteRenderer.material + " | " + enemyMain.spriteRenderer.material.GetFloat("_Transition"));
         enemyAnimator.enabled = true;
         enemyMain.agent.isStopped = false;
         SwitchAnimatorToColor();

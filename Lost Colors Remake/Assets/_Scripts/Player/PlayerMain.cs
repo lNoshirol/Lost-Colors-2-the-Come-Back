@@ -14,6 +14,8 @@ public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
 
     public PlayerCollision Collision { get; private set; }
 
+    public PlayerDashVFX PlayerDashVFX { get; private set; }
+
     public Rigidbody2D Rigidbody2D { get; private set; }
     public Collider2D Collider2D { get; private set; }
     [field: SerializeField] public GameObject ProjectileSocket { get; private set; }
@@ -52,6 +54,7 @@ public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
         Attack = GetComponent<PlayerAttack>();
         Collider2D = GetComponent<Collider2D>();
         Collision = GetComponent<PlayerCollision>();
+        PlayerDashVFX = GetComponent<PlayerDashVFX>();
         if (Inventory.CheckBrushInDatabase()){
             ColorSwitch(true);
         }

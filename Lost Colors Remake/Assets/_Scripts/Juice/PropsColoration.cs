@@ -10,7 +10,7 @@ public class PropsColoration : MonoBehaviour
     private async void Start()
     {
         await Task.Delay(1);
-
+        if (CrystalManager.Instance == null) return;
         if (CrystalManager.Instance._ListCrystal.Count > 0)
         {
             CrystalManager.Instance._ListCrystal[0].Crystal.ColorWaveHandler.OnColorizeEvent += LaunchCoroutine;

@@ -3066,6 +3066,7 @@ GameObject:
   - component: {fileID: 1528952463398644730}
   - component: {fileID: 4441499770059576181}
   - component: {fileID: 1159743132053632506}
+  - component: {fileID: 7742405783010560182}
   - component: {fileID: 3806985094790389137}
   - component: {fileID: 3102311220201749475}
   - component: {fileID: 5303053309062978632}
@@ -3253,6 +3254,20 @@ MonoBehaviour:
   whatIsPlayer: 8
   playerFeetLayer: 13
   dashLayer: 11
+--- !u!114 &7742405783010560182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8528153680925208856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d78af74b1993f854f9c1cc2d8c11f627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteTrailPrefab: {fileID: 614864940344131990, guid: d529d77d285431849bc2cbe8a6800e59, type: 3}
+  _numOfIntermediateSprites: 4
 --- !u!50 &3806985094790389137
 Rigidbody2D:
   serializedVersion: 5

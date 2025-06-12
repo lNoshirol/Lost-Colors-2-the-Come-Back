@@ -11,22 +11,22 @@ public class DeerRangeSkill : SkillParentClass
     private float timeToWaitBeforeAttack = 0.6f;
     public override async void Activate(SkillContext context)
     {
+        VFXListPos.Add(context.Caster.transform.position);
         await Task.Delay((int)(timeToWaitBeforeAttack * 1000));
-        VFXListPos.Add(context.Direction);
-        foreach (Vector2 pos in Vector2AroundPlayer(context.Direction, context.MaxDistance, context.Strength))
+        foreach (Vector2 pos in Vector2AroundPlayer(context.Caster.transform.position, context.MaxDistance, context.Strength))
         {
             VFXListPos.Add(pos);
         };
         WaitForEachFX(0.1f);
     }
 
-    async void WaitForEachFX(float WaitTimeBetween)
+    async void WaitForEachFX(float waitTimeBetween)
     {
         foreach(Vector2 pos in VFXListPos)
         {
-            await Task.Delay((int)(WaitTimeBetween * 1000));
             if (EnemyManager.Instance == null) return;
             SearchVFX("Thunder").transform.position = pos;
+            await Task.Delay((int)(waitTimeBetween * 1000));
         }
         VFXListPos.Clear();
     }

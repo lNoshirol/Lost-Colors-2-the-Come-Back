@@ -17,10 +17,11 @@ public class PlayerDashVFX : MonoBehaviour
         for (int i = 0; i < _numOfIntermediateSprites; i++)
         {
             GameObject sprite = _spritesPool.GetObject();
+            sprite.transform.SetParent(null, false);
             sprite.transform.position = PlayerMain.Instance.transform.position;
             sprite.TryGetComponent(out SpriteRenderer renderer);
             renderer.flipX = PlayerMain.Instance.Move._moveInput.x < 0;
-            yield return new WaitForSeconds(0.6f);
+            yield return new WaitForSeconds(0.1f);
         }
         
     }

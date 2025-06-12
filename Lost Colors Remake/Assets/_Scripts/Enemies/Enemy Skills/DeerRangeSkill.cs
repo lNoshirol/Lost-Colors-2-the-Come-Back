@@ -11,9 +11,9 @@ public class DeerRangeSkill : SkillParentClass
     private float timeToWaitBeforeAttack = 0.6f;
     public override async void Activate(SkillContext context)
     {
-        VFXListPos.Add(PlayerMain.Instance.PlayerGameObject.transform.position);
+        VFXListPos.Add(context.Caster.transform.position);
         await Task.Delay((int)(timeToWaitBeforeAttack * 1000));
-        foreach (Vector2 pos in Vector2AroundPlayer(PlayerMain.Instance.PlayerGameObject.transform.position, context.MaxDistance, context.Strength))
+        foreach (Vector2 pos in Vector2AroundPlayer(context.Caster.transform.position, context.MaxDistance, context.Strength))
         {
             VFXListPos.Add(pos);
         };

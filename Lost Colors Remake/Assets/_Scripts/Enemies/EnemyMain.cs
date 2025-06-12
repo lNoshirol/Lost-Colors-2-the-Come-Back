@@ -299,14 +299,14 @@ public class EnemyMain : MonoBehaviour
             case "Deer":
                 closeSkill = new DeerCloseSkill();
                 rangeSkill = new DeerRangeSkill();
-                contextClose = new(null, player, null, 10, 2, agent);
-                contextRange = new(null, player, null, 5, 3);
+                contextClose = new(null, player, new Vector2(0,0), 10, 2, agent);
+                contextRange = new(null, player, new Vector2(0, 0), 5, 3);
                 break;
             case "Wolf":
                 closeSkill = new WolfCloseSkill();
                 rangeSkill = new WolfRangeSkill();
-                contextClose = new(null, player, null, 10, 2, agent);
-                contextRange = new(null, player, null, 1);
+                contextClose = new(null, player, new Vector2(0,0), 10, 2, agent);
+                contextRange = new(null, player, new Vector2(0,0), 1);
                 break;
             default:
                 Debug.LogError("Unknow animal type, please select one");

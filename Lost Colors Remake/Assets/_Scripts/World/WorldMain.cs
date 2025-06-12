@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Threading.Tasks;
+using System;
 
 public class WorldMain : SingletonCreatorPersistent<WorldMain>
 {
@@ -12,6 +13,8 @@ public class WorldMain : SingletonCreatorPersistent<WorldMain>
     public GameObject currentRoomSwitcher;
 
     public string CurrentRoomName;
+
+    public event Action OnSwitchScene;
 
     private void Start()
     {
@@ -50,6 +53,7 @@ public class WorldMain : SingletonCreatorPersistent<WorldMain>
         //CameraMain.Instance.CenterCameraAtPosition(CameraMain.Instance.transform.position);
         PlayerMain.Instance.UI.SwitchRoomUI();
         await Task.Delay(500);
+        OnSwitchScene?.Invoke();
     }
 
     public IEnumerator SwitchRoomC(string roomName, string switcherName)

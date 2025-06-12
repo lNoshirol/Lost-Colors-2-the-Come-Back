@@ -1,9 +1,20 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class CatchThingsOnDraw : MonoBehaviour
 {
-    public List<GameObject> _ennemyObjectOnDraw;
+    public List<GameObject> _ennemyObjectOnDraw = new();
+
+    private void Start()
+    {
+        WorldMain.Instance.OnSwitchScene += HardReset;
+    }
+
+    private void HardReset()
+    {
+        _ennemyObjectOnDraw = new();
+    }
 
     public void EnnemyOnPath(Ray2D ray, LayerMask layerMask)
     {
@@ -20,6 +31,7 @@ public class CatchThingsOnDraw : MonoBehaviour
 
     public void CatchObjectOnLine(DrawData drawData)
     {
+
         foreach (GameObject obj in _ennemyObjectOnDraw)
         {
             if (obj.CompareTag("Torch"))

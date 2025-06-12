@@ -90,6 +90,8 @@ public class EnemyMain : MonoBehaviour
         Health = GetComponent<EnemyHealth>();
         UI = GetComponent<EnemyUI>();
 
+        Animation.GetGoodSocketVFXOrientation();
+
         SetupStats();
 
         EnemyManager.Instance.AddEnemiesToListAndDic(gameObject, isColorized);
@@ -306,7 +308,7 @@ public class EnemyMain : MonoBehaviour
                 closeSkill = new WolfCloseSkill();
                 rangeSkill = new WolfRangeSkill();
                 contextClose = new(null, player, new Vector2(0,0), 10, 2, agent);
-                contextRange = new(null, player, new Vector2(0,0), 1);
+                contextRange = new(null, Animation.currentVfxSocket.transform, new Vector2(0,0), 1);
                 break;
             default:
                 Debug.LogError("Unknow animal type, please select one");

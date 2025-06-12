@@ -86,7 +86,16 @@ public class ApplyDamageAfterDraw : MonoBehaviour
     public void TriggerVfxPlay()
     {
         VfxToPlay?.Invoke(_drawVfxToPlay);
-
+        if (_drawVfxToPlay.Count <= 0) return;
+        //foreach(var truc in _drawVfxToPlay)
+        //{
+        //    VFXPoolManager.Instance.PlayPaintVFXAt(truc.worldCenter);
+        //    print(truc.worldCenter);
+        //}
+        foreach(var truc in _tabassedEnemy)
+        {
+            VFXPoolManager.Instance.PlayPaintVFXAt(truc.transform.position);
+        }
         _drawVfxToPlay.Clear();
     }
 }

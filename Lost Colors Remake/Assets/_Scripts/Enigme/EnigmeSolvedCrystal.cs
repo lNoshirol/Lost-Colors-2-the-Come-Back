@@ -23,6 +23,9 @@ public class EnigmeSolvedCrystal : EnigmeSolved
         StartCoroutine(FadePPVolume());
         crystal.material.SetTexture("_ColoredTex", crystalUncorrupted.texture);
         crystal.material.DOFloat(1f, "_Transition", 2f);
+        var Sound = SoundsManager.Instance;
+        int RandomSound = Random.Range(0, Sound.Activate.Length);
+        Sound.PlaySound(Sound.Activate[RandomSound], false);
     }
 
     private IEnumerator FadePPVolume()

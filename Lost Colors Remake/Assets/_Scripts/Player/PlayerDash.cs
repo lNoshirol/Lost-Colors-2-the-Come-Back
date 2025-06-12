@@ -24,6 +24,10 @@ public class PlayerDash : MonoBehaviour
 
     void Dash()
     {
+        var Sound = SoundsManager.Instance;
+        int RandomSound = Random.Range(0, Sound.Dash.Length);
+        Sound.PlaySound(Sound.Dash[RandomSound], false);
+
         positionBeforeDash = PlayerMain.Instance.PlayerGameObject.transform.position;
         PlayerMain.Instance.Rigidbody2D.linearVelocity = PlayerMain.Instance.Move._moveInput * dashPower;
         isDashing = true;

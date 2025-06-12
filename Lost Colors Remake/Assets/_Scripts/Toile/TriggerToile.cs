@@ -18,9 +18,6 @@ public class TriggerToile : MonoBehaviour
 
     private Coroutine coroutine;
 
-    [SerializeField] private AudioClip[] _audioClipsOpen;
-    [SerializeField] private AudioClip _audioClipClose;
-
     private void Awake()
     {
         if (instance == null)
@@ -63,15 +60,11 @@ public class TriggerToile : MonoBehaviour
             //StopCoroutine(ToileMain.Instance.timerCo);
             //Time.timeScale = Time.timeScale / 3;
             coroutine = StartCoroutine(time.DoSlowmotion(ToileMain.Instance.toileTime));
-            SoundsManager.Instance.PlaySound(_audioClipsOpen[0], false);
-            SoundsManager.Instance.SlowDownAllSound();
             PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
 
         }
         else
         {
-            SoundsManager.Instance.PlaySound(_audioClipClose, false);
-            SoundsManager.Instance.BackToNormal();
             StartCoroutine(DeactivateAfterFrame());
             PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
 

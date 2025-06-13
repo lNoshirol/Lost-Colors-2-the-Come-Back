@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 
 public class EnemyAnimation : MonoBehaviour
@@ -71,17 +72,18 @@ public class EnemyAnimation : MonoBehaviour
     public IEnumerator OnDieAnim()
     {
         enemyAnimator.enabled = false;
-        print("white");
+        enemyMain.agent.isStopped = true;
         enemyMain.spriteRenderer.sprite = _whiteHitFrame;
-        yield return new WaitForSeconds(0.9f);
-        print("bw");
+        yield return new WaitForSeconds(0.1f);
         enemyMain.spriteRenderer.sprite = _BWHitFrame;
-        yield return new WaitForSeconds(0.9f);
-        print("white");
-        enemyMain.spriteRenderer.sprite = _whiteHitFrame;
-        yield return new WaitForSeconds(0.9f);
-        print("bw");
-        enemyMain.spriteRenderer.sprite = _BWHitFrame;
+        yield return new WaitForSeconds(0.1f);
+        enemyMain.spriteRenderer.material.SetTexture("_ColoredTex", _coloredHitFrame.texture);
+        enemyMain.spriteRenderer.material.DOFloat(1f, "_Transition", 2f);
+        yield return new WaitForSeconds(2.1f);
+        enemyMain.spriteRenderer.material.DOFloat(0f, "_Transition", 1f);
+        enemyAnimator.enabled = true;
+        enemyMain.agent.isStopped = false;
+        SwitchAnimatorToColor();
     }
 
     public void HitAnim()

@@ -13,6 +13,8 @@ public class EnigmeSolvedCrystal : EnigmeSolved
 
     public override void Interact()
     {
+        var Sound = SoundsManager.Instance;
+        Sound.ChangeMusicSmoothly(Sound.MusicForestColored);
         CrystalColorLerp();
         _waveManager.Anim();
         ToileMain.Instance.TriggerToile.OpenAndCloseToileMagique();

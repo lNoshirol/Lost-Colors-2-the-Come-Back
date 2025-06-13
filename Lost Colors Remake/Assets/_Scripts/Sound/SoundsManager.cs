@@ -13,7 +13,7 @@ public class SoundsManager : MonoBehaviour
     [SerializeField] private AudioClip _theOneAmbiantSound;
     [SerializeField] private bool _hasToPlayTheOneAndOnlyMusicBecauseItsTooMuchAUnMoment;
 
-    [SerializeField] private PoolObjectSound _poolObjectSound;
+    public PoolObjectSound _poolObjectSound;
 
 
     [Header("Ambiance")]
@@ -102,11 +102,18 @@ public class SoundsManager : MonoBehaviour
         PlayAmbiant(_theOneAmbiantSound, false);
     }
 
-    public void PlaySound(AudioClip audioClip, bool isPitchRandom)
+    public void PlaySound(AudioClip audioClip, bool isPitchRandom, Transform transform = null)
     {
+        if (transform == null)
+        {
+            _poolObjectSound.GetAudioSourcePool().transform.position = this.transform.position;
+        }
+        else
+        {
+            _poolObjectSound.GetAudioSourcePool().transform.position = transform.position;
+        }
         _poolObjectSound.GetAudioSourcePool().pitch = (!isPitchRandom) ? 1 : 1 + Random.Range(-0.2f, 0.2f);
         _poolObjectSound.GetAudioSourcePool().PlayOneShot(audioClip);
-        //_poolObjectSound.GetAudioSourcePool().transform.position = transform.position;
     }
     public void PlaySoundLoop(AudioClip audioClip, bool loop, AudioSource source)
     {

@@ -57,16 +57,25 @@ public class JoystickLucas : MonoBehaviour
 
         if (Input.touchCount > 0 && canMove)
         {
-            targetPos = Camera.main.ScreenToWorldPoint(touch.position) - normalPos;
-            targetPos2 = Camera.main.ScreenToWorldPoint(touch.position);
+            targetPos = (Vector3)touch.position - normalPos;
+            targetPos2 = touch.position;
 
             //Debug.Log("trying to move");
-            endPos = Camera.main.ScreenToWorldPoint(touch.position /*new Vector2(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y)*/ /*Input.mousePosition*/);
+            endPos = touch.position;
 
             Vector2 offset = endPos - new Vector2(transform.parent.position.x, transform.parent.position.y);
             Vector2 direction = Vector2.ClampMagnitude(offset, 1f);
             PlayerMain.Instance.Move.SetMoveInput(direction);
-            transform.position = new Vector2(transform.parent.position.x + direction.x, transform.parent.position.y + direction.y);
+
+            Vector2 clampedOffset = Vector2.ClampMagnitude(offset, 150);
+            transform.position = new Vector2(transform.parent.position.x + clampedOffset.x, transform.parent.position.y + clampedOffset.y);
+
+/*            float x = Mathf.Clamp(touch.position.x, transform.parent.position.x -35, transform.parent.position.x + 35);
+            float y = Mathf.Clamp(touch.position.y, transform.parent.position.y -35, transform.parent.position.y + 35);
+            
+            transform.position = new Vector2(x, y);
+
+            Debug.Log(transform.position);*/
         }
         else
         {

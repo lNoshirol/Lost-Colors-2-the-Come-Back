@@ -336,10 +336,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2255557545087755338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.20374204, y: 0.20700002}
+  m_AnchorMax: {x: 0.79600006, y: 0.79300004}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -2}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5821795777539350118
 CanvasRenderer:
@@ -674,6 +674,7 @@ RectTransform:
   - {fileID: 6954135581594074505}
   - {fileID: 7714949679957896391}
   - {fileID: 8965510908935865774}
+  - {fileID: 2255557545087755338}
   - {fileID: 3780235529399666752}
   - {fileID: 955748419147563621}
   - {fileID: 1829005540309183559}
@@ -2548,18 +2549,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4749744478471186618}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6528646594925626610}
-  m_Father: {fileID: 8965510908935865774}
+  m_Father: {fileID: 64682085990763355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -810, y: -480}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 505.0996, y: 337.79004}
+  m_SizeDelta: {x: 98.17871, y: 101.4541}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1678627065627800583
 CanvasRenderer:
@@ -2650,8 +2651,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2255557545087755338}
+  m_Children: []
   m_Father: {fileID: 64682085990763355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2756,7 +2756,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.21875
+  orthographic size: 4.71875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3468,7 +3468,6 @@ GameObject:
   - component: {fileID: 5303053309062978632}
   - component: {fileID: 4323410436467135066}
   - component: {fileID: 8384006665691216752}
-  - component: {fileID: 1909280123116646655}
   m_Layer: 8
   m_Name: PlayerMain
   m_TagString: Player
@@ -3785,14 +3784,6 @@ MonoBehaviour:
   slider: {fileID: 0}
   time: 0
   unscaledTime: 0
---- !u!81 &1909280123116646655
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8528153680925208856}
-  m_Enabled: 1
 --- !u!1 &8969085154843584510
 GameObject:
   m_ObjectHideFlags: 0

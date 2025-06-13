@@ -100,6 +100,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6608629211748619719, guid: 82108bf54ba76b040a208df5fb2170cc, type: 3}
+    - target: {fileID: 7816581534450789788, guid: eb8a3dcb167a4f24c9de35b423a14f58, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5919702
+      objectReference: {fileID: 0}
+    - target: {fileID: 7816581534450789788, guid: eb8a3dcb167a4f24c9de35b423a14f58, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.26864398
+      objectReference: {fileID: 0}
     - target: {fileID: 7939511243424421847, guid: eb8a3dcb167a4f24c9de35b423a14f58, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.950172

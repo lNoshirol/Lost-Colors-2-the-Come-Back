@@ -12,6 +12,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 9005991079581782355, guid: 4756e5b4ac1bbf14e9b0617ba9f98f6b, type: 3}
+    - target: {fileID: 2709207065428319475, guid: 9a79ba0bae2e3b24bbe42ca98eba9343, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8738308
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709207065428319475, guid: 9a79ba0bae2e3b24bbe42ca98eba9343, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2582493
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709207065428319475, guid: 9a79ba0bae2e3b24bbe42ca98eba9343, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.006029129
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709207065428319475, guid: 9a79ba0bae2e3b24bbe42ca98eba9343, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.65532017
+      objectReference: {fileID: 0}
     - target: {fileID: 2868183197966673592, guid: 9a79ba0bae2e3b24bbe42ca98eba9343, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.43

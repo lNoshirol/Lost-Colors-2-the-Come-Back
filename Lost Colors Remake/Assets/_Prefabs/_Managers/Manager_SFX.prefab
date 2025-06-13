@@ -381,7 +381,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 45b4fdb4c316d23488d1991e99ed9a72, type: 3}
   SoundEffectDeerHit:
   - {fileID: 8300000, guid: fbc9cc58a3090894ba1bacea5f330447, type: 3}
-  - {fileID: 8300000, guid: 0a4f7ea773d03cd4caebb39e19b999c5, type: 3}
   - {fileID: 8300000, guid: 3bd888bb4ada77643a6e6139153c8bb2, type: 3}
   SoundEffectDeerRun:
   - {fileID: 8300000, guid: 888e008bfe827064dbebba3f911e153d, type: 3}

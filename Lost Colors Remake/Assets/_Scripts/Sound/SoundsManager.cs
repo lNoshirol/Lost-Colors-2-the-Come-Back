@@ -13,6 +13,8 @@ public class SoundsManager : MonoBehaviour
     [SerializeField] private AudioClip _theOneAmbiantSound;
     [SerializeField] private bool _hasToPlayTheOneAndOnlyMusicBecauseItsTooMuchAUnMoment;
 
+    [SerializeField] private PoolObjectSound _poolObjectSound;
+
 
     [Header("Ambiance")]
     public AudioClip[] AudioSoundsBW;
@@ -102,8 +104,9 @@ public class SoundsManager : MonoBehaviour
 
     public void PlaySound(AudioClip audioClip, bool isPitchRandom)
     {
-        _sfxSource.pitch = (!isPitchRandom) ? 1 : 1 + Random.Range(-0.2f, 0.2f);
-        _sfxSource.PlayOneShot(audioClip);
+        _poolObjectSound.GetAudioSourcePool().pitch = (!isPitchRandom) ? 1 : 1 + Random.Range(-0.2f, 0.2f);
+        _poolObjectSound.GetAudioSourcePool().PlayOneShot(audioClip);
+        //_poolObjectSound.GetAudioSourcePool().transform.position = transform.position;
     }
     public void PlaySoundLoop(AudioClip audioClip, bool loop, AudioSource source)
     {

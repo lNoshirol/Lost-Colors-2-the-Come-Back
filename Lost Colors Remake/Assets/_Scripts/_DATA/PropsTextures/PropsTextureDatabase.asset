@@ -106,27 +106,27 @@ MonoBehaviour:
   - PropName: sprt_tiles_grass_02
     BW: {fileID: 21300000, guid: eea7c82c5e85bb149aa994b81bdd0838, type: 3}
     Colored: {fileID: 21300000, guid: 3747dd9df228a4c4b9996eef4bf879f9, type: 3}
-  - PropName: sprt_stairs_01
-    BW: {fileID: 21300000, guid: 536d2c9af2fc38c44ba8be7b7526bb6b, type: 3}
-    Colored: {fileID: 21300000, guid: 84a7de7f680f4e243aa63ca4363ada54, type: 3}
-  - PropName: sprt_stairs_02
-    BW: {fileID: 21300000, guid: 068ea7f5879005a4eac3b8fba91a229c, type: 3}
-    Colored: {fileID: 21300000, guid: 88289a0b8d70880459e4f0de52b7d203, type: 3}
-  - PropName: sprt_stairs_03
-    BW: {fileID: 21300000, guid: a66ad61870ff10a42a95d18cbce844b9, type: 3}
-    Colored: {fileID: 21300000, guid: 39e1257300286c94390b388106e63a82, type: 3}
-  - PropName: sprt_stairs_04
-    BW: {fileID: 21300000, guid: 24d53e796d5e21c45b3fc79f866db650, type: 3}
-    Colored: {fileID: 21300000, guid: 03e9e40f5a8bd204da69b7d27da17499, type: 3}
-  - PropName: sprt_stairs_05
-    BW: {fileID: 21300000, guid: dfba7435d72b96e4282a060b7ff5ccc7, type: 3}
-    Colored: {fileID: 21300000, guid: d6dedf3ae37f45b448e463e9f4436c2e, type: 3}
   - PropName: sprt_trunk_02
     BW: {fileID: 21300000, guid: 8f0e600b6475b864f9193508fa1167ba, type: 3}
     Colored: {fileID: 21300000, guid: 1c9b5843dea75cb4181811367ff28576, type: 3}
   - PropName: sprt_trunk_03
     BW: {fileID: 21300000, guid: 80380b3f6c555cb4c9ad16dc5c82477e, type: 3}
     Colored: {fileID: 21300000, guid: c7ce9fb67ab336445a8c4c9602195f58, type: 3}
+  - PropName: sprt_stairs_01
+    BW: {fileID: 21300000, guid: 536d2c9af2fc38c44ba8be7b7526bb6b, type: 3}
+    Colored: {fileID: 21300000, guid: 84a7de7f680f4e243aa63ca4363ada54, type: 3}
+  - PropName: sprt_stairs_02
+    BW: {fileID: 21300000, guid: 068ea7f5879005a4eac3b8fba91a229c, type: 3}
+    Colored: {fileID: 21300000, guid: 88289a0b8d70880459e4f0de52b7d203, type: 3}
+  - PropName: sprt_stairs_04
+    BW: {fileID: 21300000, guid: 24d53e796d5e21c45b3fc79f866db650, type: 3}
+    Colored: {fileID: 21300000, guid: 03e9e40f5a8bd204da69b7d27da17499, type: 3}
+  - PropName: sprt_stairs_05
+    BW: {fileID: 21300000, guid: dfba7435d72b96e4282a060b7ff5ccc7, type: 3}
+    Colored: {fileID: 21300000, guid: d6dedf3ae37f45b448e463e9f4436c2e, type: 3}
+  - PropName: sprt_stairs_03
+    BW: {fileID: 21300000, guid: a66ad61870ff10a42a95d18cbce844b9, type: 3}
+    Colored: {fileID: 21300000, guid: 39e1257300286c94390b388106e63a82, type: 3}
   - PropName: sprt_littleJar_01
     BW: {fileID: 21300000, guid: 844c4b6f66fa37e48a508caf9545397e, type: 3}
     Colored: {fileID: 21300000, guid: e00eee10654cfae4c9aefecd98576ad7, type: 3}
@@ -178,6 +178,15 @@ MonoBehaviour:
   - PropName: sprt_rock03
     BW: {fileID: 21300000, guid: 24e0f38091f97c043a41b9029db83475, type: 3}
     Colored: {fileID: 21300000, guid: ab66329084429e94196c4fddada58c76, type: 3}
+  - PropName: sprt_rock04
+    BW: {fileID: 21300000, guid: c62f975627f30f34bbb2944d05c07a18, type: 3}
+    Colored: {fileID: 21300000, guid: 25da37b865194534da283053d2f12773, type: 3}
+  - PropName: sprt_rock05
+    BW: {fileID: 21300000, guid: a39736862beba3242be576986c098fd0, type: 3}
+    Colored: {fileID: 21300000, guid: 3d058b7663891ae4282c7eba16d02d53, type: 3}
+  - PropName: sprt_rock06
+    BW: {fileID: 21300000, guid: a27fac56bd85e6b4a8316319ff9e09e7, type: 3}
+    Colored: {fileID: 21300000, guid: 160177d49e5a28f4285064a6e75e1801, type: 3}
   - PropName: sprt_clay_dalle_01
     BW: {fileID: 21300000, guid: b03b19a7cfdda3f4a8df64b277fb68a8, type: 3}
     Colored: {fileID: 21300000, guid: 6aca11878bc25e841bd0ee872485f0a4, type: 3}

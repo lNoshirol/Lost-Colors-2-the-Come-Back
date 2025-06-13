@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9099306488593737325}
   - component: {fileID: 4107692437769112178}
   - component: {fileID: 1330253756733851919}
+  - component: {fileID: 4940288888531570247}
   m_Layer: 0
   m_Name: Manager_SFX
   m_TagString: Untagged
@@ -345,6 +346,7 @@ MonoBehaviour:
   _theOneAndOnlyMusic: {fileID: 8300000, guid: 5e394efe86f61df4099b436ee4c73275, type: 3}
   _theOneAmbiantSound: {fileID: 8300000, guid: ce49f9c911e51e04a9d130b26091a43c, type: 3}
   _hasToPlayTheOneAndOnlyMusicBecauseItsTooMuchAUnMoment: 1
+  _poolObjectSound: {fileID: 4940288888531570247}
   AudioSoundsBW:
   - {fileID: 8300000, guid: 686325dda9014964ead0c94a0b62d31e, type: 3}
   - {fileID: 8300000, guid: ab20f0ea17b3aa44caabea30b1b7cbbe, type: 3}
@@ -605,3 +607,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8593ac382c018f74f817de411a2d6434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4940288888531570247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7232632753115461920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d841305c596a6b245b1288e6dfdb0921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundSource: {fileID: 4743762454372386963, guid: ab85a197bf86e5e4db968365ac92f3d7, type: 3}

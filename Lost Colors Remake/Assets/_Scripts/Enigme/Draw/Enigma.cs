@@ -31,6 +31,11 @@ public class Enigma : MonoBehaviour
         DrawForDollarP.instance.OnDrawFinish -= SolveEnigme;
     }
 
+    private void Update()
+    {
+        Debug.LogWarning(Time.timeScale);
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;

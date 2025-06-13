@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CameraMain : MonoBehaviour
 {
-
     public static CameraMain Instance { get; private set; }
     private void Awake()
     {
@@ -12,12 +11,5 @@ public class CameraMain : MonoBehaviour
             return;
         }
         Instance = this;
-    }
-
-
-
-    public void CenterCameraAtPosition(Vector2 targetPosition)
-    {
-        transform.position = targetPosition;
     }
 }

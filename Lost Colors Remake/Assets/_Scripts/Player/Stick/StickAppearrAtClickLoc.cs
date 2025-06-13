@@ -108,7 +108,9 @@ public class StickAppearrAtClickLoc : MonoBehaviour
 
     public void OnTouchStart(Touch touch)
     {
-        Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+        //Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+        
+        Vector2 touchPosition = touch.position;
 
 
         if (!RectTransformUtility.RectangleContainsScreenPoint(moveAreaRect, touch.position))

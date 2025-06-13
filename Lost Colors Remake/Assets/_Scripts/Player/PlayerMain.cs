@@ -41,7 +41,7 @@ public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
 
     public bool isColorized;
 
-
+    public Camera camera;
 
 
     private void Start()
@@ -121,6 +121,4 @@ public class PlayerMain : SingletonCreatorPersistent<PlayerMain>
             playerSprite.flipX = false;
         }
     }
-
 }
-

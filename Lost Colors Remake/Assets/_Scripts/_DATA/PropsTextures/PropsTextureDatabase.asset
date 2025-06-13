@@ -133,6 +133,24 @@ MonoBehaviour:
   - PropName: sprt_boat_01
     BW: {fileID: 21300000, guid: e8802cc796d402d40a7cd15f2a9174c8, type: 3}
     Colored: {fileID: 21300000, guid: f0afe82e47e0b79429c35941b5284932, type: 3}
+  - PropName: sprt_tipie_01
+    BW: {fileID: 21300000, guid: 158a9f2f165801f41ad9d664d0f46f71, type: 3}
+    Colored: {fileID: 21300000, guid: 1e733e4d2cac38044aa00d810d474b34, type: 3}
+  - PropName: sprt_tipie_02
+    BW: {fileID: 21300000, guid: a2fb7aea0eafdfb44803336bcaf54ace, type: 3}
+    Colored: {fileID: 21300000, guid: 99ea1b5a6134da843b5472e4f1dac1ee, type: 3}
+  - PropName: sprt_tipie_03
+    BW: {fileID: 21300000, guid: 53a4eb25ab5c1634094cf7a2786cb0a2, type: 3}
+    Colored: {fileID: 21300000, guid: 8fafdba444e78e24abe56d827be2803b, type: 3}
+  - PropName: sprt_tipie_04
+    BW: {fileID: 21300000, guid: 50645ff14f5b4f445aceb7e8a09811ed, type: 3}
+    Colored: {fileID: 21300000, guid: 912a38cdf18d8054996a102120680129, type: 3}
+  - PropName: sprt_fence
+    BW: {fileID: -6698704855479948370, guid: 4756e5b4ac1bbf14e9b0617ba9f98f6b, type: 3}
+    Colored: {fileID: 5693105239701634226, guid: 0ebfe39096462534a9005fceafd08d31, type: 3}
+  - PropName: sprt_spear
+    BW: {fileID: 3172608044716200014, guid: 82108bf54ba76b040a208df5fb2170cc, type: 3}
+    Colored: {fileID: -7443171443451843731, guid: 9dd3c35dbcdf5fb4d823596870b474cb, type: 3}
   - PropName: sprt_Clay_stairs
     BW: {fileID: 21300000, guid: 1253a92203346434bba42cc09a7f050f, type: 3}
     Colored: {fileID: 21300000, guid: 432590390fd7fa748b582e481b7c21ff, type: 3}
@@ -220,3 +238,12 @@ MonoBehaviour:
   - PropName: sprt_totem_01
     BW: {fileID: 21300000, guid: 38ede315afea5f646a0ffb2b0d4f1c1a, type: 3}
     Colored: {fileID: 21300000, guid: cc1b4056f2c00234ca8fd179824174d3, type: 3}
+  - PropName: sprt_tablette
+    BW: {fileID: 21300000, guid: 970cfd9dcdefa8c44aeebf61df8fb684, type: 3}
+    Colored: {fileID: 21300000, guid: 542c4bc4521a1bd488e8485b537380fd, type: 3}
+  - PropName: sprt_column
+    BW: {fileID: -636939851269121781, guid: 3303e2c1a0be7cf45932bbb6cd45af6a, type: 3}
+    Colored: {fileID: 4857223973554890546, guid: 018ec27ca03b84c4a810306bf9aae76e, type: 3}
+  - PropName: sprt_column_crack
+    BW: {fileID: 3900993511616658020, guid: c8b3288e6f8869142ad89c9d57cee3d4, type: 3}
+    Colored: {fileID: 4838093658280278665, guid: fc4318fa9673bac4e8f3f97d96d9ddd3, type: 3}

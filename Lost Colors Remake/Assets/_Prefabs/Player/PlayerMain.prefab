@@ -2756,7 +2756,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.71875
+  orthographic size: 4.21875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3468,6 +3468,7 @@ GameObject:
   - component: {fileID: 5303053309062978632}
   - component: {fileID: 4323410436467135066}
   - component: {fileID: 8384006665691216752}
+  - component: {fileID: 233053632907509839}
   m_Layer: 8
   m_Name: PlayerMain
   m_TagString: Player
@@ -3784,6 +3785,14 @@ MonoBehaviour:
   slider: {fileID: 0}
   time: 0
   unscaledTime: 0
+--- !u!81 &233053632907509839
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8528153680925208856}
+  m_Enabled: 1
 --- !u!1 &8969085154843584510
 GameObject:
   m_ObjectHideFlags: 0

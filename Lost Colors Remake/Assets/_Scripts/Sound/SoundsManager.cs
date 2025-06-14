@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 [RequireComponent(typeof(AudioSource))]
 public class SoundsManager : MonoBehaviour
@@ -104,16 +105,22 @@ public class SoundsManager : MonoBehaviour
 
     public void PlaySound(AudioClip audioClip, bool isPitchRandom, Transform transform = null)
     {
+        AudioSource audioSource = _poolObjectSound.GetAudioSourcePool();
+
         if (transform == null)
         {
-            _poolObjectSound.GetAudioSourcePool().transform.position = this.transform.position;
+            audioSource.spatialBlend = 0;
         }
         else
         {
-            _poolObjectSound.GetAudioSourcePool().transform.position = transform.position;
+            audioSource.spatialBlend = 1;
+            audioSource.transform.position = transform.position;
         }
-        _poolObjectSound.GetAudioSourcePool().pitch = (!isPitchRandom) ? 1 : 1 + Random.Range(-0.2f, 0.2f);
-        _poolObjectSound.GetAudioSourcePool().PlayOneShot(audioClip);
+
+        audioSource.pitch = (!isPitchRandom) ? 1 : 1 + Random.Range(-0.2f, 0.2f);
+        audioSource.clip = audioClip;
+        audioSource.PlayOneShot(audioClip);
+        
     }
     public void PlaySoundLoop(AudioClip audioClip, bool loop, AudioSource source)
     {

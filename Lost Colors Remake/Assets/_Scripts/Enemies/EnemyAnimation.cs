@@ -74,6 +74,7 @@ public class EnemyAnimation : MonoBehaviour
         enemyAnimator.enabled = false;
         enemyMain.agent.isStopped = true;
         enemyMain.spriteRenderer.sprite = _whiteHitFrame;
+        Debug.Log("ELOUANN CONNARD");
         yield return new WaitForSeconds(0.1f);
         enemyMain.spriteRenderer.sprite = _BWHitFrame;
         yield return new WaitForSeconds(0.1f);
@@ -84,6 +85,7 @@ public class EnemyAnimation : MonoBehaviour
         enemyAnimator.enabled = true;
         enemyMain.agent.isStopped = false;
         SwitchAnimatorToColor();
+        
     }
 
     public void HitAnim()

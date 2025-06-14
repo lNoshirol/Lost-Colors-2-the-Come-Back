@@ -32,7 +32,7 @@ public class PlayerDash : MonoBehaviour
         PlayerMain.Instance.Rigidbody2D.linearVelocity = PlayerMain.Instance.Move._moveInput * dashPower;
         isDashing = true;
         PlayerMain.Instance.Dashing(true);
-        StartCoroutine(PlayerMain.Instance.PlayerDashVFX.BalanceSpriteTrail());
+        PlayerMain.Instance.PlayerDashVFX.LaunchFeedback();
         StartCoroutine(WaitDash(dashTime));
     }
 

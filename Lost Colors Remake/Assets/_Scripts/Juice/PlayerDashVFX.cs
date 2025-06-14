@@ -14,7 +14,12 @@ public class PlayerDashVFX : MonoBehaviour
     void Start()
     {
         _trail.emitting = false;
-        _spritesPool = new(_spriteTrailPrefab, _numOfIntermediateSprites, this.transform);
+        _spritesPool = new(_spriteTrailPrefab, 25, this.transform);
+    }
+
+    public void LaunchFeedback()
+    {
+        StartCoroutine(BalanceSpriteTrail());
     }
 
     public IEnumerator BalanceSpriteTrail()
@@ -30,11 +35,15 @@ public class PlayerDashVFX : MonoBehaviour
             sprite.transform.position = PlayerMain.Instance.transform.position + Vector3.up * 0.4f;
             sprite.TryGetComponent(out SpriteRenderer renderer);
             renderer.flipX = PlayerMain.Instance.Move._moveInput.x < 0;
-            renderer.DOFade(0, 0.25f);
+            renderer.DOFade(0, 0.5f);
             usedSprites.Add(sprite);
             yield return new WaitForSeconds(0.1f);
         }
         _trail.emitting = false;
+        PlayerMain.Instance.anim.enabled = true;
+
+        yield return new WaitForSeconds(0.4f);
+
         foreach (GameObject sprite in usedSprites)
         {
             _spritesPool.Stock(sprite);
@@ -42,6 +51,5 @@ public class PlayerDashVFX : MonoBehaviour
             renderer.DOFade(1, 0f);
             sprite.transform.SetParent(this.transform);
         }
-        PlayerMain.Instance.anim.enabled = true;
     }
 }

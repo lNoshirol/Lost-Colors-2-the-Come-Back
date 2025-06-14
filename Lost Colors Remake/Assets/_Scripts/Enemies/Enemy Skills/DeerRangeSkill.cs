@@ -28,9 +28,6 @@ public class DeerRangeSkill : SkillParentClass
             SearchVFX("Thunder").transform.position = pos;
             await Task.Delay((int)(waitTimeBetween * 1000));
         }
-        var sound = SoundsManager.Instance;
-        int RandowDeer = Random.Range(0, sound.SoundEffectDeerAttackRanged.Length);
-        sound.PlaySound(sound.SoundEffectDeerAttackRanged[RandowDeer], false);
         VFXListPos.Clear();
     }
 

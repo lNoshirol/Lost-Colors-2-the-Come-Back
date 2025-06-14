@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 4756e5b4ac1bbf14e9b0617ba9f98f6b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6698704855479948370
+    second: sprt_fence_BW_0
+  - first:
+      213: -6475427046140518310
+    second: sprt_fence_BW_1
+  - first:
+      213: 6160187538848341295
+    second: sprt_fence_BW_2
+  - first:
+      213: -3606703205208921881
+    second: sprt_fence_BW_3
+  - first:
+      213: 4181305925339726914
+    second: sprt_fence_BW_4
+  - first:
+      213: -9172655310365328518
+    second: sprt_fence_BW_5
+  - first:
+      213: -581066456868036594
+    second: sprt_fence_BW_6
+  - first:
+      213: -2630476127732256649
+    second: sprt_fence_BW_7
+  - first:
+      213: 9005991079581782355
+    second: sprt_fence_BW_8
+  - first:
+      213: 5858051269481730899
+    second: sprt_fence_BW_9
+  - first:
+      213: -7070950246321565626
+    second: sprt_fence_BW_10
+  - first:
+      213: -2058287450990937745
+    second: sprt_fence_BW_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprt_fence_BW_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 147
+        width: 12
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5413764, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eabeee9dc6b6903a0800000000000000
+      internalID: -6698704855479948370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_fence_BW_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 148
+        width: 12
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5066d9e869a226a0800000000000000
+      internalID: -6475427046140518310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_fence_BW_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 163
+        width: 34
+        height: 26
+      alignment: 9
+      pivot: {x: 0.506636, y: 0.7198334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2dd7d2bde16d7550800000000000000
+      internalID: 6160187538848341295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_fence_BW_3
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 114
+        width: 27
+        height: 26
+      alignment: 9
+      pivot: {x: 0.4894467, y: 0.6331523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e862434b8a62fdc0800000000000000
+      internalID: -3606703205208921881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_fence_BW_4
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 130
+        width: 34
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7198334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2444c19e59bf60a30800000000000000
+      internalID: 4181305925339726914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_fence_BW_5
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 99
+        width: 34
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: 1.96}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7bf292189e24b080800000000000000
+      internalID: -9172655310365328518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_fence_BW_6
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 99
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e006c77d223afe7f0800000000000000
+      internalID: -581066456868036594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_fence_BW_7
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 98
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770bf5016ebae7bd0800000000000000
+      internalID: -2630476127732256649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_fence_BW_8
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 50
+        width: 29
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3511fcccb25bbfc70800000000000000
+      internalID: 9005991079581782355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_fence_BW_9
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 50
+        width: 29
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3531c71a79afb4150800000000000000
+      internalID: 5858051269481730899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_fence_BW_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 5
+        width: 28
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 640da87e630fedd90800000000000000
+      internalID: -7070950246321565626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprt_fence_BW_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 6
+        width: 30
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f697a06f77e7f63e0800000000000000
+      internalID: -2058287450990937745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6e7e092fb69b5c24ea776b13e8695875
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprt_fence_BW_0: -6698704855479948370
+      sprt_fence_BW_1: -6475427046140518310
+      sprt_fence_BW_10: -7070950246321565626
+      sprt_fence_BW_11: -2058287450990937745
+      sprt_fence_BW_2: 6160187538848341295
+      sprt_fence_BW_3: -3606703205208921881
+      sprt_fence_BW_4: 4181305925339726914
+      sprt_fence_BW_5: -9172655310365328518
+      sprt_fence_BW_6: -581066456868036594
+      sprt_fence_BW_7: -2630476127732256649
+      sprt_fence_BW_8: 9005991079581782355
+      sprt_fence_BW_9: 5858051269481730899
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

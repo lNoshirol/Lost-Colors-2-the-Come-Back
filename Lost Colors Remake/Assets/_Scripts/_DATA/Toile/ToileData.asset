@@ -16,6 +16,6 @@ MonoBehaviour:
   lineDamage: 1.5
   shapeDamage: 1
   paintAmount: 30
-  slowMotionScale: 0.3
+  slowMotionScale: 0.1
   tolerance: 0.8
   cooldown: 1.5

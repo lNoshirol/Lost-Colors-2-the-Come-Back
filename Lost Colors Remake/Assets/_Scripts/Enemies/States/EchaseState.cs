@@ -12,6 +12,10 @@ public class EChaseState : EnemiesState
     public override void OnEnter()
     {
         EnemiesMain.Animation.SetAnimTransitionParameter("IsMoving", true);
+        if(EnemiesMain.isColorized)
+        {
+            EnemiesMain.SwitchState(EnemiesMain.EFleeState);
+        }
     }
     public override void Do()
     {

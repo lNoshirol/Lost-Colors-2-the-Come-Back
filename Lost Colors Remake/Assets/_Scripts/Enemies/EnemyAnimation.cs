@@ -71,12 +71,13 @@ public class EnemyAnimation : MonoBehaviour
 
     public IEnumerator OnDieAnim()
     {
+        Debug.Log("coro start");
         enemyAnimator.enabled = false;
         enemyMain.agent.isStopped = true;
-        //enemyMain.spriteRenderer.sprite = _whiteHitFrame;
-        //yield return new WaitForSeconds(0.1f);
-        //enemyMain.spriteRenderer.sprite = _BWHitFrame;
-        //yield return new WaitForSeconds(0.1f);
+        enemyMain.spriteRenderer.sprite = _whiteHitFrame;
+        yield return new WaitForSeconds(0.1f);
+        enemyMain.spriteRenderer.sprite = _BWHitFrame;
+        yield return new WaitForSeconds(0.1f);
         enemyMain.spriteRenderer.material.SetTexture("_ColoredTex", _coloredHitFrame.texture);
         enemyMain.spriteRenderer.material.DOFloat(1f, "_Transition", 2f);
         yield return new WaitForSeconds(2.1f);
@@ -84,7 +85,8 @@ public class EnemyAnimation : MonoBehaviour
         enemyAnimator.enabled = true;
         enemyMain.agent.isStopped = false;
         SwitchAnimatorToColor();
-        
+        Debug.Log("coro end");
+
     }
 
     public void HitAnim()

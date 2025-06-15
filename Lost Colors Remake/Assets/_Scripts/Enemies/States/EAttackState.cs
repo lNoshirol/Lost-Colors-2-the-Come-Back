@@ -18,6 +18,10 @@ public class EAttackState : EnemiesState
 
     public override void OnEnter()
     {
+        if (EnemiesMain.isColorized)
+        {
+            EnemiesMain.SwitchState(EnemiesMain.EFleeState);
+        }
     }
 
     public override void Do()
@@ -40,16 +44,17 @@ public class EAttackState : EnemiesState
             EnemiesMain.alreadyAttack = true;
             Invoke(nameof(ResetAttack), attackCooldown);
         }
-        else if (!EnemiesMain.CheckPlayerInAttackRange())
+        else if (!EnemiesMain.CheckPlayerInAttackRange() && !EnemiesMain.alreadyAttack)
         {
             EnemiesMain.SwitchState(EnemiesMain.EChaseState);
         }
+
     }
 
     public override void OnExit()
     {
         EnemiesMain.canLookAt = true;
-        EnemiesMain.agent.isStopped = false;
+        if(!EnemiesMain.isColorized)EnemiesMain.agent.isStopped = false;
         EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", false);
         EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", false);
     }

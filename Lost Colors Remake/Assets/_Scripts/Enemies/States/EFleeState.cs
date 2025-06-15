@@ -9,6 +9,8 @@ public class EFleeState : EnemiesState
     private Vector2 fleePoint;
     [SerializeField]
     private bool fleePointSet = false;
+    private bool coroutineStarted = false;
+    [SerializeField] float waitTimeFlee;
 
     public override void OnEnter()
     {
@@ -22,10 +24,10 @@ public class EFleeState : EnemiesState
             FleeFromPlayer(fleeDistance);
         }
 
-        else if (fleePointSet)
+        else if (fleePointSet && !coroutineStarted)
         {
             SetEnemyDestination(fleePoint);
-            WaitAndFleeAgain(2f);
+            StartCoroutine(WaitAndFleeAgain(waitTimeFlee));
         }
 
         //if (FleeDestinationReach())
@@ -73,7 +75,9 @@ public class EFleeState : EnemiesState
 
     IEnumerator WaitAndFleeAgain(float waitTime)
     {
+        coroutineStarted = true;
         yield return new WaitForSeconds(waitTime);
         fleePointSet = false;
+        coroutineStarted = false;
     }
 }

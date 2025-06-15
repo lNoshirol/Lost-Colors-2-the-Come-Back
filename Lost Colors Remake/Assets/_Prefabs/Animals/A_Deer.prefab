@@ -8,13 +8,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2431913563940288873, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: fleeDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2431913563940288873, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: waitTimeFlee
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3621717970685091554, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 3621717970685091554, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.15
       objectReference: {fileID: 0}
     - target: {fileID: 3621717970685091554, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: m_LocalPosition.z

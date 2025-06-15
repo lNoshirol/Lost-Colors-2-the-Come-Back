@@ -52,7 +52,6 @@ public class EnemyHealth : MonoBehaviour
     {
         PlayerMain.Instance.Health.PlayerGainHP(0.5f);
 
-        EnemyMain.Animation.enemyAnimator.enabled = false;
         StartCoroutine(EnemyMain.Animation.OnDieAnim()); // deactive animator, hitf b, hitf bw, color lerp hitf bw / hitf color, active animator
 
         EnemyMain.ColorSwitch();

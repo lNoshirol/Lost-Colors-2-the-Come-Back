@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 9dd3c35dbcdf5fb4d823596870b474cb
+guid: 577cb346a2dccb748910cc5ea3feda05
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7443171443451843731
-    second: sprt_spear_0
-  - first:
-      213: 1031074799802727697
-    second: sprt_spear_1
-  - first:
-      213: -710322685535138409
-    second: sprt_spear_2
+      213: 3993206361783192948
+    second: sprt_littlerock_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,71 +109,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprt_spear_0
+      name: sprt_littlerock_01_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 11
-        height: 58
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6ba8bef10b84b890800000000000000
-      internalID: -7443171443451843731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_spear_1
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 0
-        width: 20
-        height: 50
-      alignment: 9
-      pivot: {x: 0.5807961, y: 0.3201421}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11d391b411d1f4e00800000000000000
-      internalID: 1031074799802727697
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_spear_2
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 0
-        width: 11
-        height: 51
-      alignment: 9
-      pivot: {x: 0.5551352, y: 0.3022957}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 79dc6cce74d6426f0800000000000000
-      internalID: -710322685535138409
+      spriteID: 47dcae47708ba6730800000000000000
+      internalID: 3993206361783192948
       vertices: []
       indices: 
       edges: []
@@ -188,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8b1d6ab84db3d54408116f40d6668c67
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprt_spear_0: -7443171443451843731
-      sprt_spear_1: 1031074799802727697
-      sprt_spear_2: -710322685535138409
+      sprt_littlerock_01_0: 3993206361783192948
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

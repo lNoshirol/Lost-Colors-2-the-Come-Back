@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: c038b84210da12d47b026bb2b1759b0e
+guid: 837fd6ab960783b41a7665e75cfd1edf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2820331345122727355
-    second: sprt_littlerock_0
-  - first:
-      213: 3240258859907519441
-    second: sprt_littlerock_1
-  - first:
-      213: 6308304221839347321
-    second: sprt_littlerock_2
-  - first:
-      213: -4611521580926663691
-    second: sprt_littlerock_3
+      213: -3460337476615315869
+    second: sprt_column_crack03_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -135,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprt_littlerock_0
+      name: sprt_column_crack03_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 12
-        width: 8
-        height: 18
+        x: 0
+        y: 0
+        width: 16
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,74 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb590f66a64d32720800000000000000
-      internalID: 2820331345122727355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_littlerock_1
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 22
-        width: 11
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d39915f346b7fc20800000000000000
-      internalID: 3240258859907519441
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_littlerock_2
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 1
-        width: 22
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 97ec4d554499b8750800000000000000
-      internalID: 6308304221839347321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_littlerock_3
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 10
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5f381d61e859000c0800000000000000
-      internalID: -4611521580926663691
+      spriteID: 36e5f5f06696affc0800000000000000
+      internalID: -3460337476615315869
       vertices: []
       indices: 
       edges: []
@@ -226,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprt_littlerock_0: 2820331345122727355
-      sprt_littlerock_1: 3240258859907519441
-      sprt_littlerock_2: 6308304221839347321
-      sprt_littlerock_3: -4611521580926663691
+      sprt_column_crack03_0: -3460337476615315869
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

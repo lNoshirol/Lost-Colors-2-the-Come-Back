@@ -64393,6 +64393,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4986271928651781964, guid: 5c99789f1269db74e94e88c1a970be16, type: 3}
+      propertyPath: _textureDatabase
+      value: 
+      objectReference: {fileID: 11400000, guid: 65b50979293433748b54b45cd2bfcb6a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -64999,6 +65003,10 @@ PrefabInstance:
     - target: {fileID: 4476038689870489384, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502357473904131515, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: orthographic size
+      value: 4.21875
       objectReference: {fileID: 0}
     - target: {fileID: 8528153680925208856, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_Name

@@ -120,7 +120,10 @@ public class SoundsManager : MonoBehaviour
         audioSource.pitch = (!isPitchRandom) ? 1 : 1 + Random.Range(-0.2f, 0.2f);
         audioSource.clip = audioClip;
         audioSource.PlayOneShot(audioClip);
-        
+
+        audioSource.gameObject.TryGetComponent(out SoundHasToDesactivate soundHasToDesactivate);
+
+        soundHasToDesactivate.StartCoroutine(soundHasToDesactivate.WaitToDesactivate());
     }
     public void PlaySoundLoop(AudioClip audioClip, bool loop, AudioSource source)
     {

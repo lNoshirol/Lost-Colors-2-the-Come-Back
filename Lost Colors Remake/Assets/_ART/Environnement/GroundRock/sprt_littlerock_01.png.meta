@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 018ec27ca03b84c4a810306bf9aae76e
+guid: 577cb346a2dccb748910cc5ea3feda05
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4857223973554890546
-    second: sprt_column_0
-  - first:
-      213: 5743798349336832808
-    second: sprt_column_1
-  - first:
-      213: -7205182252781924331
-    second: sprt_column_2
-  - first:
-      213: -8781862382237892085
-    second: sprt_column_3
-  - first:
-      213: 7208702106621614014
-    second: sprt_column_4
+      213: 3993206361783192948
+    second: sprt_littlerock_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,17 +109,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprt_column_0
+      name: sprt_littlerock_01_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,74 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23720422873586340800000000000000
-      internalID: 4857223973554890546
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_column_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 82b62b1ba2216bf40800000000000000
-      internalID: 5743798349336832808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_column_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5101cf07aec020c90800000000000000
-      internalID: -7205182252781924331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprt_column_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b02485011be802680800000000000000
-      internalID: -8781862382237892085
+      spriteID: 47dcae47708ba6730800000000000000
+      internalID: 3993206361783192948
       vertices: []
       indices: 
       edges: []
@@ -216,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2d5fc8ffe67b64a4983cab047b1f6353
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -226,10 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprt_column_0: 4857223973554890546
-      sprt_column_1: 5743798349336832808
-      sprt_column_2: -7205182252781924331
-      sprt_column_3: -8781862382237892085
+      sprt_littlerock_01_0: 3993206361783192948
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

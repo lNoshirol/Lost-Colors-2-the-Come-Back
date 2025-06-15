@@ -75,15 +75,15 @@ RectTransform:
   m_GameObject: {fileID: 1841442331640348911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6098375912385595257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -546.5, y: -93.49988}
-  m_SizeDelta: {x: -1091, y: -187}
+  m_AnchoredPosition: {x: -480.91, y: -93.49988}
+  m_SizeDelta: {x: -959.81, y: -187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8148957105325998778
 CanvasRenderer:
@@ -328,6 +328,7 @@ MonoBehaviour:
   slowdownFactor: 1
   slowdownLength: 2
   InSlowMotion: 0
+  volume: {fileID: 0}
 --- !u!1 &9100408352347011341
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +575,14 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476038689870489384, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476038689870489384, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4859988009736222134, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -581,6 +590,10 @@ PrefabInstance:
     - target: {fileID: 5303053309062978632, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502357473904131515, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
+      propertyPath: orthographic size
+      value: 4.71875
       objectReference: {fileID: 0}
     - target: {fileID: 6155382798469952730, guid: d60dce41c6276d24d92b88a59ea6c66b, type: 3}
       propertyPath: m_Sprite
@@ -1117,6 +1130,22 @@ PrefabInstance:
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 3374486955276342525}
+    - target: {fileID: 3543440330673061322, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.999688
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543440330673061322, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.024976598
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543440330673061322, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1.239675e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543440330673061322, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 6.4147135e-17
+      objectReference: {fileID: 0}
     - target: {fileID: 3565802424255265679, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1159,7 +1188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5397771579034108698, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 4.71875
       objectReference: {fileID: 0}
     - target: {fileID: 5804453339172526568, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: m_Sprite
@@ -1204,6 +1233,14 @@ PrefabInstance:
     - target: {fileID: 7687236704250137832, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100630548534733758, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100630548534733758, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8285851699204111409, guid: ef0bf28da2823ec4497489f2d5154941, type: 3}
       propertyPath: m_LocalPosition.x

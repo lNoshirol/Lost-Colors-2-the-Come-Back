@@ -24,15 +24,17 @@ public class VFXControl : MonoBehaviour
 
     public void PlaySound()
     {
+        Debug.Log("Bonjour");
         switch (gameObject.name)
         {
-            case "VFX_Thunder":
+            case "VFX_Thunder(Clone)":
                 var sound = SoundsManager.Instance;
                 int RandowDeer = Random.Range(0, sound.SoundEffectDeerAttackRanged.Length);
                 sound.PlaySound(sound.SoundEffectDeerAttackRanged[RandowDeer], false);
+                
                 break;
 
-            case "VFX_FlameThrower":
+            case "VFX_FlameThrower(Clone)":
                 var Sound = SoundsManager.Instance;
                 int RandomWolf = Random.Range(0, Sound.SoundEffectWolfAttackRanged.Length);
                 Sound.PlaySound(Sound.SoundEffectWolfAttackRanged[RandomWolf], false);

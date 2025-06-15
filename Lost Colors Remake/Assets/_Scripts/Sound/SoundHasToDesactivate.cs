@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class SoundHasToDesactivate : MonoBehaviour
 {
+    [SerializeField] private AudioSource m_AudioSource;
+
     private void Start()
     {
         StartCoroutine(WaitToDesactivate());
@@ -10,7 +12,7 @@ public class SoundHasToDesactivate : MonoBehaviour
 
     private IEnumerator WaitToDesactivate()
     {
-        yield return new WaitForSeconds(1.0f);
-        SoundsManager.Instance._poolObjectSound.GetPoolSound().Stock(this.gameObject);
+        yield return new WaitForSeconds(m_AudioSource.clip.length);
+        SoundsManager.Instance._poolObjectSound.GetPoolSound().Stock(gameObject);
     }
 }

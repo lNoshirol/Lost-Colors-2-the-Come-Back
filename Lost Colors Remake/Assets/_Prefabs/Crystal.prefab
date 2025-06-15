@@ -127,6 +127,9 @@ MonoBehaviour:
   _waveManager: {fileID: 4701619983086102955}
   crystalUncorrupted: {fileID: 21300000, guid: c496d63d5dfa6b44eb911613b0638a11, type: 3}
   _localDarkVolume: {fileID: 2432344123758001945}
+  _globalVolume: {fileID: 0}
+  _BWVolumeProfile: {fileID: 11400000, guid: 16bfe5e22006a44448240f4646bbe070, type: 2}
+  _ColoredVolumeProfile: {fileID: 11400000, guid: e996d5186cc17834f87ce75b9e544d72, type: 2}
 --- !u!114 &7325701953120507807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,7 +534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: _waveStartPoint.y
-      value: -41.4
+      value: -43.24
       objectReference: {fileID: 0}
     - target: {fileID: 8705132461788902631, guid: e6c38219dc5cbaf4f96a2b3d34d94757, type: 3}
       propertyPath: _tilemapRenderers.Array.size

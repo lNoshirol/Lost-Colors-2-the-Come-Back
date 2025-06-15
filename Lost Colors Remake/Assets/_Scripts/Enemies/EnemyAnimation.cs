@@ -37,6 +37,7 @@ public class EnemyAnimation : MonoBehaviour
         {
             enemyAnimator.SetBool("IsMoving", false);
         }
+        GetGoodSocketVFXOrientation();
     }
 
     // Get the direction for Attack

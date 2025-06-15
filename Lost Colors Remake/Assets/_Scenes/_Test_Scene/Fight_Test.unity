@@ -34038,10 +34038,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5016065287230482706, guid: 2c0812492a636404da1af22fc5b3d2e5, type: 3}
-      propertyPath: transition1WaitTime
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6281174737589849976, guid: 2c0812492a636404da1af22fc5b3d2e5, type: 3}
       propertyPath: m_Name
       value: VFX_FlameThrower
@@ -34593,7 +34589,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2728690694648565991, guid: 4fbe3b3ac6cba6047a6064e796433afd, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001515318583454054, guid: 4fbe3b3ac6cba6047a6064e796433afd, type: 3}
+      propertyPath: m_Speed
+      value: 13.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001515318583454054, guid: 4fbe3b3ac6cba6047a6064e796433afd, type: 3}
+      propertyPath: m_AutoBraking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001515318583454054, guid: 4fbe3b3ac6cba6047a6064e796433afd, type: 3}
+      propertyPath: m_Acceleration
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001515318583454054, guid: 4fbe3b3ac6cba6047a6064e796433afd, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 5437904033287277725, guid: 4fbe3b3ac6cba6047a6064e796433afd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34651,6 +34663,10 @@ PrefabInstance:
     - target: {fileID: 2023623450895901234, guid: fda614b7ae5fca94a861dfec2069321e, type: 3}
       propertyPath: m_Name
       value: A_Deer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023623450895901234, guid: fda614b7ae5fca94a861dfec2069321e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8267566151001538120, guid: fda614b7ae5fca94a861dfec2069321e, type: 3}
       propertyPath: m_LocalPosition.x

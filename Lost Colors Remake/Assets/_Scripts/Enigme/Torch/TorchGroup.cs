@@ -25,6 +25,8 @@ public class TorchGroup : MonoBehaviour
 
         foreach(var torch in _torchList)
         {
+            Debug.Log(count);
+
             if (!torch.IsTrigger)
             {
                 return;

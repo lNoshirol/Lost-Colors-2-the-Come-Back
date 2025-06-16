@@ -225,7 +225,6 @@ public class ExternalDrawFunctions : MonoBehaviour
 
                 boxColliderComponent.size = size;
 
-
                 break;
             case "DiagoU" or "DiagoD" or "LineH" or "LineV":
                 Debug.Log("LE DESSIN C'EST UNE LIGNE, ATTAQUE NOOPY ATTAQUE");

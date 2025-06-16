@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -44,7 +45,7 @@ public class TriggerToile : MonoBehaviour
     //    }
     //}
 
-    public void OpenAndCloseToileMagique()
+    public async void OpenAndCloseToileMagique()
     {
         ToileMain.Instance.CastSpriteShape.Resetpoint();
         if (_isActive == false)
@@ -67,10 +68,12 @@ public class TriggerToile : MonoBehaviour
 
             SoundsManager.Instance.SlowDownAllSound();
             ToileMain.Instance.toileAnimator.SetBool("ToileSpawn", true);
+
         }
         else
         {
             ToileMain.Instance.toileAnimator.SetBool("ToileSpawn", false);
+            await Task.Delay(500);
             StartCoroutine(DeactivateAfterFrame());
             PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
 

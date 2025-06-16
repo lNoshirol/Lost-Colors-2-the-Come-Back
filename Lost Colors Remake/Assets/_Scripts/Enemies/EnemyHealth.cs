@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
@@ -51,7 +52,6 @@ public class EnemyHealth : MonoBehaviour
     private void EnemyIsDead()
     {
         PlayerMain.Instance.Health.PlayerGainHP(0.5f);
-
         StartCoroutine(EnemyMain.Animation.OnDieAnim()); // deactive animator, hitf b, hitf bw, color lerp hitf bw / hitf color, active animator
         EnemyMain.UI.SwitchHealtBar(false);
     }

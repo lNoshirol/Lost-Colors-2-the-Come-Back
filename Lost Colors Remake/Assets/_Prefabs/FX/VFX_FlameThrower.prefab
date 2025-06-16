@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5461466389415720599}
   - component: {fileID: 2432365439197721015}
   - component: {fileID: 5016065287230482706}
+  - component: {fileID: 2019302063985161632}
   m_Layer: 0
   m_Name: VFX_FlameThrower
   m_TagString: Untagged
@@ -152,8 +153,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2432365439197721015}
-  transition1WaitTime: 0.2
+  transition1WaitTime: 0
   transition1Name: 
+--- !u!114 &2019302063985161632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6281174737589849976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de34c09d44855354a8ce526bfc00bba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToFalse: 1
+  effect: {fileID: 1963825411403820113}
 --- !u!1 &6682251224876653147
 GameObject:
   m_ObjectHideFlags: 0

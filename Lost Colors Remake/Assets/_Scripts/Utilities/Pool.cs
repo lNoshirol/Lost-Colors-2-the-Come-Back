@@ -31,7 +31,7 @@ public class Pool
     /// <param name="item"></param>
     public void Stock(GameObject item)
     {
-        item.gameObject.SetActive(false);
+        item.SetActive(false);
         ObjectStock.Enqueue(item);
     }
 }

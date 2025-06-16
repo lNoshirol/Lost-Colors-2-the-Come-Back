@@ -23,7 +23,7 @@ public class VFXStop : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToWait);
         effect.Stop();
-        yield return new WaitForSeconds(timeToWait);
-        gameObject.SetActive(false);
+        yield return new WaitForSeconds(timeToWait+1);
+        EnemyManager.Instance.RePackInPool(gameObject, EnemyManager.Instance.vfxPool);
     }
 }

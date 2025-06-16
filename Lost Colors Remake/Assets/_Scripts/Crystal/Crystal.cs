@@ -21,6 +21,6 @@ public class Crystal : MonoBehaviour
             p.TryGetComponent(out EnemyMain enemy);
             _list.Add(enemy);
         }
-        CrystalManager.Instance.AddToDict(this, gameObject.name, false, SceneManager.GetActiveScene().name);
+        //CrystalManager.Instance.AddToDict(this, gameObject.name, false, SceneManager.GetActiveScene().name);
     }
 }

@@ -25,8 +25,6 @@ public class TorchGroup : MonoBehaviour
 
         foreach(var torch in _torchList)
         {
-            Debug.Log(count);
-
             if (!torch.IsTrigger)
             {
                 return;
@@ -34,7 +32,10 @@ public class TorchGroup : MonoBehaviour
             else if (torch.IsTrigger)
             {
                 count++;
-                triggeredTorch.text = count.ToString();
+                if (triggeredTorch != null)
+                {
+                    triggeredTorch.text = count.ToString();
+                }
             }
         }
 

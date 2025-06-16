@@ -29,9 +29,8 @@ public class CatchThingsOnDraw : MonoBehaviour
         }
     }
 
-    public void CatchObjectOnLine(DrawData drawData)
+    public void CatchObjectOnLine(DrawData drawData, bool canTouchEnnemy)
     {
-
         foreach (GameObject obj in _ennemyObjectOnDraw)
         {
             if (obj.CompareTag("Torch"))
@@ -40,7 +39,7 @@ public class CatchThingsOnDraw : MonoBehaviour
 
                 _torchInteract.Interact();
             }
-            else if (obj.CompareTag("Enemy"))
+            else if (obj.CompareTag("Enemy") && canTouchEnnemy)
             {
                 if (obj.TryGetComponent(out EnemyHealth _health))
                 {

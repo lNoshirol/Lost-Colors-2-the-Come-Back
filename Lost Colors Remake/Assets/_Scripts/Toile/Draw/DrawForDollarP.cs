@@ -136,7 +136,7 @@ public class DrawForDollarP : MonoBehaviour
             _drawData = new DrawData(points, _extDrawFunc.GetDrawDim(ExternalDrawFunctions.GetMinMaxCoordinates(points)), 
                 gestureResult, _extDrawFunc.GetSpellTargetPointFromCenter(points), ColorUtility.ToHtmlStringRGB(_currentColor));
 
-            _catchEnnemy.CatchObjectOnLine(_drawData);
+            _catchEnnemy.CatchObjectOnLine(_drawData, false);
 
             if (gestureResult.Score < PlayerMain.Instance.toileInfo.tolerance)
             {
@@ -156,7 +156,7 @@ public class DrawForDollarP : MonoBehaviour
 
                         OnDrawFinish?.Invoke(_drawData);
 
-                        _catchEnnemy.CatchObjectOnLine(_drawData);
+                        _catchEnnemy.CatchObjectOnLine(_drawData, true);
                     }
                 }
             }

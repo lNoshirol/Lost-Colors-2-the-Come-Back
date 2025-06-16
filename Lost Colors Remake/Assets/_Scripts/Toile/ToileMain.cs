@@ -40,7 +40,7 @@ public class ToileMain : MonoBehaviour
         TriggerToile = GetComponent<TriggerToile>();
         RaycastDraw = GetComponent<RaycastDraw>();
 
-        ToileUI.UpdateToileUI(timeAmount);
+        ToileUI.UpdateToileUI(timeAmount, toileTime);
         toileTime = (int)PlayerMain.Instance.toileInfo.toileTime;
     }
 
@@ -49,10 +49,10 @@ public class ToileMain : MonoBehaviour
         gestureIsStarted = true;
         timeAmount = toileTime;
         while (timeAmount > 0) {
-            ToileUI.UpdateToileUI(timeAmount);
+            ToileUI.UpdateToileUI(timeAmount, toileTime);
             yield return new WaitForSeconds(1*PlayerMain.Instance.toileInfo.slowMotionScale);
             timeAmount--;
-            ToileUI.UpdateToileUI(timeAmount);
+            ToileUI.UpdateToileUI(timeAmount, toileTime);
         }
         gestureIsStarted = false;
         TriggerToile.OpenAndCloseToileMagique();

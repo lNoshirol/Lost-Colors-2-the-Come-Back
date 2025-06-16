@@ -50,7 +50,7 @@ public class TriggerToile : MonoBehaviour
         ToileMain.Instance.CastSpriteShape.Resetpoint();
         if (_isActive == false)
         {
-            ToileMain.Instance.ToileUI.UpdateToileUI(ToileMain.Instance.toileTime);
+            ToileMain.Instance.ToileUI.UpdateToileUI(ToileMain.Instance.toileTime, ToileMain.Instance.toileTime);
             _isActive = true;
             toile.SetActive(_isActive);
             DrawForDollarP.instance.SetActiveLine(true);

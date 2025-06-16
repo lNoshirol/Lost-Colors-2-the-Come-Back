@@ -145,7 +145,7 @@ public class EnemyManager : SingletonCreatorPersistent<EnemyManager>
         {
             float currentDistance = Vector2.Distance(enemy.transform.position, PlayerMain.Instance.transform.position);
 
-            if (currentDistance < minDistance && enemy.TryGetComponent(out EnemyMain enemyMain) && enemyMain.Armor.IsGlyphInArmorList(glyphName))
+            if (currentDistance < minDistance && enemy.TryGetComponent(out EnemyMain enemyMain) && enemyMain.Armor.IsGlyphInArmorList(glyphName) && enemyMain.spriteRenderer.isVisible)
             {
                 closestEnemy = enemy;
                 minDistance = currentDistance;

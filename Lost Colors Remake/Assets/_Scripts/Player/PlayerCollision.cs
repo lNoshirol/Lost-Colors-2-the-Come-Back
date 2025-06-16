@@ -7,6 +7,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if(collision.gameObject.layer == 9 )
         {
+            if (collision.gameObject.CompareTag("Torch")) return;
             GetCollisionLocationAtPlayer(collision.gameObject.transform);
             PlayerMain.Instance.Health.PlayerLoseHP(1f);
 

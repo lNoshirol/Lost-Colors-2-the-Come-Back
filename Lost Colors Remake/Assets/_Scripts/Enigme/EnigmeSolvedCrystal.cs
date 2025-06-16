@@ -2,6 +2,7 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.VFX;
 
 public class EnigmeSolvedCrystal : EnigmeSolved
 {
@@ -14,7 +15,14 @@ public class EnigmeSolvedCrystal : EnigmeSolved
     [Header("Global Volume")]
     [SerializeField] private Volume _globalVolume;
     [SerializeField] private VolumeProfile _BWVolumeProfile;
+
     [SerializeField] private VolumeProfile _ColoredVolumeProfile;
+
+    [Header("Falling Leaf")]
+    [SerializeField] private VisualEffect fallingLeaf;
+    [SerializeField] private Sprite leafColor;
+    
+
 
     public override void Interact()
     {
@@ -28,7 +36,8 @@ public class EnigmeSolvedCrystal : EnigmeSolved
     private void CrystalColorLerp()
     {
         StartCoroutine(FadeLocalVolume());
-        if(_globalVolume!=null)StartCoroutine(SwitchGlobalVolume());
+        StartCoroutine(SwitchGlobalVolume());
+        fallingLeaf.SetTexture("LeafText", leafColor.texture);
         crystal.material.SetTexture("_ColoredTex", crystalUncorrupted.texture);
         crystal.material.DOFloat(1f, "_Transition", 2f);
         var Sound = SoundsManager.Instance;

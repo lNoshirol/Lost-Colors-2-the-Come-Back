@@ -56,7 +56,7 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
                 DrawForDollarP.instance.SetActiveLine(true);
             }
 
-            yield return new WaitForSecondsRealtime(0.1f);
+            yield return new WaitForSecondsRealtime(0.05f);
         }
         animator.SetBool("Broken", true);
         Time.timeScale = PlayerMain.Instance.toileInfo.slowMotionScale;

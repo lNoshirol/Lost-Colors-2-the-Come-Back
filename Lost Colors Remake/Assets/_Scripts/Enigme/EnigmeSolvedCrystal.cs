@@ -28,7 +28,7 @@ public class EnigmeSolvedCrystal : EnigmeSolved
     private void CrystalColorLerp()
     {
         StartCoroutine(FadeLocalVolume());
-        StartCoroutine(SwitchGlobalVolume());
+        if(_globalVolume!=null)StartCoroutine(SwitchGlobalVolume());
         crystal.material.SetTexture("_ColoredTex", crystalUncorrupted.texture);
         crystal.material.DOFloat(1f, "_Transition", 2f);
         var Sound = SoundsManager.Instance;

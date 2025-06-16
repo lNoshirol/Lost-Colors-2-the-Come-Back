@@ -2756,7 +2756,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 4.21875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3792,7 +3792,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8528153680925208856}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &8969085154843584510
 GameObject:
   m_ObjectHideFlags: 0
@@ -3869,6 +3869,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 211046023853768335, guid: 87650e8597726b041abb991908f0921d, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649557530884662493, guid: 87650e8597726b041abb991908f0921d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649557530884662493, guid: 87650e8597726b041abb991908f0921d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649557530884662493, guid: 87650e8597726b041abb991908f0921d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649557530884662493, guid: 87650e8597726b041abb991908f0921d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649557530884662493, guid: 87650e8597726b041abb991908f0921d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2783852351091157190, guid: 87650e8597726b041abb991908f0921d, type: 3}
@@ -3958,6 +3978,14 @@ PrefabInstance:
     - target: {fileID: 4581320628963075117, guid: 87650e8597726b041abb991908f0921d, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674281650773893441, guid: 87650e8597726b041abb991908f0921d, type: 3}
+      propertyPath: m_Color.a
+      value: 0.29411766
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674281650773893441, guid: 87650e8597726b041abb991908f0921d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4838294299314484208, guid: 87650e8597726b041abb991908f0921d, type: 3}
       propertyPath: m_AnchorMax.y

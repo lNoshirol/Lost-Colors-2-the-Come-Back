@@ -6021,6 +6021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager_Spawn
       objectReference: {fileID: 0}
+    - target: {fileID: 2879137280691982609, guid: 2d57a9794e0f68846ad58308c86114cd, type: 3}
+      propertyPath: roomSwitcherData
+      value: 
+      objectReference: {fileID: 11400000, guid: 72a6c783faa5a034a82996ecfad96444, type: 2}
     - target: {fileID: 3786295616059236884, guid: 2d57a9794e0f68846ad58308c86114cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

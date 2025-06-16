@@ -15,7 +15,11 @@ PrefabInstance:
     - target: {fileID: 5984861854241784777, guid: f2b7651d61106c24b8aa83f702ff62d5, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4857223973554890546, guid: 018ec27ca03b84c4a810306bf9aae76e, type: 3}
+      objectReference: {fileID: 21300000, guid: 0390667ed3d3416428442e0f3816cd7d, type: 3}
+    - target: {fileID: 5984861854241784777, guid: f2b7651d61106c24b8aa83f702ff62d5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7974068166994095607, guid: f2b7651d61106c24b8aa83f702ff62d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

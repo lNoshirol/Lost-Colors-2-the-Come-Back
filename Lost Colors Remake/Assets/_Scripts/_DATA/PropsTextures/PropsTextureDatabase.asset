@@ -160,18 +160,6 @@ MonoBehaviour:
   - PropName: sprt_groundSingle_06
     BW: {fileID: 21300000, guid: 3a15ac51aa6f88142b8989c5ea17b2d5, type: 3}
     Colored: {fileID: 21300000, guid: 7d1aeae543088cb4da9927716de81b05, type: 3}
-  - PropName: sprt_littlerock_01
-    BW: {fileID: 21300000, guid: b8d8cae647702ad4c89c92eccdf68b85, type: 3}
-    Colored: {fileID: 21300000, guid: 577cb346a2dccb748910cc5ea3feda05, type: 3}
-  - PropName: sprt_littlerock_02
-    BW: {fileID: 21300000, guid: 9ef10f2e676a5504e8b9e8794df5b0e3, type: 3}
-    Colored: {fileID: 21300000, guid: 69db52b9711cef947a5f58d93ec8b8fb, type: 3}
-  - PropName: sprt_littlerock_03
-    BW: {fileID: 21300000, guid: af75ed1e495ed514fb8f50dfb77680bd, type: 3}
-    Colored: {fileID: 21300000, guid: daebf6869f69d8e40bd5bc5ff04c25d9, type: 3}
-  - PropName: sprt_littlerock_04
-    BW: {fileID: 21300000, guid: 56c4757d81dfbb0459c96b67378cd5b2, type: 3}
-    Colored: {fileID: 21300000, guid: 72ed07ec6c17d50498ff01fed2bc8064, type: 3}
   - PropName: sprt_enviro_stone_01
     BW: {fileID: -4219277594607294297, guid: 17a498b935077954296bf199113c1daa, type: 3}
     Colored: {fileID: -5631366215469227530, guid: 576f050313ba6f640b7ec5b2e3d51220, type: 3}
@@ -271,3 +259,15 @@ MonoBehaviour:
   - PropName: sprt_spear_03
     BW: {fileID: 21300000, guid: c542aa4a195c10747a858730a823d389, type: 3}
     Colored: {fileID: 21300000, guid: ee1f9184d168ee843aeb9d0f88f94c4c, type: 3}
+  - PropName: sprt_littlerock_01
+    BW: {fileID: 21300000, guid: b8d8cae647702ad4c89c92eccdf68b85, type: 3}
+    Colored: {fileID: 21300000, guid: 577cb346a2dccb748910cc5ea3feda05, type: 3}
+  - PropName: sprt_littlerock_02
+    BW: {fileID: 21300000, guid: 9ef10f2e676a5504e8b9e8794df5b0e3, type: 3}
+    Colored: {fileID: 21300000, guid: 69db52b9711cef947a5f58d93ec8b8fb, type: 3}
+  - PropName: sprt_littlerock_03
+    BW: {fileID: 21300000, guid: af75ed1e495ed514fb8f50dfb77680bd, type: 3}
+    Colored: {fileID: 21300000, guid: daebf6869f69d8e40bd5bc5ff04c25d9, type: 3}
+  - PropName: sprt_littlerock_04
+    BW: {fileID: 21300000, guid: 56c4757d81dfbb0459c96b67378cd5b2, type: 3}
+    Colored: {fileID: 21300000, guid: 72ed07ec6c17d50498ff01fed2bc8064, type: 3}

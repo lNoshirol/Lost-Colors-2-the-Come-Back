@@ -48,7 +48,7 @@ public class WorldMain : SingletonCreatorPersistent<WorldMain>
         EnemyManager.Instance.CurrentEnemyList.Clear();
         CrystalManager.Instance._ListCrystal.Clear();
         SceneManager.LoadScene(roomName);
-        await Task.Delay(10);
+        await Task.Delay(1000);
         PlayerMain.Instance.transform.position = FindCorrectSpawn(switcherName).transform.GetChild(0).transform.position;
         //CameraMain.Instance.CenterCameraAtPosition(CameraMain.Instance.transform.position);
         PlayerMain.Instance.UI.SwitchRoomUI();

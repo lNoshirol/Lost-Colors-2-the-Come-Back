@@ -18,6 +18,8 @@ public class ToileMain : MonoBehaviour
 
     public Coroutine timerCo;
 
+    public Animator toileAnimator;
+
 
     private void Awake()
     {

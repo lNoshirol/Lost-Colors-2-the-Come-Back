@@ -81,6 +81,7 @@ public class EAttackState : EnemiesState
     }
     public void CastRangeSkill()
     {
+        EnemiesMain.canLookAt = false;
         EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", true);
         EnemiesMain.rangeSkill.Activate(EnemiesMain.contextRange);
         StartCoroutine(WaitForEndAnime(EnemiesMain.Animation.enemyAnimator.GetCurrentAnimatorStateInfo(0).length));

@@ -37,11 +37,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _ColoredTex:
-        m_Texture: {fileID: 2800000, guid: d64116e615cdb0c48ad2469fadc74b29, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 682fa9b33c10c764c9bb6b86f23df7ed, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_39e5b5fbdd804f80a0f4177291151edd_Texture_1_Texture2D:

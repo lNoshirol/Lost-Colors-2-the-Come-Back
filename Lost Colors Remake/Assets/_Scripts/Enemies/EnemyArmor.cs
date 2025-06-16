@@ -46,6 +46,8 @@ public class EnemyArmor : MonoBehaviour
             return;
         }
         activeGlyphs.RemoveAt(activeGlyphs.Count - 1);
+        last.TryGetComponent(out Animator animator);
+        animator.SetBool("Broken", false);
         EnemyManager.Instance.RePackInPool(last, EnemyManager.Instance.glyphPool);
         UpdateGlyphPositions();
         if (activeGlyphs.Count == 0) EnemiesMain.UI.SwitchHealtBar(true);

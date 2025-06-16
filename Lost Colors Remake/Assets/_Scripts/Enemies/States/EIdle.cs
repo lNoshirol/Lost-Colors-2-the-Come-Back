@@ -12,7 +12,10 @@ public class EIdle : EnemiesState
             EnemiesMain.agent.isStopped = true;
             EnemiesMain.agent.velocity = Vector3.zero;
             EnemiesMain.Animation.enemyAnimator.SetBool("IsMoving", false);
-            EnemiesMain.StartCoroutine(IdleWait());
+            EnemiesMain.Animation.SetAnimTransitionParameter("isCloseAttacking", false);
+            EnemiesMain.Animation.SetAnimTransitionParameter("isRangeAttacking", false);
+        
+        EnemiesMain.StartCoroutine(IdleWait());
         }
 
     }

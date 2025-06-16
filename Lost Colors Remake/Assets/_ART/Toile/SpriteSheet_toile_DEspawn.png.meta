@@ -1,0 +1,350 @@
+fileFormatVersion: 2
+guid: bc3e8f989e0f89043be294f37f73e5ed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1116206840220768413
+    second: SpriteSheet_toile_DEspawn_0
+  - first:
+      213: -7028345454042873366
+    second: SpriteSheet_toile_DEspawn_1
+  - first:
+      213: -162312710711983316
+    second: SpriteSheet_toile_DEspawn_2
+  - first:
+      213: 6816261407210857573
+    second: SpriteSheet_toile_DEspawn_3
+  - first:
+      213: 1834269109564011286
+    second: SpriteSheet_toile_DEspawn_4
+  - first:
+      213: -3473504053515481950
+    second: SpriteSheet_toile_DEspawn_5
+  - first:
+      213: -6001796960352080867
+    second: SpriteSheet_toile_DEspawn_6
+  - first:
+      213: 8542460829956047368
+    second: SpriteSheet_toile_DEspawn_7
+  - first:
+      213: -318148564076197020
+    second: SpriteSheet_toile_DEspawn_8
+  - first:
+      213: 6917757025355445386
+    second: SpriteSheet_toile_DEspawn_9
+  - first:
+      213: 1013842090374906212
+    second: SpriteSheet_toile_DEspawn_10
+  - first:
+      213: 4946407888182831507
+    second: SpriteSheet_toile_DEspawn_11
+  - first:
+      213: -6146933627733440932
+    second: SpriteSheet_toile_DEspawn_12
+  - first:
+      213: 8486294620837665381
+    second: SpriteSheet_toile_DEspawn_13
+  - first:
+      213: 1454895295417020355
+    second: SpriteSheet_toile_DEspawn_14
+  - first:
+      213: -6655932423650678487
+    second: SpriteSheet_toile_DEspawn_15
+  - first:
+      213: -1243010259182322675
+    second: SpriteSheet_toile_DEspawn_16
+  - first:
+      213: 8009423847593573198
+    second: SpriteSheet_toile_DEspawn_17
+  - first:
+      213: -2473954115088223166
+    second: SpriteSheet_toile_DEspawn_18
+  - first:
+      213: -4936066978982345472
+    second: SpriteSheet_toile_DEspawn_19
+  - first:
+      213: 1344497632769682379
+    second: SpriteSheet_toile_DEspawn_20
+  - first:
+      213: 7128582793857256744
+    second: SpriteSheet_toile_DEspawn_21
+  - first:
+      213: -9116443274495050196
+    second: SpriteSheet_toile_DEspawn_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_toile_DEspawn_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 470
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 367a7c0facf6280f0800000000000000
+      internalID: -1116206840220768413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_toile_DEspawn_1
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 0
+        width: 470
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae10b0d1c0d467e90800000000000000
+      internalID: -7028345454042873366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_toile_DEspawn_2
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 0
+        width: 470
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c234b7713795fbdf0800000000000000
+      internalID: -162312710711983316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_toile_DEspawn_3
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 0
+        width: 470
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 564e101c2a9389e50800000000000000
+      internalID: 6816261407210857573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_toile_DEspawn_4
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 0
+        width: 470
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 613f80a6902a47910800000000000000
+      internalID: 1834269109564011286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_toile_DEspawn_5
+      rect:
+        serializedVersion: 2
+        x: 2350
+        y: 0
+        width: 470
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac845c7772abcfc0800000000000000
+      internalID: -3473504053515481950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d26ef8d8c7ddded48a965bf2f7907da4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpriteSheet_toile_DEspawn_0: -1116206840220768413
+      SpriteSheet_toile_DEspawn_1: -7028345454042873366
+      SpriteSheet_toile_DEspawn_2: -162312710711983316
+      SpriteSheet_toile_DEspawn_3: 6816261407210857573
+      SpriteSheet_toile_DEspawn_4: 1834269109564011286
+      SpriteSheet_toile_DEspawn_5: -3473504053515481950
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

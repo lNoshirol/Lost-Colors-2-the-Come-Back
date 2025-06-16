@@ -10,6 +10,7 @@ public class EnemyMain : MonoBehaviour
     [Header("ScriptableDATA")]
     public EnemyDATA enemyData;
     public bool isColorized;
+    public bool doingColorization;
 
     [Header("Enemy State Needs")]
     public bool playerInSightRange;

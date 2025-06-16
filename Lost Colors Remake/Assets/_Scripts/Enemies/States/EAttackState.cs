@@ -15,6 +15,8 @@ public class EAttackState : EnemiesState
     [SerializeField]
     string attackName;
 
+    [SerializeField] int numberOfAttack;
+
 
     public override void OnEnter()
     {
@@ -26,14 +28,15 @@ public class EAttackState : EnemiesState
 
     public override void Do()
     {
+        if (EnemiesMain.isColorized || EnemiesMain.doingColorization) return;
         EnemiesMain.Animation.GetDirectionXAnimPlayer();
         if (!EnemiesMain.alreadyAttack)
         {
             EnemiesMain.agent.isStopped = true;
-            EnemiesMain.canLookAt = false;
-            int randomSpell = Random.Range(0, 2);
+            //EnemiesMain.canLookAt = false;
+            int randomSpell = Random.Range(0, numberOfAttack);
             EnemiesMain.AnimalContextCheck();
-            if (randomSpell == 0)
+            if (randomSpell == 1)
             {
                 CastCloseSkill();
             }
@@ -43,6 +46,7 @@ public class EAttackState : EnemiesState
             }
             EnemiesMain.alreadyAttack = true;
             Invoke(nameof(ResetAttack), attackCooldown);
+            //EnemiesMain.canLookAt = false;
         }
         else if (!EnemiesMain.CheckPlayerInAttackRange() && !EnemiesMain.alreadyAttack)
         {

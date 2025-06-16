@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using DG.Tweening;
 
 public class TorchInteract : MonoBehaviour
 {
@@ -15,7 +16,10 @@ public class TorchInteract : MonoBehaviour
         if (!IsTrigger)
         {
             IsTrigger = true;
-            _torchFlame.SetActive(true);
+            TryGetComponent(out SpriteRenderer spriteRenderer);
+            spriteRenderer.material.SetTexture("_ColoredTex", PropsSpriteHandler.Instance.PropsColoredTextures[spriteRenderer.sprite.ToString().Replace("_BW (UnityEngine.Sprite)", "")].texture);
+            spriteRenderer.material.DOFloat(1f, "_Transition", 2f);
+            //_torchFlame.SetActive(true);
             Trigger?.Invoke();
         }
     }

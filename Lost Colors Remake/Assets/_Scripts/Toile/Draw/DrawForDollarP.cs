@@ -136,7 +136,7 @@ public class DrawForDollarP : MonoBehaviour
             _drawData = new DrawData(points, _extDrawFunc.GetDrawDim(ExternalDrawFunctions.GetMinMaxCoordinates(points)), 
                 gestureResult, _extDrawFunc.GetSpellTargetPointFromCenter(points), ColorUtility.ToHtmlStringRGB(_currentColor));
 
-            _catchEnnemy.CatchObjectOnLine(_drawData, false);
+            _catchEnnemy.CatchObjectOnLine(_drawData);
 
             if (gestureResult.Score < PlayerMain.Instance.toileInfo.tolerance)
             {
@@ -144,6 +144,8 @@ public class DrawForDollarP : MonoBehaviour
                 {
                     if (_detectEnemyInShape.GetTargetsInShape().Count != 0)
                     {
+                        Debug.Log("grosse folle");
+
                         _drawData.result.GestureClass = "Rond";
 
                         OnDrawFinish?.Invoke(_drawData);
@@ -152,11 +154,13 @@ public class DrawForDollarP : MonoBehaviour
                     }
                     else 
                     {
+                        Debug.Log("5");
+
                         _drawData.result.GestureClass = "Trait";
 
                         OnDrawFinish?.Invoke(_drawData);
 
-                        _catchEnnemy.CatchObjectOnLine(_drawData, true);
+                        _catchEnnemy.CatchObjectOnLine(_drawData);
                     }
                 }
             }

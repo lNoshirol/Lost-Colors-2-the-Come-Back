@@ -35,6 +35,7 @@ public class EnigmeSolvedCrystal : EnigmeSolved
 
     private void CrystalColorLerp()
     {
+        PlayerMain.Instance.Health.PlayerGainHP(3f);
         StartCoroutine(FadeLocalVolume());
         StartCoroutine(SwitchGlobalVolume());
         fallingLeaf.SetTexture("LeafText", leafColor.texture);

@@ -18,27 +18,27 @@ public class VFXControl : MonoBehaviour
 
     public void OnPlay()
     {
+        Debug.LogWarning("YO JE SUIS LE LOUP");
         PlaySound();
         StartCoroutine(WaitForNext(transition1WaitTime));
     }
 
     public void PlaySound()
     {
-        Debug.Log("Bonjour");
-        switch (gameObject.name)
+        Debug.Log("JE JOUE UN SON");
+        if (gameObject.name.StartsWith("VFX_Thunder"))
         {
-            case "VFX_Thunder(Clone)":
-                var sound = SoundsManager.Instance;
-                int RandowDeer = Random.Range(0, sound.SoundEffectDeerAttackRanged.Length);
-                sound.PlaySound(sound.SoundEffectDeerAttackRanged[RandowDeer], false);
-                
-                break;
-
-            case "VFX_FlameThrower(Clone)":
-                var Sound = SoundsManager.Instance;
-                int RandomWolf = Random.Range(0, Sound.SoundEffectWolfAttackRanged.Length);
-                Sound.PlaySound(Sound.SoundEffectWolfAttackRanged[RandomWolf], false);
-                break;
+            Debug.Log("VFX_Thunder");
+            var sound = SoundsManager.Instance;
+            int RandowDeer = Random.Range(0, sound.SoundEffectDeerAttackRanged.Length);
+            sound.PlaySound(sound.SoundEffectDeerAttackRanged[RandowDeer], false);
+        }
+        else if (gameObject.name.StartsWith("VFX_FlameThrower"))
+        {
+            Debug.Log("VFX_FlameThrower");
+            var sound = SoundsManager.Instance;
+            int RandowDeer = Random.Range(0, sound.SoundEffectWolfAttackRanged.Length);
+            sound.PlaySound(sound.SoundEffectWolfAttackRanged[RandowDeer], false);
         }
     }
 }

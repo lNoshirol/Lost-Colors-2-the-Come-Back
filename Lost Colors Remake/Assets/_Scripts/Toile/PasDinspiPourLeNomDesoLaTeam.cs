@@ -41,6 +41,7 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
         SoundWrong.PlaySound(SoundWrong.ValidPattern[RandomSound], false);
         yield return new WaitForSecondsRealtime(0.1f);
         closestEnemyDetected.TryGetComponent(out EnemyMain enemyMain);
+        enemyMain.Armor.activeGlyphs[0].TryGetComponent(out Animator animator);
 
         for (int i = 0; i < 6; i++)
         {
@@ -57,7 +58,7 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
 
             yield return new WaitForSecondsRealtime(0.1f);
         }
-
+        animator.SetBool("Broken", true);
         Time.timeScale = PlayerMain.Instance.toileInfo.slowMotionScale;
     }
 

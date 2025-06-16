@@ -43,7 +43,6 @@ public class PasDinspiPourLeNomDesoLaTeam : MonoBehaviour
         closestEnemyDetected.TryGetComponent(out EnemyMain enemyMain);
         enemyMain.Armor.activeGlyphs[0].TryGetComponent(out Animator animator);
 
-        
         for (int i = 0; i < 6; i++)
         {
             if (i % 2 == 0)

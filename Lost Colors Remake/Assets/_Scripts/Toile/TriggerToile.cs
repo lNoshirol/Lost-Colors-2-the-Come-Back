@@ -66,9 +66,11 @@ public class TriggerToile : MonoBehaviour
             Sound.PlaySound(Sound.OpeningCanva[RandomSound], false);
 
             SoundsManager.Instance.SlowDownAllSound();
+            ToileMain.Instance.toileAnimator.SetBool("ToileSpawn", true);
         }
         else
         {
+            ToileMain.Instance.toileAnimator.SetBool("ToileSpawn", false);
             StartCoroutine(DeactivateAfterFrame());
             PlayerMain.Instance.Inventory.ResetCurrentPaintAmount();
 
@@ -78,6 +80,7 @@ public class TriggerToile : MonoBehaviour
             Sound.PlaySound(Sound.ClosingCanva[0], false);
             time.StopSlowMotion();
             PlayerMain.Instance.UI.StartToileCooldownAsync(PlayerMain.Instance.toileInfo.cooldown);
+
 
         }
     }

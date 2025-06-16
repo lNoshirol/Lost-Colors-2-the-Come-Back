@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 2431913563940288873, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
+      propertyPath: fleeDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3621717970685091554, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.0195637
@@ -75,7 +79,7 @@ PrefabInstance:
     - target: {fileID: 5850043566281649089, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: _BWHitFrame
       value: 
-      objectReference: {fileID: 21300000, guid: dc074f3e4de500448bb67b18da813e47, type: 3}
+      objectReference: {fileID: 21300000, guid: b113c89a93a147841bb9d8cf2ad812e5, type: 3}
     - target: {fileID: 5850043566281649089, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: _whiteHitFrame
       value: 
@@ -83,7 +87,7 @@ PrefabInstance:
     - target: {fileID: 5850043566281649089, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: _coloredHitFrame
       value: 
-      objectReference: {fileID: 21300000, guid: dc074f3e4de500448bb67b18da813e47, type: 3}
+      objectReference: {fileID: 21300000, guid: bbafe0abd9553944188ecdfc9c38aeb3, type: 3}
     - target: {fileID: 5850043566281649089, guid: 5def8e61b0f9b214eaad6dcb0ddbb449, type: 3}
       propertyPath: enemyAnimationOverrideBW
       value: 

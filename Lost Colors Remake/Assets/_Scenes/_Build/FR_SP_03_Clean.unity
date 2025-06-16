@@ -707,6 +707,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9545786193407967, guid: 79728b5a665cd294bb90cc038108ba0a, type: 3}
+      propertyPath: m_TagString
+      value: Torch
+      objectReference: {fileID: 0}
     - target: {fileID: 189474390992829636, guid: 79728b5a665cd294bb90cc038108ba0a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -715,6 +719,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 753835714525695557, guid: 79728b5a665cd294bb90cc038108ba0a, type: 3}
+      propertyPath: m_TagString
+      value: Torch
+      objectReference: {fileID: 0}
     - target: {fileID: 1017138348291226401, guid: 79728b5a665cd294bb90cc038108ba0a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5
@@ -722,6 +730,10 @@ PrefabInstance:
     - target: {fileID: 1017138348291226401, guid: 79728b5a665cd294bb90cc038108ba0a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529967048481084119, guid: 79728b5a665cd294bb90cc038108ba0a, type: 3}
+      propertyPath: m_TagString
+      value: Torch
       objectReference: {fileID: 0}
     - target: {fileID: 3434948679974053383, guid: 79728b5a665cd294bb90cc038108ba0a, type: 3}
       propertyPath: m_IsActive
@@ -779,6 +791,10 @@ PrefabInstance:
       propertyPath: '_tilemapRenderers.Array.data[6]'
       value: 
       objectReference: {fileID: 1316006401}
+    - target: {fileID: 4527534282769803820, guid: 79728b5a665cd294bb90cc038108ba0a, type: 3}
+      propertyPath: m_TagString
+      value: Torch
+      objectReference: {fileID: 0}
     - target: {fileID: 4688353613274222572, guid: 79728b5a665cd294bb90cc038108ba0a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.42
@@ -846,6 +862,10 @@ PrefabInstance:
     - target: {fileID: 6723783553057818357, guid: 79728b5a665cd294bb90cc038108ba0a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902918869051108110, guid: 79728b5a665cd294bb90cc038108ba0a, type: 3}
+      propertyPath: m_TagString
+      value: Torch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

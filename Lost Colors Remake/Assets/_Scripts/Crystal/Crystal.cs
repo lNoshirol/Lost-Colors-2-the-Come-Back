@@ -21,7 +21,7 @@ public class Crystal : MonoBehaviour
             p.TryGetComponent(out EnemyMain enemy);
             _list.Add(enemy);
         }
-        // Ligne ci dessous à ne pas retirer pour le lerp des props
+        // Ligne ci dessous à ne pas retirer pour le lerp des props, merci
         CrystalManager.Instance.AddToDict(this, gameObject.name, false, SceneManager.GetActiveScene().name);
     }
 }

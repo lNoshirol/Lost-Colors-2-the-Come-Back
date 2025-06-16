@@ -227,7 +227,6 @@ public class ExternalDrawFunctions : MonoBehaviour
 
                 break;
             case "DiagoU" or "DiagoD" or "LineH" or "LineV":
-                Debug.Log("LE DESSIN C'EST UNE LIGNE, ATTAQUE NOOPY ATTAQUE");
 
                 fireBall = (SimpleDash)SpellManager.Instance.GetSpell("SimpleDash");
                 context = new(PlayerMain.Instance.Rigidbody2D, PlayerMain.Instance.PlayerGameObject.transform, PlayerMain.Instance.transform.up, 4);

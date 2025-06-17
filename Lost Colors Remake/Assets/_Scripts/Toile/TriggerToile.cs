@@ -71,7 +71,6 @@ public class TriggerToile : MonoBehaviour
             SoundsManager.Instance.SlowDownAllSound();
             ToileMain.Instance.toileAnimator.SetBool("ToileSpawn", true);
 
-            print("MAINTENANNNNT");
             ToileMain.Instance.ToileUI._toileUISprite.DOFade(0, 7).SetEase(Ease.Linear);
         }
         else

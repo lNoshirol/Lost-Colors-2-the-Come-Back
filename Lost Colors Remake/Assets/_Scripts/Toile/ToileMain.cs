@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class ToileMain : MonoBehaviour
 {
-    [SerializeField] private int timeAmount;
-    [SerializeField] public int toileTime = 60;
+    [SerializeField] private float timeAmount;
+    [SerializeField] public float toileTime = 60;
 
     [SerializeField] public DrawForDollarP CastSpriteShape;
 
@@ -48,11 +48,12 @@ public class ToileMain : MonoBehaviour
     {
         gestureIsStarted = true;
         timeAmount = toileTime;
+        ToileUI.UpdateToileUI(timeAmount, toileTime);
         while (timeAmount > 0) {
-            ToileUI.UpdateToileUI(timeAmount, toileTime);
-            yield return new WaitForSeconds(1*PlayerMain.Instance.toileInfo.slowMotionScale);
-            timeAmount--;
-            ToileUI.UpdateToileUI(timeAmount, toileTime);
+            ToileUI.UpdateToileUI(timeAmount / toileTime, toileTime);
+            yield return new WaitForSeconds(0.01f*PlayerMain.Instance.toileInfo.slowMotionScale);
+            timeAmount-= 0.01f;
+            //ToileUI.UpdateToileUI(timeAmount, toileTime);
         }
         gestureIsStarted = false;
         TriggerToile.OpenAndCloseToileMagique();

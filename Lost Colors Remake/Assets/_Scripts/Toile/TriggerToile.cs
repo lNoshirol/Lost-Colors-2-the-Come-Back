@@ -51,7 +51,7 @@ public class TriggerToile : MonoBehaviour
         ToileMain.Instance.CastSpriteShape.Resetpoint();
         if (_isActive == false)
         {
-            ToileMain.Instance.ToileUI.TimeIndicator.enabled = true;
+            //ToileMain.Instance.ToileUI.TimeIndicator.enabled = true;
             ToileMain.Instance.ToileUI.UpdateToileUI(ToileMain.Instance.toileTime, ToileMain.Instance.toileTime);
             _isActive = true;
             toile.SetActive(_isActive);
@@ -71,11 +71,11 @@ public class TriggerToile : MonoBehaviour
             SoundsManager.Instance.SlowDownAllSound();
             ToileMain.Instance.toileAnimator.SetBool("ToileSpawn", true);
 
-            ToileMain.Instance.ToileUI._toileUISprite.DOFade(0, 7).SetEase(Ease.Linear);
+            //ToileMain.Instance.ToileUI._toileUISprite.DOFade(0, 7).SetEase(Ease.Linear);
         }
         else
         {
-            ToileMain.Instance.ToileUI.TimeIndicator.enabled = false;
+            //ToileMain.Instance.ToileUI.TimeIndicator.enabled = false;
             ToileMain.Instance.toileAnimator.SetBool("ToileSpawn", false);
             await Task.Delay(500);
             StartCoroutine(DeactivateAfterFrame());
@@ -87,7 +87,7 @@ public class TriggerToile : MonoBehaviour
             Sound.PlaySound(Sound.ClosingCanva[0], false);
             time.StopSlowMotion();
             PlayerMain.Instance.UI.StartToileCooldownAsync(PlayerMain.Instance.toileInfo.cooldown);
-            ToileMain.Instance.ToileUI._toileUISprite.DOFade(1, 0);
+            //ToileMain.Instance.ToileUI._toileUISprite.DOFade(1, 0);
 
         }
     }

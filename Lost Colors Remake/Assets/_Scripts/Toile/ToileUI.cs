@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class ToileUI : MonoBehaviour
 {
-    public Image TimeIndicator;
-    [SerializeField] public SpriteRenderer _toileUISprite;
+    //public Image TimeIndicator;
+    //[SerializeField] public SpriteRenderer _toileUISprite;
     [SerializeField] TextMeshProUGUI _timerUGUI;
     [SerializeField] TextMeshProUGUI _paintAmountUGUI;
     [SerializeField] Slider _paintSlider;
 
     public void UpdateToileUI(float timerText, float maxTime)
     {
-        TimeIndicator.fillAmount = timerText;
+        //TimeIndicator.fillAmount = timerText;
     }
 
     public void UpdateToilePaintAmount()
